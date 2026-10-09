@@ -49,6 +49,7 @@ python3 scripts/replay.py --isaac-python "$ISAAC_PYTHON"
 | `trajectories/retimed_actual_4x.npz` | 当前唯一默认轨迹：13,909 帧、56 轴、192 Hz 原生采样 |
 | [REPORT.md](REPORT.md)、[REPORT.en.md](REPORT.en.md) | 简明检验报告及真机部署前步骤 |
 | [HARDWARE.md](HARDWARE.md)、[HARDWARE.en.md](HARDWARE.en.md) | 参数与映射证据表，未知项明确留空 |
+| [DEPLOYMENT.md](DEPLOYMENT.md)、[DEPLOYMENT.en.md](DEPLOYMENT.en.md) | 简明真机部署指南：准备、逐级调试、停机与验收 |
 | `evidence/` | 逐轴结果、碰撞覆盖、完整 Isaac 路径播放验证 |
 | `configs/trajectory.json`、`configs/retiming.json` | 当前输入绑定及减速来源 |
 | `outputs/robot/`、`assets/` | 当前 USD、可移植 URDF 和必要网格/转接件 |

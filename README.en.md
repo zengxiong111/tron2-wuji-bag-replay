@@ -49,6 +49,7 @@ Replace `/path/to/isaac/python.sh` with the local Isaac Python entry. **Time is 
 | `trajectories/retimed_actual_4x.npz` | The only current default trajectory: 13,909 frames, 56 axes, 192 Hz native samples |
 | [REPORT.md](REPORT.md), [REPORT.en.md](REPORT.en.md) | Simple verification reports and pre-hardware deployment steps |
 | [HARDWARE.md](HARDWARE.md), [HARDWARE.en.md](HARDWARE.en.md) | Parameter/mapping evidence tables, with unknown fields explicitly blank |
+| [DEPLOYMENT.md](DEPLOYMENT.md), [DEPLOYMENT.en.md](DEPLOYMENT.en.md) | Concise hardware deployment guide: preparation, staged commissioning, stopping and acceptance |
 | `evidence/` | Per-axis results, collision coverage and full Isaac path playback verification |
 | `configs/trajectory.json`, `configs/retiming.json` | Current bindings and retiming lineage |
 | `outputs/robot/`, `assets/` | Current USD, portable URDF and required meshes/adapter |
