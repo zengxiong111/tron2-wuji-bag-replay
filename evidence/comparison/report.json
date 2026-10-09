@@ -1,10 +1,11 @@
 {
   "mode": "PhysX position/velocity targets after single initialization",
-  "producer_sha256": "7f20672263950059076fd5c05a339f703fc878776648cda24c61728ee960aa7a",
+  "target_interpolation": "piecewise linear",
+  "producer_sha256": "e1837dbeb2a478018a361e19b67e5c5c5321861252671d2ae7aa4796d201c045",
   "usd_sha256": "0526b9a8f358a0ae2b9e55ead21467282c619973fa6b36bc2b33175b7eefed84",
-  "usd": "/home/sustech/\u6587\u6863/ChatGPT/tron2_wuji/outputs/bag_feedback_20261008_adapter/physics_motion5x_collision_fixed/robot_collision_fixed.usd",
-  "reference_sha256": "a0090ee35a669914d0e6b2264672d804924a5f130875d41022a7c40689b66b65",
-  "reference": "/home/sustech/\u6587\u6863/ChatGPT/tron2_wuji/outputs/bag_feedback_20261008_adapter/physics_motion5x_collision_fixed/reference.npz",
+  "usd": "outputs/robot/robot_collision_fixed.usd",
+  "reference_sha256": "2bc1c11bfdce4a6cd333a903f2c27ff838a19d036624e91b4703a53abb282d44",
+  "reference": "evidence/comparison/reference.npz",
   "start_source_seconds": 0,
   "solver_iterations": [
     32,
@@ -16,7 +17,7 @@
   "hand_mapping_status": "source_declared_names; left_ -> l_, right_ -> r_",
   "physics_hz": 240,
   "wall_speed_requested": 10.0,
-  "motion_speed": 5,
+  "motion_speed": 4.0,
   "gravity_m_s2": [
     0,
     0,
@@ -643,9 +644,10 @@
   "acceptance_boundary": "Physics tracking diagnostic; collision-pair coverage and hardware behavior unverified",
   "status": "complete",
   "source_time_s": 289.76666666666665,
-  "simulation_time_s": 57.95416666668582,
-  "wall_elapsed_s": 163.8954194359976,
-  "frames_measured": 13909,
-  "max_error_rad": 0.4286974452964315,
-  "rms_error_rad": 0.04376374997106029
+  "simulation_time_s": 72.44166666668295,
+  "wall_elapsed_s": 190.6047384349804,
+  "frames_measured": 17386,
+  "max_error_rad": 0.42433011531779585,
+  "rms_error_rad": 0.039909397833483795,
+  "reference_note": "Baseline is original with both head targets set zero; runtime producer hash records original implementation."
 }

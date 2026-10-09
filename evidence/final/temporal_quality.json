@@ -1,38 +1,38 @@
 {
   "before": {
-    "input_sha256": "f4389730da594a20130bc2921f122380b51c4e89d27ece5ceb9307f40f18c94b",
-    "joint_hf_rms_rad": 0.019135626906967882,
-    "acceleration_abs_p95_rad_s2": 369.56673145269764,
-    "jerk_abs_p95_rad_s3": 127171.90647112635,
-    "max_joint_velocity_rad_s": 17.311611771577834,
-    "tracking_rms_rad": 0.04376374997106029,
-    "tracking_max_all_steps_rad": 0.6190061904953406,
-    "position_limit_excess_rad": 4.126826987960186e-05,
-    "wrist_translation_hf_rms_mm": 1.7969904593559674
+    "input_sha256": "c32d5797d02dae340d94275bac06ccb6bb5e00029c9d52d9299ce19fc864210d",
+    "joint_hf_rms_rad": 0.014848417313909285,
+    "acceleration_abs_p95_rad_s2": 272.1104907988278,
+    "jerk_abs_p95_rad_s3": 92338.09661858968,
+    "max_joint_velocity_rad_s": 15.642557144161524,
+    "tracking_rms_rad": 0.039909397833483795,
+    "tracking_max_all_steps_rad": 0.749833311791596,
+    "position_limit_excess_rad": 3.9778153760217094e-05,
+    "wrist_translation_hf_rms_mm": 1.1264298289468289
   },
   "after": {
-    "input_sha256": "8634e73e49bbc0b769ea86c21ef918df92962da55e43305784c7005ffc6b505c",
-    "joint_hf_rms_rad": 0.0074228147317269575,
-    "acceleration_abs_p95_rad_s2": 65.14437139029947,
-    "jerk_abs_p95_rad_s3": 1868.793725965633,
-    "max_joint_velocity_rad_s": 13.340649604792954,
-    "tracking_rms_rad": 0.03622086144651528,
-    "tracking_max_all_steps_rad": 0.4769679693888571,
-    "position_limit_excess_rad": 2.854347228997689e-05,
-    "wrist_translation_hf_rms_mm": 0.8762132628955498
+    "input_sha256": "d7a1af76a43508be2810868adb6a45cbc3cbf7e57d5e69ea687d0940805a8d03",
+    "joint_hf_rms_rad": 0.0031214577550391412,
+    "acceleration_abs_p95_rad_s2": 42.34542846677784,
+    "jerk_abs_p95_rad_s3": 1149.4445800773524,
+    "max_joint_velocity_rad_s": 11.646580696103339,
+    "tracking_rms_rad": 0.035383819306585476,
+    "tracking_max_all_steps_rad": 0.4717787138506617,
+    "position_limit_excess_rad": 2.7112960815367515e-05,
+    "wrist_translation_hf_rms_mm": 0.37159072143154287
   },
   "cubic_target": {
     "analytical_position_limit_excess_rad": 0.0,
-    "max_velocity_rad_s": 14.91752407221028,
+    "max_velocity_rad_s": 11.939518114664146,
     "finite": true
   },
   "reduction_percent": {
-    "joint_hf_rms_rad": 61.209451000405544,
-    "acceleration_abs_p95_rad_s2": 82.37277172265233,
-    "jerk_abs_p95_rad_s3": 98.53049798668393,
-    "wrist_translation_hf_rms_mm": 51.239960216061455
+    "joint_hf_rms_rad": 78.97784195413804,
+    "acceleration_abs_p95_rad_s2": 84.43814924501241,
+    "jerk_abs_p95_rad_s3": 98.75517839096767,
+    "wrist_translation_hf_rms_mm": 67.01164050503112
   },
-  "comparison_source_start_s": 193.5625,
+  "comparison_source_start_s": 194.85,
   "comparison_simulation_duration_s": 3,
   "definition": "5 Hz order-3 zero-phase residual; derivatives at 240 Hz; pooled absolute p95; authored wrist frame FK",
   "passed": true,

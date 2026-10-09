@@ -1,4 +1,4 @@
-"""Simple launch entry for source-time references and five-times physical replay."""
+"""Simple launch entry for source-time references and four-times physical replay."""
 import argparse
 import subprocess
 from pathlib import Path
@@ -12,10 +12,10 @@ parser.add_argument('--out', type=Path)
 parser.add_argument('--max-source-seconds', type=float)
 args = parser.parse_args()
 references = {'original':'original.npz', 'accelerated':'original.npz',
-              'repaired':'repaired_source.npz', 'head-forward':'head_forward_source.npz'}
+              'repaired':'head_forward_source.npz', 'head-forward':'head_forward_source.npz'}
 command = [args.isaac_python, str(root/'scripts/114_replay_ros1_collision_fixed.py'),
            '--reference', str(root/'trajectories'/references[args.mode]),
-           '--motion-speed', '1' if args.mode=='original' else '5']
+           '--motion-speed', '1' if args.mode=='original' else '4']
 if args.mode in ['repaired','head-forward']:
     command.append('--smooth-targets')
 if args.headless:

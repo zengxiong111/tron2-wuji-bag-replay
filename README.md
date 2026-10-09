@@ -1,19 +1,19 @@
-# TRON2 + Wuji：原始轨迹、5倍重放与修复
+# TRON2 + Wuji：4 倍 Isaac 轨迹重放
 
-这是一个独立的私有运行包：从原始 ROS1 bag 读取 TRON2 与双 Wuji Hand2 的关节反馈，在 Isaac Sim 中以5倍动作速度重放，并修复碰撞与抖动。英文：[README.en.md](README.en.md)。
+当前默认轨迹为 **4 倍动作速度、头部朝前，约 72.44 秒**。模型速度与目标角度检查通过；真机电机全部极限尚未验证。先看 [简明检验报告](REPORT.md)。英文：[README.en.md](README.en.md)。
 
 ## 目录
 
 - [下载和播放](#下载和播放)
-- [文件在哪里](#文件在哪里)
-- [修复流程](#修复流程)
-- [结果和注意事项](#结果和注意事项)
+- [文件说明](#文件说明)
+- [修复和复核](#修复和复核)
+- [限制与来源](#限制与来源)
 
 ## 下载和播放
 
-需要 Git、GitHub CLI、Python3.12；运行仿真还需要已安装的 Isaac Sim5.1及兼容GPU。下载私有文件需要具有仓库访问权限的 GitHub账号。
+需要 Git、GitHub CLI、Python 3.12；仿真需要已安装的 Isaac Sim 5.1 及兼容 GPU。私有文件需要仓库访问权限。
 
-1. 克隆代码并下载模型、bag、轨迹和视频：
+1. 下载代码和运行输入：
 
 ```bash
 gh auth login
@@ -24,89 +24,60 @@ python3 scripts/download_assets.py
 python3 scripts/verify_bundle.py
 ```
 
-下载器先检查SHA-256，再安装文件，不覆盖你修改过的输入。大文件存放在同仓库的[v1.0.0 Release](https://github.com/zengxiong111/tron2-wuji-bag-replay/releases/tag/v1.0.0)。
+已有旧克隆：先 `git pull --ff-only`，再运行 `python3 scripts/download_assets.py --upgrade` 和校验命令。升级只替换哈希匹配旧交付的受管文件；修改过的输入不会被覆盖。旧版 5 倍文件及旧视频按已知哈希清理。
 
-2. 直接看完整视频：打开 `media/head_forward_full_5x.mp4`。时长57.97秒，30fps，头部朝前。
+二进制运行输入在 [v1.1.0 Release](https://github.com/zengxiong111/tron2-wuji-bag-replay/releases/tag/v1.1.0)，代码与简明报告直接保存在 Git。当前版本未附新视频，旧 5 倍视频不能代表本版。
 
-3. 在 Isaac 窗口播放最终修复轨迹：
+2. 打开 Isaac 窗口执行：
 
 ```bash
-ISAAC_PYTHON=/你的Isaac安装目录/python.sh
+ISAAC_PYTHON=/path/to/isaac/python.sh
 python3 scripts/replay.py --isaac-python "$ISAAC_PYTHON"
 ```
 
-`ISAAC_PYTHON`需要替换成你机器的Isaac Python入口。默认使用修复后的轨迹、5倍动作速度、240Hz物理仿真，并将新运行结果保存到仓库旁的 `tron2-wuji-bag-replay-runs/`。
+将 `/path/to/isaac/python.sh` 替换为本机 Isaac Python 入口。默认使用源时间参考，由物理控制器实施 4 倍动作速度、240 Hz 步长；不是对视频加速。计算机运行耗时取决于性能。新运行记录放在仓库旁的 `tron2-wuji-bag-replay-runs/`。
 
-| 想看什么 | 增加的参数 |
+| 模式 | 含义 |
 | --- | --- |
-| 原始目标、1倍速度 | `--mode original` |
-| 原始目标、5倍速度 | `--mode accelerated` |
-| 修复目标、5倍速度，保留源头部动作 | `--mode repaired` |
-| 修复目标、5倍速度，头部朝前（默认） | `--mode head-forward` |
+| 默认 / `--mode head-forward` | 修复后 4 倍，头部朝前 |
+| `--mode repaired` | 默认模式的兼容别名，同一条轨迹 |
+| `--mode original` | 原始目标，1 倍，未修复 |
+| `--mode accelerated` | 原始目标，4 倍，未修复 |
 
-这些模式共用修好的碰撞模型。未修复目标不保证避碰。5倍指仿真动作变快，不是视频后期加速，也不保证计算机能实时跑5倍。
+## 文件说明
 
-## 文件在哪里
-
-| 文件 | 含义 |
+| 文件 | 用途 |
 | --- | --- |
-| `data/2026-10-08-17-54-13.bag` | 原始真机ROS1记录，289.797秒 |
-| `trajectories/original.npz` | 原始反馈重采样，8694帧、56关节 |
-| `trajectories/accelerated_5x.npz` | 相同关节位置，显式5倍时间轴，未做修复 |
-| `trajectories/repaired_source.npz` / `repaired_5x.npz` | 避碰和滤波后的参考，分别使用源时间/5倍时间 |
-| `trajectories/head_forward_source.npz` / `head_forward_5x.npz` | 最终修复参考，头部yaw/pitch固定为零 |
-| `outputs/robot/tron2_wuji_hand2.usd` | 原始标准USD，已装配转接件 |
-| `outputs/robot/robot_collision_fixed.usd` | 物理重放用的SDF512碰撞修复模型 |
-| `outputs/robot/tron2_wuji_hand2.urdf`、`assets/` | 可移植URDF、必要网格与转接件STP/STL |
-| `evidence/final/validation/tracking.npz` | 最终完整物理重放的实际关节状态与目标 |
-| `evidence/`、`configs/` | 碰撞、平滑度、来源及哈希记录 |
+| `data/2026-10-08-17-54-13.bag` | 原始真机 ROS1 输入，289.797 秒 |
+| `trajectories/original.npz` | 原始反馈 30 Hz 参考，8694 帧、56 轴 |
+| `trajectories/head_forward_source.npz` | 当前修复参考，源时间 0–289.7667 秒 |
+| `trajectories/head_forward_4x.npz` | 同一目标的 4 倍时间轴和速度导出，约 72.4417 秒 |
+| `evidence/final/validation/tracking.npz` | 完整 4 倍物理重放的目标与实际状态 |
+| `evidence/comparison/` | 本次去抖对照所需原始 4 倍记录与零头部目标 |
+| `outputs/robot/`、`assets/` | 标准 USD、SDF512 碰撞 USD、可移植 URDF、必要网格和转接件 |
+| `REPORT.md`、`REPORT.en.md` | 简明检验报告 |
+| `evidence/`、`configs/`、`release_manifest.json` | 可复核数值、参数及 SHA-256 |
 
-原始记录是用户明确要求保留的运行输入，标准模型和碰撞模型分别用于源几何与物理重放，不是备份。旧调试输出未上传。
+`q` 是 rad，列顺序由 `joint_names` 给出。4 倍导出的 `time` 是仿真秒，`source_time` 是原始秒，`q_velocity` 是 rad/s。启动器使用源时间文件，避免再次压缩已加速时间轴。目标不等于实际物理状态。
 
-NPZ的 `q` 单位是rad，列顺序由 `joint_names`给出。显式5倍文件的 `time` 是仿真秒，`source_time` 是原始秒，`q_velocity` 是目标rad/s。它们是目标轨迹，不等于实际物理状态；启动器使用源时间参考，再由控制器实施5倍速度，避免重复加速。
+## 修复和复核
 
-## 修复流程
-
-无需安装ROS1；用 `rosbags`直接读bag。分析/修复环境与Isaac环境分开，避免更换Isaac内置USD库。
+分析环境与 Isaac 环境分开；无需 ROS1 安装。
 
 ```bash
 python3.12 -m venv .venv-analysis
 .venv-analysis/bin/pip install -r requirements-analysis.txt
 .venv-analysis/bin/python scripts/repair_pipeline.py
-```
-
-流程很简单：**原始bag → 30Hz具名反馈 → 连续腕部间距/IK修正 → 低通滤波 → 再次避碰 → 导出5倍轨迹 → 头部朝前**。
-
-- 模型：把实际碰撞API放到Mesh，开启自碰撞，手部使用SDF512；不改变转接件或视觉网格。
-- 避碰：连续调整双腕间距，通过完整SE(3) IK同步修正手臂；安全裕量0.03m。
-- 去抖：源时间1Hz、四阶零相位低通，限位裕量0.005rad；重放时使用C2三次位置插值及对应连续速度。
-- 固定条件：物理基座高于桌面0.45m，保留既有同刚体/直接父子关节排除规则。
-
-重建碰撞模型：
-
-```bash
-.venv-analysis/bin/python scripts/116_build_collision_fixed_usd.py \
-  --source outputs/robot/tron2_wuji_hand2.usd \
-  --out ../tron2-wuji-bag-replay-runs/model/robot_collision_fixed.usd \
-  --hand-approximation sdf --sdf-resolution 512
-```
-
-从已提取反馈快速重跑可加 `--reference-only`。每次重建都写新目录，不覆盖交付轨迹；新的物理运行需要重新检查碰撞，不能沿用旧验收结论。
-
-## 结果和注意事项
-
-- 完整轨迹约289.77秒；5倍仿真约57.95秒；完整视频57.97秒（帧取整）。
-- 整段13909个物理状态、每步2717对几何，未发现超过0.1mm的接触特征穿透。
-- 与修复前的物理重放比较：关节高频抖动降低约61%，腕部高频抖动降低约51%，加速度p95降低约82%。
-- 40个手部关节有明确名称；bag的16维机身顺序仍按“左7、右7、头yaw/pitch”假设，未确认。
-- 滤波会削弱快速手势细节；原始bag未修改。离散碰撞检查不等于CCD或真机安全。
-
-检查交付的完整物理状态：
-
-```bash
+.venv-analysis/bin/python scripts/check_motion_limits.py --out ../tron2-4x-checks
 .venv-analysis/bin/python scripts/115_audit_collision_fixed_replay.py \
-  --input evidence/final/validation/tracking.npz \
-  --out ../tron2-wuji-bag-replay-runs/audit
+  --input evidence/final/validation/tracking.npz --out ../tron2-4x-collision
 ```
 
-资产来源：TRON2 [limxdynamics/tron2-robot-description](https://github.com/limxdynamics/tron2-robot-description)，commit `f547f5bc949f2a4c98e076e61cf6d3ca73d179a0`，Apache2.0；Wuji [wuji-technology/wuji-description](https://github.com/wuji-technology/wuji-description)，commit `c2cd7f8d1ef8b6dc8cb907c17daa5a88b4442d95`，MIT。原始许可证在 `licenses/`；用户提供的bag与转接件不因此获得第三方模型许可证。精确输入哈希在 `release_manifest.json`、`configs/origin.json`。
+流程：原 bag → 30 Hz 具名反馈 → 源时间 1 Hz 四阶零相位低通和头部朝前 → 连续双腕避碰/SE(3) IK（0.04 m 裕量）→ C2 插值和 4 倍导出 → 完整物理检查。`--reference-only` 可复用已提取参考。每次重建写新目录，新物理运行需重新验收。
+
+## 限制与来源
+
+- 当前 17,386 个实际状态的离散碰撞检查通过，关节高频抖动下降 78.98%；完整结果及未验证项见 [报告](REPORT.md)。参考目标仍有手内重叠，不能用于无碰撞运动学播放；仿真接触会造成跟踪偏差。
+- 机身轴序仍未确认；头部两个目标为零。未验证真机电流、力矩、温升、负载或连续 CCD。滤波削弱部分快速手势。原 bag 保留不变。
+- 物理基座为 `base_Link`，Z=0；桌面 Z=-0.45 m，固定相差 0.45 m。不能移动安装高度来通过检查。标准 USD 与碰撞 USD 的视觉/安装几何一致。
+- 模型来自 [TRON2](https://github.com/limxdynamics/tron2-robot-description) commit `f547f5bc949f2a4c98e076e61cf6d3ca73d179a0`（Apache 2.0）与 [Wuji](https://github.com/wuji-technology/wuji-description) commit `c2cd7f8d1ef8b6dc8cb907c17daa5a88b4442d95`（MIT）。许可证在 `licenses/`；这些许可证不自动适用于用户 bag 和转接件。输入身份见 `configs/origin.json` 和 `release_manifest.json`。

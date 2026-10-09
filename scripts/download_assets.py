@@ -1,4 +1,5 @@
 """Download private GitHub Release assets, verify hashes, and install without overwriting."""
+import argparse
 import hashlib
 import json
 import subprocess
@@ -9,6 +10,9 @@ from pathlib import Path
 
 root = Path(__file__).resolve().parents[1]
 manifest = json.loads((root/'release_manifest.json').read_text())
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--upgrade', action='store_true', help='Replace only hash-matched managed files from the previous release')
+args = parser.parse_args()
 
 def digest(path):
     value = hashlib.sha256()
@@ -61,7 +65,9 @@ with tempfile.TemporaryDirectory(prefix='tron2-download-') as temporary:
             if not file.is_file() or digest(file) != expected:
                 raise RuntimeError('Installed file checksum mismatch: '+relative)
             target = root/relative
-            if target.is_symlink() or (target.exists() and (not target.is_file() or digest(target) != expected)):
+            previous = manifest.get('previous_files', {}).get(relative)
+            replaceable = args.upgrade and target.is_file() and not target.is_symlink() and previous == digest(target)
+            if target.is_symlink() or (target.exists() and (not target.is_file() or digest(target) != expected) and not replaceable):
                 raise FileExistsError('Refusing to overwrite modified input: '+str(target))
             parent = target.parent
             while parent != root:
@@ -71,7 +77,21 @@ with tempfile.TemporaryDirectory(prefix='tron2-download-') as temporary:
         for relative in asset['files']:
             target = root/relative
             target.parent.mkdir(parents=True, exist_ok=True)
-            if not target.exists():
+            if target.exists() and digest(target) != asset['files'][relative]:
+                # Stage beside the destination, then atomically replace an unchanged managed input.
+                import os
+                import shutil
+                with tempfile.NamedTemporaryFile(dir=target.parent, prefix='.release-', delete=False) as destination:
+                    replacement = Path(destination.name)
+                    with (staged/relative).open('rb') as source:
+                        shutil.copyfileobj(source, destination)
+                try:
+                    if target.is_symlink() or digest(target) != manifest.get('previous_files', {}).get(relative):
+                        raise FileExistsError('Input changed during upgrade: '+str(target))
+                    os.replace(replacement, target)
+                finally:
+                    replacement.unlink(missing_ok=True)
+            elif not target.exists():
                 # Create exclusively; works even when /tmp and the checkout are different filesystems.
                 import shutil
                 with target.open('xb') as destination, (staged/relative).open('rb') as source:
@@ -79,4 +99,15 @@ with tempfile.TemporaryDirectory(prefix='tron2-download-') as temporary:
         import shutil
         shutil.rmtree(staged)
         print('Installed and verified:',asset['name'])
+if args.upgrade:
+    for relative, expected in manifest.get('retired_files', {}).items():
+        target = root/relative
+        if target.is_file() and not target.is_symlink() and digest(target) == expected:
+            parent = target.parent
+            while parent != root:
+                if parent.is_symlink():
+                    raise ValueError('Symlink in retired destination path: '+str(parent))
+                parent = parent.parent
+            target.unlink()
+            print('Removed retired managed input:', relative)
 print('Ready. Run python3 scripts/verify_bundle.py')
