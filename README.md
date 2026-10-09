@@ -17,7 +17,8 @@
 
 ```bash
 gh auth login
-gh repo clone zengxiong111/tron2-wuji-bag-replay
+gh auth setup-git
+git clone https://github.com/zengxiong111/tron2-wuji-bag-replay.git
 cd tron2-wuji-bag-replay
 python3 scripts/download_assets.py
 python3 scripts/verify_bundle.py
