@@ -1,0 +1,13 @@
+data/
+trajectories/
+assets/
+outputs/
+media/
+runs/
+.venv/
+__pycache__/
+*.pyc
+*.log
+*.tmp
+evidence/**/*.npz
+.venv-analysis/

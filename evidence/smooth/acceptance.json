@@ -1,0 +1,23 @@
+{
+  "accepted": true,
+  "geometry_gate": {
+    "passed": true,
+    "threshold_mm": 0.1,
+    "maximum_depth_mm": 0.0,
+    "families": {},
+    "input_sha256": "b30ed7d95aee31c953ea399e547ca260e6cc6c00acd43cc46436824b77330666"
+  },
+  "temporal_gate": true,
+  "physical_steps": 13909,
+  "geometry_pairs_per_step": 2717,
+  "physx_contact_pairs": 97,
+  "minimum_physx_separation_mm": 0.01669316588959191,
+  "physical_base_world_m": [
+    -4.656612873077393e-10,
+    -1.4551915228366852e-11,
+    0.0
+  ],
+  "table_top_z_m": -0.45,
+  "authored_gap_m": 0.45,
+  "boundary": "All recorded 240 Hz physical states checked for triangle contact-feature penetration >0.1 mm, plus PhysX reports; not CCD or hardware safety."
+}

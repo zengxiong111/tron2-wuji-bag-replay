@@ -1,0 +1,29 @@
+{
+  "accelerated_5x": {
+    "source_sha256": "0527c09a35d1cea23a20c6a0497154365a8c869aa5095076f4efd45b06b065b1",
+    "sha256": "16ed96bc4e742acdf21155e12b9d7ef4c86e6256913eedd5067ee4516661d72d",
+    "motion_speed": 5,
+    "duration_s": 57.95333333333333,
+    "position_unchanged": true,
+    "velocity": "piecewise-linear interval slope",
+    "boundary": "Joint targets; not recorded physical states or a collision certificate"
+  },
+  "repaired_5x": {
+    "source_sha256": "f0300020e4dc23165578a84c70998911ac32c4f805b7c08a2181c2965db67fb2",
+    "sha256": "81fe1d098124f50334f4f555cb06355cce131f532948e01ced2deb870b1aa8dc",
+    "motion_speed": 5,
+    "duration_s": 57.95333333333333,
+    "position_unchanged": true,
+    "velocity": "analytic C2 cubic derivative",
+    "boundary": "Joint targets; not recorded physical states or a collision certificate"
+  },
+  "head_forward_5x": {
+    "source_sha256": "9e3bc9fb38dcca4ccb75a55bc8135303ef7b34ef3210d0298e6491e4c1df2ce7",
+    "sha256": "40572370bb6506b28c4db6b0856ad849d2d6f91bf3b92ada0e1c3ce64c33c5c2",
+    "motion_speed": 5,
+    "duration_s": 57.95333333333333,
+    "position_unchanged": true,
+    "velocity": "analytic C2 cubic derivative",
+    "boundary": "Joint targets; not recorded physical states or a collision certificate"
+  }
+}

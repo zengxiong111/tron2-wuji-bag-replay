@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "threshold_mm": 0.1,
+  "maximum_depth_mm": 0.0,
+  "families": {},
+  "input_sha256": "b30ed7d95aee31c953ea399e547ca260e6cc6c00acd43cc46436824b77330666"
+}

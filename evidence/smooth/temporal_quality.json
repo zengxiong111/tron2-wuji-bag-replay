@@ -1,0 +1,41 @@
+{
+  "before": {
+    "input_sha256": "f4389730da594a20130bc2921f122380b51c4e89d27ece5ceb9307f40f18c94b",
+    "joint_hf_rms_rad": 0.019135626906967882,
+    "acceleration_abs_p95_rad_s2": 369.56673145269764,
+    "jerk_abs_p95_rad_s3": 127171.90647112635,
+    "max_joint_velocity_rad_s": 17.311611771577834,
+    "tracking_rms_rad": 0.04376374997106029,
+    "tracking_max_all_steps_rad": 0.6190061904953406,
+    "position_limit_excess_rad": 4.126826987960186e-05,
+    "wrist_translation_hf_rms_mm": 1.7969904593559674
+  },
+  "after": {
+    "input_sha256": "b30ed7d95aee31c953ea399e547ca260e6cc6c00acd43cc46436824b77330666",
+    "joint_hf_rms_rad": 0.007422814731859246,
+    "acceleration_abs_p95_rad_s2": 65.14437139029947,
+    "jerk_abs_p95_rad_s3": 1868.793725965633,
+    "max_joint_velocity_rad_s": 13.340649604792954,
+    "tracking_rms_rad": 0.03622086112435151,
+    "tracking_max_all_steps_rad": 0.4769679693888571,
+    "position_limit_excess_rad": 2.854347228997689e-05,
+    "wrist_translation_hf_rms_mm": 0.8762132628955498
+  },
+  "cubic_target": {
+    "analytical_position_limit_excess_rad": 0.0,
+    "max_velocity_rad_s": 14.91752407221028,
+    "finite": true
+  },
+  "reduction_percent": {
+    "joint_hf_rms_rad": 61.20945099971422,
+    "acceleration_abs_p95_rad_s2": 82.37277172265233,
+    "jerk_abs_p95_rad_s3": 98.53049798668393,
+    "wrist_translation_hf_rms_mm": 51.239960216061455
+  },
+  "comparison_source_start_s": 193.5625,
+  "comparison_simulation_duration_s": 3,
+  "definition": "5 Hz order-3 zero-phase residual; derivatives at 240 Hz; pooled absolute p95; authored wrist frame FK",
+  "passed": true,
+  "gate_boundary": "Relative smoothness improvement only; separate collision gate required; not a hardware motion limit",
+  "actual_position_limit_numerical_tolerance_rad": 0.0001
+}

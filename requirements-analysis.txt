@@ -1,0 +1,6 @@
+numpy==2.2.6
+scipy==1.18.1
+pin==4.1.0
+coal==3.0.3
+rosbags==0.11.5
+usd-core==26.8
