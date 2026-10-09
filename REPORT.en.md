@@ -1,61 +1,68 @@
-# Four-times trajectory inspection report
+# Slowed trajectory verification report
 
-**Conclusion: model speed and target-angle checks pass; the full hardware motor envelope remains unverified.** This report covers the current four-times, head-forward trajectory. Checked on 2026-10-09.
-
-Chinese: [REPORT.md](REPORT.md).
+Checked on 2026-10-09. **Model speeds pass; strict discrete collision checks pass; small angle violations remain; complete physical motor limits are unverified and direct hardware execution is not admitted.** Chinese: [REPORT.md](REPORT.md).
 
 ## Contents
 
-- [Passed checks](#passed-checks)
-- [Unverified checks](#unverified-checks)
-- [Recheck](#recheck)
-- [Official sources](#official-sources)
+- [Results](#results)
+- [What this playback represents](#what-this-playback-represents)
+- [What hardware deployment still requires](#what-hardware-deployment-still-requires)
+- [Files and verification](#files-and-verification)
+- [Official references](#official-references)
 
-## Passed checks
+## Results
 
-A speed ratio approaching 100% leaves less margin. Per-axis limits below come from the delivered URDF/USD models and do not automatically establish actual device ratings.
-
-| Check | Result | Assessment |
+| Item | Measured result | Decision |
 | --- | --- | --- |
-| TRON2 arm target speed | Fastest axis 6.182 rad/s, limit 17.8 rad/s, ratio 34.73% | Within model limit |
-| Wuji target speed | Tightest axis: left little-finger PIP, 11.888 rad/s against 12.86 rad/s, ratio 92.44% | Within model limit, approximately 7.56% margin |
-| Actual physical-state speed | All 56 axes within model limits, maximum ratio 88.33% | Pass; estimated from 240 Hz positions |
-| Target angle | Complete cubic interpolation for all 56 axes stays within model and documented angle ranges | Pass |
-| TRON2 wrist reference target speed | Left/right 1.000 / 0.969 m/s, published endpoint specification 5 m/s | Reference measurement only; no endpoint admission |
-| TRON2 wrist reference target acceleration | Left/right 14.025 / 14.507 m/s², published endpoint specification 36 m/s² | Reference measurement only; no endpoint admission |
-| Actual-state penetration | Full 17,386 states × 2,717 geometry pairs, none >0.1 mm | Discrete check passed |
-| Jitter improvement | Joint high-frequency RMS down 78.98%, wrist down 67.01%, acceleration P95 down 84.44% | Improvement over original four-times replay under matched conditions |
+| Duration | Old recording 57.9500 s → new file 72.4375 s | Time stretched 1.25×, equivalent to 4× bag speed |
+| TRON2 arm speed | Tightest axis: left wrist yaw, 6.2047 rad/s, 34.86% of the model's 17.8 rad/s | Model speed passed |
+| Wuji speed | Tightest axis: left ring PIP, 10.3810 rad/s, 80.72% of the model's 12.86 rad/s | Model speed passed |
+| Head speed | Maximum about 0.000179 rad/s | Model speed passed |
+| Joint angles | Left wrist pitch exceeds by 0.001473°; right wrist pitch by 0.000152°; left middle DIP by 0.001635° | **3 axes fail strict admission**; not an all-pass result |
+| Collisions/penetration | 45,194 poses × 2717 geometry pairs, strict check finds 0 intersections and reports 0 mm depth | Discrete check passed; not continuous CCD |
+| Isaac path playback | Full 72.4375 s, 2175 playback instants; readback error <0.000001 rad, rendered-link changes checked | Recorded-path replay verified; not new physics execution |
 
-Target speed uses analytical extrema in every cubic interval, including peaks between samples. Wrist values use 240 Hz FK differences at `wrist_roll_L_Link` / `wrist_roll_R_Link` origins; the actual tool endpoint may differ, and continuous-time peaks are not proven.
+Speed checks use exact interval slopes of the piecewise-linear position path over the entire interval, rather than the file's averaged gradient. Linear interpolation has velocity jumps at knots, so **it does not establish finite continuous acceleration/jerk limits**; smooth start/stop admission is also incomplete.
 
-## Unverified checks
+Collision checks include all 13,909 original poses, every interval midpoint and the 240 Hz execution grid including the endpoint. There are 75 robot collision geometries; 2642 robot pairs and 75 table pairs are checked. The 133 same-body/direct-parent structural exclusions are explicitly recorded, with **no Wuji assembly exemptions**. Discrete triangle intersections do not establish exact solid clearance, continuous avoidance between samples or real contact response. Physical base `base_Link` has world Z=0 and tabletop Z=-0.45 m, maintaining the fixed 0.45 m gap.
 
-| Item | Why no admission is possible |
-| --- | --- |
-| Hardware per-axis rated/peak speed and acceleration | Complete parameters bound to the specific device version are unavailable; model limits cannot replace ratings |
-| Current, torque and payload | No four-times hardware current/torque/load measurements exist for this new trajectory; original-speed bag feedback cannot establish accelerated behavior |
-| Wuji current | The 2.2 Beta control guide specifies `effort` in A and an allowed hard ceiling of 2.0 A; there is no comparable four-times current recording, and simulation N·m cannot be treated as A |
-| Temperature and continuous duty | Wuji documents state that long full-load thermal behavior and load capability are not committed Beta ratings; no temperatures were measured here |
-| Joint mapping | The bag's 16 body axes have no names. Manual indices 14=pitch,15=yaw contradict the tentative head order; both head targets are zero here. Wuji SDK S1–S4 to model actuator mapping also requires device confirmation |
-| Contact-free targets and continuous collision freedom | Intrahand reference targets overlap by up to 13.301 mm. Accepted actual states are constrained by physical contacts. This is not CCD evidence or a collision-free kinematic reference |
+## What this playback represents
 
-This release is therefore an **Isaac simulation trajectory**. Hardware admission needs device identity, per-axis ratings and confirmed mappings, plus speed, current/torque, temperature and error-code recordings for this trajectory. Simulation drive gains must not be copied directly to hardware.
+This slows the previous 5× PhysX actual-joint recording; it is distinct from the older reference targets that still had intrahand overlap and is not video speed editing. All joint positions remain bitwise identical, while native sample frequency changes from 240 Hz to 192 Hz. `time` is already execution seconds, so play at **1× file time**.
 
-## Recheck
+The default player reproduces this path with position replay and no new dynamics integration. Executing it again with a controller at 4× speed may change tracking errors and contacts, requiring new actual-state recording and admission. These results do not prove task success or physical motor safety.
 
-1. Download runtime inputs and verify hashes as described in [README.en.md](README.en.md).
-2. Run in the analysis environment; outputs go to new directories outside the repository:
+## What hardware deployment still requires
+
+| Order | Required work | Current status |
+| --- | --- | --- |
+| 1 | Confirm TRON2 and both hand models/hardware revisions/firmware, SDK per-axis mapping, signs, zero offsets and units; resolve head yaw/pitch numbering conflict | Pending |
+| 2 | Correct minor angle violations against the installed device ranges; produce speed/acceleration-limited motion with smooth start/stop, then recheck interpolated collisions | Incomplete |
+| 3 | Obtain revision-bound per-axis speed, acceleration, rated/peak current or torque, temperature and sustained-load limits | Pending |
+| 4 | Calibrate physical base, adapter, hands and environment; check collisions under tracking errors and braking conditions | Incomplete |
+| 5 | Implement and test emergency stop, feedback timeouts, fault stops, limits, tracking-error protection and complete state logging | Hardware player not prepared |
+| 6 | Supervised single-axis/hand/arm checks, followed by staged low-speed, low-load trials; record speed, current/torque, temperature and error codes | Not performed |
+
+**Passing model speeds cannot establish that all real motor limits are respected.** Wuji's documented 2.0 A is an allowed control hard cap, not an installed device's rated current; 1000 Hz is control/communication frequency, not mechanical speed. Model `effort` or simulation torque cannot directly be converted into Wuji current. Actual ratings, revisions and mappings are covered by [HARDWARE.md](HARDWARE.md) / [HARDWARE.en.md](HARDWARE.en.md), with unknown fields pending.
+
+## Files and verification
+
+- Current trajectory: `trajectories/retimed_actual_4x.npz`, SHA-256 `23b555d6a4bf6df33fa4da4e5905a10f9fe375f6447784edd44079e412bdfcd1`.
+- [Per-axis checks](evidence/motor_limits/joint_limits.csv), [speed/angle results](evidence/motor_limits/report.json), [collision result](evidence/collision/gate.json), [coverage](evidence/collision/coverage.json), [complete path playback verification](evidence/isaac_playback.json).
+- Retiming lineage: [configs/retiming.json](configs/retiming.json); playback binding: [configs/trajectory.json](configs/trajectory.json). The source bag and old trajectory copies are not in the current runtime bundle.
+
+Install the analysis environment and download runtime assets as described in README, then run from the repository root; output must not already exist:
 
 ```bash
-.venv-analysis/bin/python scripts/check_motion_limits.py --out ../tron2-4x-checks
-.venv-analysis/bin/python scripts/122_audit_replay_motor_velocity.py --out ../tron2-4x-speeds
+.venv-analysis/bin/python scripts/audit_retimed_trajectory.py --out ../tron2-retimed-check
+python3 scripts/check_hardware_admission.py
+python3 -m unittest discover -s tests -v
 ```
 
-This file is the plain-language report. Machine-verifiable results: [motor checks](evidence/motor_checks/report.json), [per-axis angle/speed table](evidence/motor_checks/joint_limits.csv), [detailed speeds](evidence/final/motor_limit_audit/joint_speeds.csv), [collision result](evidence/final/audit/gate.json), [jitter metrics](evidence/final/temporal_quality.json).
+The first two commands currently return 2 for minor angle violations and missing physical-hardware admission evidence, respectively. Tests should pass. Do not interpret nonzero admission as success. `scripts/retime_recorded_trajectory.py --tracking /path/to/tracking.npz --out ../reproduced.npz` rebuilds the file from the hash-identical old recording, which remains an external source and is not distributed in the current runtime bundle.
 
-## Official sources
+## Official references
 
-- [Wuji control guide](https://docs.wuji.tech/docs/zh/wuji-hand/latest/control-guide/): joint units, current ceiling and SDK mapping boundaries; 1000 Hz is a communication/control frequency, not a mechanical speed limit.
-- [Wuji user notice](https://docs.wuji.tech/docs/zh/wuji-hand/latest/user-notice/): Beta load and thermal capability boundaries.
-- [TRON2 manual](https://www.limxdynamics.com/zh/documents/844648486841487360): endpoint performance in section 1.2, joint angles and numbering in section 1.5.
-- [TRON2 SDK guide](https://www.limxdynamics.com/zh/documents/847884267345285120): q in rad, dq in rad/s, tau as estimated N·m. Example control frequency is not a motor speed limit.
+- [Wuji control guide](https://docs.wuji.tech/docs/zh/wuji-hand/latest/control-guide/): angle/speed units, current in A and the 2.0 A control hard cap; SDK S1–S4 to model-actuator ordering is not yet provided.
+- [Wuji user notice](https://docs.wuji.tech/docs/zh/wuji-hand/latest/user-notice/): Beta load and thermal boundaries.
+- [TRON2 user manual](https://www.limxdynamics.com/zh/documents/844648486841487360), [TRON2 SDK guide](https://www.limxdynamics.com/zh/documents/847884267345285120): device performance, joint numbering and state units. Endpoint performance is not a per-axis motor limit.

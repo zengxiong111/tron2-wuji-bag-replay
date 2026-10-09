@@ -1,0 +1,15 @@
+{
+  "trajectory": "trajectories/retimed_actual_4x.npz",
+  "trajectory_sha256": "23b555d6a4bf6df33fa4da4e5905a10f9fe375f6447784edd44079e412bdfcd1",
+  "usd": "outputs/robot/robot_collision_fixed.usd",
+  "usd_sha256": "0526b9a8f358a0ae2b9e55ead21467282c619973fa6b36bc2b33175b7eefed84",
+  "interpolation": "piecewise linear in execution seconds",
+  "file_time_multiplier": 1,
+  "effective_bag_speed": 4,
+  "duration_s": 72.43750000002395,
+  "native_samples": 13909,
+  "native_hz": 192,
+  "mode": "recorded-path kinematic playback",
+  "physics_reexecuted": false,
+  "hardware_execution_authorized": false
+}

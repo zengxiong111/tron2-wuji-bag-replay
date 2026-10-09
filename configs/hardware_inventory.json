@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.0",
+  "status": "hardware_identity_unconfirmed",
+  "admission_ready": false,
+  "verified_on": "2026-10-09",
+  "scope": "offline evidence inventory for the bag-replay bundle; not a hardware connection or commissioning record",
+  "recorded_streams": [
+    {
+      "device_family": "TRON2 body",
+      "topic": "/motor/state",
+      "field": "q",
+      "channels": 16,
+      "channel_names_in_message": false,
+      "physical_device_identity": "unknown",
+      "hardware_revision": "unknown",
+      "firmware": "unknown",
+      "serial_number": "unknown"
+    },
+    {
+      "device_family": "Wuji Hand2",
+      "topic": "/wuji/hand/state",
+      "field": "hand_state.pos",
+      "channels": 40,
+      "source_joint_names": true,
+      "physical_device_identity": "unknown",
+      "hardware_revision": "unknown",
+      "firmware": "unknown",
+      "serial_number": "unknown"
+    }
+  ],
+  "confirmed_from_local_evidence": [
+    {
+      "item": "bag body stream has 16 position channels without names",
+      "source": "configs/bag_info.json",
+      "evidence": "body_names_declared=false; source /motor/state q"
+    },
+    {
+      "item": "bag hand stream has 40 named position channels; left_/right_ normalized to l_/r_",
+      "source": "configs/bag_info.json",
+      "evidence": "hand_mapping_status=source_declared_names; left_ -> l_, right_ -> r_"
+    },
+    {
+      "item": "model joint position and speed limits are model values",
+      "source": "evidence/motor_limits/joint_limits.csv",
+      "evidence": "per-axis model limits; not device ratings"
+    },
+    {
+      "item": "TRON2 manual numbering assigns head 14=pitch and 15=yaw",
+      "source": "https://www.limxdynamics.com/zh/documents/844648486841487360",
+      "evidence": "manual section 1.5 as summarized in REPORT.md; bag/model candidate head order is yaw,pitch"
+    },
+    {
+      "item": "All 44058 hand-state messages declare hand_type=wuji/hand2; nested headers label left/right",
+      "source": "configs/bag_info.json; verified source bag hash in bag_declared_identity",
+      "evidence": "HandState.hand_type; hand_state[0/1].header.frame_id; bag hash in bag_declared_identity"
+    }
+  ],
+  "unconfirmed_required_fields": [
+    "actual device family/variant and hardware revision",
+    "firmware version",
+    "serial number or asset ID",
+    "TRON2 q channel to physical joint mapping",
+    "Wuji named joints to SDK S1-S4/actuator mapping",
+    "per-axis position, speed, acceleration, current and torque limits applicable to installed device",
+    "operator/vendor confirmation record",
+    "per-axis SDK direction sign, zero offset and units",
+    "temperature and duty-cycle constraints applicable to installed device"
+  ],
+  "published_documented_values": {
+    "wuji_effort_unit": "A",
+    "wuji_effort_allowed_hard_ceiling_A": 2.0,
+    "status": "documented control ceiling; not default command and not per-joint rated current",
+    "tron2_q_unit": "rad",
+    "tron2_dq_unit": "rad/s",
+    "tron2_tau_unit": "estimated_Nm",
+    "tron2_endpoint_speed_m_s": 5.0,
+    "tron2_endpoint_acceleration_m_s2": 36.0,
+    "status_note": "endpoint performance values; not per-joint motor limits",
+    "status_note_control_frequency": "control/communication frequency; not mechanical speed limit",
+    "wuji_control_frequency_hz": 1000
+  },
+  "gate_requirements": [
+    "hardware_identity_confirmed",
+    "mapping_rows_confirmed_for_all_commanded_channels",
+    "hardware_limits_populated_from_revision_bound_source",
+    "limits_and_units_reviewed",
+    "trajectory_admission_recomputed_against_hardware_limits",
+    "operator_authorized commissioning and live checks"
+  ],
+  "source_files": [
+    "configs/bag_info.json",
+    "configs/joint_mapping.csv",
+    "configs/hardware_limits.csv",
+    "evidence/motor_checks/joint_limits.csv",
+    "REPORT.md"
+  ],
+  "official_sources": [
+    "https://docs.wuji.tech/docs/zh/wuji-hand/latest/control-guide/",
+    "https://docs.wuji.tech/docs/zh/wuji-hand/latest/sdk-reference/",
+    "https://docs.wuji.tech/docs/zh/wuji-hand/latest/user-notice/",
+    "https://www.limxdynamics.com/zh/documents/847884267345285120",
+    "https://www.limxdynamics.com/zh/documents/844648486841487360"
+  ],
+  "devices": [
+    {
+      "device_id": "tron2",
+      "family": "TRON2",
+      "model_variant": null,
+      "hardware_revision": null,
+      "firmware": null,
+      "serial_or_asset_id": null,
+      "identity_status": "unconfirmed",
+      "identity_evidence": null
+    },
+    {
+      "device_id": "wuji_left",
+      "family": "Wuji",
+      "model_variant": null,
+      "hardware_revision": null,
+      "firmware": null,
+      "serial_or_asset_id": null,
+      "identity_status": "unconfirmed",
+      "identity_evidence": null
+    },
+    {
+      "device_id": "wuji_right",
+      "family": "Wuji",
+      "model_variant": null,
+      "hardware_revision": null,
+      "firmware": null,
+      "serial_or_asset_id": null,
+      "identity_status": "unconfirmed",
+      "identity_evidence": null
+    }
+  ],
+  "bag_declared_identity": {
+    "bag_sha256": "2af6c090b36e26231aff0b2b102768c7224044cd260b8bc07486aa4167fe55bd",
+    "hand_type_values": [
+      "wuji/hand2"
+    ],
+    "hand_state_records_checked": 44058,
+    "hand_header_frame_ids": [
+      "both"
+    ],
+    "nested_hand_frame_ids": [
+      "left",
+      "right"
+    ],
+    "boundary": "Recorded message labels only; no Beta revision, firmware, serial or current physical-device identity confirmation"
+  }
+}

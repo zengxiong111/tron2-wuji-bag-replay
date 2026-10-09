@@ -1,0 +1,39 @@
+{
+  "source_tracking": "previous head-forward 5x recorded PhysX actual states; identified by SHA-256",
+  "source_tracking_sha256": "8634e73e49bbc0b769ea86c21ef918df92962da55e43305784c7005ffc6b505c",
+  "source_report_sha256": "c5a30f79e88e451648272130dfd88526e78ebfaa0462561be1a13c65506cd92f",
+  "output_sha256": "23b555d6a4bf6df33fa4da4e5905a10f9fe375f6447784edd44079e412bdfcd1",
+  "input_duration_s": 57.95000000001916,
+  "output_duration_s": 72.43750000002395,
+  "time_stretch": 1.25,
+  "old_motion_speed": 5,
+  "new_effective_motion_speed": 4,
+  "position_samples_bitwise_unchanged": true,
+  "samples": 13909,
+  "uniform_sample_rate_hz": 191.9999999999127,
+  "source_interval_s": [
+    0.0,
+    289.7500000000958
+  ],
+  "velocity_scale": 0.8,
+  "acceleration_scale": 0.64,
+  "jerk_scale": 0.512,
+  "physics_reexecuted": false,
+  "trajectory_kind": "retimed recorded actual PhysX joint states, not the old reference targets",
+  "playback_time_convention": "time is already execution seconds; replay at 1x, do not apply another 4x scaling",
+  "boundary": "Retiming preserves sampled geometry only. It is not a new physics replay, CCD proof or hardware admission.",
+  "inherited_discrete_collision_gate": {
+    "gate": {
+      "passed": true,
+      "threshold_mm": 0.1,
+      "maximum_depth_mm": 0.0,
+      "families": {},
+      "input_sha256": "8634e73e49bbc0b769ea86c21ef918df92962da55e43305784c7005ffc6b505c"
+    },
+    "source_gate_sha256": "d2a4ab7079e4e57d5e8a67afc106c755910f7d5de5fce21cbaacf48ddd2e8227",
+    "model_sha256": "0526b9a8f358a0ae2b9e55ead21467282c619973fa6b36bc2b33175b7eefed84",
+    "physical_base_to_table_m": 0.45,
+    "boundary": "Same positions and unchanged model/table: previous sampled 0.1mm gate inherited; no interpolation/CCD or new physical tracking claim"
+  },
+  "delivered_trajectory": "trajectories/retimed_actual_4x.npz"
+}

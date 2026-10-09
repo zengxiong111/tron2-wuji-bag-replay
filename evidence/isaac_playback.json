@@ -1,0 +1,22 @@
+{
+  "trajectory_sha256": "23b555d6a4bf6df33fa4da4e5905a10f9fe375f6447784edd44079e412bdfcd1",
+  "usd_sha256": "0526b9a8f358a0ae2b9e55ead21467282c619973fa6b36bc2b33175b7eefed84",
+  "producer_sha256": "65b53eddd95e0e9edae24fbe43f12583fd555b07b2326cb70309274cec4973ed",
+  "mode": "recorded-path kinematic playback",
+  "interpolation": "piecewise linear in execution seconds",
+  "file_time_multiplier": 1,
+  "effective_bag_speed": 4,
+  "physics_stepped": false,
+  "physical_base_to_table_m": 0.45,
+  "hardware_execution_authorized": false,
+  "status": "complete",
+  "frames": 2175,
+  "last_execution_time_s": 72.43750000002395,
+  "maximum_joint_readback_error_rad": 9.543091428199091e-08,
+  "rendered_link_matrix_max_delta": {
+    "wrist_roll_L_Link": 0.9772184379440809,
+    "wrist_roll_R_Link": 0.793438102406587,
+    "l_index_finger_distal": 1.8457166154964126,
+    "r_index_finger_distal": 1.7747835579576567
+  }
+}

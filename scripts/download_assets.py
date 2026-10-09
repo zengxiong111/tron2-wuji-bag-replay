@@ -41,7 +41,7 @@ with tempfile.TemporaryDirectory(prefix='tron2-download-') as temporary:
         archive = temporary/asset['name']
         for attempt in range(3):
             archive.unlink(missing_ok=True)
-            result = subprocess.run(['gh','release','download',manifest['tag'],'--repo',manifest['repository'],
+            result = subprocess.run(['gh','release','download',asset.get('tag',manifest['tag']),'--repo',manifest['repository'],
                                      '--pattern',asset['name'],'--dir',str(temporary)], capture_output=True, text=True)
             if result.returncode == 0:
                 break

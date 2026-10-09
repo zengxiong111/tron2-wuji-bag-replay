@@ -2,6 +2,7 @@ from pathlib import Path
 import xml.etree.ElementTree as ET
 import numpy as np
 import pinocchio as pin
+from assembly_policy import load_assembly_policy
 
 def joint_distance(model: pin.Model, first: int, second: int) -> int:
     """Undirected distance in the articulated joint tree, treating universe as root."""
@@ -15,13 +16,18 @@ def joint_distance(model: pin.Model, first: int, second: int) -> int:
     common = set(first_chain).intersection(second_chain)
     return min(i + second_chain.index(node) for i, node in enumerate(first_chain) if node in common) if common else len(first_chain) + len(second_chain)
 
-def build_pairs(model: pin.Model, geometry: pin.GeometryModel) -> tuple[dict[str, int], list[dict[str, object]]]:
+def build_pairs(model: pin.Model, geometry: pin.GeometryModel, assembly_policy=None) -> tuple[dict[str, int], list[dict[str, object]]]:
     """Create every non-structural pair and retain a reviewable exclusion record."""
     included = 0
     exclusions: list[dict[str, object]] = []
+    assembly_pairs = {frozenset(name + '_0' for name in pair) for pair in assembly_policy['link_pairs']} if assembly_policy else set()
     for first in range(geometry.ngeoms):
         for second in range(first + 1, geometry.ngeoms):
             a, b = geometry.geometryObjects[first], geometry.geometryObjects[second]
+            if frozenset((a.name, b.name)) in assembly_pairs:
+                exclusions.append({'first': a.name, 'second': b.name, 'reason': 'official_wuji_assembly_overlap',
+                                   'source_commit': assembly_policy['official_source_commit']})
+                continue
             if a.parentJoint == b.parentJoint:
                 exclusions.append({"first": a.name, "second": b.name, "reason": "same_rigid_joint"})
                 continue
