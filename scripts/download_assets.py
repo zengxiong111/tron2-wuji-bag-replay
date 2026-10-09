@@ -4,6 +4,7 @@ import json
 import subprocess
 import tarfile
 import tempfile
+import time
 from pathlib import Path
 
 root = Path(__file__).resolve().parents[1]
@@ -19,9 +20,31 @@ def digest(path):
 with tempfile.TemporaryDirectory(prefix='tron2-download-') as temporary:
     temporary = Path(temporary)
     for asset in manifest['assets']:
+        installed = True
+        for relative, expected in asset['files'].items():
+            target = root/relative
+            parent = target.parent
+            unsafe = target.is_symlink()
+            while parent != root:
+                unsafe = unsafe or parent.is_symlink()
+                parent = parent.parent
+            if unsafe or not target.is_file() or digest(target) != expected:
+                installed = False
+                break
+        if installed:
+            print('Already installed and verified:', asset['name'], flush=True)
+            continue
         archive = temporary/asset['name']
-        subprocess.run(['gh','release','download',manifest['tag'],'--repo',manifest['repository'],
-                        '--pattern',asset['name'],'--dir',str(temporary)], check=True)
+        for attempt in range(3):
+            archive.unlink(missing_ok=True)
+            result = subprocess.run(['gh','release','download',manifest['tag'],'--repo',manifest['repository'],
+                                     '--pattern',asset['name'],'--dir',str(temporary)], capture_output=True, text=True)
+            if result.returncode == 0:
+                break
+            if attempt == 2:
+                raise RuntimeError('Download failed after 3 attempts: '+asset['name']+'; check GitHub access and network, then rerun.')
+            print('Retrying download:', asset['name'], flush=True)
+            time.sleep(2*(attempt+1))
         if archive.stat().st_size != asset['size_bytes'] or digest(archive) != asset['sha256']:
             raise RuntimeError('Release asset checksum mismatch: '+asset['name'])
         staged = temporary/'unpack'
