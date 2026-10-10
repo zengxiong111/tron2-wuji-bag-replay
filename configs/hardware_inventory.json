@@ -47,7 +47,7 @@
     {
       "item": "TRON2 manual numbering assigns head 14=pitch and 15=yaw",
       "source": "https://www.limxdynamics.com/zh/documents/844648486841487360",
-      "evidence": "manual section 1.5 as summarized in REPORT.md; bag/model candidate head order is yaw,pitch"
+      "evidence": "manual section 1.5; bag/model candidate head order is yaw,pitch"
     },
     {
       "item": "All 44058 hand-state messages declare hand_type=wuji/hand2; nested headers label left/right",
@@ -91,8 +91,8 @@
     "configs/bag_info.json",
     "configs/joint_mapping.csv",
     "configs/hardware_limits.csv",
-    "evidence/motor_checks/joint_limits.csv",
-    "REPORT.md"
+    "evidence/motor_limits/joint_limits.csv",
+    "DEPLOYMENT.md"
   ],
   "official_sources": [
     "https://docs.wuji.tech/docs/zh/wuji-hand/latest/control-guide/",

@@ -11,3 +11,11 @@ __pycache__/
 *.tmp
 evidence/**/*.npz
 .venv-analysis/
+
+# Internal instructions and generated files are not part of delivery.
+AGENTS*.md
+lessons*.md
+CHANGELOG*
+.pytest_cache/
+.ruff_cache/
+*.bak
