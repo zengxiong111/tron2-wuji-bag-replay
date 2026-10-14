@@ -11,7 +11,7 @@
 
 ## 安装与下载
 
-依赖Git、已登录的GitHub CLI及Python3.12。播放/物理执行另需Isaac Sim5.1及兼容GPU。运行：
+依赖Git、已登录的GitHub CLI及Python3.12。播放/物理执行另需Isaac Sim5.1及兼容GPU。物理入口还要求同一个Isaac Python环境安装SciPy；若缺失，执行 `/path/to/isaac/python.sh -m pip install scipy`。运行：
 
 ```bash
 gh auth login

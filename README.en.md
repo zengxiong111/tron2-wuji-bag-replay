@@ -11,7 +11,7 @@ This branch restores the original repaired **5x** trajectory: **57.95 seconds**,
 
 ## Install and download
 
-Requires Git, authenticated GitHub CLI and Python3.12. Playback/physics requires Isaac Sim5.1 and a compatible GPU. Run:
+Requires Git, authenticated GitHub CLI and Python3.12. Playback/physics requires Isaac Sim5.1 and a compatible GPU. The physical entry also requires SciPy in the same Isaac Python environment; if missing, install it with `/path/to/isaac/python.sh -m pip install scipy`. Run:
 
 ```bash
 gh auth login
