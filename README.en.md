@@ -43,7 +43,7 @@ python3 scripts/replay.py --isaac-python /path/to/isaac/python.sh --physics
 
 This integrates physics at240Hz, sends continuous C2 position/velocity targets at5x action speed, enables table/self-collision and keeps solver32/8 and SDF512. After a single initialization, joints are controlled through drives. It creates a fresh diagnostic trace, which needs fresh validation; the included full-run reports apply to the original run. `--max-seconds 1` limits simulation time, starting from source zero. `--wall-speed` changes wall pacing only; computation may be slower than real time and never multiplies action speed again. Outputs go beside the checkout in `<checkout-name>-runs/`; no hardware I/O is included.
 
-[Full video:57.97seconds,30fps](media/head_forward_full_5x.mp4) · [Direct video download](https://github.com/zengxiong111/tron2-wuji-bag-replay/releases/download/5x-collision-smooth-20261014/head_forward_full_5x.mp4). The video renders the recorded5x PhysX states at fixed frame rate; it is not a1x recording sped up afterward. Raw bag duration289.797s, synchronized reference289.767s and frame rounding explain the small timing differences.
+[Full video:57.97seconds,30fps](https://github.com/zengxiong111/tron2-wuji-bag-replay/releases/download/5x-collision-smooth-20261014/head_forward_full_5x.mp4). After asset download, the local file is `media/head_forward_full_5x.mp4`. The video renders the recorded5x PhysX states at fixed frame rate; it is not a1x recording sped up afterward. Raw bag duration289.797s, synchronized reference289.767s and frame rounding explain the small timing differences.
 
 ## Files
 

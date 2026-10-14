@@ -43,7 +43,7 @@ python3 scripts/replay.py --isaac-python /path/to/isaac/python.sh --physics
 
 该模式以240Hz积分物理，按5倍动作速度发送连续C2位置/速度目标，启用桌面/自碰撞，保留32/8求解迭代及SDF512。仅初始化时设置关节状态，之后通过驱动器控制。它生成新的诊断记录，需要重新验证；已附整段报告属于原始物理运行。`--max-seconds 1` 限制仿真时间，从源起点开始。`--wall-speed` 只改变墙钟节奏，计算可能慢于实时，不会再次倍乘动作速度。输出保存在仓库旁的 `<checkout-name>-runs/`，不包含硬件I/O。
 
-[完整视频：57.97秒、30fps](media/head_forward_full_5x.mp4) · [直接下载视频](https://github.com/zengxiong111/tron2-wuji-bag-replay/releases/download/5x-collision-smooth-20261014/head_forward_full_5x.mp4)。视频按固定帧率渲染记录的5倍PhysX实际状态，不是1倍视频后期提速。原始bag289.797秒、共同参考289.767秒及视频帧取整解释了小幅时长差异。
+[完整视频：57.97秒、30fps](https://github.com/zengxiong111/tron2-wuji-bag-replay/releases/download/5x-collision-smooth-20261014/head_forward_full_5x.mp4)。下载资产后，本地文件为 `media/head_forward_full_5x.mp4`。视频按固定帧率渲染记录的5倍PhysX实际状态，不是1倍视频后期提速。原始bag289.797秒、共同参考289.767秒及视频帧取整解释了小幅时长差异。
 
 ## 文件
 
