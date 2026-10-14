@@ -1,10 +1,10 @@
 {
   "label": "checked",
-  "input_sha256": "20299f508b4c75594e353b6c6ac47b662caf1972e53b024c43d8c7e754032a9d",
+  "input_sha256": "168795f31f0eff8d0d38e84383bb97894be53354662f4faa67c2426b9603175c",
   "q_dataset": "q",
-  "samples": 45194,
+  "samples": 34741,
   "midpoints": false,
-  "source_duration_s": 72.43750000002395,
+  "source_duration_s": 48.29166666667813,
   "samples_with_mesh_intersection": 0,
   "mesh_intersection_events": 0,
   "strict_intersections": true,
@@ -14,6 +14,6 @@
   "families": {},
   "intersection_pairs_sorted": [],
   "pairs_sorted": [],
-  "elapsed_s": 89.92592185799731,
-  "checked_samples_sha256": "3cfb9dd36a742bc4e4754e9b5c5fc3525675396333984f7867a4116db4d9de4d"
+  "elapsed_s": 67.34156603494193,
+  "checked_samples_sha256": "d83d0a9a1ef7a5d4595a6688a1accf0127b69aa8a2f644dc03bd672a8ddc48d1"
 }

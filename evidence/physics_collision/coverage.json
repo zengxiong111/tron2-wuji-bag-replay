@@ -1,0 +1,928 @@
+{
+  "assembly_policy": null,
+  "assembly_policy_sha256": null,
+  "usd_sha256": "33747dc8b5bcf796ea104fc1cc9522298e60f260c92c6ed6cf51d859fa66c486",
+  "urdf_sha256": "684a9f18203bb2c8792cb701fd59bfe5e0b0c77ddc816367794e1b4ad4d960fb",
+  "robot_collision_geometry_count": 75,
+  "coverage": {
+    "urdf_link_count": 89,
+    "urdf_links_without_collision": [
+      "base_imu",
+      "d435_Link",
+      "d435_optical_frame",
+      "head_base_Link",
+      "l_index_finger_tip",
+      "l_middle_finger_tip",
+      "l_pinky_tip",
+      "l_ring_finger_tip",
+      "l_thumb_tip",
+      "r_index_finger_tip",
+      "r_middle_finger_tip",
+      "r_pinky_tip",
+      "r_ring_finger_tip",
+      "r_thumb_tip"
+    ],
+    "urdf_links_without_collision_count": 14,
+    "pinocchio_collision_geometry_count": 75
+  },
+  "pairs": {
+    "robot": {
+      "included_pairs": 2642,
+      "excluded_pairs": 133
+    },
+    "table": 75,
+    "total": 2717
+  },
+  "table_center_m": [
+    0.8,
+    0,
+    -0.475
+  ],
+  "table_size_m": [
+    1.2,
+    1.6,
+    0.05
+  ],
+  "physical_base_above_table_m": 0.45,
+  "contact_samples_per_pair": 16,
+  "raw_depth_sign_test": {
+    "overlap_m": 0.5,
+    "raw_penetration_depth_m": -0.5,
+    "positive_depth_formula": "max(0, -raw_penetration_depth_m)"
+  },
+  "usd_self_collision_enabled": [
+    false
+  ],
+  "usd_collider_meshes": [
+    {
+      "path": "/tron2_dach_wuji_hand2_beta2/l_adapter/adapter_geometry",
+      "enabled": true,
+      "approximation": "convexDecomposition"
+    },
+    {
+      "path": "/tron2_dach_wuji_hand2_beta2/r_adapter/adapter_geometry",
+      "enabled": true,
+      "approximation": "convexDecomposition"
+    }
+  ],
+  "exclusions": [
+    {
+      "first": "base_Link_0",
+      "second": "base_2_Link_0",
+      "reason": "same_rigid_joint"
+    },
+    {
+      "first": "base_Link_0",
+      "second": "base_3_Link_0",
+      "reason": "same_rigid_joint"
+    },
+    {
+      "first": "base_Link_0",
+      "second": "head_yaw_Link_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "base_Link_0",
+      "second": "proximal_pitch_L_Link_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "base_Link_0",
+      "second": "proximal_pitch_R_Link_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "base_2_Link_0",
+      "second": "base_3_Link_0",
+      "reason": "same_rigid_joint"
+    },
+    {
+      "first": "base_2_Link_0",
+      "second": "head_yaw_Link_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "base_2_Link_0",
+      "second": "proximal_pitch_L_Link_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "base_2_Link_0",
+      "second": "proximal_pitch_R_Link_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "base_3_Link_0",
+      "second": "head_yaw_Link_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "base_3_Link_0",
+      "second": "proximal_pitch_L_Link_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "base_3_Link_0",
+      "second": "proximal_pitch_R_Link_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "head_yaw_Link_0",
+      "second": "head_pitch_Link_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "proximal_pitch_L_Link_0",
+      "second": "proximal_roll_L_Link_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "proximal_roll_L_Link_0",
+      "second": "proximal_yaw_L_Link_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "proximal_yaw_L_Link_0",
+      "second": "elbow_L_Link_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "elbow_L_Link_0",
+      "second": "wrist_yaw_L_Link_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "wrist_yaw_L_Link_0",
+      "second": "wrist_pitch_L_Link_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "wrist_pitch_L_Link_0",
+      "second": "wrist_roll_L_Link_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "wrist_pitch_L_Link_0",
+      "second": "l_adapter_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "wrist_pitch_L_Link_0",
+      "second": "l_mount_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "wrist_pitch_L_Link_0",
+      "second": "l_wrist_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "wrist_roll_L_Link_0",
+      "second": "l_adapter_0",
+      "reason": "same_rigid_joint"
+    },
+    {
+      "first": "wrist_roll_L_Link_0",
+      "second": "l_mount_0",
+      "reason": "same_rigid_joint"
+    },
+    {
+      "first": "wrist_roll_L_Link_0",
+      "second": "l_wrist_0",
+      "reason": "same_rigid_joint"
+    },
+    {
+      "first": "wrist_roll_L_Link_0",
+      "second": "l_index_finger_proximal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "wrist_roll_L_Link_0",
+      "second": "l_middle_finger_proximal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "wrist_roll_L_Link_0",
+      "second": "l_pinky_proximal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "wrist_roll_L_Link_0",
+      "second": "l_ring_finger_proximal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "wrist_roll_L_Link_0",
+      "second": "l_thumb_proximal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "l_adapter_0",
+      "second": "l_mount_0",
+      "reason": "same_rigid_joint"
+    },
+    {
+      "first": "l_adapter_0",
+      "second": "l_wrist_0",
+      "reason": "same_rigid_joint"
+    },
+    {
+      "first": "l_adapter_0",
+      "second": "l_index_finger_proximal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "l_adapter_0",
+      "second": "l_middle_finger_proximal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "l_adapter_0",
+      "second": "l_pinky_proximal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "l_adapter_0",
+      "second": "l_ring_finger_proximal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "l_adapter_0",
+      "second": "l_thumb_proximal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "l_mount_0",
+      "second": "l_wrist_0",
+      "reason": "same_rigid_joint"
+    },
+    {
+      "first": "l_mount_0",
+      "second": "l_index_finger_proximal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "l_mount_0",
+      "second": "l_middle_finger_proximal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "l_mount_0",
+      "second": "l_pinky_proximal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "l_mount_0",
+      "second": "l_ring_finger_proximal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "l_mount_0",
+      "second": "l_thumb_proximal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "l_wrist_0",
+      "second": "l_index_finger_proximal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "l_wrist_0",
+      "second": "l_middle_finger_proximal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "l_wrist_0",
+      "second": "l_pinky_proximal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "l_wrist_0",
+      "second": "l_ring_finger_proximal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "l_wrist_0",
+      "second": "l_thumb_proximal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "l_index_finger_proximal_0",
+      "second": "l_index_finger_proximal_abd_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "l_index_finger_proximal_abd_0",
+      "second": "l_index_finger_middle_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "l_index_finger_middle_0",
+      "second": "l_index_finger_distal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "l_index_finger_middle_0",
+      "second": "l_index_finger_tip_sensor_frame_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "l_index_finger_distal_0",
+      "second": "l_index_finger_tip_sensor_frame_0",
+      "reason": "same_rigid_joint"
+    },
+    {
+      "first": "l_middle_finger_proximal_0",
+      "second": "l_middle_finger_proximal_abd_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "l_middle_finger_proximal_abd_0",
+      "second": "l_middle_finger_middle_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "l_middle_finger_middle_0",
+      "second": "l_middle_finger_distal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "l_middle_finger_middle_0",
+      "second": "l_middle_finger_tip_sensor_frame_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "l_middle_finger_distal_0",
+      "second": "l_middle_finger_tip_sensor_frame_0",
+      "reason": "same_rigid_joint"
+    },
+    {
+      "first": "l_pinky_proximal_0",
+      "second": "l_pinky_proximal_abd_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "l_pinky_proximal_abd_0",
+      "second": "l_pinky_middle_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "l_pinky_middle_0",
+      "second": "l_pinky_distal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "l_pinky_middle_0",
+      "second": "l_pinky_tip_sensor_frame_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "l_pinky_distal_0",
+      "second": "l_pinky_tip_sensor_frame_0",
+      "reason": "same_rigid_joint"
+    },
+    {
+      "first": "l_ring_finger_proximal_0",
+      "second": "l_ring_finger_proximal_abd_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "l_ring_finger_proximal_abd_0",
+      "second": "l_ring_finger_middle_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "l_ring_finger_middle_0",
+      "second": "l_ring_finger_distal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "l_ring_finger_middle_0",
+      "second": "l_ring_finger_tip_sensor_frame_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "l_ring_finger_distal_0",
+      "second": "l_ring_finger_tip_sensor_frame_0",
+      "reason": "same_rigid_joint"
+    },
+    {
+      "first": "l_thumb_proximal_0",
+      "second": "l_thumb_proximal_abd_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "l_thumb_proximal_abd_0",
+      "second": "l_thumb_middle_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "l_thumb_middle_0",
+      "second": "l_thumb_distal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "l_thumb_middle_0",
+      "second": "l_thumb_tip_sensor_frame_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "l_thumb_distal_0",
+      "second": "l_thumb_tip_sensor_frame_0",
+      "reason": "same_rigid_joint"
+    },
+    {
+      "first": "proximal_pitch_R_Link_0",
+      "second": "proximal_roll_R_Link_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "proximal_roll_R_Link_0",
+      "second": "proximal_yaw_R_Link_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "proximal_yaw_R_Link_0",
+      "second": "elbow_R_Link_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "elbow_R_Link_0",
+      "second": "wrist_yaw_R_Link_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "wrist_yaw_R_Link_0",
+      "second": "wrist_pitch_R_Link_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "wrist_pitch_R_Link_0",
+      "second": "wrist_roll_R_Link_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "wrist_pitch_R_Link_0",
+      "second": "r_adapter_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "wrist_pitch_R_Link_0",
+      "second": "r_mount_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "wrist_pitch_R_Link_0",
+      "second": "r_wrist_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "wrist_roll_R_Link_0",
+      "second": "r_adapter_0",
+      "reason": "same_rigid_joint"
+    },
+    {
+      "first": "wrist_roll_R_Link_0",
+      "second": "r_mount_0",
+      "reason": "same_rigid_joint"
+    },
+    {
+      "first": "wrist_roll_R_Link_0",
+      "second": "r_wrist_0",
+      "reason": "same_rigid_joint"
+    },
+    {
+      "first": "wrist_roll_R_Link_0",
+      "second": "r_index_finger_proximal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "wrist_roll_R_Link_0",
+      "second": "r_middle_finger_proximal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "wrist_roll_R_Link_0",
+      "second": "r_pinky_proximal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "wrist_roll_R_Link_0",
+      "second": "r_ring_finger_proximal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "wrist_roll_R_Link_0",
+      "second": "r_thumb_proximal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "r_adapter_0",
+      "second": "r_mount_0",
+      "reason": "same_rigid_joint"
+    },
+    {
+      "first": "r_adapter_0",
+      "second": "r_wrist_0",
+      "reason": "same_rigid_joint"
+    },
+    {
+      "first": "r_adapter_0",
+      "second": "r_index_finger_proximal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "r_adapter_0",
+      "second": "r_middle_finger_proximal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "r_adapter_0",
+      "second": "r_pinky_proximal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "r_adapter_0",
+      "second": "r_ring_finger_proximal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "r_adapter_0",
+      "second": "r_thumb_proximal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "r_mount_0",
+      "second": "r_wrist_0",
+      "reason": "same_rigid_joint"
+    },
+    {
+      "first": "r_mount_0",
+      "second": "r_index_finger_proximal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "r_mount_0",
+      "second": "r_middle_finger_proximal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "r_mount_0",
+      "second": "r_pinky_proximal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "r_mount_0",
+      "second": "r_ring_finger_proximal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "r_mount_0",
+      "second": "r_thumb_proximal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "r_wrist_0",
+      "second": "r_index_finger_proximal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "r_wrist_0",
+      "second": "r_middle_finger_proximal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "r_wrist_0",
+      "second": "r_pinky_proximal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "r_wrist_0",
+      "second": "r_ring_finger_proximal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "r_wrist_0",
+      "second": "r_thumb_proximal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "r_index_finger_proximal_0",
+      "second": "r_index_finger_proximal_abd_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "r_index_finger_proximal_abd_0",
+      "second": "r_index_finger_middle_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "r_index_finger_middle_0",
+      "second": "r_index_finger_distal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "r_index_finger_middle_0",
+      "second": "r_index_finger_tip_sensor_frame_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "r_index_finger_distal_0",
+      "second": "r_index_finger_tip_sensor_frame_0",
+      "reason": "same_rigid_joint"
+    },
+    {
+      "first": "r_middle_finger_proximal_0",
+      "second": "r_middle_finger_proximal_abd_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "r_middle_finger_proximal_abd_0",
+      "second": "r_middle_finger_middle_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "r_middle_finger_middle_0",
+      "second": "r_middle_finger_distal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "r_middle_finger_middle_0",
+      "second": "r_middle_finger_tip_sensor_frame_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "r_middle_finger_distal_0",
+      "second": "r_middle_finger_tip_sensor_frame_0",
+      "reason": "same_rigid_joint"
+    },
+    {
+      "first": "r_pinky_proximal_0",
+      "second": "r_pinky_proximal_abd_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "r_pinky_proximal_abd_0",
+      "second": "r_pinky_middle_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "r_pinky_middle_0",
+      "second": "r_pinky_distal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "r_pinky_middle_0",
+      "second": "r_pinky_tip_sensor_frame_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "r_pinky_distal_0",
+      "second": "r_pinky_tip_sensor_frame_0",
+      "reason": "same_rigid_joint"
+    },
+    {
+      "first": "r_ring_finger_proximal_0",
+      "second": "r_ring_finger_proximal_abd_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "r_ring_finger_proximal_abd_0",
+      "second": "r_ring_finger_middle_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "r_ring_finger_middle_0",
+      "second": "r_ring_finger_distal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "r_ring_finger_middle_0",
+      "second": "r_ring_finger_tip_sensor_frame_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "r_ring_finger_distal_0",
+      "second": "r_ring_finger_tip_sensor_frame_0",
+      "reason": "same_rigid_joint"
+    },
+    {
+      "first": "r_thumb_proximal_0",
+      "second": "r_thumb_proximal_abd_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "r_thumb_proximal_abd_0",
+      "second": "r_thumb_middle_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "r_thumb_middle_0",
+      "second": "r_thumb_distal_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "r_thumb_middle_0",
+      "second": "r_thumb_tip_sensor_frame_0",
+      "reason": "direct_parent_child_joint",
+      "joint_tree_distance": 1
+    },
+    {
+      "first": "r_thumb_distal_0",
+      "second": "r_thumb_tip_sensor_frame_0",
+      "reason": "same_rigid_joint"
+    }
+  ],
+  "boundary": "Discrete triangle-mesh intersection/contact-feature depth. Not exact solid clearance, PhysX convex collider equivalence, CCD or collision response. Adjacent joints and same-rigid meshes excluded; adapter seating assessed separately.",
+  "usd_parser_shapes": {
+    "CubeShape": [
+      "/tron2_dach_wuji_hand2_beta2/base_2_Link/collisions/mesh_0/box"
+    ],
+    "MeshShape": [
+      "/tron2_dach_wuji_hand2_beta2/l_adapter/adapter_geometry",
+      "/tron2_dach_wuji_hand2_beta2/r_adapter/adapter_geometry"
+    ]
+  },
+  "usd_collision_api_non_gprim": [
+    "/tron2_dach_wuji_hand2_beta2/base_Link/collisions/base_Link/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/base_3_Link/collisions/base_3_Link/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/head_yaw_Link/collisions/head_yaw_Link/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/head_pitch_Link/collisions/head_pitch_Link/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/proximal_pitch_L_Link/collisions/proximal_pitch_L_Link/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/proximal_roll_L_Link/collisions/proximal_roll_L_Link/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/proximal_yaw_L_Link/collisions/proximal_yaw_L_Link_collision/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/elbow_L_Link/collisions/elbow_L_Link/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/wrist_yaw_L_Link/collisions/wrist_yaw_L_Link/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/wrist_pitch_L_Link/collisions/wrist_pitch_L_Link/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/wrist_roll_L_Link/collisions/wrist_roll_L_Link_collision/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/l_mount/collisions/l_mount/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/l_wrist/collisions/l_wrist/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/l_index_finger_proximal/collisions/l_index_finger_proximal/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/l_index_finger_proximal_abd/collisions/l_index_finger_proximal_abd/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/l_index_finger_middle/collisions/l_index_finger_middle/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/l_index_finger_distal/collisions/l_index_finger_distal/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/l_index_finger_tip_sensor_frame/collisions/l_index_finger_tip_sensor_frame/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/l_middle_finger_proximal/collisions/l_middle_finger_proximal/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/l_middle_finger_proximal_abd/collisions/l_middle_finger_proximal_abd/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/l_middle_finger_middle/collisions/l_middle_finger_middle/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/l_middle_finger_distal/collisions/l_middle_finger_distal/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/l_middle_finger_tip_sensor_frame/collisions/l_middle_finger_tip_sensor_frame/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/l_pinky_proximal/collisions/l_pinky_proximal/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/l_pinky_proximal_abd/collisions/l_pinky_proximal_abd/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/l_pinky_middle/collisions/l_pinky_middle/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/l_pinky_distal/collisions/l_pinky_distal/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/l_pinky_tip_sensor_frame/collisions/l_pinky_tip_sensor_frame/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/l_ring_finger_proximal/collisions/l_ring_finger_proximal/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/l_ring_finger_proximal_abd/collisions/l_ring_finger_proximal_abd/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/l_ring_finger_middle/collisions/l_ring_finger_middle/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/l_ring_finger_distal/collisions/l_ring_finger_distal/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/l_ring_finger_tip_sensor_frame/collisions/l_ring_finger_tip_sensor_frame/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/l_thumb_proximal/collisions/l_thumb_proximal/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/l_thumb_proximal_abd/collisions/l_thumb_proximal_abd/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/l_thumb_middle/collisions/l_thumb_middle/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/l_thumb_distal/collisions/l_thumb_distal/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/l_thumb_tip_sensor_frame/collisions/l_thumb_tip_sensor_frame/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/proximal_pitch_R_Link/collisions/proximal_pitch_R_Link/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/proximal_roll_R_Link/collisions/proximal_roll_R_Link/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/proximal_yaw_R_Link/collisions/proximal_yaw_R_Link_collision/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/elbow_R_Link/collisions/elbow_R_Link/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/wrist_yaw_R_Link/collisions/wrist_yaw_R_Link/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/wrist_pitch_R_Link/collisions/wrist_pitch_R_Link/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/wrist_roll_R_Link/collisions/wrist_roll_R_Link_collision/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/r_mount/collisions/r_mount/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/r_wrist/collisions/r_wrist/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/r_index_finger_proximal/collisions/r_index_finger_proximal/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/r_index_finger_proximal_abd/collisions/r_index_finger_proximal_abd/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/r_index_finger_middle/collisions/r_index_finger_middle/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/r_index_finger_distal/collisions/r_index_finger_distal/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/r_index_finger_tip_sensor_frame/collisions/r_index_finger_tip_sensor_frame/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/r_middle_finger_proximal/collisions/r_middle_finger_proximal/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/r_middle_finger_proximal_abd/collisions/r_middle_finger_proximal_abd/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/r_middle_finger_middle/collisions/r_middle_finger_middle/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/r_middle_finger_distal/collisions/r_middle_finger_distal/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/r_middle_finger_tip_sensor_frame/collisions/r_middle_finger_tip_sensor_frame/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/r_pinky_proximal/collisions/r_pinky_proximal/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/r_pinky_proximal_abd/collisions/r_pinky_proximal_abd/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/r_pinky_middle/collisions/r_pinky_middle/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/r_pinky_distal/collisions/r_pinky_distal/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/r_pinky_tip_sensor_frame/collisions/r_pinky_tip_sensor_frame/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/r_ring_finger_proximal/collisions/r_ring_finger_proximal/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/r_ring_finger_proximal_abd/collisions/r_ring_finger_proximal_abd/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/r_ring_finger_middle/collisions/r_ring_finger_middle/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/r_ring_finger_distal/collisions/r_ring_finger_distal/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/r_ring_finger_tip_sensor_frame/collisions/r_ring_finger_tip_sensor_frame/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/r_thumb_proximal/collisions/r_thumb_proximal/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/r_thumb_proximal_abd/collisions/r_thumb_proximal_abd/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/r_thumb_middle/collisions/r_thumb_middle/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/r_thumb_distal/collisions/r_thumb_distal/node_STL_BINARY_",
+    "/tron2_dach_wuji_hand2_beta2/r_thumb_tip_sensor_frame/collisions/r_thumb_tip_sensor_frame/node_STL_BINARY_"
+  ],
+  "usd_parser_boundary": "OpenUSD core physics parser; separate from a PhysX runtime contact test. The original Xform CollisionAPI declarations are unrecognized shape types."
+}

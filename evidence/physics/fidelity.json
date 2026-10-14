@@ -1,0 +1,36 @@
+{
+  "physical_trace_sha256": "7078b8dda74e1384efba22b2575f4067cd43b6ffee75341d88e6956b6d6db45c",
+  "before_trace_sha256": "8634e73e49bbc0b769ea86c21ef918df92962da55e43305784c7005ffc6b505c",
+  "export_sha256": "460463385a43a8df54604d84b01ea389b60b56152366f32487a3e846410894fc",
+  "producer_sha256": "b979b1d2efb003b94be962ddc1e7c83a46e8d4a54c72074ddb6e12913bbd51a1",
+  "motion_speed": 6,
+  "states": 11591,
+  "physics_hz": 240,
+  "execution_last_knot_s": 48.29166666667813,
+  "simulation_duration_s": 48.2958333333448,
+  "source_interval_s": [
+    0.0,
+    289.76666666666665
+  ],
+  "joint_delta_rms_rad": 0.048654488702169194,
+  "joint_delta_max_rad": 0.8014848053517709,
+  "fingertip_position_delta_mean_mm": 21.266837477117097,
+  "fingertip_position_delta_p95_mm": 34.81439605108057,
+  "nearest_opposite_hand_tip_spacing_before_min_mm": 6.466968175930319,
+  "nearest_opposite_hand_tip_spacing_after_min_mm": 27.41586192577385,
+  "tip_spacing_delta_mean_mm": 24.54781696328435,
+  "tip_spacing_delta_abs_p95_mm": 53.16559468454224,
+  "worst_spacing_change": {
+    "source_time_s": 92.29999999999669,
+    "delta_mm": 95.6224620145468
+  },
+  "physx_contact_pairs": 62,
+  "physx_min_contact_separation_m": 5.417162174126133e-05,
+  "physx_negative_separation_pairs": 0,
+  "head_max_abs_deg": {
+    "head_yaw_Joint": 1.8690755837558177e-05,
+    "head_pitch_Joint": 0.02924267786398937
+  },
+  "physical_base_to_table_m": 0.45,
+  "boundary": "Source-aligned physical states, fingertip frame distances rather than surface contact or force preservation. Export time is already execution seconds; use 1x file playback. Fresh physics uses reference.npz instead."
+}

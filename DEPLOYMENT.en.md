@@ -10,7 +10,7 @@ This repository provides Isaac Sim playback. **It includes no hardware controlle
 
 ## Offline checks
 
-Download assets using [README.en.md](README.en.md), then run from the repository root:
+Download 6x assets using [README.en.md](README.en.md). The actual path lasts approximately 48.30 seconds and plays at 1x file time; this branch retains the physics configuration with 98% model velocity caps. Run from the repository root:
 
 ```bash
 python3 scripts/verify_bundle.py
@@ -21,7 +21,7 @@ python3 scripts/check_hardware_admission.py
 ../tron2-analysis-env/bin/python -m unittest discover -s tests -v
 ```
 
-`../tron2-limits-check` must be a new directory outside the repository. The angle check currently returns `2` (3 axes have minor overshoot); hardware admission also returns `2` (incomplete information). Integrity verification and unit tests should pass. Hardware admission checks offline information without connecting to devices.
+`../tron2-limits-check` must be a new directory outside the repository. Model position and velocity checks for this branch's 6x trajectory should return `0`; hardware admission still returns `2` (incomplete information). Integrity verification and unit tests should pass. Hardware admission checks offline information without connecting to devices.
 
 To recompute the complete discrete collision check, use the same environment and the command below. It takes longer and writes results to a new external directory:
 
@@ -44,7 +44,7 @@ The source bag has 16 unnamed body-state channels. Their order remains unconfirm
 ## Deployment sequence
 
 1. **Confirm devices and mappings.** Verify the information above and resolve body-channel order and hand-actuator assignments.
-2. **Prepare an executable trajectory.** Fix angle overshoot, add smooth starts/stops and acceleration/jerk limits, then resample at the actual control period. The file's 192 Hz sample rate does not define hardware control frequency. Recheck limits, collisions and physical tracking; update trajectory and report hashes.
+2. **Prepare an executable trajectory.** Retain the current model position/speed passes, add smooth starts/stops and hardware acceleration/jerk bounds, then resample at the actual control period. The file's 240 Hz sample rate does not define hardware control frequency. Recheck limits, collisions and physical tracking; update trajectory and report hashes.
 3. **Check the site and initial pose.** Keep the tabletop-to-physical-base gap at 0.45 m; do not change mounting height to eliminate collisions. Check adapters, cables, loads, obstacles, the first-frame transition and braking space.
 4. **Implement a hardware controller.** Use the confirmed SDK with per-axis limits, feedback timeouts, tracking-error monitoring, fault stops and emergency stops. Verify read-only feedback and fault handling first. Parameters and gains must be confirmed against the physical devices.
 5. **Commission in stages.** After device-owner approval, check individual axes, hands, arms, slow segments and the full trajectory, then validate the target motion speed. Record actual states, current/torque, temperatures, fault codes and timestamps outside the repository.

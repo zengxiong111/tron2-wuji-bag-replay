@@ -1,0 +1,27 @@
+{
+  "base_main_commit": "2e5c7840c0f8f3ac08d240446f6d776eca0b76d7",
+  "original_bag_sha256": "2af6c090b36e26231aff0b2b102768c7224044cd260b8bc07486aa4167fe55bd",
+  "parent_5x_reference_sha256": "9e3bc9fb38dcca4ccb75a55bc8135303ef7b34ef3210d0298e6491e4c1df2ce7",
+  "source_tracking_sha256": "7078b8dda74e1384efba22b2575f4067cd43b6ffee75341d88e6956b6d6db45c",
+  "source_report_sha256": "9324f89b1460c4014ac1f15314c3d5f3810a7818e9b30b1b393c2a168f75a8bd",
+  "reference_sha256": "11827052a2664e7e4fcb68303ac013c507d052bbbf0170ac8d89fe5ada1225e8",
+  "published_actual_sha256": "460463385a43a8df54604d84b01ea389b60b56152366f32487a3e846410894fc",
+  "actual_positions_array_sha256": "d15ef14f08e14491771194d0132cd98af38ba85d14c0de601f0ce7423e0a322e",
+  "source_time_array_sha256": "2c1e59d33beda3b978fb5fbb1a8193e78435840746f4947499f2c5b9f1498f86",
+  "physics_motion_speed": 6,
+  "source_interval_s": [
+    0,
+    289.76666666666665
+  ],
+  "simulation_duration_s": 48.2958333333448,
+  "last_recorded_knot_s": 48.29166666667813,
+  "position_samples_bitwise_unchanged": true,
+  "physics_reexecuted_during_publication": false,
+  "physical_base_to_table_m": 0.45,
+  "head_target_rad": [
+    0,
+    0
+  ],
+  "repair_pipeline": "5x reference -> 0.6 Hz source smoothing -> wrist clearance -> 6x contact-constrained physical projection -> dense linear reference -> up to25 mm additional clearance per wrist -> full6x PhysX with98% velocity caps",
+  "source_producer_sha256": "5d02661bc9627e2bd6d19b47fcc4fe25206fdcd243664eee104dbaf01f012339"
+}

@@ -1,0 +1,19 @@
+{
+  "label": "checked",
+  "input_sha256": "11827052a2664e7e4fcb68303ac013c507d052bbbf0170ac8d89fe5ada1225e8",
+  "q_dataset": "q",
+  "samples": 23183,
+  "midpoints": true,
+  "source_duration_s": 289.76666666666665,
+  "samples_with_mesh_intersection": 0,
+  "mesh_intersection_events": 0,
+  "strict_intersections": true,
+  "samples_with_penetration_over_0_1mm": 0,
+  "samples_with_penetration_over_1mm": 0,
+  "maximum_depth_mm": 0.0,
+  "families": {},
+  "intersection_pairs_sorted": [],
+  "pairs_sorted": [],
+  "elapsed_s": 46.31596359994728,
+  "checked_samples_sha256": "5a6d67747dfb83bdebcdbfe3ee028f91614c1867aa8f58b7384fcc778f683171"
+}

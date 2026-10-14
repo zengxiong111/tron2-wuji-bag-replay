@@ -1,0 +1,881 @@
+{
+  "mode": "PhysX position/velocity targets after single initialization",
+  "target_interpolation": "piecewise linear",
+  "producer_sha256": "5d02661bc9627e2bd6d19b47fcc4fe25206fdcd243664eee104dbaf01f012339",
+  "usd_sha256": "0526b9a8f358a0ae2b9e55ead21467282c619973fa6b36bc2b33175b7eefed84",
+  "usd": "outputs/robot/robot_collision_fixed.usd",
+  "reference_sha256": "11827052a2664e7e4fcb68303ac013c507d052bbbf0170ac8d89fe5ada1225e8",
+  "reference": "trajectories/repaired_source.npz",
+  "start_source_seconds": 0,
+  "solver_iterations": [
+    32,
+    8
+  ],
+  "contact_offset_m": 0.001,
+  "rest_offset_m": 0.0002,
+  "body_mapping_status": "candidate_unconfirmed",
+  "hand_mapping_status": "source_declared_names; left_ -> l_, right_ -> r_",
+  "physics_hz": 240,
+  "wall_speed_requested": 10.0,
+  "motion_speed": 6.0,
+  "gravity_m_s2": [
+    0,
+    0,
+    -9.81
+  ],
+  "self_collision_enabled": [
+    true
+  ],
+  "table_collision_enabled": true,
+  "physical_base_to_table_m": 0.45,
+  "runtime_gain_kp_rad": [
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125,
+    35809.86328125
+  ],
+  "runtime_gain_kd_rad": [
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625,
+    2864.7890625
+  ],
+  "runtime_drive_settings": {
+    "head_yaw_Joint": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 20.0,
+      "drive_type": "acceleration"
+    },
+    "head_pitch_Joint": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 20.0,
+      "drive_type": "acceleration"
+    },
+    "proximal_pitch_L_Joint": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 150.0,
+      "drive_type": "acceleration"
+    },
+    "proximal_roll_L_Joint": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 150.0,
+      "drive_type": "acceleration"
+    },
+    "proximal_yaw_L_Joint": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 60.0,
+      "drive_type": "acceleration"
+    },
+    "elbow_L_Joint": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 70.0,
+      "drive_type": "acceleration"
+    },
+    "wrist_yaw_L_Joint": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 20.0,
+      "drive_type": "acceleration"
+    },
+    "wrist_pitch_L_Joint": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 20.0,
+      "drive_type": "acceleration"
+    },
+    "wrist_roll_L_Joint": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 20.0,
+      "drive_type": "acceleration"
+    },
+    "l_index_finger_mcp_flex": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 2.0,
+      "drive_type": "acceleration"
+    },
+    "l_index_finger_mcp_abd": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 0.20000000298023224,
+      "drive_type": "acceleration"
+    },
+    "l_index_finger_pip": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 0.30000001192092896,
+      "drive_type": "acceleration"
+    },
+    "l_index_finger_dip": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 0.30000001192092896,
+      "drive_type": "acceleration"
+    },
+    "l_middle_finger_mcp_flex": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 2.0,
+      "drive_type": "acceleration"
+    },
+    "l_middle_finger_mcp_abd": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 0.20000000298023224,
+      "drive_type": "acceleration"
+    },
+    "l_middle_finger_pip": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 0.30000001192092896,
+      "drive_type": "acceleration"
+    },
+    "l_middle_finger_dip": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 0.30000001192092896,
+      "drive_type": "acceleration"
+    },
+    "l_pinky_mcp_flex": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 2.0,
+      "drive_type": "acceleration"
+    },
+    "l_pinky_mcp_abd": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 0.20000000298023224,
+      "drive_type": "acceleration"
+    },
+    "l_pinky_pip": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 0.30000001192092896,
+      "drive_type": "acceleration"
+    },
+    "l_pinky_dip": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 0.30000001192092896,
+      "drive_type": "acceleration"
+    },
+    "l_ring_finger_mcp_flex": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 2.0,
+      "drive_type": "acceleration"
+    },
+    "l_ring_finger_mcp_abd": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 0.20000000298023224,
+      "drive_type": "acceleration"
+    },
+    "l_ring_finger_pip": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 0.30000001192092896,
+      "drive_type": "acceleration"
+    },
+    "l_ring_finger_dip": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 0.30000001192092896,
+      "drive_type": "acceleration"
+    },
+    "l_thumb_cmc_flex": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 0.6000000238418579,
+      "drive_type": "acceleration"
+    },
+    "l_thumb_cmc_abd": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 0.6000000238418579,
+      "drive_type": "acceleration"
+    },
+    "l_thumb_mcp": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 0.30000001192092896,
+      "drive_type": "acceleration"
+    },
+    "l_thumb_ip": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 0.30000001192092896,
+      "drive_type": "acceleration"
+    },
+    "proximal_pitch_R_Joint": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 150.0,
+      "drive_type": "acceleration"
+    },
+    "proximal_roll_R_Joint": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 150.0,
+      "drive_type": "acceleration"
+    },
+    "proximal_yaw_R_Joint": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 60.0,
+      "drive_type": "acceleration"
+    },
+    "elbow_R_Joint": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 70.0,
+      "drive_type": "acceleration"
+    },
+    "wrist_yaw_R_Joint": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 20.0,
+      "drive_type": "acceleration"
+    },
+    "wrist_pitch_R_Joint": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 20.0,
+      "drive_type": "acceleration"
+    },
+    "wrist_roll_R_Joint": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 20.0,
+      "drive_type": "acceleration"
+    },
+    "r_index_finger_mcp_flex": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 2.0,
+      "drive_type": "acceleration"
+    },
+    "r_index_finger_mcp_abd": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 0.20000000298023224,
+      "drive_type": "acceleration"
+    },
+    "r_index_finger_pip": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 0.30000001192092896,
+      "drive_type": "acceleration"
+    },
+    "r_index_finger_dip": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 0.30000001192092896,
+      "drive_type": "acceleration"
+    },
+    "r_middle_finger_mcp_flex": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 2.0,
+      "drive_type": "acceleration"
+    },
+    "r_middle_finger_mcp_abd": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 0.20000000298023224,
+      "drive_type": "acceleration"
+    },
+    "r_middle_finger_pip": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 0.30000001192092896,
+      "drive_type": "acceleration"
+    },
+    "r_middle_finger_dip": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 0.30000001192092896,
+      "drive_type": "acceleration"
+    },
+    "r_pinky_mcp_flex": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 2.0,
+      "drive_type": "acceleration"
+    },
+    "r_pinky_mcp_abd": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 0.20000000298023224,
+      "drive_type": "acceleration"
+    },
+    "r_pinky_pip": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 0.30000001192092896,
+      "drive_type": "acceleration"
+    },
+    "r_pinky_dip": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 0.30000001192092896,
+      "drive_type": "acceleration"
+    },
+    "r_ring_finger_mcp_flex": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 2.0,
+      "drive_type": "acceleration"
+    },
+    "r_ring_finger_mcp_abd": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 0.20000000298023224,
+      "drive_type": "acceleration"
+    },
+    "r_ring_finger_pip": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 0.30000001192092896,
+      "drive_type": "acceleration"
+    },
+    "r_ring_finger_dip": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 0.30000001192092896,
+      "drive_type": "acceleration"
+    },
+    "r_thumb_cmc_flex": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 0.6000000238418579,
+      "drive_type": "acceleration"
+    },
+    "r_thumb_cmc_abd": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 0.6000000238418579,
+      "drive_type": "acceleration"
+    },
+    "r_thumb_mcp": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 0.30000001192092896,
+      "drive_type": "acceleration"
+    },
+    "r_thumb_ip": {
+      "stiffness": 625.0,
+      "source_damping": 0.0,
+      "runtime_damping": 50.0,
+      "max_force": 0.30000001192092896,
+      "drive_type": "acceleration"
+    }
+  },
+  "runtime_velocity_limit_scale": 0.98,
+  "runtime_velocity_caps": {
+    "head_yaw_Joint": {
+      "authored_deg_s": 1019.86474609375,
+      "runtime_deg_s": 999.4674511718749
+    },
+    "head_pitch_Joint": {
+      "authored_deg_s": 1019.86474609375,
+      "runtime_deg_s": 999.4674511718749
+    },
+    "proximal_pitch_L_Joint": {
+      "authored_deg_s": 1048.5126953125,
+      "runtime_deg_s": 1027.54244140625
+    },
+    "proximal_roll_L_Joint": {
+      "authored_deg_s": 1048.5126953125,
+      "runtime_deg_s": 1027.54244140625
+    },
+    "proximal_yaw_L_Joint": {
+      "authored_deg_s": 1290.3009033203125,
+      "runtime_deg_s": 1264.4948852539062
+    },
+    "elbow_L_Joint": {
+      "authored_deg_s": 1290.3009033203125,
+      "runtime_deg_s": 1264.4948852539062
+    },
+    "wrist_yaw_L_Joint": {
+      "authored_deg_s": 1019.86474609375,
+      "runtime_deg_s": 999.4674511718749
+    },
+    "wrist_pitch_L_Joint": {
+      "authored_deg_s": 1019.86474609375,
+      "runtime_deg_s": 999.4674511718749
+    },
+    "wrist_roll_L_Joint": {
+      "authored_deg_s": 1019.86474609375,
+      "runtime_deg_s": 999.4674511718749
+    },
+    "l_index_finger_mcp_flex": {
+      "authored_deg_s": 469.99725341796875,
+      "runtime_deg_s": 460.59730834960936
+    },
+    "l_index_finger_mcp_abd": {
+      "authored_deg_s": 464.6687316894531,
+      "runtime_deg_s": 455.37535705566404
+    },
+    "l_index_finger_pip": {
+      "authored_deg_s": 736.8236694335938,
+      "runtime_deg_s": 722.0871960449218
+    },
+    "l_index_finger_dip": {
+      "authored_deg_s": 773.4929809570312,
+      "runtime_deg_s": 758.0231213378906
+    },
+    "l_middle_finger_mcp_flex": {
+      "authored_deg_s": 469.99725341796875,
+      "runtime_deg_s": 460.59730834960936
+    },
+    "l_middle_finger_mcp_abd": {
+      "authored_deg_s": 464.6687316894531,
+      "runtime_deg_s": 455.37535705566404
+    },
+    "l_middle_finger_pip": {
+      "authored_deg_s": 736.8236694335938,
+      "runtime_deg_s": 722.0871960449218
+    },
+    "l_middle_finger_dip": {
+      "authored_deg_s": 773.4929809570312,
+      "runtime_deg_s": 758.0231213378906
+    },
+    "l_pinky_mcp_flex": {
+      "authored_deg_s": 469.99725341796875,
+      "runtime_deg_s": 460.59730834960936
+    },
+    "l_pinky_mcp_abd": {
+      "authored_deg_s": 464.6687316894531,
+      "runtime_deg_s": 455.37535705566404
+    },
+    "l_pinky_pip": {
+      "authored_deg_s": 736.8236694335938,
+      "runtime_deg_s": 722.0871960449218
+    },
+    "l_pinky_dip": {
+      "authored_deg_s": 773.4929809570312,
+      "runtime_deg_s": 758.0231213378906
+    },
+    "l_ring_finger_mcp_flex": {
+      "authored_deg_s": 469.99725341796875,
+      "runtime_deg_s": 460.59730834960936
+    },
+    "l_ring_finger_mcp_abd": {
+      "authored_deg_s": 464.6687316894531,
+      "runtime_deg_s": 455.37535705566404
+    },
+    "l_ring_finger_pip": {
+      "authored_deg_s": 736.8236694335938,
+      "runtime_deg_s": 722.0871960449218
+    },
+    "l_ring_finger_dip": {
+      "authored_deg_s": 773.4929809570312,
+      "runtime_deg_s": 758.0231213378906
+    },
+    "l_thumb_cmc_flex": {
+      "authored_deg_s": 491.99884033203125,
+      "runtime_deg_s": 482.15886352539064
+    },
+    "l_thumb_cmc_abd": {
+      "authored_deg_s": 635.983154296875,
+      "runtime_deg_s": 623.2634912109374
+    },
+    "l_thumb_mcp": {
+      "authored_deg_s": 736.8236694335938,
+      "runtime_deg_s": 722.0871960449218
+    },
+    "l_thumb_ip": {
+      "authored_deg_s": 773.4929809570312,
+      "runtime_deg_s": 758.0231213378906
+    },
+    "proximal_pitch_R_Joint": {
+      "authored_deg_s": 1048.5126953125,
+      "runtime_deg_s": 1027.54244140625
+    },
+    "proximal_roll_R_Joint": {
+      "authored_deg_s": 1048.5126953125,
+      "runtime_deg_s": 1027.54244140625
+    },
+    "proximal_yaw_R_Joint": {
+      "authored_deg_s": 1290.3009033203125,
+      "runtime_deg_s": 1264.4948852539062
+    },
+    "elbow_R_Joint": {
+      "authored_deg_s": 1290.3009033203125,
+      "runtime_deg_s": 1264.4948852539062
+    },
+    "wrist_yaw_R_Joint": {
+      "authored_deg_s": 1019.86474609375,
+      "runtime_deg_s": 999.4674511718749
+    },
+    "wrist_pitch_R_Joint": {
+      "authored_deg_s": 1019.86474609375,
+      "runtime_deg_s": 999.4674511718749
+    },
+    "wrist_roll_R_Joint": {
+      "authored_deg_s": 1019.86474609375,
+      "runtime_deg_s": 999.4674511718749
+    },
+    "r_index_finger_mcp_flex": {
+      "authored_deg_s": 469.99725341796875,
+      "runtime_deg_s": 460.59730834960936
+    },
+    "r_index_finger_mcp_abd": {
+      "authored_deg_s": 464.6687316894531,
+      "runtime_deg_s": 455.37535705566404
+    },
+    "r_index_finger_pip": {
+      "authored_deg_s": 736.8236694335938,
+      "runtime_deg_s": 722.0871960449218
+    },
+    "r_index_finger_dip": {
+      "authored_deg_s": 773.4929809570312,
+      "runtime_deg_s": 758.0231213378906
+    },
+    "r_middle_finger_mcp_flex": {
+      "authored_deg_s": 469.99725341796875,
+      "runtime_deg_s": 460.59730834960936
+    },
+    "r_middle_finger_mcp_abd": {
+      "authored_deg_s": 464.6687316894531,
+      "runtime_deg_s": 455.37535705566404
+    },
+    "r_middle_finger_pip": {
+      "authored_deg_s": 736.8236694335938,
+      "runtime_deg_s": 722.0871960449218
+    },
+    "r_middle_finger_dip": {
+      "authored_deg_s": 773.4929809570312,
+      "runtime_deg_s": 758.0231213378906
+    },
+    "r_pinky_mcp_flex": {
+      "authored_deg_s": 469.99725341796875,
+      "runtime_deg_s": 460.59730834960936
+    },
+    "r_pinky_mcp_abd": {
+      "authored_deg_s": 464.6687316894531,
+      "runtime_deg_s": 455.37535705566404
+    },
+    "r_pinky_pip": {
+      "authored_deg_s": 736.8236694335938,
+      "runtime_deg_s": 722.0871960449218
+    },
+    "r_pinky_dip": {
+      "authored_deg_s": 773.4929809570312,
+      "runtime_deg_s": 758.0231213378906
+    },
+    "r_ring_finger_mcp_flex": {
+      "authored_deg_s": 469.99725341796875,
+      "runtime_deg_s": 460.59730834960936
+    },
+    "r_ring_finger_mcp_abd": {
+      "authored_deg_s": 464.6687316894531,
+      "runtime_deg_s": 455.37535705566404
+    },
+    "r_ring_finger_pip": {
+      "authored_deg_s": 736.8236694335938,
+      "runtime_deg_s": 722.0871960449218
+    },
+    "r_ring_finger_dip": {
+      "authored_deg_s": 773.4929809570312,
+      "runtime_deg_s": 758.0231213378906
+    },
+    "r_thumb_cmc_flex": {
+      "authored_deg_s": 491.99884033203125,
+      "runtime_deg_s": 482.15886352539064
+    },
+    "r_thumb_cmc_abd": {
+      "authored_deg_s": 635.983154296875,
+      "runtime_deg_s": 623.2634912109374
+    },
+    "r_thumb_mcp": {
+      "authored_deg_s": 736.8236694335938,
+      "runtime_deg_s": 722.0871960449218
+    },
+    "r_thumb_ip": {
+      "authored_deg_s": 773.4929809570312,
+      "runtime_deg_s": 758.0231213378906
+    }
+  },
+  "massless_frame_overrides": {
+    "/World/Robot/l_index_finger_tip": {
+      "source_mass": 0,
+      "runtime_mass_kg": 1e-06,
+      "runtime_diagonal_inertia_kg_m2": [
+        1e-10,
+        1e-10,
+        1e-10
+      ],
+      "reason": "empty coordinate frame otherwise receives PhysX default 1 kg"
+    },
+    "/World/Robot/l_middle_finger_tip": {
+      "source_mass": 0,
+      "runtime_mass_kg": 1e-06,
+      "runtime_diagonal_inertia_kg_m2": [
+        1e-10,
+        1e-10,
+        1e-10
+      ],
+      "reason": "empty coordinate frame otherwise receives PhysX default 1 kg"
+    },
+    "/World/Robot/l_pinky_tip": {
+      "source_mass": 0,
+      "runtime_mass_kg": 1e-06,
+      "runtime_diagonal_inertia_kg_m2": [
+        1e-10,
+        1e-10,
+        1e-10
+      ],
+      "reason": "empty coordinate frame otherwise receives PhysX default 1 kg"
+    },
+    "/World/Robot/l_ring_finger_tip": {
+      "source_mass": 0,
+      "runtime_mass_kg": 1e-06,
+      "runtime_diagonal_inertia_kg_m2": [
+        1e-10,
+        1e-10,
+        1e-10
+      ],
+      "reason": "empty coordinate frame otherwise receives PhysX default 1 kg"
+    },
+    "/World/Robot/l_thumb_tip": {
+      "source_mass": 0,
+      "runtime_mass_kg": 1e-06,
+      "runtime_diagonal_inertia_kg_m2": [
+        1e-10,
+        1e-10,
+        1e-10
+      ],
+      "reason": "empty coordinate frame otherwise receives PhysX default 1 kg"
+    },
+    "/World/Robot/r_index_finger_tip": {
+      "source_mass": 0,
+      "runtime_mass_kg": 1e-06,
+      "runtime_diagonal_inertia_kg_m2": [
+        1e-10,
+        1e-10,
+        1e-10
+      ],
+      "reason": "empty coordinate frame otherwise receives PhysX default 1 kg"
+    },
+    "/World/Robot/r_middle_finger_tip": {
+      "source_mass": 0,
+      "runtime_mass_kg": 1e-06,
+      "runtime_diagonal_inertia_kg_m2": [
+        1e-10,
+        1e-10,
+        1e-10
+      ],
+      "reason": "empty coordinate frame otherwise receives PhysX default 1 kg"
+    },
+    "/World/Robot/r_pinky_tip": {
+      "source_mass": 0,
+      "runtime_mass_kg": 1e-06,
+      "runtime_diagonal_inertia_kg_m2": [
+        1e-10,
+        1e-10,
+        1e-10
+      ],
+      "reason": "empty coordinate frame otherwise receives PhysX default 1 kg"
+    },
+    "/World/Robot/r_ring_finger_tip": {
+      "source_mass": 0,
+      "runtime_mass_kg": 1e-06,
+      "runtime_diagonal_inertia_kg_m2": [
+        1e-10,
+        1e-10,
+        1e-10
+      ],
+      "reason": "empty coordinate frame otherwise receives PhysX default 1 kg"
+    },
+    "/World/Robot/r_thumb_tip": {
+      "source_mass": 0,
+      "runtime_mass_kg": 1e-06,
+      "runtime_diagonal_inertia_kg_m2": [
+        1e-10,
+        1e-10,
+        1e-10
+      ],
+      "reason": "empty coordinate frame otherwise receives PhysX default 1 kg"
+    }
+  },
+  "accepted": false,
+  "acceptance_boundary": "Physics tracking diagnostic; collision-pair coverage and hardware behavior unverified",
+  "status": "complete",
+  "source_time_s": 289.76666666666665,
+  "simulation_time_s": 48.2958333333448,
+  "wall_elapsed_s": 118.43815800198354,
+  "frames_measured": 11591,
+  "max_error_rad": 0.2714601792395115,
+  "rms_error_rad": 0.023342102990481825,
+  "source_report_sha256": "9324f89b1460c4014ac1f15314c3d5f3810a7818e9b30b1b393c2a168f75a8bd",
+  "normalization": "Only model/reference paths normalized; original report identified by source_report_sha256"
+}

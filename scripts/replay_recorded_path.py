@@ -36,7 +36,7 @@ app = SimulationApp({'headless': args.headless, 'width': 1280, 'height': 800, 'm
 report = {'trajectory_sha256': sha(reference), 'usd_sha256': sha(usd),
           'producer_sha256': sha(Path(__file__)), 'mode': 'recorded-path kinematic playback',
           'interpolation': 'piecewise linear in execution seconds', 'file_time_multiplier': 1,
-          'effective_bag_speed': 4, 'physics_stepped': False, 'physical_base_to_table_m': .45,
+          'effective_bag_speed': binding['effective_bag_speed'], 'physics_stepped': False, 'physical_base_to_table_m': .45,
           'hardware_execution_authorized': False, 'status': 'starting'}
 try:
     from isaacsim.core.api import World
@@ -61,7 +61,7 @@ try:
     indices = np.array([robot.get_dof_index(n) for n in names])
     if len(set(indices)) != 56:
         raise ValueError('Model joint mapping is not one-to-one')
-    set_camera_view(eye=np.array([2.35, .95, .60]), target=np.array([.15, 0, -.10]))
+    set_camera_view(eye=np.array([2.35, .95, .60]), target=np.array([.15, 0, .20]))
     stamps = np.r_[np.arange(float(axis[0]), end, 1/30), end]
     started = time.perf_counter()
     maximum_error = 0.

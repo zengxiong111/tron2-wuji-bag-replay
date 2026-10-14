@@ -1,66 +1,66 @@
 {
-  "trajectory_sha256": "23b555d6a4bf6df33fa4da4e5905a10f9fe375f6447784edd44079e412bdfcd1",
+  "trajectory_sha256": "460463385a43a8df54604d84b01ea389b60b56152366f32487a3e846410894fc",
   "urdf_sha256": "684a9f18203bb2c8792cb701fd59bfe5e0b0c77ddc816367794e1b4ad4d960fb",
-  "producer_sha256": "37b8605f8d1929f7e7ac260f572d51ab3cac2ead99f5594765c54647969c759f",
+  "producer_sha256": "2a52fbd9432030e0a54e63b89a61a2445fc25040584898c605f2acd2f5c637de",
   "interpolation": "piecewise linear in execution seconds",
-  "duration_s": 72.43750000002395,
-  "states": 13909,
+  "duration_s": 48.29166666667813,
+  "states": 11591,
   "groups": {
     "tron2_arm": {
       "worst_speed": {
         "joint": "wrist_yaw_L_Joint",
         "group": "tron2_arm",
-        "minimum_rad": -0.4346392750740051,
-        "maximum_rad": 0.7890189290046692,
+        "minimum_rad": -0.3574635982513428,
+        "maximum_rad": 0.7966094017028809,
         "model_lower_rad": -1.7453292519943295,
         "model_upper_rad": 1.3962634015954636,
         "position_excess_rad": 0.0,
         "position_excess_deg": 0.0,
-        "peak_linear_speed_rad_s": 6.204683303830186,
+        "peak_linear_speed_rad_s": 6.011502742767676,
         "model_speed_limit_rad_s": 17.8,
-        "speed_limit_ratio": 0.348577713698325
+        "speed_limit_ratio": 0.33772487318919525
       },
       "speed_over_limit_joints": 0,
-      "angle_over_limit_joints": 2
+      "angle_over_limit_joints": 0
     },
     "wuji": {
       "worst_speed": {
-        "joint": "l_ring_finger_pip",
+        "joint": "l_pinky_pip",
         "group": "wuji",
-        "minimum_rad": -0.06731687486171722,
-        "maximum_rad": 1.6937062740325928,
+        "minimum_rad": -0.1866576075553894,
+        "maximum_rad": 1.8110125064849854,
         "model_lower_rad": -1.047,
         "model_upper_rad": 2.094,
         "position_excess_rad": 0.0,
         "position_excess_deg": 0.0,
-        "peak_linear_speed_rad_s": 10.380958557124185,
+        "peak_linear_speed_rad_s": 12.040715217591016,
         "model_speed_limit_rad_s": 12.86,
-        "speed_limit_ratio": 0.8072285036644001
+        "speed_limit_ratio": 0.936292007588726
       },
       "speed_over_limit_joints": 0,
-      "angle_over_limit_joints": 1
+      "angle_over_limit_joints": 0
     },
     "head": {
       "worst_speed": {
         "joint": "head_pitch_Joint",
         "group": "head",
-        "minimum_rad": 0.0004943038802593946,
-        "maximum_rad": 0.0005058539682067931,
+        "minimum_rad": 0.0004943067324347794,
+        "maximum_rad": 0.0005103810108266771,
         "model_lower_rad": -0.7853981633974483,
         "model_upper_rad": 1.0471975511965976,
         "position_excess_rad": 0.0,
         "position_excess_deg": 0.0,
-        "peak_linear_speed_rad_s": 0.00017853453755382783,
+        "peak_linear_speed_rad_s": 6.219372153277216e-05,
         "model_speed_limit_rad_s": 17.8,
-        "speed_limit_ratio": 1.003003019965325e-05
+        "speed_limit_ratio": 3.4940292995939416e-06
       },
       "speed_over_limit_joints": 0,
       "angle_over_limit_joints": 0
     }
   },
   "model_velocity_passed": true,
-  "model_position_strict_passed": false,
-  "maximum_position_excess_deg": 0.0016354204948642909,
+  "model_position_strict_passed": true,
+  "maximum_position_excess_deg": 0.0,
   "acceleration_jerk_status": "Not bounded: linear interpolation has velocity jumps at knots; no motor acceleration/jerk admission",
   "hardware_motor_limits_verified": false,
   "hardware_execution_authorized": false,
@@ -77,10 +77,10 @@
     "threshold_mm": 0.1,
     "maximum_depth_mm": 0.0,
     "families": {},
-    "input_sha256": "20299f508b4c75594e353b6c6ac47b662caf1972e53b024c43d8c7e754032a9d"
+    "input_sha256": "168795f31f0eff8d0d38e84383bb97894be53354662f4faa67c2426b9603175c"
   },
-  "collision_samples": 45194,
-  "sampled_sha256": "20299f508b4c75594e353b6c6ac47b662caf1972e53b024c43d8c7e754032a9d",
+  "collision_samples": 34741,
+  "sampled_sha256": "168795f31f0eff8d0d38e84383bb97894be53354662f4faa67c2426b9603175c",
   "collision_sample_definition": "All native knots, all interval midpoints, and 240 Hz execution grid including endpoints",
   "collision_boundary": "Strict discrete triangle intersections with structural exclusions only; no Wuji assembly exemptions; not continuous CCD or exact solid clearance"
 }
