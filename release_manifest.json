@@ -1,6 +1,6 @@
 {
   "repository": "zengxiong111/tron2-wuji-bag-replay",
-  "tag": "v1.2.0",
+  "tag": "5x-collision-smooth-20261014",
   "assets": [
     {
       "name": "robot-assets.tar.gz",
@@ -95,30 +95,17 @@
     },
     {
       "name": "trajectory-data.tar.gz",
-      "sha256": "f37258a2b73dadaf48492b6fe0c96fccfca2a80d6d04ef0cce1a1a60ef0da92f",
-      "size_bytes": 7035426,
+      "size_bytes": 11564148,
+      "sha256": "05b3345316e890b282e457320186f805baf739e8c68cb47d39ad46b1b3ac5b89",
       "files": {
-        "trajectories/retimed_actual_4x.npz": "23b555d6a4bf6df33fa4da4e5905a10f9fe375f6447784edd44079e412bdfcd1"
+        "trajectories/recorded_actual_5x.npz": "4e086ddf442ddded028b0af4824c519de4a004ba421b9df4662c11c8e498fc06",
+        "trajectories/repaired_source.npz": "9e3bc9fb38dcca4ccb75a55bc8135303ef7b34ef3210d0298e6491e4c1df2ce7",
+        "media/head_forward_full_5x.mp4": "92d45ad013eb127b5fcbb05a5516f5c09877ede0ab0f74001f15daecffaa7685"
       }
     }
   ],
   "previous_files": {},
   "retired_files": {
-    "evidence/collision_repaired/validation/tracking.npz": "f4389730da594a20130bc2921f122380b51c4e89d27ece5ceb9307f40f18c94b",
-    "evidence/smooth/validation/tracking.npz": "b30ed7d95aee31c953ea399e547ca260e6cc6c00acd43cc46436824b77330666",
-    "trajectories/accelerated_5x.npz": "16ed96bc4e742acdf21155e12b9d7ef4c86e6256913eedd5067ee4516661d72d",
-    "trajectories/head_forward_5x.npz": "40572370bb6506b28c4db6b0856ad849d2d6f91bf3b92ada0e1c3ce64c33c5c2",
-    "trajectories/repaired_5x.npz": "81fe1d098124f50334f4f555cb06355cce131f532948e01ced2deb870b1aa8dc",
-    "trajectories/repaired_source.npz": "f0300020e4dc23165578a84c70998911ac32c4f805b7c08a2181c2965db67fb2",
-    "media/head_forward_full_5x.mp4": "92d45ad013eb127b5fcbb05a5516f5c09877ede0ab0f74001f15daecffaa7685",
-    "data/2026-10-08-17-54-13.bag": "2af6c090b36e26231aff0b2b102768c7224044cd260b8bc07486aa4167fe55bd",
-    "evidence/comparison/reference.npz": "2bc1c11bfdce4a6cd333a903f2c27ff838a19d036624e91b4703a53abb282d44",
-    "evidence/comparison/tracking.npz": "c32d5797d02dae340d94275bac06ccb6bb5e00029c9d52d9299ce19fc864210d",
-    "evidence/final/audit/checked_samples.npz": "62fd09ca42ef198c774d9c61ded2fe2474ef28e97771e39d3c72477faa84c41a",
-    "evidence/final/target_audit/checked_samples.npz": "8af44d8b459d3b0151bab4a2dcc6d3670adcf046fc284bf24e48f37fd8ca1ed9",
-    "evidence/final/validation/tracking.npz": "d7a1af76a43508be2810868adb6a45cbc3cbf7e57d5e69ea687d0940805a8d03",
-    "trajectories/head_forward_4x.npz": "84eaf146901e0583a6cf9b1e4f2afdf65b2ac53a431bae800cf883009ee854b2",
-    "trajectories/head_forward_source.npz": "f070b4dcfa886e9b584ade88953b4ecfe74df2b353a30150d8e5cba1d58a883c",
-    "trajectories/original.npz": "0527c09a35d1cea23a20c6a0497154365a8c869aa5095076f4efd45b06b065b1"
+    "trajectories/retimed_actual_4x.npz": "23b555d6a4bf6df33fa4da4e5905a10f9fe375f6447784edd44079e412bdfcd1"
   }
 }

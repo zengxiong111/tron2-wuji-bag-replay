@@ -1,6 +1,6 @@
 # Hardware deployment preparation
 
-This repository provides Isaac Sim playback. **It includes no hardware controller and has not passed hardware admission.** These steps support further preparation after handoff. Chinese: [DEPLOYMENT.md](DEPLOYMENT.md).
+This5x branch provides recorded-path playback and explicit PhysX re-execution. **It includes no hardware controller and has not passed hardware admission.** These steps support further preparation after handoff. Chinese: [DEPLOYMENT.md](DEPLOYMENT.md).
 
 ## Contents
 
@@ -17,11 +17,12 @@ python3 scripts/verify_bundle.py
 python3.12 -m venv ../tron2-analysis-env
 ../tron2-analysis-env/bin/pip install -r requirements-analysis.txt
 ../tron2-analysis-env/bin/python scripts/audit_retimed_trajectory.py --limits-only --out ../tron2-limits-check
+../tron2-analysis-env/bin/python scripts/audit_target_velocity.py --out ../tron2-target-speed-check
 python3 scripts/check_hardware_admission.py
 ../tron2-analysis-env/bin/python -m unittest discover -s tests -v
 ```
 
-`../tron2-limits-check` must be a new directory outside the repository. The angle check currently returns `2` (3 axes have minor overshoot); hardware admission also returns `2` (incomplete information). Integrity verification and unit tests should pass. Hardware admission checks offline information without connecting to devices.
+`../tron2-limits-check` must be a new directory outside the repository. The path check returns `2` for model speed (2 hand axes slightly exceed) and angles (3 minor overruns); target-speed admission also returns `2` (8 hand axes exceed), and hardware admission returns `2` (incomplete information). Integrity verification and unit tests should pass. Hardware admission checks offline information without connecting to devices.
 
 To recompute the complete discrete collision check, use the same environment and the command below. It takes longer and writes results to a new external directory:
 
@@ -44,7 +45,7 @@ The source bag has 16 unnamed body-state channels. Their order remains unconfirm
 ## Deployment sequence
 
 1. **Confirm devices and mappings.** Verify the information above and resolve body-channel order and hand-actuator assignments.
-2. **Prepare an executable trajectory.** Fix angle overshoot, add smooth starts/stops and acceleration/jerk limits, then resample at the actual control period. The file's 192 Hz sample rate does not define hardware control frequency. Recheck limits, collisions and physical tracking; update trajectory and report hashes.
+2. **Prepare an executable trajectory.** Fix model speed and angle overshoot, add smooth starts/stops and acceleration/jerk limits, then resample at the actual control period. The file's 240 Hz sample rate does not define hardware control frequency. Recheck limits, collisions and physical tracking; update trajectory and report hashes.
 3. **Check the site and initial pose.** Keep the tabletop-to-physical-base gap at 0.45 m; do not change mounting height to eliminate collisions. Check adapters, cables, loads, obstacles, the first-frame transition and braking space.
 4. **Implement a hardware controller.** Use the confirmed SDK with per-axis limits, feedback timeouts, tracking-error monitoring, fault stops and emergency stops. Verify read-only feedback and fault handling first. Parameters and gains must be confirmed against the physical devices.
 5. **Commission in stages.** After device-owner approval, check individual axes, hands, arms, slow segments and the full trajectory, then validate the target motion speed. Record actual states, current/torque, temperatures, fault codes and timestamps outside the repository.

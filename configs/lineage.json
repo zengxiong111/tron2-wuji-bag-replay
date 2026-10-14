@@ -1,0 +1,23 @@
+{
+  "base_main_commit": "2e5c7840c0f8f3ac08d240446f6d776eca0b76d7",
+  "source_tracking_sha256": "8634e73e49bbc0b769ea86c21ef918df92962da55e43305784c7005ffc6b505c",
+  "source_report_sha256": "c5a30f79e88e451648272130dfd88526e78ebfaa0462561be1a13c65506cd92f",
+  "original_reference_sha256": "9e3bc9fb38dcca4ccb75a55bc8135303ef7b34ef3210d0298e6491e4c1df2ce7",
+  "actual_positions_array_sha256": "fbdab5f5da7d407e22ab5beb305e771954d11eb5a4a6eff85402f8dded2fdb53",
+  "source_time_array_sha256": "1edfbce130c3513c375ecfbced699ee3dc4a7934af27fe741375d67584f3fabf",
+  "published_actual_sha256": "4e086ddf442ddded028b0af4824c519de4a004ba421b9df4662c11c8e498fc06",
+  "physics_motion_speed": 5,
+  "original_physics_run_hz": 240,
+  "output_duration_s": 57.95000000001916,
+  "position_samples_bitwise_unchanged": true,
+  "time_stretch": 1,
+  "physics_reexecuted_during_publication": false,
+  "trajectory_kind": "recorded actual states of the full repaired 5x PhysX run; q is not the desired reference",
+  "head_target_rad": [
+    0,
+    0
+  ],
+  "physical_base_to_table_m": 0.45,
+  "video_sha256": "92d45ad013eb127b5fcbb05a5516f5c09877ede0ab0f74001f15daecffaa7685",
+  "video_duration_s": 57.96666666666667
+}

@@ -49,7 +49,7 @@ def inspect_limits(data, urdf):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--input', type=Path, default=ROOT/'trajectories/retimed_actual_4x.npz')
+    parser.add_argument('--input', type=Path, default=ROOT/json.loads((ROOT/'configs/trajectory.json').read_text())['trajectory'])
     parser.add_argument('--out', type=Path, required=True)
     parser.add_argument('--limits-only', action='store_true')
     args = parser.parse_args()

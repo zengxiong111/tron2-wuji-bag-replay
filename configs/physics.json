@@ -1,0 +1,12 @@
+{
+  "usd": "outputs/robot/robot_collision_fixed.usd",
+  "usd_sha256": "0526b9a8f358a0ae2b9e55ead21467282c619973fa6b36bc2b33175b7eefed84",
+  "reference": "trajectories/repaired_source.npz",
+  "reference_sha256": "9e3bc9fb38dcca4ccb75a55bc8135303ef7b34ef3210d0298e6491e4c1df2ce7",
+  "body_mapping_status": "candidate_unconfirmed",
+  "hand_mapping_status": "source_declared_names; left_ -> l_, right_ -> r_",
+  "motion_speed": 5,
+  "physics_hz": 240,
+  "interpolation": "C2 cubic clamped; analytical velocity targets",
+  "hardware_execution_authorized": false
+}

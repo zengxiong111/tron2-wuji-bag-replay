@@ -1,0 +1,35 @@
+{
+  "accepted": true,
+  "raw_bag_duration_s": 289.797147406,
+  "reference_duration_s": 289.76666666666665,
+  "motion_speed": 5,
+  "physical_source_interval_s": [
+    0,
+    289.76666666666665
+  ],
+  "recorded_physical_states": 13909,
+  "geometry_pairs_per_state": 2717,
+  "geometry_gate": {
+    "passed": true,
+    "threshold_mm": 0.1,
+    "maximum_depth_mm": 0.0,
+    "families": {},
+    "input_sha256": "8634e73e49bbc0b769ea86c21ef918df92962da55e43305784c7005ffc6b505c"
+  },
+  "temporal_gate": true,
+  "head_target_rad": [
+    0,
+    0
+  ],
+  "head_max_actual_abs_deg": [
+    1.7975047740037553e-05,
+    0.02898329682648182
+  ],
+  "minimum_physx_separation_mm": 0.01669316588959191,
+  "physical_base_to_table_m": 0.45,
+  "boundary": "Full recorded discrete physical states and contact reports; no CCD or hardware claim",
+  "acceptance_scope": "discrete collision and relative smoothness only",
+  "model_velocity_target_admission_passed": false,
+  "hardware_motor_limits_verified": false,
+  "motor_limit_report": "../target_motor_limits/report.json"
+}
