@@ -3,3 +3,4 @@ scipy==1.18.1
 pin==4.1.0
 coal==3.0.3
 usd-core==26.8
+osqp==1.0.4

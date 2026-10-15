@@ -1,4 +1,4 @@
-"""Isaac recorded-path playback; no new physics integration or hardware I/O."""
+"""Isaac reference-path display; no new physics integration or hardware I/O."""
 import argparse
 import datetime
 import hashlib
@@ -34,7 +34,7 @@ output.mkdir(parents=True, exist_ok=False)
 from isaacsim import SimulationApp
 app = SimulationApp({'headless': args.headless, 'width': 1280, 'height': 800, 'multi_gpu': False})
 report = {'trajectory_sha256': sha(reference), 'usd_sha256': sha(usd),
-          'producer_sha256': sha(Path(__file__)), 'mode': 'recorded-path kinematic playback',
+          'producer_sha256': sha(Path(__file__)), 'mode': binding['mode'],
           'interpolation': 'piecewise linear in execution seconds', 'file_time_multiplier': 1,
           'effective_bag_speed': binding['effective_bag_speed'], 'physics_stepped': False, 'physical_base_to_table_m': .45,
           'hardware_execution_authorized': False, 'status': 'starting'}

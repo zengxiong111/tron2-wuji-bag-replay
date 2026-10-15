@@ -24,6 +24,9 @@ a.start_source_seconds = 0
 a.max_source_seconds = None if a.max_seconds is None else a.max_seconds*6
 a.contact_offset = .001
 a.rest_offset = .0002
+margin_map = source['per_body_rest_offsets_m']
+if any(not np.isfinite(float(v)) or not 0<=float(v)<a.contact_offset for v in margin_map.values()):
+    raise ValueError('Invalid per-body rest offset')
 a.out = (a.out or root.parent/(root.name+'-runs')/datetime.datetime.now().strftime('%Y%m%d_%H%M%S_%f_physics')).resolve()
 if a.out == root or root in a.out.parents:
     raise ValueError('Write physical replay records outside the repository')
@@ -60,12 +63,15 @@ try:
    for c in contacts[header.contact_data_offset:header.contact_data_offset+header.num_contact_data]:
     item['min_separation_m']=min(item['min_separation_m'],float(c.separation));item['max_impulse_norm']=max(item['max_impulse_norm'],float(np.linalg.norm(c.impulse)))
  contact_subscription=get_physx_simulation_interface().subscribe_contact_report_events(on_contacts)
+ for body in margin_map:
+  prim=world.stage.GetPrimAtPath('/World/Robot/'+body)
+  if not prim.IsValid() or not prim.HasAPI(UsdPhysics.RigidBodyAPI):raise ValueError('Unknown collision body: '+body)
  # Enable self-contact and tighten the solver without changing geometry.
  for prim in Usd.PrimRange(world.stage.GetPrimAtPath('/World/Robot'),Usd.TraverseInstanceProxies()):
   if prim.HasAPI(UsdPhysics.ArticulationRootAPI):
    api=PhysxSchema.PhysxArticulationAPI.Apply(prim);api.CreateEnabledSelfCollisionsAttr(True);api.CreateSolverPositionIterationCountAttr(32);api.CreateSolverVelocityIterationCountAttr(8)
   if prim.HasAPI(UsdPhysics.CollisionAPI) and not prim.IsInstanceProxy():
-   api=PhysxSchema.PhysxCollisionAPI.Apply(prim);api.CreateContactOffsetAttr(a.contact_offset);api.CreateRestOffsetAttr(a.rest_offset)
+   api=PhysxSchema.PhysxCollisionAPI.Apply(prim);api.CreateContactOffsetAttr(a.contact_offset);api.CreateRestOffsetAttr(float(margin_map.get(str(prim.GetPath()).split('/')[3],a.rest_offset)))
  # Preserve authored stiffness/effort bounds and add USD angular damping.
  # This is a simulation controller setting, not a measured hardware gain.
  drives={}
@@ -100,7 +106,7 @@ try:
     ui.Label('Hands named | body mapping UNCONFIRMED')
     label=ui.Label('Starting...');ui.Button('Pause / Resume',clicked_fn=pause)
  self_collision=[bool(p.GetAttribute('physxArticulation:enabledSelfCollisions').Get()) for p in world.stage.Traverse() if p.HasAPI(UsdPhysics.ArticulationRootAPI)]
- record={'mode':'PhysX position/velocity targets after single initialization','target_interpolation':'piecewise linear','producer_sha256':producer_sha256,'usd_sha256':input_hashes['usd'],'usd':str(usd),'reference_sha256':input_hashes['reference'],'reference':str(ref),'start_source_seconds':a.start_source_seconds,'solver_iterations':[32,8],'contact_offset_m':a.contact_offset,'rest_offset_m':a.rest_offset,'body_mapping_status':source['body_mapping_status'],'hand_mapping_status':source['hand_mapping_status'],'physics_hz':240,'wall_speed_requested':a.wall_speed,'motion_speed':a.motion_speed,'gravity_m_s2':[0,0,-9.81],'self_collision_enabled':self_collision,'table_collision_enabled':True,'physical_base_to_table_m':.45,'runtime_gain_kp_rad':controller.get_gains()[0][ids].tolist(),'runtime_gain_kd_rad':controller.get_gains()[1][ids].tolist(),'runtime_drive_settings':drives,'runtime_velocity_limit_scale':a.velocity_limit_scale,'runtime_velocity_caps':velocity_caps,'massless_frame_overrides':massless_overrides,'accepted':False,'acceptance_boundary':'Physics tracking diagnostic; collision-pair coverage and hardware behavior unverified'}
+ record={'mode':'PhysX position/velocity targets after single initialization','target_interpolation':'piecewise linear','producer_sha256':producer_sha256,'usd_sha256':input_hashes['usd'],'usd':str(usd),'reference_sha256':input_hashes['reference'],'reference':str(ref),'start_source_seconds':a.start_source_seconds,'solver_iterations':[32,8],'contact_offset_m':a.contact_offset,'rest_offset_m':a.rest_offset,'per_body_rest_offsets_m':margin_map,'body_mapping_status':source['body_mapping_status'],'hand_mapping_status':source['hand_mapping_status'],'physics_hz':240,'wall_speed_requested':a.wall_speed,'motion_speed':a.motion_speed,'gravity_m_s2':[0,0,-9.81],'self_collision_enabled':self_collision,'table_collision_enabled':True,'physical_base_to_table_m':.45,'runtime_gain_kp_rad':controller.get_gains()[0][ids].tolist(),'runtime_gain_kd_rad':controller.get_gains()[1][ids].tolist(),'runtime_drive_settings':drives,'runtime_velocity_limit_scale':a.velocity_limit_scale,'runtime_velocity_caps':velocity_caps,'massless_frame_overrides':massless_overrides,'accepted':False,'acceptance_boundary':'Physics tracking diagnostic; collision-pair coverage and hardware behavior unverified'}
  record.update(hardware_execution_authorized=False,physics_stepped=True,acceptance_scope='New physics diagnostic; inspect the new trace before acceptance')
  sim_t=0.;wall_start=time.perf_counter();pause_start=None;paused_total=0.;step=0;next_render=0.;status='running'
  def save(status):

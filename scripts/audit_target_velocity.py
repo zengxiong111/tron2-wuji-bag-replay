@@ -15,13 +15,13 @@ args = parser.parse_args()
 root = Path(__file__).resolve().parents[1]
 urdf = root/'outputs/robot/tron2_wuji_hand2.urdf'
 reference = root/'trajectories/repaired_source.npz'
-trace = root/'trajectories/recorded_actual_6x.npz'
+trace = root/'trajectories/physical_tracking_6x.npz'
 record = json.loads((root/'evidence/physics/report.json').read_text())
 sha = lambda path: hashlib.sha256(path.read_bytes()).hexdigest()
 if sha(reference) != record['reference_sha256'] or sha(root/record['usd']) != record['usd_sha256']:
     raise ValueError('Replay input binding mismatch')
 targets, recorded = np.load(reference), np.load(trace)
-actual = {'joint_names':recorded['joint_names'], 'source_time':recorded['source_time'], 'q_actual':recorded['q']}
+actual = recorded
 if not np.array_equal(targets['joint_names'], actual['joint_names']):
     raise ValueError('Joint identity mismatch')
 speed = float(record['motion_speed'])

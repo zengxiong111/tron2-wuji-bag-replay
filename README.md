@@ -1,97 +1,84 @@
-# TRON2 + Wuji 修复后的 6x bag 重放
+# TRON2 + Wuji：保留 5x 动作的 6x 轨迹
 
-本分支发布已完成物理验证的 **6x 轨迹**：模拟时长 **48.295833 秒**，56 关节、240 Hz，11,591 个实际状态，头部朝前。原始 main 和 5x 分支保持不变。English: [README.en.md](README.en.md).
+本分支的默认轨迹已替换为保留原 5x 动作的参考版，约 **48.29 秒**。双臂、头部和首尾姿态不变，仅在测得的手部超速/碰撞窗口小幅修正。English: [README.en.md](README.en.md).
 
 ## 目录
 
-- [安装与下载](#安装与下载)
+- [安装和更新](#安装和更新)
 - [在 Isaac 中运行](#在-isaac-中运行)
-- [仓库结构](#仓库结构)
-- [验证结果](#验证结果)
-- [动作变化与限制](#动作变化与限制)
+- [结果和文件](#结果和文件)
+- [使用限制](#使用限制)
 
-## 安装与下载
+## 安装和更新
 
-1. 准备 Git、GitHub CLI 和 Python 3.12。显示与物理执行还需要 Isaac Sim 5.1 及兼容 GPU；其 Python 环境需要 NumPy。离线分析环境依赖见 `requirements-analysis.txt`。
-2. 执行以下指令：
+需要 Git、已登录的 GitHub CLI、Python 3.12；显示/物理执行还需要 Isaac Sim 5.1 及兼容 GPU。首次使用：
 
 ```bash
-gh auth login
 git clone --branch replay-6x-collision-smooth https://github.com/zengxiong111/tron2-wuji-bag-replay.git
 cd tron2-wuji-bag-replay
 python3 scripts/download_assets.py
 python3 scripts/verify_bundle.py
 ```
 
-模型复用固定的 `v1.1.0` Release 资产；6x 轨迹从本分支预发布 `6x-collision-smooth-20261014` 下载。完整性检查应输出 `Verified 85 runtime files`。
+已有本分支克隆，在仓库根目录执行：
 
-已有克隆请先切换本分支，再执行 `python3 scripts/download_assets.py --upgrade` 和完整性检查。升级仅替换哈希匹配的受管参考文件、删除哈希匹配的旧 4x/5x 实际轨迹及 5x 视频；修改过的文件不会被覆盖。
+```bash
+git pull --ff-only
+python3 scripts/download_assets.py --upgrade
+python3 scripts/verify_bundle.py
+```
+
+下载器会替换哈希匹配的旧参考文件并移除旧受管轨迹，拒绝覆盖自行修改的输入。模型仍使用固定的 `v1.1.0` 资产；新轨迹来自 `6x-preserve5x-20261015` 预发布。校验应输出 `Verified 87 runtime files`。
 
 ## 在 Isaac 中运行
 
-在仓库根目录运行，将 `/path/to/isaac/python.sh` 替换成你的 Isaac Python 入口。
+在仓库根目录执行，将 `/path/to/isaac/python.sh` 换成你的 Isaac Python 入口。
 
-1. **显示已验证的实际记录路径**：
+1. **查看保留动作的参考路径**（默认）：
 
 ```bash
 python3 scripts/replay.py --isaac-python /path/to/isaac/python.sh
 ```
 
-文件时间已经是 6x 执行秒，按 **1x 文件速度**显示，不要再乘 6。该模式设置记录姿态，不重新执行物理。
+直接设置参考姿态，不重新执行物理。文件时间已是 6x 执行秒，按 1x 文件时间显示。
 
-2. **以 6x 动作速度重新执行物理仿真**：
+2. **重新执行物理跟踪**：
 
 ```bash
 python3 scripts/replay.py --isaac-python /path/to/isaac/python.sh --physics
 ```
 
-该模式以 240 Hz 积分，发送密集线性位置/速度目标，启用桌面和自碰撞，使用 32/8 求解迭代、SDF512，并将模型速度上限收紧到 98%。保持原刚度和力矩上限，仅初始化时设置状态，之后由驱动器控制。不要改用三次插值，它会在密集接触姿态间超调。
+使用 240 Hz、6x 动作速度、密集线性目标、98% 模型速度上限及局部接触裕量。新的实际运动会有跟踪偏差，需重新检查。两个入口均支持 `--headless`、`--max-seconds 1`、`--out`；输出写入仓库旁的新目录。物理入口的 `--wall-speed` 只调整等待/渲染节奏。
 
-两个入口均支持 `--headless`、`--max-seconds 1`、`--out`；结果写入仓库旁的新目录。物理入口的 `--wall-speed 10` 仅改变等待和渲染节奏，动作倍率仍为 6x；计算可能慢于实时。新的物理运行是诊断结果，需要重新检查，不自动继承本分支验收。
+## 结果和文件
 
-## 仓库结构
+以下小幅偏差指标属于**参考路径**：
 
-沿用 main 的目录布局：
-
-| 路径 | 内容 |
+| 检查 | 结果 |
 | --- | --- |
-| `scripts/replay.py` | 共用入口；`--physics` 选择物理执行 |
-| `scripts/download_assets.py`、`scripts/verify_bundle.py` | 带哈希的 Release 下载和完整性校验 |
-| `scripts/audit_retimed_trajectory.py`、`scripts/audit_target_velocity.py` | 默认实际路径的限制/离散碰撞检查及物理目标速度检查 |
-| `trajectories/recorded_actual_6x.npz` | 实际姿态；`time` 为执行秒，`source_time` 为源秒，`q` 为弧度，`joint_names` 为轴序 |
-| `trajectories/repaired_source.npz` | 密集线性物理参考，源时间单位 |
-| `assets/`、`outputs/robot/` | 与 main 相同的机器人、网格和连接件 |
-| `configs/trajectory.json`、`configs/physics.json`、`configs/lineage.json` | 时序、控制设置、输入哈希及来源 |
-| `evidence/collision/`、`evidence/motor_limits/`、`evidence/target_motor_limits/` | 发布文件的碰撞、限位和目标速度复查 |
-| `evidence/physics/`、`evidence/physics_collision/`、`evidence/target_collision/` | 完整原运行和目标/实际姿态证据，可移植入口短段检查 |
-| `evidence/isaac_playback.json` | 可移植显示入口第一秒检查 |
-| [DEPLOYMENT.md](DEPLOYMENT.md) | 真机准备及尚未满足的准入条件 |
-| `tests/`、`requirements-analysis.txt`、`licenses/` | 离线测试、分析依赖和上游许可 |
+| 参考时长 / 采样 |48.291667秒；56轴、13,909姿态、288 Hz |
+| 原样保留的关节采样值 |98.41%；双臂、头部、首尾姿态及修复窗口外全部不变 |
+| 最大 / RMS 关节修正 |3.80° /0.0775° |
+| 指尖平均 / 最大偏差 |0.019 /4.24 mm |
+| 参考 / 物理实际离散网格 |均零相交；只排除结构性相邻/同刚体对 |
+| 最终 PhysX 接触报告 |零负接触间距对 |
+| 模型速度 |参考与物理实际采样速度均通过 |
 
-轨迹和模型存放于 Release 资产，代码/配置/必要证据存放于 Git。没有原始 bag、旧轨迹、日志、内部指令或完整 6x 视频；本次交付对象为轨迹。
+修复窗口分散在全段，约 50.90% 的帧至少有一个手指值被微调；98.41% 指的是“关节×采样点”，并非整帧比例。没有全段平滑或移动手腕分离双手。
 
-## 验证结果
-
-| 项目 | 已验证结果 |
+| 文件 | 用途 |
 | --- | --- |
-| 源区间 / 物理时长 | 0–289.766667 秒 / 48.295833 秒 |
-| 默认实际路径末节点 | 48.291667 秒；剩余一个物理步可保持末姿态 |
-| 发布路径离散碰撞 | 34,741 姿态 × 2,717 对几何体，零相交 |
-| 原完整运行目标 / 实际网格检查 | 23,183 / 23,181 姿态，零相交 |
-| 原完整 PhysX 接触 | 零负间距对；最小分离 +0.05417 mm |
-| 抖动改善 | 相对直接提速的 6x 基线，关节/腕部高频 RMS 下降 65.43% / 56.46%，加速度绝对值 P95 下降 37.74% |
-| 模型位置限制 | 目标和实际记录均无越限 |
-| 模型速度占比 | TRON2 目标/实际 34.57% / 33.77%；Wuji 93.68% / 93.63%，均通过 |
-| 跟踪 RMS / 最大值 | 0.023342 / 0.453704 rad，全部物理步统计 |
-| 可移植物理入口 | 第一秒 241 状态的目标/实际数组与原整段运行前缀逐位一致 |
-| 真机与连续 CCD | 未验证 |
+| `trajectories/trajectory_6x.npz` | 默认保真参考：`time`为执行秒，`source_time`为源秒，`q`为弧度，`joint_names`为轴序 |
+| `trajectories/repaired_source.npz` | 同一目标的源时间版本，用于物理执行 |
+| `trajectories/physical_tracking_6x.npz` | 已验证物理运行的实际状态与目标，单独保存 |
+| `configs/`、`release_manifest.json` | 时序、模型/输入哈希、来源和下载配置 |
+| `evidence/reference/`、`evidence/collision/`、`evidence/physics/` | 修改范围、保真度、碰撞及物理结果 |
+| [DEPLOYMENT.md](DEPLOYMENT.md) | 离线检查和真机准备 |
 
-查看[实际路径限位](evidence/motor_limits/report.json)、[目标速度](evidence/target_motor_limits/report.json)、[碰撞](evidence/collision/gate.json)、[物理验收](evidence/physics/acceptance.json)、[抖动](evidence/physics/temporal_quality.json)。高频指标采用 5 Hz 三阶零相位低通残差。离散碰撞保留同刚体/直接父子结构排除，不新增装配豁免；正间距处仍有接触事件。
+## 使用限制
 
-## 动作变化与限制
-
-1. 在 5x 修复参考上以源时间 0.6 Hz 平滑，使用接触约束物理姿态修正参考，并额外增加最多每只手腕 25 mm 间距。相对 5x 实际轨迹，指尖位置变化均值/P95 为 21.27/34.81 mm；最小双手指尖坐标原点间距由 6.47 变为 27.42 mm。最大间距变化为 95.62 mm，位于源时间 92.30 秒；关节 RMS/最大变化为 0.048654/0.801485 rad。局部手势已改变，未证明原表面接触与交互关系保持，详见[动作变化](evidence/physics/fidelity.json)。
-2. 平滑改善不代表零抖动；线性插值不保证加速度/jerk 限制。离散网格和 PhysX 接触检查不证明连续 CCD、精确实体间隙或真机安全。
-3. 物理基座 `base_Link` 世界 Z=0，桌面 Z=−0.45 m，固定高度差 **0.45 m**。物理基座、URDF 根、手腕及法兰是不同坐标系。16 维身体映射仍为 `candidate_unconfirmed`；真机身份、SDK 映射、电流/力矩与温度包络待确认。
-4. 默认实际位置与验收的 6x 物理记录逐位相同，没有在发布时再次加速或改关节值。轨迹 SHA-256：`460463385a43a8df54604d84b01ea389b60b56152366f32487a3e846410894fc`；原物理记录 SHA-256：`7078b8dda74e1384efba22b2575f4067cd43b6ffee75341d88e6956b6d6db45c`。路径规范化的报告保留源报告哈希，见[来源](configs/lineage.json)。
-5. 模型来源为 TRON2 commit `f547f5bc949f2a4c98e076e61cf6d3ca73d179a0`（Apache 2.0）和 Wuji commit `c2cd7f8d1ef8b6dc8cb907c17daa5a88b4442d95`（MIT），见 `licenses/`；不自动覆盖用户轨迹或连接件。
+- **物理实际运动仍有偏差**：相对 5x，指尖平均/P95/最大偏差约 7.94/18.37/72.74 mm，最大关节偏差约 28.10°。小幅参考修正不代表物理实际同样保真，详见[对比结果](evidence/reference/fidelity_temporal.json)。
+- 保留了原 5x 的微小位置越限，最大约 0.001635°。线性插值尚未约束真机加速度/jerk；离散碰撞不证明连续 CCD 或真机安全。
+- 物理基座 `base_Link` 世界 Z=0、桌面 Z=−0.45 m，高度差固定 **0.45 m**。身体映射仍为 `candidate_unconfirmed`；设备身份、SDK映射、电流/力矩/温度限制待确认。
+- 新参考 SHA-256：`841c29aefb3a3bfb2813bd59698ffe60ecdf20b712205227cb5ba05f77890253`。修改掩码见 `evidence/reference/local_masks.npz`；来源见[lineage](configs/lineage.json)。新运行不自动继承原报告验收。
+- 上游模型及许可见 `licenses/` 和 `configs/origin.json`；模型许可不自动覆盖用户轨迹或连接件。

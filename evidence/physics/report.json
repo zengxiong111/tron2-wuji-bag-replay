@@ -1,10 +1,10 @@
 {
   "mode": "PhysX position/velocity targets after single initialization",
   "target_interpolation": "piecewise linear",
-  "producer_sha256": "5d02661bc9627e2bd6d19b47fcc4fe25206fdcd243664eee104dbaf01f012339",
+  "producer_sha256": "1565481582f07767a7cdee82832ec2f577af6b17b299ebdd26c1fd6baad8242c",
   "usd_sha256": "0526b9a8f358a0ae2b9e55ead21467282c619973fa6b36bc2b33175b7eefed84",
   "usd": "outputs/robot/robot_collision_fixed.usd",
-  "reference_sha256": "11827052a2664e7e4fcb68303ac013c507d052bbbf0170ac8d89fe5ada1225e8",
+  "reference_sha256": "417b13370a93904056e8ca65863d14da2e13ce7881a147c2056bce24765efdbe",
   "reference": "trajectories/repaired_source.npz",
   "start_source_seconds": 0,
   "solver_iterations": [
@@ -13,6 +13,14 @@
   ],
   "contact_offset_m": 0.001,
   "rest_offset_m": 0.0002,
+  "per_body_rest_offsets_m": {
+    "l_index_finger_tip_sensor_frame": 0.0004,
+    "r_index_finger_distal": 0.0004,
+    "l_pinky_tip_sensor_frame": 0.0004,
+    "l_pinky_middle": 0.0004,
+    "r_index_finger_tip_sensor_frame": 0.0004
+  },
+  "collision_margin_map_sha256": "0fe9f17357a3c76db9b13a557c702f879c29174c73f25826295762f6e9f6fee5",
   "body_mapping_status": "candidate_unconfirmed",
   "hand_mapping_status": "source_declared_names; left_ -> l_, right_ -> r_",
   "physics_hz": 240,
@@ -872,10 +880,10 @@
   "status": "complete",
   "source_time_s": 289.76666666666665,
   "simulation_time_s": 48.2958333333448,
-  "wall_elapsed_s": 118.43815800198354,
+  "wall_elapsed_s": 118.19215705303941,
   "frames_measured": 11591,
-  "max_error_rad": 0.2714601792395115,
-  "rms_error_rad": 0.023342102990481825,
-  "source_report_sha256": "9324f89b1460c4014ac1f15314c3d5f3810a7818e9b30b1b393c2a168f75a8bd",
+  "max_error_rad": 0.2697075307369232,
+  "rms_error_rad": 0.025032522156834602,
+  "source_report_sha256": "f1546664d4f751e77b640737a17398829db564b0a5cec57d602a214c3efbfc0a",
   "normalization": "Only model/reference paths normalized; original report identified by source_report_sha256"
 }

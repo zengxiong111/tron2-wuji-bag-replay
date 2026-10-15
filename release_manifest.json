@@ -1,6 +1,6 @@
 {
   "repository": "zengxiong111/tron2-wuji-bag-replay",
-  "tag": "6x-collision-smooth-20261014",
+  "tag": "6x-preserve5x-20261015",
   "assets": [
     {
       "name": "robot-assets.tar.gz",
@@ -95,20 +95,23 @@
     },
     {
       "name": "trajectory-data.tar.gz",
-      "size_bytes": 5824999,
-      "sha256": "b5503f1e1de8b821e9fe4d700bcfbb3da36414fd0c1db61ea02d94b046f2ccbb",
+      "size_bytes": 10785923,
+      "sha256": "9e64969685fd1d5b4ba7179a9a6cf0f947472092ef754b1c89149f8848402426",
       "files": {
-        "trajectories/recorded_actual_6x.npz": "460463385a43a8df54604d84b01ea389b60b56152366f32487a3e846410894fc",
-        "trajectories/repaired_source.npz": "11827052a2664e7e4fcb68303ac013c507d052bbbf0170ac8d89fe5ada1225e8"
+        "trajectories/trajectory_6x.npz": "841c29aefb3a3bfb2813bd59698ffe60ecdf20b712205227cb5ba05f77890253",
+        "trajectories/repaired_source.npz": "417b13370a93904056e8ca65863d14da2e13ce7881a147c2056bce24765efdbe",
+        "trajectories/physical_tracking_6x.npz": "99aaf8bbcd84f6f60d54532c2caa859a24d50c7ea1c4bcb57b88e354bc903acd",
+        "evidence/reference/local_masks.npz": "8df76d67b5ad45fa2556cf2900c47aa25f9cccfc3c7e324cc9647cdd441e1809"
       }
     }
   ],
   "previous_files": {
-    "trajectories/repaired_source.npz": "9e3bc9fb38dcca4ccb75a55bc8135303ef7b34ef3210d0298e6491e4c1df2ce7"
+    "trajectories/repaired_source.npz": "11827052a2664e7e4fcb68303ac013c507d052bbbf0170ac8d89fe5ada1225e8"
   },
   "retired_files": {
     "trajectories/retimed_actual_4x.npz": "23b555d6a4bf6df33fa4da4e5905a10f9fe375f6447784edd44079e412bdfcd1",
     "trajectories/recorded_actual_5x.npz": "4e086ddf442ddded028b0af4824c519de4a004ba421b9df4662c11c8e498fc06",
-    "media/head_forward_full_5x.mp4": "92d45ad013eb127b5fcbb05a5516f5c09877ede0ab0f74001f15daecffaa7685"
+    "media/head_forward_full_5x.mp4": "92d45ad013eb127b5fcbb05a5516f5c09877ede0ab0f74001f15daecffaa7685",
+    "trajectories/recorded_actual_6x.npz": "460463385a43a8df54604d84b01ea389b60b56152366f32487a3e846410894fc"
   }
 }

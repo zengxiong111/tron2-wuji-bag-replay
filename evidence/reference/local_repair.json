@@ -1,0 +1,139 @@
+{
+  "input_sha256": "ae9ba861cbf4f34f4bb2dc0bfb4a03ca941609cca244924aee84b38c64c5359b",
+  "output_sha256": "841c29aefb3a3bfb2813bd59698ffe60ecdf20b712205227cb5ba05f77890253",
+  "producer_sha256": "b3dfadfa5b5e8be6d597ae27a05df62c7e16690e8817814f396f183e86960237",
+  "urdf_sha256": "c7864b55f60bac854586c8e7bab730fff027455511a4ef6ccbfec97d85f0407d",
+  "duration_s": 48.29166666668263,
+  "native_hz": 287.9999999999048,
+  "context_seconds": 0.15,
+  "max_delta_budget_deg": 4,
+  "max_delta_deg": 3.8042941318393346,
+  "rms_delta_deg": 0.0775355333730469,
+  "changed_cells": 12395,
+  "changed_cell_fraction": 0.015913385988517197,
+  "changed_frames": 7080,
+  "changed_frame_fraction": 0.5090229347904235,
+  "context_samples_each_side": 44,
+  "actual_context_seconds_each_side": 0.15277777777782828,
+  "outside_allowed_windows_bitwise_unchanged": true,
+  "arms_and_head_bitwise_unchanged": true,
+  "first_and_last_pose_bitwise_unchanged": true,
+  "peak_model_velocity_ratio": 0.9999029319267868,
+  "joints": [
+    {
+      "joint": "l_index_finger_mcp_flex",
+      "allowed_samples": 92,
+      "max_delta_deg": 0.025007030098709186
+    },
+    {
+      "joint": "l_index_finger_pip",
+      "allowed_samples": 518,
+      "max_delta_deg": 1.15163136576668
+    },
+    {
+      "joint": "l_index_finger_dip",
+      "allowed_samples": 91,
+      "max_delta_deg": 0.014469755756672012
+    },
+    {
+      "joint": "l_middle_finger_mcp_flex",
+      "allowed_samples": 1166,
+      "max_delta_deg": 1.3843222504106742
+    },
+    {
+      "joint": "l_middle_finger_pip",
+      "allowed_samples": 1498,
+      "max_delta_deg": 3.4194112645618238
+    },
+    {
+      "joint": "l_middle_finger_dip",
+      "allowed_samples": 335,
+      "max_delta_deg": 2.9326936918540074
+    },
+    {
+      "joint": "l_ring_finger_pip",
+      "allowed_samples": 2948,
+      "max_delta_deg": 3.485117684377346
+    },
+    {
+      "joint": "l_pinky_pip",
+      "allowed_samples": 4129,
+      "max_delta_deg": 3.8042941318393346
+    },
+    {
+      "joint": "l_pinky_dip",
+      "allowed_samples": 92,
+      "max_delta_deg": 0.03053777577912701
+    },
+    {
+      "joint": "r_index_finger_mcp_flex",
+      "allowed_samples": 381,
+      "max_delta_deg": 0.6110611665478982
+    },
+    {
+      "joint": "r_index_finger_pip",
+      "allowed_samples": 340,
+      "max_delta_deg": 1.8500574819882112
+    },
+    {
+      "joint": "r_index_finger_dip",
+      "allowed_samples": 321,
+      "max_delta_deg": 1.499749459176128
+    },
+    {
+      "joint": "r_middle_finger_mcp_flex",
+      "allowed_samples": 934,
+      "max_delta_deg": 2.317370487264021
+    },
+    {
+      "joint": "r_middle_finger_pip",
+      "allowed_samples": 383,
+      "max_delta_deg": 2.609152753512381
+    },
+    {
+      "joint": "r_middle_finger_dip",
+      "allowed_samples": 397,
+      "max_delta_deg": 2.86566733798138
+    },
+    {
+      "joint": "r_ring_finger_pip",
+      "allowed_samples": 291,
+      "max_delta_deg": 2.8457624591926702
+    },
+    {
+      "joint": "r_pinky_pip",
+      "allowed_samples": 140,
+      "max_delta_deg": 0.9687018243208134
+    }
+  ],
+  "local_collision_hints": [
+    {
+      "joint": "r_index_finger_dip",
+      "source_center_s": 99.79999999999626,
+      "halfwidth_source_s": 1.2,
+      "delta_deg": 1.5,
+      "evidence_sha256": "61cb7ecb8db853a95173d1ac7357c9759b619679b6186f2a74491e3cf6a9f488",
+      "pair": [
+        "l_pinky_tip_sensor_frame_0",
+        "r_index_finger_distal_0"
+      ],
+      "observed_max_depth_mm": 0.07199528081940253
+    },
+    {
+      "joint": "r_index_finger_dip",
+      "source_center_s": 158.77499999999293,
+      "halfwidth_source_s": 1.2,
+      "delta_deg": -1.5,
+      "evidence_sha256": "61cb7ecb8db853a95173d1ac7357c9759b619679b6186f2a74491e3cf6a9f488",
+      "pair": [
+        "l_index_finger_tip_sensor_frame_0",
+        "r_index_finger_distal_0"
+      ],
+      "observed_max_depth_mm": 0.06472808941296375
+    }
+  ],
+  "method": "Convex closest-correction QP with correction-curvature penalty; only original speed-violation neighborhoods and explicitly measured collision windows are variables",
+  "boundary": "Recorded-path local correction, not a new physical trace; mesh, fidelity and temporal checks required",
+  "physical_base_to_table_m": 0.45,
+  "hardware_execution_authorized": false
+}

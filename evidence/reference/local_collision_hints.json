@@ -1,0 +1,26 @@
+[
+  {
+    "joint": "r_index_finger_dip",
+    "source_center_s": 99.79999999999626,
+    "halfwidth_source_s": 1.2,
+    "delta_deg": 1.5,
+    "evidence_sha256": "61cb7ecb8db853a95173d1ac7357c9759b619679b6186f2a74491e3cf6a9f488",
+    "pair": [
+      "l_pinky_tip_sensor_frame_0",
+      "r_index_finger_distal_0"
+    ],
+    "observed_max_depth_mm": 0.07199528081940253
+  },
+  {
+    "joint": "r_index_finger_dip",
+    "source_center_s": 158.77499999999293,
+    "halfwidth_source_s": 1.2,
+    "delta_deg": -1.5,
+    "evidence_sha256": "61cb7ecb8db853a95173d1ac7357c9759b619679b6186f2a74491e3cf6a9f488",
+    "pair": [
+      "l_index_finger_tip_sensor_frame_0",
+      "r_index_finger_distal_0"
+    ],
+    "observed_max_depth_mm": 0.06472808941296375
+  }
+]

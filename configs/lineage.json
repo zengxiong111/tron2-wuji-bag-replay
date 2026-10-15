@@ -1,27 +1,152 @@
 {
   "base_main_commit": "2e5c7840c0f8f3ac08d240446f6d776eca0b76d7",
+  "replaces_branch_commit": "d38d375ec46f3eb4fbbfa1e17a7611e66249560e",
+  "parent_5x_tracking_sha256": "8634e73e49bbc0b769ea86c21ef918df92962da55e43305784c7005ffc6b505c",
   "original_bag_sha256": "2af6c090b36e26231aff0b2b102768c7224044cd260b8bc07486aa4167fe55bd",
-  "parent_5x_reference_sha256": "9e3bc9fb38dcca4ccb75a55bc8135303ef7b34ef3210d0298e6491e4c1df2ce7",
-  "source_tracking_sha256": "7078b8dda74e1384efba22b2575f4067cd43b6ffee75341d88e6956b6d6db45c",
-  "source_report_sha256": "9324f89b1460c4014ac1f15314c3d5f3810a7818e9b30b1b393c2a168f75a8bd",
-  "reference_sha256": "11827052a2664e7e4fcb68303ac013c507d052bbbf0170ac8d89fe5ada1225e8",
-  "published_actual_sha256": "460463385a43a8df54604d84b01ea389b60b56152366f32487a3e846410894fc",
-  "actual_positions_array_sha256": "d15ef14f08e14491771194d0132cd98af38ba85d14c0de601f0ce7423e0a322e",
-  "source_time_array_sha256": "2c1e59d33beda3b978fb5fbb1a8193e78435840746f4947499f2c5b9f1498f86",
-  "physics_motion_speed": 6,
-  "source_interval_s": [
-    0,
-    289.76666666666665
-  ],
-  "simulation_duration_s": 48.2958333333448,
-  "last_recorded_knot_s": 48.29166666667813,
-  "position_samples_bitwise_unchanged": true,
-  "physics_reexecuted_during_publication": false,
-  "physical_base_to_table_m": 0.45,
-  "head_target_rad": [
-    0,
-    0
-  ],
-  "repair_pipeline": "5x reference -> 0.6 Hz source smoothing -> wrist clearance -> 6x contact-constrained physical projection -> dense linear reference -> up to25 mm additional clearance per wrist -> full6x PhysX with98% velocity caps",
-  "source_producer_sha256": "5d02661bc9627e2bd6d19b47fcc4fe25206fdcd243664eee104dbaf01f012339"
+  "trajectory_sha256": "841c29aefb3a3bfb2813bd59698ffe60ecdf20b712205227cb5ba05f77890253",
+  "reference_sha256": "417b13370a93904056e8ca65863d14da2e13ce7881a147c2056bce24765efdbe",
+  "physical_tracking_sha256": "99aaf8bbcd84f6f60d54532c2caa859a24d50c7ea1c4bcb57b88e354bc903acd",
+  "source_report_sha256": "f1546664d4f751e77b640737a17398829db564b0a5cec57d602a214c3efbfc0a",
+  "reference_pose_changes": {
+    "input_sha256": "ae9ba861cbf4f34f4bb2dc0bfb4a03ca941609cca244924aee84b38c64c5359b",
+    "output_sha256": "841c29aefb3a3bfb2813bd59698ffe60ecdf20b712205227cb5ba05f77890253",
+    "producer_sha256": "b3dfadfa5b5e8be6d597ae27a05df62c7e16690e8817814f396f183e86960237",
+    "urdf_sha256": "c7864b55f60bac854586c8e7bab730fff027455511a4ef6ccbfec97d85f0407d",
+    "duration_s": 48.29166666668263,
+    "native_hz": 287.9999999999048,
+    "context_seconds": 0.15,
+    "max_delta_budget_deg": 4,
+    "max_delta_deg": 3.8042941318393346,
+    "rms_delta_deg": 0.0775355333730469,
+    "changed_cells": 12395,
+    "changed_cell_fraction": 0.015913385988517197,
+    "changed_frames": 7080,
+    "changed_frame_fraction": 0.5090229347904235,
+    "context_samples_each_side": 44,
+    "actual_context_seconds_each_side": 0.15277777777782828,
+    "outside_allowed_windows_bitwise_unchanged": true,
+    "arms_and_head_bitwise_unchanged": true,
+    "first_and_last_pose_bitwise_unchanged": true,
+    "peak_model_velocity_ratio": 0.9999029319267868,
+    "joints": [
+      {
+        "joint": "l_index_finger_mcp_flex",
+        "allowed_samples": 92,
+        "max_delta_deg": 0.025007030098709186
+      },
+      {
+        "joint": "l_index_finger_pip",
+        "allowed_samples": 518,
+        "max_delta_deg": 1.15163136576668
+      },
+      {
+        "joint": "l_index_finger_dip",
+        "allowed_samples": 91,
+        "max_delta_deg": 0.014469755756672012
+      },
+      {
+        "joint": "l_middle_finger_mcp_flex",
+        "allowed_samples": 1166,
+        "max_delta_deg": 1.3843222504106742
+      },
+      {
+        "joint": "l_middle_finger_pip",
+        "allowed_samples": 1498,
+        "max_delta_deg": 3.4194112645618238
+      },
+      {
+        "joint": "l_middle_finger_dip",
+        "allowed_samples": 335,
+        "max_delta_deg": 2.9326936918540074
+      },
+      {
+        "joint": "l_ring_finger_pip",
+        "allowed_samples": 2948,
+        "max_delta_deg": 3.485117684377346
+      },
+      {
+        "joint": "l_pinky_pip",
+        "allowed_samples": 4129,
+        "max_delta_deg": 3.8042941318393346
+      },
+      {
+        "joint": "l_pinky_dip",
+        "allowed_samples": 92,
+        "max_delta_deg": 0.03053777577912701
+      },
+      {
+        "joint": "r_index_finger_mcp_flex",
+        "allowed_samples": 381,
+        "max_delta_deg": 0.6110611665478982
+      },
+      {
+        "joint": "r_index_finger_pip",
+        "allowed_samples": 340,
+        "max_delta_deg": 1.8500574819882112
+      },
+      {
+        "joint": "r_index_finger_dip",
+        "allowed_samples": 321,
+        "max_delta_deg": 1.499749459176128
+      },
+      {
+        "joint": "r_middle_finger_mcp_flex",
+        "allowed_samples": 934,
+        "max_delta_deg": 2.317370487264021
+      },
+      {
+        "joint": "r_middle_finger_pip",
+        "allowed_samples": 383,
+        "max_delta_deg": 2.609152753512381
+      },
+      {
+        "joint": "r_middle_finger_dip",
+        "allowed_samples": 397,
+        "max_delta_deg": 2.86566733798138
+      },
+      {
+        "joint": "r_ring_finger_pip",
+        "allowed_samples": 291,
+        "max_delta_deg": 2.8457624591926702
+      },
+      {
+        "joint": "r_pinky_pip",
+        "allowed_samples": 140,
+        "max_delta_deg": 0.9687018243208134
+      }
+    ],
+    "local_collision_hints": [
+      {
+        "joint": "r_index_finger_dip",
+        "source_center_s": 99.79999999999626,
+        "halfwidth_source_s": 1.2,
+        "delta_deg": 1.5,
+        "evidence_sha256": "61cb7ecb8db853a95173d1ac7357c9759b619679b6186f2a74491e3cf6a9f488",
+        "pair": [
+          "l_pinky_tip_sensor_frame_0",
+          "r_index_finger_distal_0"
+        ],
+        "observed_max_depth_mm": 0.07199528081940253
+      },
+      {
+        "joint": "r_index_finger_dip",
+        "source_center_s": 158.77499999999293,
+        "halfwidth_source_s": 1.2,
+        "delta_deg": -1.5,
+        "evidence_sha256": "61cb7ecb8db853a95173d1ac7357c9759b619679b6186f2a74491e3cf6a9f488",
+        "pair": [
+          "l_index_finger_tip_sensor_frame_0",
+          "r_index_finger_distal_0"
+        ],
+        "observed_max_depth_mm": 0.06472808941296375
+      }
+    ],
+    "method": "Convex closest-correction QP with correction-curvature penalty; only original speed-violation neighborhoods and explicitly measured collision windows are variables",
+    "boundary": "Recorded-path local correction, not a new physical trace; mesh, fidelity and temporal checks required",
+    "physical_base_to_table_m": 0.45,
+    "hardware_execution_authorized": false
+  },
+  "reference_preservation_scope": "All arm/head axes, endpoints and all samples outside measured hand speed/collision windows unchanged",
+  "physical_actual_pose_preservation": false,
+  "physical_base_to_table_m": 0.45
 }

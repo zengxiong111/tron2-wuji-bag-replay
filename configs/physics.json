@@ -2,12 +2,19 @@
   "usd": "outputs/robot/robot_collision_fixed.usd",
   "usd_sha256": "0526b9a8f358a0ae2b9e55ead21467282c619973fa6b36bc2b33175b7eefed84",
   "reference": "trajectories/repaired_source.npz",
-  "reference_sha256": "11827052a2664e7e4fcb68303ac013c507d052bbbf0170ac8d89fe5ada1225e8",
+  "reference_sha256": "417b13370a93904056e8ca65863d14da2e13ce7881a147c2056bce24765efdbe",
   "body_mapping_status": "candidate_unconfirmed",
   "hand_mapping_status": "source_declared_names; left_ -> l_, right_ -> r_",
   "motion_speed": 6,
   "physics_hz": 240,
   "interpolation": "piecewise linear",
   "velocity_limit_scale": 0.98,
-  "hardware_execution_authorized": false
+  "hardware_execution_authorized": false,
+  "per_body_rest_offsets_m": {
+    "l_index_finger_tip_sensor_frame": 0.0004,
+    "r_index_finger_distal": 0.0004,
+    "l_pinky_tip_sensor_frame": 0.0004,
+    "l_pinky_middle": 0.0004,
+    "r_index_finger_tip_sensor_frame": 0.0004
+  }
 }

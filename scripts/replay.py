@@ -1,4 +1,4 @@
-"""Launch recorded6x path playback, or explicitly rerun repaired targets in PhysX."""
+"""Launch preserved6x reference display, or explicitly rerun repaired targets in PhysX."""
 import argparse
 from pathlib import Path
 import subprocess

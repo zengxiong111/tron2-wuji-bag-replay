@@ -1,15 +1,16 @@
 {
-  "trajectory": "trajectories/recorded_actual_6x.npz",
-  "trajectory_sha256": "460463385a43a8df54604d84b01ea389b60b56152366f32487a3e846410894fc",
+  "trajectory": "trajectories/trajectory_6x.npz",
+  "trajectory_sha256": "841c29aefb3a3bfb2813bd59698ffe60ecdf20b712205227cb5ba05f77890253",
   "usd": "outputs/robot/robot_collision_fixed.usd",
   "usd_sha256": "0526b9a8f358a0ae2b9e55ead21467282c619973fa6b36bc2b33175b7eefed84",
   "interpolation": "piecewise linear in execution seconds",
   "file_time_multiplier": 1,
   "effective_bag_speed": 6,
-  "duration_s": 48.29166666667813,
-  "native_samples": 11591,
-  "native_hz": 240,
-  "mode": "recorded-path kinematic playback",
+  "duration_s": 48.29166666668263,
+  "native_samples": 13909,
+  "native_hz": 288,
+  "mode": "locally repaired reference-path kinematic playback",
   "physics_reexecuted": false,
-  "hardware_execution_authorized": false
+  "hardware_execution_authorized": false,
+  "trajectory_kind": "preserved5x pose reference with local hand corrections; not new physics actual states"
 }

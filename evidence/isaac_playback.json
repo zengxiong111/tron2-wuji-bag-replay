@@ -1,8 +1,8 @@
 {
-  "trajectory_sha256": "460463385a43a8df54604d84b01ea389b60b56152366f32487a3e846410894fc",
+  "trajectory_sha256": "841c29aefb3a3bfb2813bd59698ffe60ecdf20b712205227cb5ba05f77890253",
   "usd_sha256": "0526b9a8f358a0ae2b9e55ead21467282c619973fa6b36bc2b33175b7eefed84",
-  "producer_sha256": "14c45e315b0c46563165e834a9af2823d245e8403dd87f82e2ea1067870b1fba",
-  "mode": "recorded-path kinematic playback",
+  "producer_sha256": "46373ea456bb024ef3a969df64761d7ee183d85f803bb78d0412a4283bff1b2c",
+  "mode": "locally repaired reference-path kinematic playback",
   "interpolation": "piecewise linear in execution seconds",
   "file_time_multiplier": 1,
   "effective_bag_speed": 6,
@@ -12,11 +12,11 @@
   "status": "complete",
   "frames": 31,
   "last_execution_time_s": 1.0,
-  "maximum_joint_readback_error_rad": 4.440892098500626e-16,
+  "maximum_joint_readback_error_rad": 9.536743172944284e-08,
   "rendered_link_matrix_max_delta": {
-    "wrist_roll_L_Link": 0.045264405663582585,
-    "wrist_roll_R_Link": 0.027283932571502856,
-    "l_index_finger_distal": 0.06199684937841121,
-    "r_index_finger_distal": 0.03295287518630596
+    "wrist_roll_L_Link": 0.045659241519732885,
+    "wrist_roll_R_Link": 0.03163475386823522,
+    "l_index_finger_distal": 0.059260577337589826,
+    "r_index_finger_distal": 0.03723191560304134
   }
 }

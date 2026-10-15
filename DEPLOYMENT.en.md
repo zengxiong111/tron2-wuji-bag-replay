@@ -1,54 +1,43 @@
 # Hardware deployment preparation
 
-This repository provides Isaac Sim playback. **It includes no hardware controller and has not passed hardware admission.** These steps support further preparation after handoff. Chinese: [DEPLOYMENT.md](DEPLOYMENT.md).
+This repository provides reference display and physical tracking. **It has no hardware controller and has not passed hardware admission.** 中文：[DEPLOYMENT.md](DEPLOYMENT.md)。
 
 ## Contents
 
 - [Offline checks](#offline-checks)
-- [Device information](#device-information)
-- [Deployment sequence](#deployment-sequence)
+- [Required information](#required-information)
+- [Commissioning sequence](#commissioning-sequence)
 
 ## Offline checks
 
-Download 6x assets using [README.en.md](README.en.md). The actual path lasts approximately 48.30 seconds and plays at 1x file time; this branch retains the physics configuration with 98% model velocity caps. Run from the repository root:
+Download assets using [README.en.md](README.en.md), then run from the repository root. Output directories must be new and outside the repository:
 
 ```bash
 python3 scripts/verify_bundle.py
 python3.12 -m venv ../tron2-analysis-env
 ../tron2-analysis-env/bin/pip install -r requirements-analysis.txt
 ../tron2-analysis-env/bin/python scripts/audit_retimed_trajectory.py --limits-only --out ../tron2-limits-check
+../tron2-analysis-env/bin/python scripts/audit_target_velocity.py --out ../tron2-target-check
 python3 scripts/check_hardware_admission.py
 ../tron2-analysis-env/bin/python -m unittest discover -s tests -v
 ```
 
-`../tron2-limits-check` must be a new directory outside the repository. Model position and velocity checks for this branch's 6x trajectory should return `0`; hardware admission still returns `2` (incomplete information). Integrity verification and unit tests should pass. Hardware admission checks offline information without connecting to devices.
+Integrity verification, target speed checks and eight tests should pass. Strict position checks should return `2` because original5x tiny excess up to approximately 0.001635° is retained; hardware information checks also return `2`. These scripts do not connect to devices. Physical actual tracking still has maximum deviation around28.10° and cannot inherit reference fidelity admission.
 
-To recompute the complete discrete collision check, use the same environment and the command below. It takes longer and writes results to a new external directory:
+## Required information
 
-```bash
-../tron2-analysis-env/bin/python scripts/audit_retimed_trajectory.py --out ../tron2-full-check
-```
-
-## Device information
-
-The device owner must complete these files. Leave unknown fields blank; model values cannot substitute for physical-device ratings.
-
-| File | Required confirmation |
+| File | Confirm |
 | --- | --- |
-| `configs/hardware_inventory.json` | TRON2, left-hand and right-hand models, hardware revisions, firmware, identifiers and evidence |
-| `configs/joint_mapping.csv` | SDK names/IDs, directions, zero offsets and units for 56 axes |
-| `configs/hardware_limits.csv` | Per-axis position, speed, acceleration, current, torque, temperature and sustained-load limits, with source revisions |
+| `configs/hardware_inventory.json` | TRON2 and left/right Wuji model, firmware, identifiers and evidence |
+| `configs/joint_mapping.csv` | SDK names/indices, directions, zero offsets and units for56 axes |
+| `configs/hardware_limits.csv` | Revision-bound per-axis position, velocity, acceleration, current, torque, temperature and load limits |
 
-The source bag has 16 unnamed body-state channels. Their order remains unconfirmed, with conflicting head yaw/pitch order: the candidate order is yaw, pitch, while the manual lists 14=pitch and 15=yaw. The hands have 40 named position channels, but name matching does not confirm the installed devices' SDK mapping. `bag_hand_index` / `bag_pos_index` are nested hand / position indices; `bag_raw_index` is the flattened 40-channel index.
+The16-axis body order remains unconfirmed, with a conflict between candidate head yaw/pitch order and manual indices. The40 named hand channels do not confirm the installed devices' SDK mapping. Leave unknown fields blank; model values do not substitute for device ratings.
 
-## Deployment sequence
+## Commissioning sequence
 
-1. **Confirm devices and mappings.** Verify the information above and resolve body-channel order and hand-actuator assignments.
-2. **Prepare an executable trajectory.** Retain the current model position/speed passes, add smooth starts/stops and hardware acceleration/jerk bounds, then resample at the actual control period. The file's 240 Hz sample rate does not define hardware control frequency. Recheck limits, collisions and physical tracking; update trajectory and report hashes.
-3. **Check the site and initial pose.** Keep the tabletop-to-physical-base gap at 0.45 m; do not change mounting height to eliminate collisions. Check adapters, cables, loads, obstacles, the first-frame transition and braking space.
-4. **Implement a hardware controller.** Use the confirmed SDK with per-axis limits, feedback timeouts, tracking-error monitoring, fault stops and emergency stops. Verify read-only feedback and fault handling first. Parameters and gains must be confirmed against the physical devices.
-5. **Commission in stages.** After device-owner approval, check individual axes, hands, arms, slow segments and the full trajectory, then validate the target motion speed. Record actual states, current/torque, temperatures, fault codes and timestamps outside the repository.
-
-Follow the manufacturer's stop procedure for mapping errors, lost feedback, limit violations, abnormal temperatures or unexpected contact. Resolve the cause before continuing. Revalidate affected checks after changes to parameters, loads, assembly, controllers or trajectories.
-
-Hardware acceptance requires device-owner confirmation of information, mappings, limits, starts/stops, braking and complete-run results. Isaac videos and offline tables cannot substitute for physical commissioning. Acceleration/jerk remains unbounded for the current piecewise-linear path; slowing it alone does not resolve this.
+1. Confirm devices, mappings, trajectory hash and initial pose; keep the mounting gap fixed at0.45m.
+2. Prepare a trajectory/controller meeting hardware limits. Resolve tiny angle excess, starts/stops, braking, acceleration/jerk and physical tracking errors, then recheck collisions/limits. The file's288Hz does not define hardware control frequency.
+3. Implement per-axis limits, feedback timeouts, tracking-error/fault/temperature monitoring and emergency stops; validate read-only feedback and stopping first.
+4. After device-owner approval, progress through single axes, single hands/arms, slow segments and slow full runs, increasing speed only after each stage passes.
+5. Follow manufacturer stop procedures for mapping errors, lost feedback, limit violations, abnormal heating or unexpected contact. Never resume automatically; resolve causes and revalidate. Store runtime records outside the repository.

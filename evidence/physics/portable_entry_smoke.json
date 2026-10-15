@@ -1,10 +1,10 @@
 {
   "mode": "PhysX position/velocity targets after single initialization",
   "target_interpolation": "piecewise linear",
-  "producer_sha256": "01d17f0fbb5009a3c7df1f0ae3847e2ab7577ff7a6cf02824b2185e372e35e3d",
+  "producer_sha256": "25c114d034d6784e2c3a44e19d164587966985f59d299ca4cc69a37ae5973d95",
   "usd_sha256": "0526b9a8f358a0ae2b9e55ead21467282c619973fa6b36bc2b33175b7eefed84",
   "usd": "outputs/robot/robot_collision_fixed.usd",
-  "reference_sha256": "11827052a2664e7e4fcb68303ac013c507d052bbbf0170ac8d89fe5ada1225e8",
+  "reference_sha256": "417b13370a93904056e8ca65863d14da2e13ce7881a147c2056bce24765efdbe",
   "reference": "trajectories/repaired_source.npz",
   "start_source_seconds": 0,
   "solver_iterations": [
@@ -13,6 +13,13 @@
   ],
   "contact_offset_m": 0.001,
   "rest_offset_m": 0.0002,
+  "per_body_rest_offsets_m": {
+    "l_index_finger_tip_sensor_frame": 0.0004,
+    "r_index_finger_distal": 0.0004,
+    "l_pinky_tip_sensor_frame": 0.0004,
+    "l_pinky_middle": 0.0004,
+    "r_index_finger_tip_sensor_frame": 0.0004
+  },
   "body_mapping_status": "candidate_unconfirmed",
   "hand_mapping_status": "source_declared_names; left_ -> l_, right_ -> r_",
   "physics_hz": 240,
@@ -875,16 +882,11 @@
   "status": "complete",
   "source_time_s": 6.0,
   "simulation_time_s": 1.0041666666666644,
-  "wall_elapsed_s": 2.0538575099781156,
+  "wall_elapsed_s": 2.2667415889445692,
   "frames_measured": 241,
-  "max_error_rad": 0.045349493622779846,
-  "rms_error_rad": 0.017993952045409725,
-  "source_report_sha256": "3b0d641e20c1ebfb6218468d12ca77753b4b9f5697e8df7d3f4c5c70de9e2736",
-  "prefix_comparison": {
-    "states": 241,
-    "q_target_bitwise_equal_to_original_full_run_prefix": true,
-    "q_actual_bitwise_equal_to_original_full_run_prefix": true,
-    "maximum_actual_delta_rad": 0
-  },
-  "scope": "First simulation second of portable physical entry; not another full-run certificate"
+  "max_error_rad": 0.045468010008335114,
+  "rms_error_rad": 0.017956608906388283,
+  "source_report_sha256": "e14051ea70173a70d1d6286876b492a5b3f7d046c5dc5894afb23409ca851418",
+  "prefix_bitwise_equal_states": 241,
+  "scope": "Portable entry first second; original full-run evidence is separate"
 }
