@@ -1,6 +1,6 @@
 {
   "trajectory": "trajectories/trajectory_6x.npz",
-  "trajectory_sha256": "c29efc597857dc3193ab68b629d1b4c6b8309eaea9bf7b44b5dc03303ec98a25",
+  "trajectory_sha256": "bedc266d4339cd038e35dcd0ec555cb41696a004fb018c8437573cc94a728246",
   "usd": "outputs/robot/robot_collision_fixed.usd",
   "usd_sha256": "0526b9a8f358a0ae2b9e55ead21467282c619973fa6b36bc2b33175b7eefed84",
   "interpolation": "piecewise linear in execution seconds",
@@ -9,8 +9,8 @@
   "duration_s": 48.29166666668263,
   "native_samples": 13909,
   "native_hz": 288,
-  "mode": "expanded-opening arm-retimed hand-fixed reference playback",
+  "mode": "finger-clearance-repaired 6x target playback",
   "physics_reexecuted": false,
   "hardware_execution_authorized": false,
-  "trajectory_kind": "Opening strokes approximately +20 percent with three local preservation windows; unchanged finger targets and local 2x arm clock; not physical actual states"
+  "trajectory_kind": "Finger-clearance repair; arms, head and both clocks pointwise numerically unchanged from parent 27ff86b; not physical actual states"
 }

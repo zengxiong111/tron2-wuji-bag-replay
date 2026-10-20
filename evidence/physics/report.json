@@ -1,10 +1,10 @@
 {
   "mode": "PhysX position/velocity targets after single initialization",
   "target_interpolation": "piecewise linear",
-  "producer_sha256": "1565481582f07767a7cdee82832ec2f577af6b17b299ebdd26c1fd6baad8242c",
+  "producer_sha256": "e1573fe1a1faef828ae0da015da7c539d919737cdbccc342f5c24f34122766ef",
   "usd_sha256": "0526b9a8f358a0ae2b9e55ead21467282c619973fa6b36bc2b33175b7eefed84",
   "usd": "outputs/robot/robot_collision_fixed.usd",
-  "reference_sha256": "68f112de1ebbc432c14642353d7acd89e280f84cc80cf297ef6a9b4d7bcebde0",
+  "reference_sha256": "785cb79490bd23582743f840b1021db23c780c026a57ccd98c7ad3b8b13cdf61",
   "reference": "trajectories/repaired_source.npz",
   "start_source_seconds": 0,
   "solver_iterations": [
@@ -877,19 +877,19 @@
   },
   "accepted": false,
   "acceptance_boundary": "Physics tracking diagnostic; collision-pair coverage and hardware behavior unverified",
+  "digit_nonzero_impulse_points": 0,
+  "digit_nonzero_impulse_pairs": 0,
   "status": "complete",
   "source_time_s": 289.76666666666665,
   "simulation_time_s": 48.2958333333448,
-  "wall_elapsed_s": 124.28344794199802,
+  "wall_elapsed_s": 107.7141277550254,
   "frames_measured": 11591,
-  "max_error_rad": 0.2540811598300934,
-  "rms_error_rad": 0.026654591783881187,
-  "max_error_sampling": "Render-cadence diagnostic only; full 240 Hz sample metric is recorded separately below.",
+  "max_error_rad": 0.2540415059184744,
+  "rms_error_rad": 0.026865632568728603,
   "full_trace_tracking_error": {
-    "rms_rad": 0.026654590623295102,
-    "maximum_rad": 0.6330035701394081,
-    "sample_rate_hz": 240,
-    "method": "Pointwise q_actual minus q_target across all physical trace states",
-    "physical_trace_sha256": "6676f70d2a0cc650097b13995841181642235ca093b51a341f3c90cf7a09ed1e"
-  }
+    "rms_rad": 0.026865632568728603,
+    "max_rad": 0.6329797274932929,
+    "sample_hz": 240
+  },
+  "producer_note": "Accepted source runner hash; portable entry uses identical control configuration. Capture-specific digit event logging is in the accepted evidence."
 }

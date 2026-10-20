@@ -1,8 +1,8 @@
 {
-  "trajectory_sha256": "c29efc597857dc3193ab68b629d1b4c6b8309eaea9bf7b44b5dc03303ec98a25",
+  "trajectory_sha256": "bedc266d4339cd038e35dcd0ec555cb41696a004fb018c8437573cc94a728246",
   "usd_sha256": "0526b9a8f358a0ae2b9e55ead21467282c619973fa6b36bc2b33175b7eefed84",
   "producer_sha256": "46373ea456bb024ef3a969df64761d7ee183d85f803bb78d0412a4283bff1b2c",
-  "mode": "expanded-opening arm-retimed hand-fixed reference playback",
+  "mode": "finger-clearance-repaired 6x target playback",
   "interpolation": "piecewise linear in execution seconds",
   "file_time_multiplier": 1,
   "effective_bag_speed": 6,
@@ -16,7 +16,7 @@
   "rendered_link_matrix_max_delta": {
     "wrist_roll_L_Link": 0.04565937533565656,
     "wrist_roll_R_Link": 0.03163456379960339,
-    "l_index_finger_distal": 0.05926056431941118,
-    "r_index_finger_distal": 0.03723164597881362
+    "l_index_finger_distal": 0.05926262514386871,
+    "r_index_finger_distal": 0.03722256759382436
   }
 }

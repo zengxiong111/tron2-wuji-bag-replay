@@ -22,7 +22,7 @@ python3 scripts/check_hardware_admission.py
 ../tron2-analysis-env/bin/python -m unittest discover -s tests -v
 ```
 
-Integrity verification, target speed checks and eight tests should pass. Strict position checks return `2` for the inherited tiny excess around 0.001067°; hardware inventory checks also return `2`. These commands do not connect to devices. Finger targets match the old version; see README for physical tracking after arm expansion, local gain exceptions and temporal metrics. Inspect the full motion; a reference video alone does not establish physical quality.
+Integrity verification, target speed checks and eight tests should pass. Strict position checks return `2` for the inherited tiny excess around 0.001067°; hardware inventory checks also return `2`. These commands do not connect to devices. Finger targets have local clearance repairs; arms, head and clocks are unchanged. See README for changes and actual tracking metrics. Inspect the full motion; a reference video alone does not establish physical quality.
 
 ## Information to confirm
 

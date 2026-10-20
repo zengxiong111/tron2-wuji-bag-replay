@@ -1,0 +1,105 @@
+{
+  "parent_sha256": "c29efc597857dc3193ab68b629d1b4c6b8309eaea9bf7b44b5dc03303ec98a25",
+  "trajectory_sha256": "bedc266d4339cd038e35dcd0ec555cb41696a004fb018c8437573cc94a728246",
+  "unchanged": {
+    "time": true,
+    "source_time": true,
+    "joint_names": true,
+    "arms_and_head": true
+  },
+  "duration_s": 48.29166666668263,
+  "samples": 13909,
+  "maximum_finger_delta_deg": 8.275723574776679,
+  "rms_finger_delta_deg": 0.5232262782454828,
+  "finger_tip_shift_mm": {
+    "maximum": 13.914475610130904,
+    "rms": 1.8005359086969341,
+    "p95": 4.027606350302644
+  },
+  "cross_hand_tip_relation_vector_change_mm": {
+    "maximum": 20.660101744470616,
+    "rms": 2.5789125574590743
+  },
+  "finger_amplitude_ratio": {
+    "min": 0.9697602580656612,
+    "max": 14.333156827699613,
+    "per_joint": {
+      "l_thumb_cmc_flex": 14.333156827699613,
+      "l_thumb_cmc_abd": 9.508135844476005,
+      "l_thumb_mcp": 1.074085131639504,
+      "l_thumb_ip": 0.9977168373984532,
+      "l_index_finger_mcp_flex": 0.9774024469575475,
+      "l_index_finger_mcp_abd": 1.039440351845,
+      "l_index_finger_pip": 0.9959061957710192,
+      "l_index_finger_dip": 1.0025552473217902,
+      "l_middle_finger_mcp_flex": 0.9987424287170704,
+      "l_middle_finger_mcp_abd": 0.9697602580656612,
+      "l_middle_finger_pip": 1.0068617734659238,
+      "l_middle_finger_dip": 1.0001856202276762,
+      "l_ring_finger_mcp_flex": 1.0012794641526161,
+      "l_ring_finger_mcp_abd": 1.028229330336815,
+      "l_ring_finger_pip": 1.0003675834326808,
+      "l_ring_finger_dip": 0.9999815390128827,
+      "l_pinky_mcp_flex": 1.0000056379323128,
+      "l_pinky_mcp_abd": 0.9958934041555367,
+      "l_pinky_pip": 0.998313412964776,
+      "l_pinky_dip": 1.0000137320230214,
+      "r_thumb_cmc_flex": 0.9933593298145498,
+      "r_thumb_cmc_abd": 0.9992101432789177,
+      "r_thumb_mcp": 0.9912032885403615,
+      "r_thumb_ip": 0.9998090504874441,
+      "r_index_finger_mcp_flex": 1.0005546923028867,
+      "r_index_finger_mcp_abd": 1.002136446197374,
+      "r_index_finger_pip": 1.0021849846549669,
+      "r_index_finger_dip": 1.0035763009458527,
+      "r_middle_finger_mcp_flex": 1.009195028839261,
+      "r_middle_finger_mcp_abd": 0.9802037625581583,
+      "r_middle_finger_pip": 1.0007968358656367,
+      "r_middle_finger_dip": 1.001618077695632,
+      "r_ring_finger_mcp_flex": 1.025154633578395,
+      "r_ring_finger_mcp_abd": 1.0355591584266581,
+      "r_ring_finger_pip": 0.9994082183944564,
+      "r_ring_finger_dip": 0.998812442500982,
+      "r_pinky_mcp_flex": 1.000568102351795,
+      "r_pinky_mcp_abd": 1.063273357535583,
+      "r_pinky_pip": 0.9997409823892782,
+      "r_pinky_dip": 0.9999713834222715
+    }
+  },
+  "model_speed_ratio": {
+    "arms": 0.6637238920406179,
+    "fingers": 0.9999000052544582
+  },
+  "maximum_position_excess_deg": 0.0010667617496056218,
+  "physical_base_above_table_m": 0.45,
+  "actual_high_frequency_rms_above_6hz": {
+    "arms": {
+      "previous_rad": 0.005588450674756156,
+      "new_rad": 0.005584410159438272
+    },
+    "fingers": {
+      "previous_rad": 0.008127245628390935,
+      "new_rad": 0.00796449062676052
+    }
+  },
+  "actual_model_velocity_peak_ratio": 0.986035791560743,
+  "physics_config_unchanged": {
+    "usd_sha256": true,
+    "solver_iterations": true,
+    "contact_offset_m": true,
+    "rest_offset_m": true,
+    "per_body_rest_offsets_m": true,
+    "physics_hz": true,
+    "motion_speed": true,
+    "gravity_m_s2": true,
+    "self_collision_enabled": true,
+    "table_collision_enabled": true,
+    "physical_base_to_table_m": true,
+    "runtime_gain_kp_rad": true,
+    "runtime_gain_kd_rad": true,
+    "runtime_drive_settings": true,
+    "runtime_velocity_limit_scale": true,
+    "runtime_velocity_caps": true,
+    "massless_frame_overrides": true
+  }
+}

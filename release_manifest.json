@@ -1,6 +1,6 @@
 {
   "repository": "zengxiong111/tron2-wuji-bag-replay",
-  "tag": "6x-arm-open20-hand-fixed-20261020",
+  "tag": "6x-no-finger-contact-20261020",
   "assets": [
     {
       "name": "robot-assets.tar.gz",
@@ -95,43 +95,47 @@
     },
     {
       "name": "trajectory-data.tar.gz",
-      "size_bytes": 15169315,
-      "sha256": "2008995650d6f31dffbf0726ef61f3b0268eeadb05f86564f9f32c809079fbff",
+      "size_bytes": 18248892,
+      "sha256": "5e475d04b03c1f5c6d6ca23a50ff0f6c54ed84a52d2402a17874f64aae61721a",
       "files": {
-        "trajectories/trajectory_6x.npz": "c29efc597857dc3193ab68b629d1b4c6b8309eaea9bf7b44b5dc03303ec98a25",
-        "trajectories/repaired_source.npz": "68f112de1ebbc432c14642353d7acd89e280f84cc80cf297ef6a9b4d7bcebde0",
-        "trajectories/physical_tracking_6x.npz": "6676f70d2a0cc650097b13995841181642235ca093b51a341f3c90cf7a09ed1e",
-        "evidence/reference/arm_clock.npz": "bfe1ea25211bd16e16ede154e0b8790c3ccdbddf15c4cc516ae4af950d761ffb",
-        "evidence/reference/expanded_path.npz": "137c31e87a68d61af9dc0f9eab359d6dffb4bf9a6604dbbbd70b782cc408e421",
-        "evidence/reference/opening_geometry.npz": "fcd5a5aa2d43f048831e6a050e31450bcc1cabdd0718df299c1011c30bba5867",
-        "evidence/reference/expansion_weight.npz": "404db1ae72aa351bb4460cc04d98f06e54aff7a55ac636fe3fbd4beef365a0ef",
+        "evidence/finger_actual/samples.npz": "42b27832829e39c05010e24650acb8aa6ce3d8711e24c822fefa2ac09a14ae4a",
+        "evidence/finger_actual_swept/bounds.npz": "99faa3468914b93fbc964c40bbf4b552f9d992e16b1474e2cdcf992b1acdf0a6",
+        "evidence/finger_target/samples.npz": "1fd071b7a17aefc17c6b99552fb094682ea1fc9d7446e4be6e45742141766980",
+        "evidence/finger_target_swept/bounds.npz": "5ba7a066ffb192c0df5a28bfe560b9abfc08fd3f7b72e85439756df263379070",
+        "evidence/physics_collision/checked_samples.npz": "a16ef60e8b577d7879b691c4d117d10cb9765f4348d423a0e154109f97024713",
         "evidence/reference_collision/checked_samples.npz": "0eb105bc603ec979ef8a3eb4b3ceb2ebbda7ecd817431dd6e57c8f55c75571d8",
-        "evidence/physics_collision/checked_samples.npz": "a16ef60e8b577d7879b691c4d117d10cb9765f4348d423a0e154109f97024713"
+        "trajectories/physical_tracking_6x.npz": "adfed561341d0f06a78bb18b339a90593eb9c8ec89497bdbd27a54291a98e8b3",
+        "trajectories/repaired_source.npz": "785cb79490bd23582743f840b1021db23c780c026a57ccd98c7ad3b8b13cdf61",
+        "trajectories/trajectory_6x.npz": "bedc266d4339cd038e35dcd0ec555cb41696a004fb018c8437573cc94a728246"
       }
     },
     {
       "name": "replay-videos.tar.gz",
-      "size_bytes": 11504694,
-      "sha256": "dedaab499b3623b30dd57c10d2d10c177613b046d77dd3dc363ec3e2854261d4",
+      "size_bytes": 2728481,
+      "sha256": "2b0308adfaac25ea279f4f195a38ce24f88378d3ac75cbdd0ea4ab6a73c7538d",
       "files": {
-        "media/new_6x_full.mp4": "61c3924c43ed3f5546ed0fd0700d84f8794c99f5d2352400ed46ad5ddd005c37",
-        "media/old_vs_new_6x.mp4": "08f8066b72db826d0f5fd8d9f60d3e8ea50ecb80a2da88a5e926d3729d87847d"
+        "media/new_6x_full.mp4": "81dcffc739a37702618e06d8e43387aaba6c44cc0f23e32d60e65ab3090dc29d"
       }
     }
   ],
   "previous_files": {
-    "trajectories/trajectory_6x.npz": "5467cff16fcf08f2aba6fada0bce74d914ba8bc69e141a99e3c08531915db2e2",
-    "trajectories/repaired_source.npz": "d6d47a47953bda2929b16ef3ebab145ba2952cd5f6c4e0b3583212fb0a69b7da",
-    "trajectories/physical_tracking_6x.npz": "1a06fa1bede52e7f2f40d38942893ce1c10506300ec08ba96341cc4a6c965c20",
-    "evidence/reference/arm_clock.npz": "0cb7bdc81670452a07d8c71efa6bb3f35e54fd8db33b9f6202f90c0c001557e7",
-    "media/new_6x_full.mp4": "5db14054c92e609dad1775a0786d77606b74966372eb3cb0b98cca6cac61af76",
-    "media/old_vs_new_6x.mp4": "f34e40f78af0bafd1d7ef9c66d775b23784765cac6a6a4c84964f32b91f4acdd"
+    "trajectories/trajectory_6x.npz": "c29efc597857dc3193ab68b629d1b4c6b8309eaea9bf7b44b5dc03303ec98a25",
+    "trajectories/repaired_source.npz": "68f112de1ebbc432c14642353d7acd89e280f84cc80cf297ef6a9b4d7bcebde0",
+    "trajectories/physical_tracking_6x.npz": "6676f70d2a0cc650097b13995841181642235ca093b51a341f3c90cf7a09ed1e",
+    "evidence/reference_collision/checked_samples.npz": "0eb105bc603ec979ef8a3eb4b3ceb2ebbda7ecd817431dd6e57c8f55c75571d8",
+    "evidence/physics_collision/checked_samples.npz": "a16ef60e8b577d7879b691c4d117d10cb9765f4348d423a0e154109f97024713",
+    "media/new_6x_full.mp4": "61c3924c43ed3f5546ed0fd0700d84f8794c99f5d2352400ed46ad5ddd005c37"
   },
   "retired_files": {
     "trajectories/retimed_actual_4x.npz": "23b555d6a4bf6df33fa4da4e5905a10f9fe375f6447784edd44079e412bdfcd1",
     "trajectories/recorded_actual_5x.npz": "4e086ddf442ddded028b0af4824c519de4a004ba421b9df4662c11c8e498fc06",
     "media/head_forward_full_5x.mp4": "92d45ad013eb127b5fcbb05a5516f5c09877ede0ab0f74001f15daecffaa7685",
     "trajectories/recorded_actual_6x.npz": "460463385a43a8df54604d84b01ea389b60b56152366f32487a3e846410894fc",
-    "evidence/reference/local_masks.npz": "8df76d67b5ad45fa2556cf2900c47aa25f9cccfc3c7e324cc9647cdd441e1809"
+    "evidence/reference/local_masks.npz": "8df76d67b5ad45fa2556cf2900c47aa25f9cccfc3c7e324cc9647cdd441e1809",
+    "evidence/reference/arm_clock.npz": "bfe1ea25211bd16e16ede154e0b8790c3ccdbddf15c4cc516ae4af950d761ffb",
+    "evidence/reference/expanded_path.npz": "137c31e87a68d61af9dc0f9eab359d6dffb4bf9a6604dbbbd70b782cc408e421",
+    "evidence/reference/opening_geometry.npz": "fcd5a5aa2d43f048831e6a050e31450bcc1cabdd0718df299c1011c30bba5867",
+    "evidence/reference/expansion_weight.npz": "404db1ae72aa351bb4460cc04d98f06e54aff7a55ac636fe3fbd4beef365a0ef",
+    "media/old_vs_new_6x.mp4": "08f8066b72db826d0f5fd8d9f60d3e8ea50ecb80a2da88a5e926d3729d87847d"
   }
 }

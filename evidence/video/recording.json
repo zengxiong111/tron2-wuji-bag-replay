@@ -3,29 +3,28 @@
   "frames": 1449,
   "duration_s": 48.3,
   "codec": "H264 yuv420p faststart",
-  "label": "NEW 6x | OPENING +20% / LOCAL REPAIRS | SAME FINGERS",
   "motion_speed": 6,
   "source_interval_s": [
     0.0,
-    289.7500000000958
+    289.7500000000688
   ],
   "video_source_interval_s": [
     0.0,
-    289.7708333334291
+    289.77500000006876
   ],
   "last_frame_source_time_s": 289.6,
   "preserved_head_max_abs_rad": [
-    3.137237740702403e-07,
-    0.0005058539682067931
+    6.290406417974737e-07,
+    0.0010132815223187208
   ],
-  "max_readback_error_rad": 9.538421297250466e-08,
+  "max_readback_error_rad": 1.322386644631024e-10,
   "physics_stepped_for_capture": false,
-  "fresh_rendered_frames": 1307,
-  "reused_exactly_identical_pose_frames": 142,
-  "reuse_video_sha256": "37c2e96d1e3626a12d2ce09c04fff2d41d797946a581f1781e3233a70ac45f00",
-  "reuse_trajectory_sha256": "95ff878f9cb8e38087949948ad0b13df412caec4c0dc095ceed8504ea7001329",
-  "trajectory_sha256": "c29efc597857dc3193ab68b629d1b4c6b8309eaea9bf7b44b5dc03303ec98a25",
-  "usd_sha256": "33747dc8b5bcf796ea104fc1cc9522298e60f260c92c6ed6cf51d859fa66c486",
-  "producer_sha256": "d8c74c15ea20c55c7dd7c6ffd8c6c7785266668c3a63e14b12c1b1ebcae77206",
-  "boundary": "Full fixed-fps Isaac reference visualization; unchanged frames reused only at identical 56-axis targets with the same clock/model/camera. Changed poses freshly rendered. No physics during capture or video speed-up."
+  "usd_sha256": "0526b9a8f358a0ae2b9e55ead21467282c619973fa6b36bc2b33175b7eefed84",
+  "producer_sha256": "67dddce6b8d18281c76a935f9f667fae08bbab885ab889b52b2427f313a90ed2",
+  "boundary": "Full Isaac rendering of actual states from the validated complete 6x PhysX run. No physics during capture and no video post-speedup.",
+  "render_input_sha256": "c0acb56ac3524f4503a7b1d861ab0d893f23fcde293f9faaf3dd3164d7a6078d",
+  "source": "trajectories/physical_tracking_6x.npz",
+  "q_dataset": "q_actual",
+  "actual_trace_sha256": "adfed561341d0f06a78bb18b339a90593eb9c8ec89497bdbd27a54291a98e8b3",
+  "video_sha256": "81dcffc739a37702618e06d8e43387aaba6c44cc0f23e32d60e65ab3090dc29d"
 }

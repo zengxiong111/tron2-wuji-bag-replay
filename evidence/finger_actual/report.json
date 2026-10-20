@@ -1,0 +1,231 @@
+{
+  "input_sha256": "adfed561341d0f06a78bb18b339a90593eb9c8ec89497bdbd27a54291a98e8b3",
+  "q_dataset": "q_actual",
+  "samples": 23181,
+  "midpoints": true,
+  "different_digit_pairs": 1125,
+  "minimum_distance_mm": 0.3632004314568169,
+  "samples_below_2mm": 1033,
+  "samples_at_or_below_zero": 0,
+  "pairs_below_2p1mm": {
+    "r_middle_finger_distal_0 | r_thumb_tip_sensor_frame_0": {
+      "min_distance_m": 0.0009156158478351177,
+      "time_s": 7.237499999999909,
+      "sample": 3474
+    },
+    "r_ring_finger_distal_0 | r_thumb_tip_sensor_frame_0": {
+      "min_distance_m": 0.0011499585249682654,
+      "time_s": 15.09166666666613,
+      "sample": 7244
+    },
+    "r_ring_finger_middle_0 | r_thumb_tip_sensor_frame_0": {
+      "min_distance_m": 0.001938099357663937,
+      "time_s": 4.141666666666752,
+      "sample": 1988
+    },
+    "r_middle_finger_tip_sensor_frame_0 | r_thumb_tip_sensor_frame_0": {
+      "min_distance_m": 0.0008725939340858609,
+      "time_s": 7.620833333333221,
+      "sample": 3658
+    },
+    "r_middle_finger_distal_0 | r_ring_finger_distal_0": {
+      "min_distance_m": 0.0014910762787356474,
+      "time_s": 44.27083333334159,
+      "sample": 21250
+    },
+    "l_index_finger_distal_0 | l_thumb_tip_sensor_frame_0": {
+      "min_distance_m": 0.0013327802141042142,
+      "time_s": 8.258333333333185,
+      "sample": 3964
+    },
+    "l_index_finger_tip_sensor_frame_0 | l_thumb_tip_sensor_frame_0": {
+      "min_distance_m": 0.0015072237883048678,
+      "time_s": 8.262499999999852,
+      "sample": 3966
+    },
+    "l_pinky_middle_0 | r_ring_finger_tip_sensor_frame_0": {
+      "min_distance_m": 0.0016019615367576236,
+      "time_s": 8.29999999999985,
+      "sample": 3984
+    },
+    "l_thumb_distal_0 | r_index_finger_tip_sensor_frame_0": {
+      "min_distance_m": 0.0005699644742301959,
+      "time_s": 8.862499999999818,
+      "sample": 4254
+    },
+    "l_thumb_tip_sensor_frame_0 | r_index_finger_tip_sensor_frame_0": {
+      "min_distance_m": 0.0008180468747493586,
+      "time_s": 8.87083333333315,
+      "sample": 4258
+    },
+    "l_thumb_distal_0 | r_index_finger_distal_0": {
+      "min_distance_m": 0.0009340913399536408,
+      "time_s": 27.887499999998738,
+      "sample": 13386
+    },
+    "l_ring_finger_middle_0 | r_middle_finger_tip_sensor_frame_0": {
+      "min_distance_m": 0.0010222812170324308,
+      "time_s": 8.87083333333315,
+      "sample": 4258
+    },
+    "r_middle_finger_middle_0 | r_thumb_tip_sensor_frame_0": {
+      "min_distance_m": 0.0015258755134820489,
+      "time_s": 9.299999999999793,
+      "sample": 4464
+    },
+    "r_pinky_tip_sensor_frame_0 | r_ring_finger_distal_0": {
+      "min_distance_m": 0.001007869265736666,
+      "time_s": 43.937500000007994,
+      "sample": 21090
+    },
+    "l_index_finger_middle_0 | l_thumb_tip_sensor_frame_0": {
+      "min_distance_m": 0.000532817622469127,
+      "time_s": 39.31250000000432,
+      "sample": 18870
+    },
+    "l_index_finger_proximal_abd_0 | l_thumb_tip_sensor_frame_0": {
+      "min_distance_m": 0.0016431884172257276,
+      "time_s": 39.30833333333765,
+      "sample": 18868
+    },
+    "r_middle_finger_middle_0 | r_ring_finger_middle_0": {
+      "min_distance_m": 0.0014901305523404237,
+      "time_s": 16.09583333333274,
+      "sample": 7726
+    },
+    "l_ring_finger_distal_0 | r_middle_finger_tip_sensor_frame_0": {
+      "min_distance_m": 0.0013633191562731936,
+      "time_s": 41.5020833333394,
+      "sample": 19921
+    },
+    "l_middle_finger_distal_0 | l_ring_finger_distal_0": {
+      "min_distance_m": 0.0018823504284997059,
+      "time_s": 43.08541666667399,
+      "sample": 20681
+    },
+    "l_index_finger_tip_sensor_frame_0 | r_index_finger_middle_0": {
+      "min_distance_m": 0.0012432539543607204,
+      "time_s": 22.739583333332362,
+      "sample": 10915
+    },
+    "l_index_finger_distal_0 | r_index_finger_middle_0": {
+      "min_distance_m": 0.001174580746944057,
+      "time_s": 22.74583333333236,
+      "sample": 10918
+    },
+    "l_index_finger_distal_0 | r_index_finger_distal_0": {
+      "min_distance_m": 0.0013014771666038391,
+      "time_s": 22.760416666665698,
+      "sample": 10925
+    },
+    "l_thumb_tip_sensor_frame_0 | r_index_finger_distal_0": {
+      "min_distance_m": 0.0007993779205914444,
+      "time_s": 28.916666666665346,
+      "sample": 13880
+    },
+    "r_index_finger_middle_0 | r_thumb_tip_sensor_frame_0": {
+      "min_distance_m": 0.0017646730770099364,
+      "time_s": 33.295833333332865,
+      "sample": 15982
+    },
+    "l_thumb_distal_0 | r_middle_finger_tip_sensor_frame_0": {
+      "min_distance_m": 0.0010882423720201635,
+      "time_s": 35.36250000000118,
+      "sample": 16974
+    },
+    "l_thumb_middle_0 | r_index_finger_tip_sensor_frame_0": {
+      "min_distance_m": 0.0009373940953012311,
+      "time_s": 35.31458333333447,
+      "sample": 16951
+    },
+    "l_pinky_distal_0 | l_ring_finger_tip_sensor_frame_0": {
+      "min_distance_m": 0.0019046430534114314,
+      "time_s": 36.75000000000228,
+      "sample": 17640
+    },
+    "l_pinky_distal_0 | l_ring_finger_distal_0": {
+      "min_distance_m": 0.0018906933250926134,
+      "time_s": 37.10416666666923,
+      "sample": 17810
+    },
+    "l_index_finger_middle_0 | l_middle_finger_middle_0": {
+      "min_distance_m": 0.0018644835444038977,
+      "time_s": 37.38750000000279,
+      "sample": 17946
+    },
+    "r_index_finger_distal_0 | r_thumb_tip_sensor_frame_0": {
+      "min_distance_m": 0.0018805097357848955,
+      "time_s": 38.312500000003524,
+      "sample": 18390
+    },
+    "r_index_finger_middle_0 | r_middle_finger_middle_0": {
+      "min_distance_m": 0.0020222757535028574,
+      "time_s": 40.404166666671856,
+      "sample": 19394
+    },
+    "l_index_finger_tip_sensor_frame_0 | r_index_finger_distal_0": {
+      "min_distance_m": 0.0014072347605445367,
+      "time_s": 43.02291666667394,
+      "sample": 20651
+    },
+    "l_index_finger_tip_sensor_frame_0 | r_index_finger_tip_sensor_frame_0": {
+      "min_distance_m": 0.0014905984493097954,
+      "time_s": 43.01875000000727,
+      "sample": 20649
+    },
+    "l_index_finger_distal_0 | r_ring_finger_tip_sensor_frame_0": {
+      "min_distance_m": 0.0011723318870835993,
+      "time_s": 43.5562500000077,
+      "sample": 20907
+    },
+    "r_middle_finger_distal_0 | r_ring_finger_tip_sensor_frame_0": {
+      "min_distance_m": 0.0019942768977191582,
+      "time_s": 45.837500000009506,
+      "sample": 22002
+    },
+    "l_thumb_distal_0 | r_thumb_distal_0": {
+      "min_distance_m": 0.00036320043145681693,
+      "time_s": 44.87916666667542,
+      "sample": 21542
+    },
+    "l_thumb_distal_0 | r_thumb_tip_sensor_frame_0": {
+      "min_distance_m": 0.0008064888465846895,
+      "time_s": 44.87500000000875,
+      "sample": 21540
+    },
+    "l_thumb_tip_sensor_frame_0 | r_thumb_distal_0": {
+      "min_distance_m": 0.0016253066255155072,
+      "time_s": 44.877083333342085,
+      "sample": 21541
+    },
+    "l_thumb_tip_sensor_frame_0 | r_thumb_tip_sensor_frame_0": {
+      "min_distance_m": 0.0019007159865001538,
+      "time_s": 44.87500000000875,
+      "sample": 21540
+    },
+    "r_index_finger_distal_0 | r_middle_finger_tip_sensor_frame_0": {
+      "min_distance_m": 0.0019334231378325946,
+      "time_s": 46.84166666667698,
+      "sample": 22484
+    },
+    "r_middle_finger_proximal_abd_0 | r_ring_finger_proximal_abd_0": {
+      "min_distance_m": 0.0017174963248673559,
+      "time_s": 46.84583333334365,
+      "sample": 22486
+    },
+    "r_middle_finger_proximal_0 | r_ring_finger_proximal_abd_0": {
+      "min_distance_m": 0.0017492973642302474,
+      "time_s": 46.84583333334365,
+      "sample": 22486
+    },
+    "l_middle_finger_distal_0 | l_ring_finger_tip_sensor_frame_0": {
+      "min_distance_m": 0.0019924486102236155,
+      "time_s": 46.854166666676996,
+      "sample": 22490
+    }
+  },
+  "exact_distance_evaluations": 25463,
+  "elapsed_s": 41.150240421295166,
+  "method": "Conservative hull lower-bound culling and exact authored triangle distance; all different digits including both hands; no sibling exclusions",
+  "boundary": "Discrete positions and optional interpolation midpoints; not a continuous CCD certificate"
+}

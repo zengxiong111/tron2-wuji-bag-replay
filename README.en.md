@@ -1,29 +1,27 @@
-# TRON2 + Wuji: wider arm opening with unchanged fingers at 6x
+# TRON2 + Wuji: 6x trajectory with finger clearance
 
-Finger targets are unchanged. Arm opening strokes increase by approximately **20%**, using the same **22 phases with local arm rate up to 2x**. Total duration remains **48.29 seconds**. 中文：[README.md](README.md).
+This version repairs finger contact while retaining the previous arms, head and clocks, with a **48.29 s** duration. 中文：[README.md](README.md). The legacy branch name remains; finger targets have been locally modified.
 
 ## Contents
 
-- [What changed](#what-changed)
+- [Current motion](#current-motion)
 - [Download and run](#download-and-run)
-- [Files and videos](#files-and-videos)
+- [Files and video](#files-and-video)
 - [Verification and limits](#verification-and-limits)
 
-## What changed
+## Current motion
 
-| Item | Current behavior |
+| Item | Current result |
 | --- | --- |
-| 40 finger axes | Pointwise identical to the original 6x targets; joint amplitude, target speed and timing unchanged |
-| Arm opening | Expand travel from each closed position; wrist separation increases by up to about 4.23 cm, preserving wrist orientation and closing keyframes |
-| Local repair | Of 132 opening peaks, 122 retain about +20%; 10 reduce expansion near three measured problem windows |
-| Arm timing | Preserve the previous 22 phases with local rate up to 2x, using pauses and delayed closing to coordinate gestures |
-| Duration | 48.291667 s, 13,909 poses, 288 Hz; head and endpoint poses unchanged |
-
-20% measures opening travel gain. Local 2x uses the original 6x arm clock as its baseline. Unchanged fingers refers to joint targets; actual physical tracking can still be affected by arm motion and contacts.
+| Arms, head and clocks | Pointwise numerical identity to `27ff86b`; retains approximately +20% opening, three local expansion exceptions and 22 phases with local peak 2x timing |
+| Fingers | Locally adjusted for clearance; joint changes RMS 0.523°, maximum 8.276° |
+| Relationship between hands | Wrist targets unchanged; fingertip relative vector changes RMS 2.579 mm, maximum 20.660 mm; gestures are not identical |
+| Duration and sampling | 48.291667 s; 13,909 poses at 288 Hz |
+| Physics configuration | Model, drives, collision settings, 240 Hz, 6x clock, linear targets and 98% model velocity limit retained |
 
 ## Download and run
 
-Requires Git, installed and authenticated GitHub CLI (`gh`), and Python 3.12. First-time users should run `gh auth login`. Isaac display and physical execution also require Isaac Sim 5.1 and a compatible GPU.
+Requires Git, authenticated GitHub CLI (`gh auth login`) and Python 3. Isaac entry points also require Isaac Sim 5.1 and a compatible GPU.
 
 ```bash
 git clone --branch codex/replay-6x-arm-fast-hand-fixed https://github.com/zengxiong111/tron2-wuji-bag-replay.git
@@ -32,9 +30,9 @@ python3 scripts/download_assets.py
 python3 scripts/verify_bundle.py
 ```
 
-Expect `Verified 94 runtime files`. Models stay pinned to `v1.1.0`; new trajectories and videos use prerelease [6x-arm-open20-hand-fixed-20261020](https://github.com/zengxiong111/tron2-wuji-bag-replay/releases/tag/6x-arm-open20-hand-fixed-20261020).
+Expect `Verified 93 runtime files`, followed by acceptance binding confirmation. Models remain pinned to `v1.1.0`; trajectory and video come from [6x-no-finger-contact-20261020](https://github.com/zengxiong111/tron2-wuji-bag-replay/releases/tag/6x-no-finger-contact-20261020).
 
-If the previous assets from this branch are installed, update code and then upgrade assets:
+For an installed immediately previous branch version, run from the repository root:
 
 ```bash
 git pull --ff-only
@@ -42,42 +40,49 @@ python3 scripts/download_assets.py --upgrade
 python3 scripts/verify_bundle.py
 ```
 
-Upgrade replaces only files matching the previous managed hashes; modified files are not overwritten. Run from the repository root, replacing `/path/to/isaac/python.sh` with the Isaac Python entry point:
+Upgrade replaces only managed files matching previous hashes, refuses modified files, and removes matching obsolete comparison video and retired evidence. Use a fresh clone for older versions.
+
+Replace `/path/to/isaac/python.sh` with the Isaac Python entry point:
 
 ```bash
 python3 scripts/replay.py --isaac-python /path/to/isaac/python.sh
 python3 scripts/replay.py --isaac-python /path/to/isaac/python.sh --physics
 ```
 
-The first command displays reference targets; the second reruns physical tracking. Target file time already uses 6x execution seconds, so display uses file time at 1x. Physics uses 240 Hz, 6x source-time progression, linear targets and 98% model velocity caps. Both support `--headless`, `--max-seconds 1` and `--out`; output directories must be outside the repository. Physical `--wall-speed` changes waiting/render pacing only.
+The first displays targets; the second executes fresh physics tracking. Target files already use 6x execution seconds and display at 1x file time; physics advances source time at 6x. Supports `--headless`, `--max-seconds 1` and `--out`; output directories must be outside the repository. Physics `--wall-speed` only changes waiting and render pacing.
 
-## Files and videos
+## Files and video
 
 | Path | Purpose |
 | --- | --- |
-| `trajectories/trajectory_6x.npz` | Default targets: execution seconds, source seconds, joint angles in radians and joint names |
-| `trajectories/repaired_source.npz` | Same targets in source time, used by the physics entry point |
-| `trajectories/physical_tracking_6x.npz` | Actual states and targets from the final full physical run |
-| `media/new_6x_full.mp4` | Full new reference video, 48.3 s |
-| `media/old_vs_new_6x.mp4` | Full synchronized comparison, 48.3 s: previous 2x arm timing with original amplitude left; new approximately +20% expansion right |
-| `evidence/reference/` | Expansion, local windows, arm timing, finger identity and acceptance evidence |
-| `evidence/reference_collision/`, `evidence/physics_collision/` | Discrete target and actual-state mesh checks |
-| `configs/lineage.json`, `release_manifest.json` | Lineage bindings, current hashes and download configuration |
+| `trajectories/trajectory_6x.npz` | Default repaired target: execution seconds, source seconds, radians and joint names |
+| `trajectories/repaired_source.npz` | Same target on source time for physics |
+| `trajectories/physical_tracking_6x.npz` | Accepted full 240 Hz actual states and targets |
+| `media/new_6x_full.mp4` | Isaac rendering of those actual states, 48.3 s, 30 fps, 1,449 frames |
+| `evidence/reference/` | Acceptance, changes, provenance and model equivalence |
+| `evidence/reference_collision/`, `evidence/physics_collision/` | Whole-robot mesh checks for target and actual states |
+| `evidence/finger_*`, `evidence/physics/` | Finger clearance, linear path certificates and physical contact reports |
+| `configs/lineage.json`, `release_manifest.json` | Source commit, file hashes and download configuration |
 
-Videos visualize Isaac reference targets with matched model, view and frame times: 1,449 frames at 30 fps. Changed poses are freshly rendered; exactly identical poses reuse bound frames. The video left panel uses the local-2x arm reference; this branch previously published a local-1.5x default.
+Video uses actual states executed at 6x in physics; capture redraws those states without rerunning physics or post-production acceleration. Default display shows targets and therefore differs from the actual-state video by tracking error. The obsolete comparison video does not represent this motion and was removed.
+
+JSON evidence is reformatted and its path labels relocated; `evidence/reference/import_binding.json` records accepted source and published byte hashes, and the verifier checks the published hashes.
 
 ## Verification and limits
 
-| Check | Result |
+| Check | Accepted result |
 | --- | --- |
-| Target / actual mesh | 27,817 / 23,181 native and midpoint poses; 2,717 pairs each; zero intersections |
-| PhysX | Full 48.295833 s; zero negative-separation pairs, minimum reported separation +0.05417 mm |
-| Model velocity | Targets and actual sampled speeds pass; arm target peak 66.37%, finger target peak 99.9903% |
-| Physical tracking error (all 240 Hz states) | Whole-robot RMS 0.026655 rad, maximum 0.633004 rad (36.27 degrees) |
-| Actual high-frequency RMS above 6 Hz | Relative to the video left-panel 2x arm version: arms about +7.1%, fingers about +1.0%; does not establish jitter reduction |
+| Finger collision response | Full 48.295833 s run including initialization: zero pairs/points with nonzero impulse |
+| Predictive proximity reports | 3,602 positive-separation, zero-impulse points remain; this does not mean no contact callbacks |
+| Sampled finger mesh clearance | Target minimum 2.334 mm; actual minimum 0.363 mm |
+| Whole-robot meshes | Target 27,817 / actual 23,181 native and midpoint poses, 2,717 pairs per pose, zero intersections |
+| Linear path clearance certificates | Target and linear interpolation of recorded actual states pass; conservative interval lower bound approximately 0.010 mm |
+| Model speed | Finger target peak 99.9900%, arm target 66.3724%, actual finite-difference peak 98.6036% |
+| Full 240 Hz tracking error | RMS 0.026866 rad, maximum 0.632980 rad |
+| Actual finger high-frequency RMS | Above 6 Hz, approximately −2.00% versus the previous version; only indicates no increase in this metric |
 
-The physical report’s `max_error_rad` samples render cadence only. The table and `full_trace_tracking_error` use all 240 Hz states, so their maximum can be larger.
+Physical `base_Link` world Z=0; tabletop Z=−0.45 m; the gap stays **0.45 m**. The inherited left wrist position excess of approximately **0.001067°** remains; body ordering is still `candidate_unconfirmed`. Report `max_error_rad` uses render cadence; see `full_trace_tracking_error` for full-state metrics.
 
-Physical `base_Link` world Z=0, tabletop Z=−0.45 m: fixed gap **0.45 m**. A tiny position excess up to about 0.001067 degrees remains; body mapping is `candidate_unconfirmed`. These results do not prove continuous CCD, hardware motor capability or hardware readiness. See [DEPLOYMENT.en.md](DEPLOYMENT.en.md) for offline checks and hardware preparation.
+Linear path certificates do not cover unknown true within-step PhysX curves or prove convex collision shape equivalence, hardware CCD or motor safety. There is no hardware control entry point. See [DEPLOYMENT.en.md](DEPLOYMENT.en.md) for offline checks and hardware preparation. Model licenses are in `licenses/`.
 
-Current target SHA-256: `c29efc597857dc3193ab68b629d1b4c6b8309eaea9bf7b44b5dc03303ec98a25`. New runs require new validation. Upstream model licenses are in `licenses/`.
+Current target SHA-256: `bedc266d4339cd038e35dcd0ec555cb41696a004fb018c8437573cc94a728246`. Acceptance binds only the listed files; new runs require fresh checks.

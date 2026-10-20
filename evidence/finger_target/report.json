@@ -1,0 +1,15 @@
+{
+  "input_sha256": "bedc266d4339cd038e35dcd0ec555cb41696a004fb018c8437573cc94a728246",
+  "q_dataset": "q",
+  "samples": 27817,
+  "midpoints": true,
+  "different_digit_pairs": 1125,
+  "minimum_distance_mm": 2.3341278773444714,
+  "samples_below_2mm": 0,
+  "samples_at_or_below_zero": 0,
+  "pairs_below_2p1mm": {},
+  "exact_distance_evaluations": 29905,
+  "elapsed_s": 49.87575054168701,
+  "method": "Conservative hull lower-bound culling and exact authored triangle distance; all different digits including both hands; no sibling exclusions",
+  "boundary": "Discrete positions and optional interpolation midpoints; not a continuous CCD certificate"
+}

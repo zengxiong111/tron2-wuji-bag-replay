@@ -1,0 +1,131 @@
+{
+  "source_artifact_id": "physics_motion6x_no_finger_contact",
+  "canonical_acceptance_sha256": "32af4f25c97f9f4907efd3cb26faa02ab35ccfd59460d67e7093e1f1f62eedc6",
+  "normalization": "Accepted NPZ/video bytes unchanged. JSON reserialized as UTF-8 with repository-relative path labels; source-local labels are descriptive only. Physics report adds full-240Hz tracking metrics and portable producer note. Source hashes identify original accepted bytes; installed hashes bind published reports.",
+  "files": {
+    "trajectories/trajectory_6x.npz": {
+      "accepted_source_sha256": "bedc266d4339cd038e35dcd0ec555cb41696a004fb018c8437573cc94a728246",
+      "installed_sha256": "bedc266d4339cd038e35dcd0ec555cb41696a004fb018c8437573cc94a728246"
+    },
+    "trajectories/repaired_source.npz": {
+      "accepted_source_sha256": "785cb79490bd23582743f840b1021db23c780c026a57ccd98c7ad3b8b13cdf61",
+      "installed_sha256": "785cb79490bd23582743f840b1021db23c780c026a57ccd98c7ad3b8b13cdf61"
+    },
+    "trajectories/physical_tracking_6x.npz": {
+      "accepted_source_sha256": "adfed561341d0f06a78bb18b339a90593eb9c8ec89497bdbd27a54291a98e8b3",
+      "installed_sha256": "adfed561341d0f06a78bb18b339a90593eb9c8ec89497bdbd27a54291a98e8b3"
+    },
+    "media/new_6x_full.mp4": {
+      "accepted_source_sha256": "81dcffc739a37702618e06d8e43387aaba6c44cc0f23e32d60e65ab3090dc29d",
+      "installed_sha256": "81dcffc739a37702618e06d8e43387aaba6c44cc0f23e32d60e65ab3090dc29d"
+    },
+    "evidence/reference_collision/coverage.json": {
+      "accepted_source_sha256": "4d4ea696b4cafeb71c846b43f54a92562cf8e068e6f5014570a126c8ecc8a170",
+      "installed_sha256": "39c002dd65288f8e457603373cf98fff1469e741a57d98556dec9d8fe0da5fd4"
+    },
+    "evidence/reference_collision/checked_samples.npz": {
+      "accepted_source_sha256": "0eb105bc603ec979ef8a3eb4b3ceb2ebbda7ecd817431dd6e57c8f55c75571d8",
+      "installed_sha256": "0eb105bc603ec979ef8a3eb4b3ceb2ebbda7ecd817431dd6e57c8f55c75571d8"
+    },
+    "evidence/reference_collision/gate.json": {
+      "accepted_source_sha256": "717261c4149ce706b14fe46dc55f54077f1cd388a10058bf5a5ad313d802efa2",
+      "installed_sha256": "aaa82aabcf1d9554fa223f269bfd518ad0816c3d33ccf5865a735c053e0229e3"
+    },
+    "evidence/reference_collision/checked.json": {
+      "accepted_source_sha256": "348a0e1c9f96e9c678eaa50689f83721779e6148247aca18610b34fb22e2a700",
+      "installed_sha256": "2318cb1371fc4841558f5198d77c1f29ee68f251467a5789dca2d74700d52d05"
+    },
+    "evidence/physics_collision/coverage.json": {
+      "accepted_source_sha256": "4d4ea696b4cafeb71c846b43f54a92562cf8e068e6f5014570a126c8ecc8a170",
+      "installed_sha256": "39c002dd65288f8e457603373cf98fff1469e741a57d98556dec9d8fe0da5fd4"
+    },
+    "evidence/physics_collision/checked_samples.npz": {
+      "accepted_source_sha256": "a16ef60e8b577d7879b691c4d117d10cb9765f4348d423a0e154109f97024713",
+      "installed_sha256": "a16ef60e8b577d7879b691c4d117d10cb9765f4348d423a0e154109f97024713"
+    },
+    "evidence/physics_collision/gate.json": {
+      "accepted_source_sha256": "41d155814505573e1c85cefb410c55c80915b1ca763a5b4c0c0ac0a17ea9b52d",
+      "installed_sha256": "f86b900c5b6e228b6f1f23a63211e8fe9ef9e9a6d31d729d6bfc9616452579a7"
+    },
+    "evidence/physics_collision/checked.json": {
+      "accepted_source_sha256": "2a105d828774dacc72bbf9525408ad93b800afd65ee68cdb3c0e3dc7ec9243c5",
+      "installed_sha256": "677ad8fe7fa8f130f2f69f82cadc836a4be3cf8d19045947b60613680ef707da"
+    },
+    "evidence/physics/shape_stats.json": {
+      "accepted_source_sha256": "94418d24dfff6fa23f1674fa64ada5844b03f17634f397750272005af4853984",
+      "installed_sha256": "14cc22352c68d9e5d48b158df2528c007d51b4b087dabd1990db4a1d99e98330"
+    },
+    "evidence/physics/digit_contact_events.json": {
+      "accepted_source_sha256": "16bcc281e789c55a7cd183509c727ab4535423121466cdbe3a6aabdb27f212d8",
+      "installed_sha256": "5881e3e6948d7df989db612f96288e14af44638b66a90f3707895ab32a7daffc"
+    },
+    "evidence/physics/contacts.json": {
+      "accepted_source_sha256": "0fd17811c3e64526d71db77bda183ccc11432a0be0bf9fa5f6d8244e233f729b",
+      "installed_sha256": "ecda36d903a4e3c83be4a4569fe1e6cffeb76ac46c129a5a7a8c84e2a8d78c1a"
+    },
+    "evidence/physics/report.json": {
+      "accepted_source_sha256": "ec83512e5fcbc27ff77c4a9ac2e17b032d7d44b7d25f30573f3c22692277da33",
+      "installed_sha256": "15d61c7f975fdbddf36dd578cf39cd33ac734778d5615f684b3968903a4482fa"
+    },
+    "evidence/finger_target/report.json": {
+      "accepted_source_sha256": "707f9cf6d114f16e996882624290bc0fa6f610147df7b858c967e49a3e1a996e",
+      "installed_sha256": "466edea907ab06cac4b2a19604f8bb80a88f641a1c23a5a8d1c60561b32ff54b"
+    },
+    "evidence/finger_target/samples.npz": {
+      "accepted_source_sha256": "1fd071b7a17aefc17c6b99552fb094682ea1fc9d7446e4be6e45742141766980",
+      "installed_sha256": "1fd071b7a17aefc17c6b99552fb094682ea1fc9d7446e4be6e45742141766980"
+    },
+    "evidence/finger_actual/report.json": {
+      "accepted_source_sha256": "b93e2168ead5db8b60402746048d6e6ba4ed6214b7bed0e184a4974e2e20d3e6",
+      "installed_sha256": "ad1278d42a33c75048b19dde82960c1e1a9584fa491668c5d107402266a771fa"
+    },
+    "evidence/finger_actual/samples.npz": {
+      "accepted_source_sha256": "42b27832829e39c05010e24650acb8aa6ce3d8711e24c822fefa2ac09a14ae4a",
+      "installed_sha256": "42b27832829e39c05010e24650acb8aa6ce3d8711e24c822fefa2ac09a14ae4a"
+    },
+    "evidence/finger_target_swept/report.json": {
+      "accepted_source_sha256": "08118e02fc2f51038df7fd9d7b2cf9fbf7336cb71e9b73f30e8a181a1ab438aa",
+      "installed_sha256": "078d691d5490f8775f983ae3f87431437558994d2ca1d0c157ca1fc369f9f71a"
+    },
+    "evidence/finger_target_swept/bounds.npz": {
+      "accepted_source_sha256": "5ba7a066ffb192c0df5a28bfe560b9abfc08fd3f7b72e85439756df263379070",
+      "installed_sha256": "5ba7a066ffb192c0df5a28bfe560b9abfc08fd3f7b72e85439756df263379070"
+    },
+    "evidence/finger_actual_swept/report.json": {
+      "accepted_source_sha256": "071f0a556cf049dcd14f65d851c79bd7bc2494436b5197f4a7110b3c292b4806",
+      "installed_sha256": "53a20056082c9f0b3ac0c3e316351c25dfa5cef06f5c2b4e10cc471f82cd22b9"
+    },
+    "evidence/finger_actual_swept/bounds.npz": {
+      "accepted_source_sha256": "99faa3468914b93fbc964c40bbf4b552f9d992e16b1474e2cdcf992b1acdf0a6",
+      "installed_sha256": "99faa3468914b93fbc964c40bbf4b552f9d992e16b1474e2cdcf992b1acdf0a6"
+    },
+    "evidence/video/recording.json": {
+      "accepted_source_sha256": "267ce5ed57704701df84ef98afbe0add18f7737f222355e5f125aa51fae4cb84",
+      "installed_sha256": "a77d7c589be670d4e711609814b13632eda03fca133f1e5e4a289a2780479fab"
+    },
+    "evidence/video/media_probe.json": {
+      "accepted_source_sha256": "2ab38df47065d88fe794ae6831dcd05df5ae65c8535516be1887819882120e0e",
+      "installed_sha256": "2ab38df47065d88fe794ae6831dcd05df5ae65c8535516be1887819882120e0e"
+    },
+    "evidence/reference/acceptance.json": {
+      "accepted_source_sha256": "32af4f25c97f9f4907efd3cb26faa02ab35ccfd59460d67e7093e1f1f62eedc6",
+      "installed_sha256": "32af4f25c97f9f4907efd3cb26faa02ab35ccfd59460d67e7093e1f1f62eedc6"
+    },
+    "evidence/reference/comparison.json": {
+      "accepted_source_sha256": "450f0b8ba5a59e5cfbd8ee0a2166f85beeaed210afe398d04dfbe0a4d0dd6ea9",
+      "installed_sha256": "1e88cee5a72afc8e35a61f1b8c68ede81eaf46c4e615173ef3834cad78176024"
+    },
+    "evidence/reference/repair.json": {
+      "accepted_source_sha256": "3e917794adbe22280a1fb66454b1d5241085cc729b940929b6a03546d9c42a44",
+      "installed_sha256": "de428e31d7f7d149d8b1d5af61a09f167db8d008c080fc180649f6918bcb9a0d"
+    },
+    "evidence/reference/model_equivalence.json": {
+      "accepted_source_sha256": "1f9313ac3ebd973f73160145861368e355f2f433478d1b743c86460127e9c168",
+      "installed_sha256": "c2d5acb3c2f19059a3726f43e6c8ed269b3ef9e46248719dd73249a8ff6a6744"
+    },
+    "evidence/reference/local_collision_margins.json": {
+      "accepted_source_sha256": "0fe9f17357a3c76db9b13a557c702f879c29174c73f25826295762f6e9f6fee5",
+      "installed_sha256": "767a835488deb950cadab5a9a6149e9f665413802bb883ef10da36799b5a0e5f"
+    }
+  }
+}

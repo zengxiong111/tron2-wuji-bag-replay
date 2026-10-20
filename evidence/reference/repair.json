@@ -1,0 +1,60 @@
+{
+  "source_sha256": "0527c09a35d1cea23a20c6a0497154365a8c869aa5095076f4efd45b06b065b1",
+  "parent_trajectory_sha256": "6aea55aa4c7112cfc69fc5ba6490c3f60db190e2915c8ebf40a5f1c32f5a312b",
+  "output_sha256": "785cb79490bd23582743f840b1021db23c780c026a57ccd98c7ad3b8b13cdf61",
+  "trajectory_sha256": "bedc266d4339cd038e35dcd0ec555cb41696a004fb018c8437573cc94a728246",
+  "producer_sha256": "647fcde00fdc8717d46e3d55bc8650d200aa94444e4db71d9541ca2bea844f5c",
+  "feedback_trace_sha256": "b31b7b6662fc674ff6b0c24a478f1002bca3550bb2fd8b130f99c3a60de41ded",
+  "clearance_target_mm": 2.6,
+  "arm_head_time_bitwise_unchanged": true,
+  "max_finger_delta_deg": 1.9654028959555534,
+  "rms_finger_delta_deg": 0.04830761702132722,
+  "model_velocity_ratio": 0.99999984,
+  "history": [
+    {
+      "iteration": 0,
+      "minimum_mm": -1.2338733582025505,
+      "violating_constraints": 48,
+      "qp_status": "solved",
+      "elapsed_s": 53.01135325431824
+    },
+    {
+      "iteration": 1,
+      "minimum_mm": 1.8998030019830625,
+      "violating_constraints": 27,
+      "qp_status": "solved",
+      "elapsed_s": 105.99641847610474
+    },
+    {
+      "iteration": 2,
+      "minimum_mm": 2.461790249106716,
+      "violating_constraints": 10,
+      "qp_status": "solved",
+      "elapsed_s": 158.54619455337524
+    },
+    {
+      "iteration": 3,
+      "minimum_mm": 2.5732858383573176,
+      "violating_constraints": 6,
+      "qp_status": "solved",
+      "elapsed_s": 210.96137499809265
+    }
+  ],
+  "physical_base_above_table_m": 0.45,
+  "status": "candidate; independent full physical and clearance audits required",
+  "polish_parent_sha256": "d64f5b013fbeaeacf882bf28f63a8252c774d964827a6107860ac34e1f75d4a3",
+  "maximum_polish_delta_deg": 0.0009037819503432341,
+  "thumb_root_parent_sha256": "8179b14086f21eeb172a3f88e5509150a1519dae1980d3d8cf99aee21f265247",
+  "thumb_root_actual_trace_sha256": "66cf823340513f0e9340a5527d0a61f9efd712ae9c3c5cacb4eba4933869f3d7",
+  "thumb_root_max_extra_delta_deg": 4.569200851545038,
+  "thumb_root_projection_history": [
+    {
+      "iteration": 0,
+      "intersecting_samples": 1189
+    },
+    {
+      "iteration": 1,
+      "intersecting_samples": 0
+    }
+  ]
+}
