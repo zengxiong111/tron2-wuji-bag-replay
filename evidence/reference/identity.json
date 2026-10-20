@@ -1,53 +1,56 @@
 {
-  "sha256": {
-    "baseline": "841c29aefb3a3bfb2813bd59698ffe60ecdf20b712205227cb5ba05f77890253",
-    "trajectory": "5467cff16fcf08f2aba6fada0bce74d914ba8bc69e141a99e3c08531915db2e2",
-    "arm_clock": "0cb7bdc81670452a07d8c71efa6bb3f35e54fd8db33b9f6202f90c0c001557e7",
-    "verifier": "9e06391d4deb95053f78f83d9902bf2a5f4020761bd36befb1393c8b6a710b5b",
-    "physical_trace": "1a06fa1bede52e7f2f40d38942893ce1c10506300ec08ba96341cc4a6c965c20"
-  },
-  "hand_40_positions_speeds_amplitudes_bitwise_unchanged": true,
-  "head_2_and_both_time_axes_bitwise_unchanged": true,
-  "arms_14_on_original_linear_pose_path": true,
-  "duration_s": 48.29166666668263,
-  "reference_temporal": {
-    "baseline_arms": {
-      "above_6hz_rms_rad": 0.0038125186031293767,
-      "acceleration_abs_p95_rad_s2": 56.59716796871258,
-      "acceleration_abs_max_rad_s2": 292.6312866209003
+  "hands_head_time_bitwise_unchanged": true,
+  "old_2x_arm_clock_bitwise_unchanged": true,
+  "closed_keyframes_unchanged": true,
+  "opening_peak_count": 132,
+  "full_20_percent_peak_count": 122,
+  "local_preservation_peak_count": 10,
+  "opening_stroke_ratio_min_median_max": [
+    1.0,
+    1.199999371151962,
+    1.2000008611526525
+  ],
+  "max_extra_wrist_span_mm": 42.2650205866486,
+  "max_midpoint_change_mm": 0.0009713259237550925,
+  "max_position_error_mm": 0.001026355750019473,
+  "max_orientation_error_rad": 8.652625308903862e-06,
+  "max_inherited_position_excess_deg": 0.0010667617496056218,
+  "target_temporal": {
+    "previous_2x_arms": {
+      "above_6hz_rms_rad": 0.005712099229378035,
+      "acceleration_p95_rad_s2": 62.78457870479246
     },
     "new_arms": {
-      "above_6hz_rms_rad": 0.004748155800762036,
-      "acceleration_abs_p95_rad_s2": 59.373509216269326,
-      "acceleration_abs_max_rad_s2": 292.6312866209003
+      "above_6hz_rms_rad": 0.0061288124723158765,
+      "acceleration_p95_rad_s2": 71.46213598246617
     }
   },
-  "boundary": "Hand identity applies to reference targets. Physical tracking errors are separate. Fast phases and pauses are intentional low-frequency changes; not a global jitter-reduction claim.",
+  "sha256": {
+    "baseline": "841c29aefb3a3bfb2813bd59698ffe60ecdf20b712205227cb5ba05f77890253",
+    "timed_reference": "95ff878f9cb8e38087949948ad0b13df412caec4c0dc095ceed8504ea7001329",
+    "new_trajectory": "c29efc597857dc3193ab68b629d1b4c6b8309eaea9bf7b44b5dc03303ec98a25",
+    "verifier": "81cf4888e7c2859df7bff01d648628588b88fd48974c67f60736a79059373425",
+    "physical_trace": "6676f70d2a0cc650097b13995841181642235ca093b51a341f3c90cf7a09ed1e"
+  },
+  "boundary": "Gain is opening stroke above the interpolated closure envelope, not 20 percent of absolute wrist spacing. Hand identity concerns target joint motion, not unchanged world-space hand position or physical tracking.",
   "physical": {
-    "hand_target_vs_baseline_max_rad": 1.4310891560675998e-07,
-    "tracking_rms_rad": 0.025508781130725338,
-    "tracking_max_rad": 0.5976796671748161,
-    "arm_tracking_rms_rad": 0.006463267784795732,
-    "hand_tracking_rms_rad": 0.029939104792616786,
-    "actual_arms": {
-      "above_6hz_rms_rad": 0.004692147930875843,
-      "acceleration_abs_p95_rad_s2": 59.931586682768035,
-      "acceleration_abs_max_rad_s2": 381.8778991697406
+    "tracking_rms_rad": 0.026654590623295102,
+    "tracking_max_rad": 0.6330035701394081,
+    "new_actual_arms": {
+      "above_6hz_rms_rad": 0.006018630065454597,
+      "acceleration_p95_rad_s2": 71.72656059265137
     },
-    "actual_hands": {
-      "above_6hz_rms_rad": 0.008757898684426032,
-      "acceleration_abs_p95_rad_s2": 111.10610961908789,
-      "acceleration_abs_max_rad_s2": 2867.2428131089905
+    "previous_2x_actual_arms": {
+      "above_6hz_rms_rad": 0.0056209355067788225,
+      "acceleration_p95_rad_s2": 63.551053404808044
     },
-    "baseline_actual_arms": {
-      "above_6hz_rms_rad": 0.0037841475483080906,
-      "acceleration_abs_p95_rad_s2": 56.884288787814796,
-      "acceleration_abs_max_rad_s2": 381.8847656248187
+    "new_actual_hands": {
+      "above_6hz_rms_rad": 0.00895873046140965,
+      "acceleration_p95_rad_s2": 116.10885322093954
     },
-    "baseline_actual_hands": {
-      "above_6hz_rms_rad": 0.008629970702775625,
-      "acceleration_abs_p95_rad_s2": 110.16549110407368,
-      "acceleration_abs_max_rad_s2": 2916.820845006512
+    "previous_2x_actual_hands": {
+      "above_6hz_rms_rad": 0.008872012019339393,
+      "acceleration_p95_rad_s2": 112.99120903015131
     }
   }
 }

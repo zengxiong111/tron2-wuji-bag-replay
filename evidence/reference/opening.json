@@ -1,0 +1,44 @@
+{
+  "baseline_sha256": "841c29aefb3a3bfb2813bd59698ffe60ecdf20b712205227cb5ba05f77890253",
+  "timed_reference_sha256": "95ff878f9cb8e38087949948ad0b13df412caec4c0dc095ceed8504ea7001329",
+  "trajectory_sha256": "c29efc597857dc3193ab68b629d1b4c6b8309eaea9bf7b44b5dc03303ec98a25",
+  "output_sha256": "68f112de1ebbc432c14642353d7acd89e280f84cc80cf297ef6a9b4d7bcebde0",
+  "producer_sha256": "23be723311cf5bc9583e5a4d153e4ae903c1d7ae1b0a6bf61230fe10e81bf8be",
+  "urdf_sha256": "c7864b55f60bac854586c8e7bab730fff027455511a4ef6ccbfec97d85f0407d",
+  "source_sha256": "0527c09a35d1cea23a20c6a0497154365a8c869aa5095076f4efd45b06b065b1",
+  "opening_stroke_gain": 0.2,
+  "max_extra_wrist_span_mm": 42.26505180849625,
+  "local_preserve_windows": [
+    {
+      "center_unwarped_s": 8.84082645232545,
+      "inner_halfwidth_s": 0.25,
+      "outer_halfwidth_s": 0.6,
+      "observed_source_time_s": 53.075,
+      "evidence_physical_trace_sha256": "710ce12c53d09aff3186e7e3024474b533b94f528ca60a107fcc918b8bf46a3c"
+    },
+    {
+      "center_unwarped_s": 32.4,
+      "inner_halfwidth_s": 0.25,
+      "outer_halfwidth_s": 0.6,
+      "observed_source_time_s": 194.4,
+      "evidence_physical_trace_sha256": "710ce12c53d09aff3186e7e3024474b533b94f528ca60a107fcc918b8bf46a3c"
+    },
+    {
+      "center_unwarped_s": 35.262499999999996,
+      "inner_halfwidth_s": 0.25,
+      "outer_halfwidth_s": 0.6,
+      "observed_source_time_s": 211.575,
+      "evidence_physical_trace_sha256": "710ce12c53d09aff3186e7e3024474b533b94f528ca60a107fcc918b8bf46a3c"
+    }
+  ],
+  "max_ik_position_error_mm": 0.0009996732549775965,
+  "max_ik_rotation_error_rad": 8.667435569135815e-06,
+  "hand_head_time_bitwise_unchanged": true,
+  "closed_keyframes_unchanged": true,
+  "arm_peak_model_velocity_ratio": 0.6637238920406179,
+  "duration_s": 48.29166666668263,
+  "max_arm_pose_delta_deg": 5.507265567779541,
+  "physical_base_above_table_m": 0.45,
+  "method": "Increase wrist separation above interpolated closure envelope, preserve midpoint and wrist orientations by local IK; retain the existing arm time warp and exact finger targets.",
+  "boundary": "Reference only. Physical tracking, collision, model limits and temporal metrics require independent checks."
+}

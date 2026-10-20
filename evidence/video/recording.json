@@ -3,7 +3,7 @@
   "frames": 1449,
   "duration_s": 48.3,
   "codec": "H264 yuv420p faststart",
-  "label": "NEW 6x | QUICKER ARMS / SAME FINGERS",
+  "label": "NEW 6x | OPENING +20% / LOCAL REPAIRS | SAME FINGERS",
   "motion_speed": 6,
   "source_interval_s": [
     0.0,
@@ -18,13 +18,13 @@
     3.137237740702403e-07,
     0.0005058539682067931
   ],
-  "max_readback_error_rad": 9.54230645611176e-08,
+  "max_readback_error_rad": 9.538421297250466e-08,
   "physics_stepped_for_capture": false,
-  "fresh_rendered_frames": 250,
-  "reused_exactly_identical_pose_frames": 1199,
-  "reuse_video_sha256": "c43b1d586e93c14ca9551fc925ed453b1e224f51c3b39b028f749f7512be9421",
-  "reuse_trajectory_sha256": "841c29aefb3a3bfb2813bd59698ffe60ecdf20b712205227cb5ba05f77890253",
-  "trajectory_sha256": "5467cff16fcf08f2aba6fada0bce74d914ba8bc69e141a99e3c08531915db2e2",
+  "fresh_rendered_frames": 1307,
+  "reused_exactly_identical_pose_frames": 142,
+  "reuse_video_sha256": "37c2e96d1e3626a12d2ce09c04fff2d41d797946a581f1781e3233a70ac45f00",
+  "reuse_trajectory_sha256": "95ff878f9cb8e38087949948ad0b13df412caec4c0dc095ceed8504ea7001329",
+  "trajectory_sha256": "c29efc597857dc3193ab68b629d1b4c6b8309eaea9bf7b44b5dc03303ec98a25",
   "usd_sha256": "33747dc8b5bcf796ea104fc1cc9522298e60f260c92c6ed6cf51d859fa66c486",
   "producer_sha256": "d8c74c15ea20c55c7dd7c6ffd8c6c7785266668c3a63e14b12c1b1ebcae77206",
   "boundary": "Full fixed-fps Isaac reference visualization; unchanged frames reused only at identical 56-axis targets with the same clock/model/camera. Changed poses freshly rendered. No physics during capture or video speed-up."

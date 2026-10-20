@@ -1,19 +1,18 @@
 {
-  "left": "old 6x preserved-5x reference",
-  "right": "new 6x arm-retimed hand-fixed reference",
+  "left": "previous 6x arm peak-rate 2x reference",
+  "right": "new opening-stroke plus20 percent with same 2x arm clock and finger targets",
   "frames": 1449,
   "fps": 30,
   "duration_s": 48.3,
   "last_frame_source_time_s": 289.6,
   "trajectory_end_source_time_s": 289.7500000000958,
   "frame_rounding_s": 0.008333333317366964,
-  "old_video_sha256": "c43b1d586e93c14ca9551fc925ed453b1e224f51c3b39b028f749f7512be9421",
-  "new_video_sha256": "5db14054c92e609dad1775a0786d77606b74966372eb3cb0b98cca6cac61af76",
-  "comparison_sha256": "f34e40f78af0bafd1d7ef9c66d775b23784765cac6a6a4c84964f32b91f4acdd",
-  "new_trajectory_sha256": "5467cff16fcf08f2aba6fada0bce74d914ba8bc69e141a99e3c08531915db2e2",
-  "old_trajectory_sha256": "841c29aefb3a3bfb2813bd59698ffe60ecdf20b712205227cb5ba05f77890253",
-  "producer_sha256": "bdf9bd961eff09f9aa120ccfea0f0da2ba7c7d77c8f3bef9197d9eb31ffcfbc7",
+  "old_video_sha256": "37c2e96d1e3626a12d2ce09c04fff2d41d797946a581f1781e3233a70ac45f00",
+  "new_video_sha256": "61c3924c43ed3f5546ed0fd0700d84f8794c99f5d2352400ed46ad5ddd005c37",
+  "comparison_sha256": "08f8066b72db826d0f5fd8d9f60d3e8ea50ecb80a2da88a5e926d3729d87847d",
+  "new_trajectory_sha256": "c29efc597857dc3193ab68b629d1b4c6b8309eaea9bf7b44b5dc03303ec98a25",
+  "old_trajectory_sha256": "95ff878f9cb8e38087949948ad0b13df412caec4c0dc095ceed8504ea7001329",
+  "producer_sha256": "c5cd594aa19a58caa666007864379db9a6cddc041f1e599ee7dccb1d9b69a9c2",
   "same_camera_scene_code_checked": true,
-  "boundary": "Synchronized full Isaac reference targets, not actual dynamics recording. Identical poses reuse the bound old frames; changed poses rendered in Isaac. No video speed-up.",
-  "composition": "Same frame index; identical crop (700x560 at300,150), scale960x768, labels, horizontal stack1920x820; no temporal filter"
+  "boundary": "Synchronized full Isaac reference targets, not actual dynamics recording. Identical poses reuse the bound old frames; changed poses rendered in Isaac. No video speed-up."
 }

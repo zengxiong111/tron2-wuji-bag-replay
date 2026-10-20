@@ -1,0 +1,23 @@
+[
+  {
+    "center_unwarped_s": 8.84082645232545,
+    "inner_halfwidth_s": 0.25,
+    "outer_halfwidth_s": 0.6,
+    "observed_source_time_s": 53.075,
+    "evidence_physical_trace_sha256": "710ce12c53d09aff3186e7e3024474b533b94f528ca60a107fcc918b8bf46a3c"
+  },
+  {
+    "center_unwarped_s": 32.4,
+    "inner_halfwidth_s": 0.25,
+    "outer_halfwidth_s": 0.6,
+    "observed_source_time_s": 194.4,
+    "evidence_physical_trace_sha256": "710ce12c53d09aff3186e7e3024474b533b94f528ca60a107fcc918b8bf46a3c"
+  },
+  {
+    "center_unwarped_s": 35.262499999999996,
+    "inner_halfwidth_s": 0.25,
+    "outer_halfwidth_s": 0.6,
+    "observed_source_time_s": 211.575,
+    "evidence_physical_trace_sha256": "710ce12c53d09aff3186e7e3024474b533b94f528ca60a107fcc918b8bf46a3c"
+  }
+]

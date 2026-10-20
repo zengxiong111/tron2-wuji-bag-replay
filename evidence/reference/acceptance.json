@@ -1,16 +1,16 @@
 {
-  "reference_identity_passed": true,
   "target_mesh_passed": true,
   "actual_mesh_passed": true,
   "physical_complete": true,
+  "negative_contact_pairs": 0,
   "target_model_velocity_passed": true,
   "actual_fd_model_velocity_passed": true,
-  "negative_contact_pairs": 0,
-  "minimum_reported_separation_m": 5.417045395006426e-05,
-  "full_reference_duration_s": 48.29166666668263,
-  "trajectory_sha256": "5467cff16fcf08f2aba6fada0bce74d914ba8bc69e141a99e3c08531915db2e2",
+  "finger_targets_bitwise_unchanged": true,
+  "old_2x_arm_clock_bitwise_unchanged": true,
+  "opening_peaks_20_percent": 122,
+  "opening_peaks_local_reduction": 10,
+  "maximum_extra_wrist_span_mm": 42.2650205866486,
   "continuous_ccd_verified": false,
   "hardware_verified": false,
-  "body_mapping_status": "candidate_unconfirmed",
-  "boundary": "Target hand identity verified. Physics actual hand speeds need not match baseline. Temporal metrics increased with faster arm phases; no claim of additional jitter reduction."
+  "boundary": "Target hand identity; actual tracking and temporal metrics remain separate. Three measured arm-path windows reduce expansion locally."
 }

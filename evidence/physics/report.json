@@ -4,7 +4,7 @@
   "producer_sha256": "1565481582f07767a7cdee82832ec2f577af6b17b299ebdd26c1fd6baad8242c",
   "usd_sha256": "0526b9a8f358a0ae2b9e55ead21467282c619973fa6b36bc2b33175b7eefed84",
   "usd": "outputs/robot/robot_collision_fixed.usd",
-  "reference_sha256": "d6d47a47953bda2929b16ef3ebab145ba2952cd5f6c4e0b3583212fb0a69b7da",
+  "reference_sha256": "68f112de1ebbc432c14642353d7acd89e280f84cc80cf297ef6a9b4d7bcebde0",
   "reference": "trajectories/repaired_source.npz",
   "start_source_seconds": 0,
   "solver_iterations": [
@@ -880,8 +880,16 @@
   "status": "complete",
   "source_time_s": 289.76666666666665,
   "simulation_time_s": 48.2958333333448,
-  "wall_elapsed_s": 110.18287226883695,
+  "wall_elapsed_s": 124.28344794199802,
   "frames_measured": 11591,
-  "max_error_rad": 0.5407083034515381,
-  "rms_error_rad": 0.025508780032396317
+  "max_error_rad": 0.2540811598300934,
+  "rms_error_rad": 0.026654591783881187,
+  "max_error_sampling": "Render-cadence diagnostic only; full 240 Hz sample metric is recorded separately below.",
+  "full_trace_tracking_error": {
+    "rms_rad": 0.026654590623295102,
+    "maximum_rad": 0.6330035701394081,
+    "sample_rate_hz": 240,
+    "method": "Pointwise q_actual minus q_target across all physical trace states",
+    "physical_trace_sha256": "6676f70d2a0cc650097b13995841181642235ca093b51a341f3c90cf7a09ed1e"
+  }
 }

@@ -1,6 +1,6 @@
 {
   "trajectory": "trajectories/trajectory_6x.npz",
-  "trajectory_sha256": "5467cff16fcf08f2aba6fada0bce74d914ba8bc69e141a99e3c08531915db2e2",
+  "trajectory_sha256": "c29efc597857dc3193ab68b629d1b4c6b8309eaea9bf7b44b5dc03303ec98a25",
   "usd": "outputs/robot/robot_collision_fixed.usd",
   "usd_sha256": "0526b9a8f358a0ae2b9e55ead21467282c619973fa6b36bc2b33175b7eefed84",
   "interpolation": "piecewise linear in execution seconds",
@@ -9,8 +9,8 @@
   "duration_s": 48.29166666668263,
   "native_samples": 13909,
   "native_hz": 288,
-  "mode": "arm-retimed hand-fixed reference-path playback",
+  "mode": "expanded-opening arm-retimed hand-fixed reference playback",
   "physics_reexecuted": false,
   "hardware_execution_authorized": false,
-  "trajectory_kind": "Common arm phase warp with unchanged hand targets and execution clock; not physical actual states"
+  "trajectory_kind": "Opening strokes approximately +20 percent with three local preservation windows; unchanged finger targets and local 2x arm clock; not physical actual states"
 }
