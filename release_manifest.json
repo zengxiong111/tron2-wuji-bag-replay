@@ -1,13 +1,13 @@
 {
   "repository": "zengxiong111/tron2-wuji-bag-replay",
-  "tag": "6x-preserve5x-20261015",
+  "tag": "6x-arm-fast-hand-fixed-20261020",
   "assets": [
     {
       "name": "robot-assets.tar.gz",
       "sha256": "390d7760609d0afb7841c8d8d64b41c4a172b68f617c10a4f17ea60adcade9e4",
       "size_bytes": 68635683,
       "files": {
-        "assets/adapter/tron2-12070101-\u821e\u808c\u624b\u8f6c\u63a5\u4ef6.stp": "89c44ac876415470e10b0176e6e195412fbd98d8ba185331b6d9929e4b98999c",
+        "assets/adapter/tron2-12070101-舞肌手转接件.stp": "89c44ac876415470e10b0176e6e195412fbd98d8ba185331b6d9929e4b98999c",
         "assets/adapter/tron2_wuji_adapter.stl": "c3501998c28cd36ab0c66fe3f1ed65c96c342d7c3049817f6f4498b7a7df66b6",
         "assets/tron2-robot-description/tron2a/DACH_TRON2A/meshes/base_2_Link.STL": "0949b4cc8fe9908e42cadbd700b20248b813e216e37c36b4c5ed3c05f2132659",
         "assets/tron2-robot-description/tron2a/DACH_TRON2A/meshes/base_3_Link.STL": "e97bbbb149445b4ce2a7df2589b53ac03045c0386e64590eb2efc5d3524c2fce",
@@ -95,23 +95,35 @@
     },
     {
       "name": "trajectory-data.tar.gz",
-      "size_bytes": 10785923,
-      "sha256": "9e64969685fd1d5b4ba7179a9a6cf0f947472092ef754b1c89149f8848402426",
+      "size_bytes": 10903781,
+      "sha256": "2750233c737a4232efd6c3ae3130ac831ce3ef29104cb3292ba458107042fe89",
       "files": {
-        "trajectories/trajectory_6x.npz": "841c29aefb3a3bfb2813bd59698ffe60ecdf20b712205227cb5ba05f77890253",
-        "trajectories/repaired_source.npz": "417b13370a93904056e8ca65863d14da2e13ce7881a147c2056bce24765efdbe",
-        "trajectories/physical_tracking_6x.npz": "99aaf8bbcd84f6f60d54532c2caa859a24d50c7ea1c4bcb57b88e354bc903acd",
-        "evidence/reference/local_masks.npz": "8df76d67b5ad45fa2556cf2900c47aa25f9cccfc3c7e324cc9647cdd441e1809"
+        "trajectories/trajectory_6x.npz": "5467cff16fcf08f2aba6fada0bce74d914ba8bc69e141a99e3c08531915db2e2",
+        "trajectories/repaired_source.npz": "d6d47a47953bda2929b16ef3ebab145ba2952cd5f6c4e0b3583212fb0a69b7da",
+        "trajectories/physical_tracking_6x.npz": "1a06fa1bede52e7f2f40d38942893ce1c10506300ec08ba96341cc4a6c965c20",
+        "evidence/reference/arm_clock.npz": "0cb7bdc81670452a07d8c71efa6bb3f35e54fd8db33b9f6202f90c0c001557e7"
+      }
+    },
+    {
+      "name": "replay-videos.tar.gz",
+      "size_bytes": 10721227,
+      "sha256": "dea10b0a01c398227a5d5ea12c03ab49898f4674b622fa34a7022e50930174d4",
+      "files": {
+        "media/new_6x_full.mp4": "5db14054c92e609dad1775a0786d77606b74966372eb3cb0b98cca6cac61af76",
+        "media/old_vs_new_6x.mp4": "f34e40f78af0bafd1d7ef9c66d775b23784765cac6a6a4c84964f32b91f4acdd"
       }
     }
   ],
   "previous_files": {
-    "trajectories/repaired_source.npz": "11827052a2664e7e4fcb68303ac013c507d052bbbf0170ac8d89fe5ada1225e8"
+    "trajectories/trajectory_6x.npz": "841c29aefb3a3bfb2813bd59698ffe60ecdf20b712205227cb5ba05f77890253",
+    "trajectories/repaired_source.npz": "417b13370a93904056e8ca65863d14da2e13ce7881a147c2056bce24765efdbe",
+    "trajectories/physical_tracking_6x.npz": "99aaf8bbcd84f6f60d54532c2caa859a24d50c7ea1c4bcb57b88e354bc903acd"
   },
   "retired_files": {
     "trajectories/retimed_actual_4x.npz": "23b555d6a4bf6df33fa4da4e5905a10f9fe375f6447784edd44079e412bdfcd1",
     "trajectories/recorded_actual_5x.npz": "4e086ddf442ddded028b0af4824c519de4a004ba421b9df4662c11c8e498fc06",
     "media/head_forward_full_5x.mp4": "92d45ad013eb127b5fcbb05a5516f5c09877ede0ab0f74001f15daecffaa7685",
-    "trajectories/recorded_actual_6x.npz": "460463385a43a8df54604d84b01ea389b60b56152366f32487a3e846410894fc"
+    "trajectories/recorded_actual_6x.npz": "460463385a43a8df54604d84b01ea389b60b56152366f32487a3e846410894fc",
+    "evidence/reference/local_masks.npz": "8df76d67b5ad45fa2556cf2900c47aa25f9cccfc3c7e324cc9647cdd441e1809"
   }
 }

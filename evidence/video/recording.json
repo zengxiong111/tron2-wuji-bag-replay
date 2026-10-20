@@ -1,0 +1,31 @@
+{
+  "fps": 30,
+  "frames": 1449,
+  "duration_s": 48.3,
+  "codec": "H264 yuv420p faststart",
+  "label": "NEW 6x | QUICKER ARMS / SAME FINGERS",
+  "motion_speed": 6,
+  "source_interval_s": [
+    0.0,
+    289.7500000000958
+  ],
+  "video_source_interval_s": [
+    0.0,
+    289.7708333334291
+  ],
+  "last_frame_source_time_s": 289.6,
+  "preserved_head_max_abs_rad": [
+    3.137237740702403e-07,
+    0.0005058539682067931
+  ],
+  "max_readback_error_rad": 9.54230645611176e-08,
+  "physics_stepped_for_capture": false,
+  "fresh_rendered_frames": 250,
+  "reused_exactly_identical_pose_frames": 1199,
+  "reuse_video_sha256": "c43b1d586e93c14ca9551fc925ed453b1e224f51c3b39b028f749f7512be9421",
+  "reuse_trajectory_sha256": "841c29aefb3a3bfb2813bd59698ffe60ecdf20b712205227cb5ba05f77890253",
+  "trajectory_sha256": "5467cff16fcf08f2aba6fada0bce74d914ba8bc69e141a99e3c08531915db2e2",
+  "usd_sha256": "33747dc8b5bcf796ea104fc1cc9522298e60f260c92c6ed6cf51d859fa66c486",
+  "producer_sha256": "d8c74c15ea20c55c7dd7c6ffd8c6c7785266668c3a63e14b12c1b1ebcae77206",
+  "boundary": "Full fixed-fps Isaac reference visualization; unchanged frames reused only at identical 56-axis targets with the same clock/model/camera. Changed poses freshly rendered. No physics during capture or video speed-up."
+}

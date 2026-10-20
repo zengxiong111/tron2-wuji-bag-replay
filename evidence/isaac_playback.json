@@ -1,8 +1,8 @@
 {
-  "trajectory_sha256": "841c29aefb3a3bfb2813bd59698ffe60ecdf20b712205227cb5ba05f77890253",
+  "trajectory_sha256": "5467cff16fcf08f2aba6fada0bce74d914ba8bc69e141a99e3c08531915db2e2",
   "usd_sha256": "0526b9a8f358a0ae2b9e55ead21467282c619973fa6b36bc2b33175b7eefed84",
   "producer_sha256": "46373ea456bb024ef3a969df64761d7ee183d85f803bb78d0412a4283bff1b2c",
-  "mode": "locally repaired reference-path kinematic playback",
+  "mode": "arm-retimed hand-fixed reference-path playback",
   "interpolation": "piecewise linear in execution seconds",
   "file_time_multiplier": 1,
   "effective_bag_speed": 6,

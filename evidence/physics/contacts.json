@@ -6,587 +6,622 @@
   },
   "/World/Robot/r_index_finger_proximal_abd | /World/Robot/r_wrist": {
     "contact_events": 11713,
-    "min_separation_m": 0.0005894649657420814,
+    "min_separation_m": 0.0005894294590689242,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/r_middle_finger_proximal_abd | /World/Robot/r_wrist": {
     "contact_events": 11713,
-    "min_separation_m": 0.0005920151597820222,
+    "min_separation_m": 0.0005920337280258536,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/r_ring_finger_proximal_abd | /World/Robot/r_wrist": {
     "contact_events": 11713,
-    "min_separation_m": 0.0005920527619309723,
+    "min_separation_m": 0.000592063763178885,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/l_thumb_proximal_abd | /World/Robot/l_wrist": {
     "contact_events": 11713,
     "min_separation_m": 5.417045395006426e-05,
-    "max_impulse_norm": 12.241792380902158
+    "max_impulse_norm": 12.242600314064358
   },
   "/World/Robot/l_index_finger_proximal_abd | /World/Robot/l_wrist": {
     "contact_events": 11713,
-    "min_separation_m": 0.0005895252688787878,
+    "min_separation_m": 0.0005895234644412994,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/l_middle_finger_proximal_abd | /World/Robot/l_wrist": {
     "contact_events": 11713,
-    "min_separation_m": 0.0005890553584322333,
+    "min_separation_m": 0.0005890821339562535,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/l_ring_finger_proximal_abd | /World/Robot/l_wrist": {
     "contact_events": 11713,
-    "min_separation_m": 0.000595218560192734,
+    "min_separation_m": 0.0005952300853095949,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/l_pinky_proximal_abd | /World/Robot/l_wrist": {
     "contact_events": 11713,
-    "min_separation_m": 0.0005847722059115767,
+    "min_separation_m": 0.0005850946181453764,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/r_pinky_proximal_abd | /World/Robot/r_wrist": {
     "contact_events": 11713,
-    "min_separation_m": 0.0005875485367141664,
+    "min_separation_m": 0.0005875295610167086,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/l_pinky_distal | /World/Robot/l_ring_finger_distal": {
-    "contact_events": 2063,
-    "min_separation_m": 0.00038198637776076794,
-    "max_impulse_norm": 0.0030314645723915974
+    "contact_events": 2067,
+    "min_separation_m": 0.00038185244193300605,
+    "max_impulse_norm": 0.003034883018369817
   },
   "/World/Robot/l_pinky_distal | /World/Robot/l_ring_finger_middle": {
-    "contact_events": 1660,
-    "min_separation_m": 0.0003888487408403307,
-    "max_impulse_norm": 0.02022081403819611
+    "contact_events": 1662,
+    "min_separation_m": 0.00038880729698576033,
+    "max_impulse_norm": 0.02021057178271632
   },
   "/World/Robot/l_pinky_tip_sensor_frame | /World/Robot/l_ring_finger_distal": {
-    "contact_events": 329,
-    "min_separation_m": 0.0005998234264552593,
-    "max_impulse_norm": 0.0062101426550860974
+    "contact_events": 337,
+    "min_separation_m": 0.0006068009533919394,
+    "max_impulse_norm": 0.006210291138296371
   },
   "/World/Robot/r_middle_finger_distal | /World/Robot/r_thumb_tip_sensor_frame": {
-    "contact_events": 265,
-    "min_separation_m": 0.0003619857016019523,
-    "max_impulse_norm": 0.01473679693790325
-  },
-  "/World/Robot/r_middle_finger_tip_sensor_frame | /World/Robot/r_thumb_tip_sensor_frame": {
-    "contact_events": 214,
-    "min_separation_m": 0.00034318596590310335,
-    "max_impulse_norm": 0.010014379962622904
+    "contact_events": 264,
+    "min_separation_m": 0.00036190214450471103,
+    "max_impulse_norm": 0.014736624886188755
   },
   "/World/Robot/l_index_finger_distal | /World/Robot/r_index_finger_tip_sensor_frame": {
-    "contact_events": 72,
-    "min_separation_m": 0.0005648721707984805,
-    "max_impulse_norm": 0.050380413172545234
+    "contact_events": 90,
+    "min_separation_m": 0.0005648297374136746,
+    "max_impulse_norm": 0.05038650362955738
   },
   "/World/Robot/l_index_finger_tip_sensor_frame | /World/Robot/r_index_finger_tip_sensor_frame": {
-    "contact_events": 89,
-    "min_separation_m": 0.00028841805760748684,
-    "max_impulse_norm": 0.014508634541104777
+    "contact_events": 116,
+    "min_separation_m": 0.00028839471633546054,
+    "max_impulse_norm": 0.01543665743838767
+  },
+  "/World/Robot/r_middle_finger_tip_sensor_frame | /World/Robot/r_thumb_tip_sensor_frame": {
+    "contact_events": 212,
+    "min_separation_m": 0.00035293237306177616,
+    "max_impulse_norm": 0.010021954452523475
   },
   "/World/Robot/l_ring_finger_tip_sensor_frame | /World/Robot/r_ring_finger_tip_sensor_frame": {
-    "contact_events": 12,
-    "min_separation_m": 0.0010111634619534016,
+    "contact_events": 28,
+    "min_separation_m": 0.0010126670822501183,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/r_middle_finger_distal | /World/Robot/r_ring_finger_distal": {
-    "contact_events": 886,
-    "min_separation_m": 0.00037738168612122536,
-    "max_impulse_norm": 0.012081053278082864
+    "contact_events": 882,
+    "min_separation_m": 0.0003940322785638273,
+    "max_impulse_norm": 0.01207851716296586
   },
   "/World/Robot/r_middle_finger_distal | /World/Robot/r_ring_finger_tip_sensor_frame": {
-    "contact_events": 620,
-    "min_separation_m": 0.00038850793498568237,
-    "max_impulse_norm": 0.009814850543266772
+    "contact_events": 623,
+    "min_separation_m": 0.0003885914047714323,
+    "max_impulse_norm": 0.008372676048691585
   },
-  "/World/Robot/r_ring_finger_distal | /World/Robot/r_thumb_tip_sensor_frame": {
-    "contact_events": 53,
-    "min_separation_m": 0.00038793880958110094,
-    "max_impulse_norm": 0.005169109262595515
+  "/World/Robot/l_pinky_proximal_abd | /World/Robot/r_index_finger_tip_sensor_frame": {
+    "contact_events": 20,
+    "min_separation_m": 0.0006658006459474564,
+    "max_impulse_norm": 0.005439094839987633
   },
-  "/World/Robot/r_ring_finger_middle | /World/Robot/r_thumb_tip_sensor_frame": {
-    "contact_events": 17,
-    "min_separation_m": 0.001409630523994565,
+  "/World/Robot/l_pinky_middle | /World/Robot/r_index_finger_tip_sensor_frame": {
+    "contact_events": 30,
+    "min_separation_m": 0.00011629745131358504,
+    "max_impulse_norm": 0.0159734031460972
+  },
+  "/World/Robot/l_pinky_middle | /World/Robot/r_index_finger_distal": {
+    "contact_events": 15,
+    "min_separation_m": 0.0008013271726667881,
+    "max_impulse_norm": 0.0014871170171320248
+  },
+  "/World/Robot/l_pinky_middle | /World/Robot/r_index_finger_middle": {
+    "contact_events": 14,
+    "min_separation_m": 0.0009778242092579603,
     "max_impulse_norm": 0.0
   },
-  "/World/Robot/l_ring_finger_tip_sensor_frame | /World/Robot/r_index_finger_tip_sensor_frame": {
-    "contact_events": 16,
-    "min_separation_m": 0.0006963021005503833,
-    "max_impulse_norm": 0.006008394469046637
+  "/World/Robot/l_pinky_proximal_abd | /World/Robot/r_index_finger_middle": {
+    "contact_events": 11,
+    "min_separation_m": 0.001422019791789353,
+    "max_impulse_norm": 0.0
+  },
+  "/World/Robot/l_pinky_proximal_abd | /World/Robot/r_index_finger_distal": {
+    "contact_events": 6,
+    "min_separation_m": 0.001525042811408639,
+    "max_impulse_norm": 0.0
+  },
+  "/World/Robot/r_ring_finger_distal | /World/Robot/r_thumb_tip_sensor_frame": {
+    "contact_events": 54,
+    "min_separation_m": 0.0003878717543557286,
+    "max_impulse_norm": 0.005169363506473421
+  },
+  "/World/Robot/r_ring_finger_middle | /World/Robot/r_thumb_tip_sensor_frame": {
+    "contact_events": 14,
+    "min_separation_m": 0.001732926582917571,
+    "max_impulse_norm": 0.0
   },
   "/World/Robot/l_ring_finger_tip_sensor_frame | /World/Robot/r_index_finger_distal": {
-    "contact_events": 30,
-    "min_separation_m": 0.0005213874974288046,
-    "max_impulse_norm": 0.009206966993621087
+    "contact_events": 24,
+    "min_separation_m": 0.0005886428989470005,
+    "max_impulse_norm": 0.0063127575996273725
   },
-  "/World/Robot/l_ring_finger_tip_sensor_frame | /World/Robot/r_index_finger_middle": {
-    "contact_events": 2,
-    "min_separation_m": 0.001971085090190172,
+  "/World/Robot/l_ring_finger_tip_sensor_frame | /World/Robot/r_index_finger_tip_sensor_frame": {
+    "contact_events": 9,
+    "min_separation_m": 0.0009276862256228924,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/l_index_finger_tip_sensor_frame | /World/Robot/r_index_finger_distal": {
-    "contact_events": 49,
-    "min_separation_m": 0.00010102886881213635,
-    "max_impulse_norm": 0.017902937862610147
+    "contact_events": 62,
+    "min_separation_m": 0.00010101788211613894,
+    "max_impulse_norm": 0.02099580608849868
   },
   "/World/Robot/l_index_finger_distal | /World/Robot/r_index_finger_distal": {
-    "contact_events": 25,
-    "min_separation_m": 0.0009313932387158275,
-    "max_impulse_norm": 0.011380680841357413
+    "contact_events": 22,
+    "min_separation_m": 0.0011239564046263695,
+    "max_impulse_norm": 0.0
   },
   "/World/Robot/r_middle_finger_middle | /World/Robot/r_thumb_tip_sensor_frame": {
-    "contact_events": 62,
-    "min_separation_m": 0.00038551795296370983,
-    "max_impulse_norm": 0.002605122515943871
+    "contact_events": 61,
+    "min_separation_m": 0.00038556396611966193,
+    "max_impulse_norm": 0.00260456878435875
   },
   "/World/Robot/r_middle_finger_middle | /World/Robot/r_ring_finger_middle": {
-    "contact_events": 380,
-    "min_separation_m": 0.00036136480048298836,
-    "max_impulse_norm": 0.032478766522961146
+    "contact_events": 377,
+    "min_separation_m": 0.00030329328728839755,
+    "max_impulse_norm": 0.032482337999647684
   },
-  "/World/Robot/l_ring_finger_distal | /World/Robot/r_thumb_distal": {
-    "contact_events": 5,
-    "min_separation_m": 0.001637981622479856,
+  "/World/Robot/l_middle_finger_distal | /World/Robot/r_middle_finger_distal": {
+    "contact_events": 1,
+    "min_separation_m": 0.0019280421547591686,
     "max_impulse_norm": 0.0
   },
-  "/World/Robot/l_index_finger_middle | /World/Robot/l_thumb_tip_sensor_frame": {
-    "contact_events": 426,
-    "min_separation_m": 0.00034243144909851253,
-    "max_impulse_norm": 0.04947116983947457
-  },
-  "/World/Robot/l_index_finger_proximal_abd | /World/Robot/l_thumb_tip_sensor_frame": {
-    "contact_events": 72,
-    "min_separation_m": 0.001089400495402515,
+  "/World/Robot/l_middle_finger_middle | /World/Robot/r_middle_finger_distal": {
+    "contact_events": 8,
+    "min_separation_m": 0.0008531791972927749,
     "max_impulse_norm": 0.0
-  },
-  "/World/Robot/l_index_finger_distal | /World/Robot/l_thumb_tip_sensor_frame": {
-    "contact_events": 117,
-    "min_separation_m": 0.0003974804130848497,
-    "max_impulse_norm": 0.0
-  },
-  "/World/Robot/l_index_finger_tip_sensor_frame | /World/Robot/l_thumb_tip_sensor_frame": {
-    "contact_events": 122,
-    "min_separation_m": 0.0005914600333198905,
-    "max_impulse_norm": 0.0
-  },
-  "/World/Robot/l_middle_finger_distal | /World/Robot/l_ring_finger_tip_sensor_frame": {
-    "contact_events": 68,
-    "min_separation_m": 0.0009834177326411009,
-    "max_impulse_norm": 0.007540079158771683
-  },
-  "/World/Robot/l_pinky_distal | /World/Robot/l_ring_finger_tip_sensor_frame": {
-    "contact_events": 222,
-    "min_separation_m": 0.0005674911080859601,
-    "max_impulse_norm": 0.0
-  },
-  "/World/Robot/l_pinky_tip_sensor_frame | /World/Robot/l_ring_finger_tip_sensor_frame": {
-    "contact_events": 53,
-    "min_separation_m": 0.0011213850229978561,
-    "max_impulse_norm": 0.0
-  },
-  "/World/Robot/l_pinky_tip_sensor_frame | /World/Robot/l_ring_finger_middle": {
-    "contact_events": 133,
-    "min_separation_m": 0.0006287240539677441,
-    "max_impulse_norm": 0.0
-  },
-  "/World/Robot/l_index_finger_tip_sensor_frame | /World/Robot/l_middle_finger_distal": {
-    "contact_events": 111,
-    "min_separation_m": 0.0005946090677753091,
-    "max_impulse_norm": 0.0018136678564474667
-  },
-  "/World/Robot/l_index_finger_distal | /World/Robot/l_middle_finger_distal": {
-    "contact_events": 93,
-    "min_separation_m": 0.0007367015350610018,
-    "max_impulse_norm": 0.0
-  },
-  "/World/Robot/l_ring_finger_middle | /World/Robot/r_middle_finger_tip_sensor_frame": {
-    "contact_events": 46,
-    "min_separation_m": 0.0003549059038050473,
-    "max_impulse_norm": 0.026538756243400158
-  },
-  "/World/Robot/l_thumb_distal | /World/Robot/r_index_finger_distal": {
-    "contact_events": 26,
-    "min_separation_m": 0.0005655622808262706,
-    "max_impulse_norm": 0.04677022331419628
-  },
-  "/World/Robot/l_thumb_tip_sensor_frame | /World/Robot/r_index_finger_tip_sensor_frame": {
-    "contact_events": 23,
-    "min_separation_m": 0.000588931841775775,
-    "max_impulse_norm": 0.002641231576344445
   },
   "/World/Robot/l_thumb_distal | /World/Robot/r_index_finger_tip_sensor_frame": {
     "contact_events": 69,
-    "min_separation_m": 0.0005422828835435212,
-    "max_impulse_norm": 0.012538115011253407
+    "min_separation_m": 0.0005423850961960852,
+    "max_impulse_norm": 0.012545421698453555
+  },
+  "/World/Robot/l_middle_finger_middle | /World/Robot/r_middle_finger_tip_sensor_frame": {
+    "contact_events": 2,
+    "min_separation_m": 0.001917694229632616,
+    "max_impulse_norm": 0.0
+  },
+  "/World/Robot/l_index_finger_middle | /World/Robot/l_thumb_tip_sensor_frame": {
+    "contact_events": 411,
+    "min_separation_m": 0.0003460524312686175,
+    "max_impulse_norm": 0.04943947137105781
+  },
+  "/World/Robot/l_index_finger_proximal_abd | /World/Robot/l_thumb_tip_sensor_frame": {
+    "contact_events": 78,
+    "min_separation_m": 0.00108938233461231,
+    "max_impulse_norm": 0.0
+  },
+  "/World/Robot/l_index_finger_distal | /World/Robot/l_thumb_tip_sensor_frame": {
+    "contact_events": 112,
+    "min_separation_m": 0.000393277732655406,
+    "max_impulse_norm": 0.0
+  },
+  "/World/Robot/l_index_finger_tip_sensor_frame | /World/Robot/l_thumb_tip_sensor_frame": {
+    "contact_events": 119,
+    "min_separation_m": 0.0005914332577958703,
+    "max_impulse_norm": 0.0
+  },
+  "/World/Robot/l_middle_finger_distal | /World/Robot/l_ring_finger_tip_sensor_frame": {
+    "contact_events": 67,
+    "min_separation_m": 0.0009833702351897955,
+    "max_impulse_norm": 0.007541595505239648
+  },
+  "/World/Robot/l_pinky_tip_sensor_frame | /World/Robot/l_ring_finger_tip_sensor_frame": {
+    "contact_events": 60,
+    "min_separation_m": 0.0010655918158590794,
+    "max_impulse_norm": 0.0
+  },
+  "/World/Robot/l_pinky_distal | /World/Robot/l_ring_finger_tip_sensor_frame": {
+    "contact_events": 225,
+    "min_separation_m": 0.0005674358690157533,
+    "max_impulse_norm": 0.0
+  },
+  "/World/Robot/l_pinky_tip_sensor_frame | /World/Robot/l_ring_finger_middle": {
+    "contact_events": 145,
+    "min_separation_m": 0.0006338914390653372,
+    "max_impulse_norm": 0.0
+  },
+  "/World/Robot/l_index_finger_tip_sensor_frame | /World/Robot/l_middle_finger_distal": {
+    "contact_events": 113,
+    "min_separation_m": 0.0005945665761828423,
+    "max_impulse_norm": 0.0018113448176901002
+  },
+  "/World/Robot/l_index_finger_distal | /World/Robot/l_middle_finger_distal": {
+    "contact_events": 91,
+    "min_separation_m": 0.0007367373909801245,
+    "max_impulse_norm": 0.0
+  },
+  "/World/Robot/l_ring_finger_middle | /World/Robot/r_middle_finger_tip_sensor_frame": {
+    "contact_events": 43,
+    "min_separation_m": 0.0003723455884028226,
+    "max_impulse_norm": 0.026538328633616493
   },
   "/World/Robot/r_pinky_tip_sensor_frame | /World/Robot/r_ring_finger_distal": {
     "contact_events": 259,
-    "min_separation_m": 0.0004946976550854743,
-    "max_impulse_norm": 0.004863006145450428
+    "min_separation_m": 0.0004952078452333808,
+    "max_impulse_norm": 0.004862837024534214
   },
   "/World/Robot/l_index_finger_middle | /World/Robot/l_middle_finger_middle": {
     "contact_events": 202,
-    "min_separation_m": 0.0003891575033776462,
-    "max_impulse_norm": 0.007494523812408107
+    "min_separation_m": 0.00038655343814752996,
+    "max_impulse_norm": 0.007516459161745248
   },
   "/World/Robot/l_middle_finger_distal | /World/Robot/l_ring_finger_distal": {
     "contact_events": 103,
-    "min_separation_m": 0.0006829931517131627,
-    "max_impulse_norm": 0.012324366045565452
-  },
-  "/World/Robot/l_middle_finger_tip_sensor_frame | /World/Robot/l_ring_finger_tip_sensor_frame": {
-    "contact_events": 30,
-    "min_separation_m": 0.0007723598973825574,
-    "max_impulse_norm": 0.0
+    "min_separation_m": 0.0006829519988968968,
+    "max_impulse_norm": 0.012322051677530218
   },
   "/World/Robot/l_index_finger_middle | /World/Robot/l_middle_finger_proximal_abd": {
-    "contact_events": 94,
-    "min_separation_m": 0.0008968067704699934,
+    "contact_events": 84,
+    "min_separation_m": 0.0008967359317466617,
+    "max_impulse_norm": 0.0
+  },
+  "/World/Robot/l_middle_finger_tip_sensor_frame | /World/Robot/l_ring_finger_tip_sensor_frame": {
+    "contact_events": 32,
+    "min_separation_m": 0.0007723263697698712,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/l_middle_finger_tip_sensor_frame | /World/Robot/l_ring_finger_distal": {
-    "contact_events": 70,
-    "min_separation_m": 0.000453637883765623,
+    "contact_events": 73,
+    "min_separation_m": 0.0004536508349701762,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/r_middle_finger_tip_sensor_frame | /World/Robot/r_ring_finger_tip_sensor_frame": {
     "contact_events": 158,
-    "min_separation_m": 0.0005008289590477943,
+    "min_separation_m": 0.000500804977491498,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/r_middle_finger_middle | /World/Robot/r_ring_finger_proximal_abd": {
-    "contact_events": 58,
-    "min_separation_m": 0.0005886104772798717,
+    "contact_events": 60,
+    "min_separation_m": 0.0005858882213942707,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/r_middle_finger_proximal_abd | /World/Robot/r_ring_finger_middle": {
     "contact_events": 32,
-    "min_separation_m": 0.0009218048071488738,
+    "min_separation_m": 0.0008969292975962162,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/l_middle_finger_tip_sensor_frame | /World/Robot/r_index_finger_tip_sensor_frame": {
     "contact_events": 30,
-    "min_separation_m": 0.0005900259129703045,
-    "max_impulse_norm": 0.005310706720997712
+    "min_separation_m": 0.0005900108953937888,
+    "max_impulse_norm": 0.005329790567742693
   },
   "/World/Robot/r_ring_finger_tip_sensor_frame | /World/Robot/r_thumb_tip_sensor_frame": {
     "contact_events": 7,
-    "min_separation_m": 0.0015533147379755974,
+    "min_separation_m": 0.001553302281536162,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/r_middle_finger_distal | /World/Robot/r_ring_finger_middle": {
-    "contact_events": 9,
-    "min_separation_m": 0.001500465557910502,
+    "contact_events": 10,
+    "min_separation_m": 0.0015005258610472083,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/l_pinky_tip_sensor_frame | /World/Robot/r_index_finger_tip_sensor_frame": {
     "contact_events": 6,
-    "min_separation_m": 0.0011977411340922117,
+    "min_separation_m": 0.0011976358946412802,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/l_pinky_tip_sensor_frame | /World/Robot/r_index_finger_distal": {
     "contact_events": 8,
-    "min_separation_m": 0.00011046628787880763,
-    "max_impulse_norm": 0.025445007360903868
+    "min_separation_m": 0.00011035904026357457,
+    "max_impulse_norm": 0.025442382065336604
+  },
+  "/World/Robot/l_ring_finger_tip_sensor_frame | /World/Robot/r_index_finger_middle": {
+    "contact_events": 1,
+    "min_separation_m": 0.0019764488097280264,
+    "max_impulse_norm": 0.0
   },
   "/World/Robot/r_pinky_distal | /World/Robot/r_ring_finger_distal": {
-    "contact_events": 162,
-    "min_separation_m": 0.0009363759309053421,
+    "contact_events": 165,
+    "min_separation_m": 0.0009363702265545726,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/l_ring_finger_distal | /World/Robot/r_middle_finger_tip_sensor_frame": {
     "contact_events": 30,
-    "min_separation_m": 0.00040259069646708667,
-    "max_impulse_norm": 0.013821191955479884
+    "min_separation_m": 0.00040252244798466563,
+    "max_impulse_norm": 0.013821067670202431
+  },
+  "/World/Robot/l_thumb_tip_sensor_frame | /World/Robot/r_index_finger_tip_sensor_frame": {
+    "contact_events": 19,
+    "min_separation_m": 0.000588880036957562,
+    "max_impulse_norm": 0.002641504338764374
+  },
+  "/World/Robot/l_thumb_distal | /World/Robot/r_index_finger_distal": {
+    "contact_events": 21,
+    "min_separation_m": 0.0005657662404701114,
+    "max_impulse_norm": 0.04675875635092904
   },
   "/World/Robot/l_thumb_tip_sensor_frame | /World/Robot/r_index_finger_distal": {
-    "contact_events": 23,
-    "min_separation_m": 0.0008565363823436201,
+    "contact_events": 22,
+    "min_separation_m": 0.0008565888274461031,
     "max_impulse_norm": 0.0
-  },
-  "/World/Robot/l_ring_finger_distal | /World/Robot/r_index_finger_tip_sensor_frame": {
-    "contact_events": 13,
-    "min_separation_m": 0.0005436409846879542,
-    "max_impulse_norm": 0.043899061653884235
-  },
-  "/World/Robot/l_ring_finger_middle | /World/Robot/r_index_finger_tip_sensor_frame": {
-    "contact_events": 20,
-    "min_separation_m": 0.0005340353818610311,
-    "max_impulse_norm": 0.04912839590515745
   },
   "/World/Robot/r_index_finger_distal | /World/Robot/r_middle_finger_distal": {
     "contact_events": 10,
-    "min_separation_m": 0.0005958722904324532,
-    "max_impulse_norm": 0.0010305328048703533
+    "min_separation_m": 0.000591738149523735,
+    "max_impulse_norm": 0.0006906631652107937
+  },
+  "/World/Robot/l_ring_finger_middle | /World/Robot/r_index_finger_tip_sensor_frame": {
+    "contact_events": 20,
+    "min_separation_m": 0.0005340703064575791,
+    "max_impulse_norm": 0.04913475389531983
+  },
+  "/World/Robot/l_ring_finger_distal | /World/Robot/r_index_finger_tip_sensor_frame": {
+    "contact_events": 13,
+    "min_separation_m": 0.0005782240186817944,
+    "max_impulse_norm": 0.0441566935712015
   },
   "/World/Robot/r_index_finger_distal | /World/Robot/r_middle_finger_tip_sensor_frame": {
     "contact_events": 8,
-    "min_separation_m": 0.0009655017638579011,
+    "min_separation_m": 0.0009613067377358675,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/r_index_finger_tip_sensor_frame | /World/Robot/r_middle_finger_tip_sensor_frame": {
     "contact_events": 7,
-    "min_separation_m": 0.0010623937705531716,
+    "min_separation_m": 0.0010587461292743683,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/l_pinky_distal | /World/Robot/r_index_finger_tip_sensor_frame": {
     "contact_events": 12,
-    "min_separation_m": 0.0007134532788768411,
-    "max_impulse_norm": 0.0008608714092297496
-  },
-  "/World/Robot/l_pinky_middle | /World/Robot/r_index_finger_tip_sensor_frame": {
-    "contact_events": 11,
-    "min_separation_m": 0.00011649639782262966,
-    "max_impulse_norm": 0.015968022835297142
+    "min_separation_m": 0.0007208087481558323,
+    "max_impulse_norm": 0.0008635485363117186
   },
   "/World/Robot/l_ring_finger_middle | /World/Robot/r_index_finger_distal": {
     "contact_events": 6,
-    "min_separation_m": 0.0015203417278826237,
+    "min_separation_m": 0.0015263359528034925,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/l_ring_finger_proximal_abd | /World/Robot/r_index_finger_tip_sensor_frame": {
     "contact_events": 2,
-    "min_separation_m": 0.0017585130408406258,
+    "min_separation_m": 0.0017837536288425326,
     "max_impulse_norm": 0.0
-  },
-  "/World/Robot/l_pinky_distal | /World/Robot/r_middle_finger_tip_sensor_frame": {
-    "contact_events": 5,
-    "min_separation_m": 0.00047401979099959135,
-    "max_impulse_norm": 0.010969710307754075
   },
   "/World/Robot/l_pinky_distal | /World/Robot/r_middle_finger_distal": {
     "contact_events": 3,
-    "min_separation_m": 0.0009327543084509671,
+    "min_separation_m": 0.0010284959571436048,
     "max_impulse_norm": 0.0
   },
-  "/World/Robot/l_pinky_middle | /World/Robot/r_middle_finger_tip_sensor_frame": {
-    "contact_events": 2,
-    "min_separation_m": 0.0019083642400801182,
+  "/World/Robot/l_pinky_distal | /World/Robot/r_middle_finger_tip_sensor_frame": {
+    "contact_events": 3,
+    "min_separation_m": 0.0005779862403869629,
+    "max_impulse_norm": 0.014670894084659538
+  },
+  "/World/Robot/l_pinky_middle | /World/Robot/l_ring_finger_distal": {
+    "contact_events": 1,
+    "min_separation_m": 0.001963576301932335,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/l_middle_finger_distal | /World/Robot/r_index_finger_tip_sensor_frame": {
     "contact_events": 38,
-    "min_separation_m": 0.00041996591608040035,
-    "max_impulse_norm": 0.01528024538007767
+    "min_separation_m": 0.0004201155388727784,
+    "max_impulse_norm": 0.015282583661291023
   },
   "/World/Robot/l_middle_finger_distal | /World/Robot/r_index_finger_distal": {
     "contact_events": 17,
-    "min_separation_m": 0.000635999720543623,
-    "max_impulse_norm": 0.016173253500938168
+    "min_separation_m": 0.000635855714790523,
+    "max_impulse_norm": 0.01617326191939897
   },
   "/World/Robot/l_middle_finger_middle | /World/Robot/r_index_finger_distal": {
     "contact_events": 1,
-    "min_separation_m": 0.001955486834049225,
+    "min_separation_m": 0.0019553187303245068,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/l_middle_finger_tip_sensor_frame | /World/Robot/r_index_finger_distal": {
     "contact_events": 12,
-    "min_separation_m": 0.00034753340878523886,
-    "max_impulse_norm": 0.022320788502781862
+    "min_separation_m": 0.00034746163873933256,
+    "max_impulse_norm": 0.022291219243844907
   },
   "/World/Robot/l_index_finger_tip_sensor_frame | /World/Robot/r_index_finger_middle": {
     "contact_events": 19,
-    "min_separation_m": 0.0005957529065199196,
-    "max_impulse_norm": 0.010397992509785228
+    "min_separation_m": 0.0005949988844804466,
+    "max_impulse_norm": 0.010397175934545998
   },
   "/World/Robot/l_index_finger_distal | /World/Robot/r_index_finger_middle": {
     "contact_events": 19,
-    "min_separation_m": 0.0003991357225459069,
-    "max_impulse_norm": 0.030252929813862302
+    "min_separation_m": 0.0003991199191659689,
+    "max_impulse_norm": 0.0302185739746782
   },
   "/World/Robot/l_ring_finger_distal | /World/Robot/r_ring_finger_tip_sensor_frame": {
     "contact_events": 2,
-    "min_separation_m": 0.0019349944777786732,
+    "min_separation_m": 0.001935894601047039,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/r_middle_finger_proximal_abd | /World/Robot/r_ring_finger_proximal_abd": {
     "contact_events": 4,
-    "min_separation_m": 0.0019351619994267821,
+    "min_separation_m": 0.0019090614514425397,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/r_index_finger_distal | /World/Robot/r_thumb_tip_sensor_frame": {
     "contact_events": 56,
-    "min_separation_m": 0.000616019475273788,
-    "max_impulse_norm": 0.013448732280815074
+    "min_separation_m": 0.0006159453769214451,
+    "max_impulse_norm": 0.013449378692765046
   },
   "/World/Robot/r_index_finger_tip_sensor_frame | /World/Robot/r_thumb_tip_sensor_frame": {
     "contact_events": 41,
-    "min_separation_m": 0.00048191886162385345,
-    "max_impulse_norm": 0.01966488288459032
+    "min_separation_m": 0.0004818843735847622,
+    "max_impulse_norm": 0.01966868363993767
   },
   "/World/Robot/r_index_finger_middle | /World/Robot/r_thumb_tip_sensor_frame": {
     "contact_events": 112,
-    "min_separation_m": 0.0003908602229785174,
-    "max_impulse_norm": 0.007663694691418006
+    "min_separation_m": 0.00039095329702831805,
+    "max_impulse_norm": 0.007664689377388016
   },
   "/World/Robot/r_index_finger_middle | /World/Robot/r_middle_finger_middle": {
     "contact_events": 13,
-    "min_separation_m": 0.00033393470221199095,
-    "max_impulse_norm": 0.021630097804052784
+    "min_separation_m": 0.00033374939812347293,
+    "max_impulse_norm": 0.02163415511777407
   },
   "/World/Robot/r_index_finger_middle | /World/Robot/r_middle_finger_proximal_abd": {
     "contact_events": 3,
-    "min_separation_m": 0.0018681820947676897,
+    "min_separation_m": 0.001868235063739121,
     "max_impulse_norm": 0.0
-  },
-  "/World/Robot/l_index_finger_tip_sensor_frame | /World/Robot/r_middle_finger_tip_sensor_frame": {
-    "contact_events": 10,
-    "min_separation_m": 0.0006905278423801064,
-    "max_impulse_norm": 0.01169003400891107
   },
   "/World/Robot/l_index_finger_tip_sensor_frame | /World/Robot/r_middle_finger_distal": {
     "contact_events": 6,
-    "min_separation_m": 0.0006000192370265722,
-    "max_impulse_norm": 0.003920284318269656
+    "min_separation_m": 0.0005964955780655146,
+    "max_impulse_norm": 0.003944484592139929
+  },
+  "/World/Robot/l_index_finger_tip_sensor_frame | /World/Robot/r_middle_finger_tip_sensor_frame": {
+    "contact_events": 9,
+    "min_separation_m": 0.0005880816606804729,
+    "max_impulse_norm": 0.010163314894718169
   },
   "/World/Robot/l_ring_finger_distal | /World/Robot/r_index_finger_distal": {
     "contact_events": 9,
-    "min_separation_m": 0.0005413071485236287,
-    "max_impulse_norm": 0.15209655828251573
+    "min_separation_m": 0.0005412962636910379,
+    "max_impulse_norm": 0.1520795687349702
   },
   "/World/Robot/r_index_finger_tip_sensor_frame | /World/Robot/r_middle_finger_distal": {
     "contact_events": 5,
-    "min_separation_m": 0.0019730066414922476,
+    "min_separation_m": 0.001972924219444394,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/l_middle_finger_tip_sensor_frame | /World/Robot/r_index_finger_proximal": {
     "contact_events": 2,
-    "min_separation_m": 0.001623250194825232,
+    "min_separation_m": 0.0016231898916885257,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/l_index_finger_tip_sensor_frame | /World/Robot/l_middle_finger_tip_sensor_frame": {
     "contact_events": 13,
-    "min_separation_m": 0.001572010456584394,
+    "min_separation_m": 0.0015720034716650844,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/l_thumb_middle | /World/Robot/r_index_finger_tip_sensor_frame": {
     "contact_events": 35,
-    "min_separation_m": 0.00043074143468402326,
-    "max_impulse_norm": 0.10655825378381524
+    "min_separation_m": 0.0004308132629375905,
+    "max_impulse_norm": 0.10659164757102775
   },
   "/World/Robot/l_thumb_distal | /World/Robot/r_thumb_tip_sensor_frame": {
     "contact_events": 10,
-    "min_separation_m": 0.00038094501360319555,
-    "max_impulse_norm": 0.01111734753865664
+    "min_separation_m": 0.00038094064802862704,
+    "max_impulse_norm": 0.011126972308614673
   },
   "/World/Robot/l_thumb_tip_sensor_frame | /World/Robot/r_thumb_tip_sensor_frame": {
     "contact_events": 6,
-    "min_separation_m": 0.0016130608273670077,
+    "min_separation_m": 0.001613078755326569,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/l_thumb_distal | /World/Robot/r_middle_finger_tip_sensor_frame": {
     "contact_events": 32,
-    "min_separation_m": 0.0003434704849496484,
-    "max_impulse_norm": 0.007531166485907269
+    "min_separation_m": 0.00034345375024713576,
+    "max_impulse_norm": 0.007530842668087429
   },
   "/World/Robot/l_thumb_tip_sensor_frame | /World/Robot/r_middle_finger_tip_sensor_frame": {
     "contact_events": 10,
-    "min_separation_m": 0.0010158584918826818,
+    "min_separation_m": 0.0010158824734389782,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/l_index_finger_proximal_abd | /World/Robot/r_index_finger_distal": {
     "contact_events": 11,
-    "min_separation_m": 0.000578954815864563,
-    "max_impulse_norm": 0.02694854311718334
+    "min_separation_m": 0.0005791217554360628,
+    "max_impulse_norm": 0.026951384193300384
   },
   "/World/Robot/l_index_finger_proximal_abd | /World/Robot/r_index_finger_tip_sensor_frame": {
     "contact_events": 9,
-    "min_separation_m": 0.001516898162662983,
+    "min_separation_m": 0.0015169881517067552,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/l_middle_finger_middle | /World/Robot/r_index_finger_tip_sensor_frame": {
-    "contact_events": 7,
-    "min_separation_m": 0.0014946337323635817,
+    "contact_events": 8,
+    "min_separation_m": 0.0014947690069675446,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/l_index_finger_proximal_abd | /World/Robot/l_middle_finger_middle": {
     "contact_events": 55,
-    "min_separation_m": 0.0010664159199222922,
+    "min_separation_m": 0.0010663304710760713,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/r_middle_finger_tip_sensor_frame | /World/Robot/r_ring_finger_distal": {
     "contact_events": 97,
-    "min_separation_m": 0.0005959285190328956,
+    "min_separation_m": 0.0005959425470791757,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/r_pinky_distal | /World/Robot/r_ring_finger_middle": {
     "contact_events": 6,
-    "min_separation_m": 0.0018473598174750805,
+    "min_separation_m": 0.0018473744858056307,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/l_index_finger_distal | /World/Robot/l_middle_finger_middle": {
     "contact_events": 6,
-    "min_separation_m": 0.0013584019616246223,
+    "min_separation_m": 0.0013615544885396957,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/l_index_finger_middle | /World/Robot/l_middle_finger_distal": {
     "contact_events": 6,
-    "min_separation_m": 0.0014568640617653728,
+    "min_separation_m": 0.001459894934669137,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/l_thumb_proximal_abd | /World/Robot/r_index_finger_tip_sensor_frame": {
     "contact_events": 12,
-    "min_separation_m": 0.00044827107922174037,
-    "max_impulse_norm": 0.06008896236078494
+    "min_separation_m": 0.0004654347721952945,
+    "max_impulse_norm": 0.060097799195538766
   },
   "/World/Robot/l_thumb_middle | /World/Robot/r_index_finger_distal": {
     "contact_events": 9,
-    "min_separation_m": 0.0007351814419962466,
+    "min_separation_m": 0.0007352622924372554,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/r_middle_finger_middle | /World/Robot/r_ring_finger_distal": {
     "contact_events": 4,
-    "min_separation_m": 0.0016130468575283885,
+    "min_separation_m": 0.001613089581951499,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/l_index_finger_middle | /World/Robot/l_thumb_distal": {
     "contact_events": 19,
-    "min_separation_m": 0.0004073207965120673,
-    "max_impulse_norm": 0.02159465636268349
+    "min_separation_m": 0.00040730100590735674,
+    "max_impulse_norm": 0.02159273379525222
   },
   "/World/Robot/l_ring_finger_distal | /World/Robot/r_middle_finger_distal": {
     "contact_events": 3,
-    "min_separation_m": 0.0015298632206395268,
+    "min_separation_m": 0.0015203211223706603,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/l_ring_finger_middle | /World/Robot/r_middle_finger_distal": {
     "contact_events": 3,
-    "min_separation_m": 0.0014392341254279017,
+    "min_separation_m": 0.0014335059095174074,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/l_index_finger_distal | /World/Robot/l_middle_finger_tip_sensor_frame": {
     "contact_events": 1,
-    "min_separation_m": 0.00199215579777956,
-    "max_impulse_norm": 0.0
-  },
-  "/World/Robot/l_index_finger_tip_sensor_frame | /World/Robot/r_ring_finger_distal": {
-    "contact_events": 7,
-    "min_separation_m": 0.0015515037812292576,
-    "max_impulse_norm": 0.0
-  },
-  "/World/Robot/l_index_finger_distal | /World/Robot/r_ring_finger_tip_sensor_frame": {
-    "contact_events": 10,
-    "min_separation_m": 0.0008602355374023318,
-    "max_impulse_norm": 0.0
-  },
-  "/World/Robot/l_index_finger_distal | /World/Robot/r_ring_finger_distal": {
-    "contact_events": 9,
-    "min_separation_m": 0.0009112262632697821,
+    "min_separation_m": 0.0019921641796827316,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/l_index_finger_tip_sensor_frame | /World/Robot/r_ring_finger_tip_sensor_frame": {
     "contact_events": 10,
-    "min_separation_m": 0.0005980768473818898,
-    "max_impulse_norm": 0.020018953650895985
+    "min_separation_m": 0.0005978408153168857,
+    "max_impulse_norm": 0.01093548975377355
+  },
+  "/World/Robot/l_index_finger_distal | /World/Robot/r_ring_finger_tip_sensor_frame": {
+    "contact_events": 10,
+    "min_separation_m": 0.0007598460069857538,
+    "max_impulse_norm": 0.0
+  },
+  "/World/Robot/l_index_finger_distal | /World/Robot/r_ring_finger_distal": {
+    "contact_events": 8,
+    "min_separation_m": 0.0009928083745762706,
+    "max_impulse_norm": 0.0
+  },
+  "/World/Robot/l_index_finger_tip_sensor_frame | /World/Robot/r_ring_finger_distal": {
+    "contact_events": 7,
+    "min_separation_m": 0.001671970821917057,
+    "max_impulse_norm": 0.0
   },
   "/World/Robot/l_thumb_distal | /World/Robot/r_thumb_distal": {
     "contact_events": 4,
-    "min_separation_m": 0.0003834002709481865,
+    "min_separation_m": 0.0003832776565104723,
     "max_impulse_norm": 0.0
   },
   "/World/Robot/l_thumb_tip_sensor_frame | /World/Robot/r_thumb_distal": {
     "contact_events": 2,
-    "min_separation_m": 0.001422452856786549,
+    "min_separation_m": 0.001422408502548933,
     "max_impulse_norm": 0.0
   }
 }

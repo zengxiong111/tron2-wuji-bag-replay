@@ -12,9 +12,9 @@
         "target_peak_rad_s": 9.307024955745279,
         "target_peak_source_s": 191.35416666668414,
         "target_limit_ratio": 0.5228665705474875,
-        "actual_fd_peak_rad_s": 9.402844905851135,
+        "actual_fd_peak_rad_s": 9.402852058408508,
         "actual_fd_peak_source_s": 191.32499999999106,
-        "actual_fd_limit_ratio": 0.5282497138118615,
+        "actual_fd_limit_ratio": 0.5282501156409274,
         "actual_fd_time_over_limit_s": 0.0
       },
       "worst_actual_fd": {
@@ -25,9 +25,9 @@
         "target_peak_rad_s": 9.307024955745279,
         "target_peak_source_s": 191.35416666668414,
         "target_limit_ratio": 0.5228665705474875,
-        "actual_fd_peak_rad_s": 9.402844905851135,
+        "actual_fd_peak_rad_s": 9.402852058408508,
         "actual_fd_peak_source_s": 191.32499999999106,
-        "actual_fd_limit_ratio": 0.5282497138118615,
+        "actual_fd_limit_ratio": 0.5282501156409274,
         "actual_fd_time_over_limit_s": 0.0
       }
     },
@@ -55,9 +55,9 @@
         "target_peak_rad_s": 12.858741760265602,
         "target_peak_source_s": 137.4999999999938,
         "target_limit_ratio": 0.9999021586520687,
-        "actual_fd_peak_rad_s": 12.654587030393502,
+        "actual_fd_peak_rad_s": 12.654583454114816,
         "actual_fd_peak_source_s": 272.02500000005466,
-        "actual_fd_limit_ratio": 0.9840269852561044,
+        "actual_fd_limit_ratio": 0.984026707162894,
         "actual_fd_time_over_limit_s": 0.0
       }
     },
@@ -72,9 +72,9 @@
         "target_peak_rad_s": 0.0002678018063307418,
         "target_peak_source_s": 48.97916666666549,
         "target_limit_ratio": 1.5045045299479875e-05,
-        "actual_fd_peak_rad_s": 0.00019147060811526152,
+        "actual_fd_peak_rad_s": 0.000185603275895182,
         "actual_fd_peak_source_s": 59.749999999998536,
-        "actual_fd_limit_ratio": 1.0756775736812445e-05,
+        "actual_fd_limit_ratio": 1.042715033119e-05,
         "actual_fd_time_over_limit_s": 0.0
       },
       "worst_actual_fd": {
@@ -85,9 +85,9 @@
         "target_peak_rad_s": 0.0002678018063307418,
         "target_peak_source_s": 48.97916666666549,
         "target_limit_ratio": 1.5045045299479875e-05,
-        "actual_fd_peak_rad_s": 0.00019147060811526152,
+        "actual_fd_peak_rad_s": 0.000185603275895182,
         "actual_fd_peak_source_s": 59.749999999998536,
-        "actual_fd_limit_ratio": 1.0756775736812445e-05,
+        "actual_fd_limit_ratio": 1.042715033119e-05,
         "actual_fd_time_over_limit_s": 0.0
       }
     }
@@ -102,8 +102,8 @@
   "body_mapping_status": "candidate_unconfirmed",
   "torque_current_thermal_verified": false,
   "sha256": {
-    "reference": "417b13370a93904056e8ca65863d14da2e13ce7881a147c2056bce24765efdbe",
-    "physical_trace": "99aaf8bbcd84f6f60d54532c2caa859a24d50c7ea1c4bcb57b88e354bc903acd",
+    "reference": "d6d47a47953bda2929b16ef3ebab145ba2952cd5f6c4e0b3583212fb0a69b7da",
+    "physical_trace": "1a06fa1bede52e7f2f40d38942893ce1c10506300ec08ba96341cc4a6c965c20",
     "urdf": "684a9f18203bb2c8792cb701fd59bfe5e0b0c77ddc816367794e1b4ad4d960fb",
     "usd": "0526b9a8f358a0ae2b9e55ead21467282c619973fa6b36bc2b33175b7eefed84",
     "producer": "70974c14f3ea62229155ab9e519704072cca992fc4269c1c8caa5cbbb033c591"
@@ -114,12 +114,12 @@
       "group": "tron2_arm",
       "model_limit_rad_s": 18.3,
       "usd_limit_deg_s": 1048.5126953125,
-      "target_peak_rad_s": 4.84285068512073,
-      "target_peak_source_s": 88.41666666666326,
-      "target_limit_ratio": 0.2646366494601492,
-      "actual_fd_peak_rad_s": 4.757759571077062,
-      "actual_fd_peak_source_s": 88.39999999999691,
-      "actual_fd_limit_ratio": 0.2599868618074897,
+      "target_peak_rad_s": 5.799013137818701,
+      "target_peak_source_s": 51.229166666665364,
+      "target_limit_ratio": 0.31688596381522954,
+      "actual_fd_peak_rad_s": 5.608134269716268,
+      "actual_fd_peak_source_s": 51.19999999999902,
+      "actual_fd_limit_ratio": 0.3064554245746594,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -140,12 +140,12 @@
       "group": "tron2_arm",
       "model_limit_rad_s": 22.52,
       "usd_limit_deg_s": 1290.3009033203125,
-      "target_peak_rad_s": 4.702869415281064,
-      "target_peak_source_s": 230.39583333338186,
-      "target_limit_ratio": 0.20883079108708102,
-      "actual_fd_peak_rad_s": 4.509848356240796,
-      "actual_fd_peak_source_s": 230.37500000002154,
-      "actual_fd_limit_ratio": 0.20025969610305488,
+      "target_peak_rad_s": 5.582749843596777,
+      "target_peak_source_s": 49.41666666666546,
+      "target_limit_ratio": 0.24790185806380005,
+      "actual_fd_peak_rad_s": 5.358821153642574,
+      "actual_fd_peak_source_s": 49.399999999999125,
+      "actual_fd_limit_ratio": 0.23795831055251218,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -153,12 +153,12 @@
       "group": "tron2_arm",
       "model_limit_rad_s": 22.52,
       "usd_limit_deg_s": 1290.3009033203125,
-      "target_peak_rad_s": 4.2156257629317855,
-      "target_peak_source_s": 284.20833333342466,
-      "target_limit_ratio": 0.1871947496861361,
-      "actual_fd_peak_rad_s": 3.9749050140417013,
-      "actual_fd_peak_source_s": 284.2000000000644,
-      "actual_fd_limit_ratio": 0.176505551245191,
+      "target_peak_rad_s": 6.322597503650609,
+      "target_peak_source_s": 281.89583333342284,
+      "target_limit_ratio": 0.28075477369674107,
+      "actual_fd_peak_rad_s": 5.952100753776059,
+      "actual_fd_peak_source_s": 281.8750000000625,
+      "actual_fd_limit_ratio": 0.26430287538970065,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -169,9 +169,9 @@
       "target_peak_rad_s": 9.307024955745279,
       "target_peak_source_s": 191.35416666668414,
       "target_limit_ratio": 0.5228665705474875,
-      "actual_fd_peak_rad_s": 9.402844905851135,
+      "actual_fd_peak_rad_s": 9.402852058408508,
       "actual_fd_peak_source_s": 191.32499999999106,
-      "actual_fd_limit_ratio": 0.5282497138118615,
+      "actual_fd_limit_ratio": 0.5282501156409274,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -182,9 +182,9 @@
       "target_peak_rad_s": 8.219738960265179,
       "target_peak_source_s": 46.416666666665634,
       "target_limit_ratio": 0.4617830876553471,
-      "actual_fd_peak_rad_s": 8.114944556728467,
+      "actual_fd_peak_rad_s": 8.114952938631639,
       "actual_fd_peak_source_s": 46.42499999999929,
-      "actual_fd_limit_ratio": 0.45589576161395884,
+      "actual_fd_limit_ratio": 0.4558962325073954,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -192,12 +192,12 @@
       "group": "tron2_arm",
       "model_limit_rad_s": 17.8,
       "usd_limit_deg_s": 1019.86474609375,
-      "target_peak_rad_s": 4.3081426620463805,
-      "target_peak_source_s": 88.37499999999659,
-      "target_limit_ratio": 0.24203048663181911,
-      "actual_fd_peak_rad_s": 4.147397875787242,
-      "actual_fd_peak_source_s": 88.34999999999691,
-      "actual_fd_limit_ratio": 0.2329998806622046,
+      "target_peak_rad_s": 4.7445402145396525,
+      "target_peak_source_s": 51.145833333332035,
+      "target_limit_ratio": 0.2665472030640254,
+      "actual_fd_peak_rad_s": 4.669368267058265,
+      "actual_fd_peak_source_s": 51.12499999999902,
+      "actual_fd_limit_ratio": 0.2623240599470935,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -218,12 +218,12 @@
       "group": "tron2_arm",
       "model_limit_rad_s": 18.3,
       "usd_limit_deg_s": 1048.5126953125,
-      "target_peak_rad_s": 5.315709114075915,
-      "target_peak_source_s": 77.91666666666384,
-      "target_limit_ratio": 0.2904759078730008,
-      "actual_fd_peak_rad_s": 5.1723432540881795,
-      "actual_fd_peak_source_s": 77.9249999999975,
-      "actual_fd_limit_ratio": 0.282641707873671,
+      "target_peak_rad_s": 5.467732429503773,
+      "target_peak_source_s": 47.0416666666656,
+      "target_limit_ratio": 0.29878319286905863,
+      "actual_fd_peak_rad_s": 5.2691888809207095,
+      "actual_fd_peak_source_s": 47.02499999999925,
+      "actual_fd_limit_ratio": 0.287933818629547,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -234,9 +234,9 @@
       "target_peak_rad_s": 5.1524763107276375,
       "target_peak_source_s": 229.56250000004786,
       "target_limit_ratio": 0.22879557330051675,
-      "actual_fd_peak_rad_s": 4.842453002928587,
+      "actual_fd_peak_rad_s": 4.842431545256468,
       "actual_fd_peak_source_s": 229.60000000002094,
-      "actual_fd_limit_ratio": 0.21502899657764596,
+      "actual_fd_limit_ratio": 0.21502804375028722,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -244,12 +244,12 @@
       "group": "tron2_arm",
       "model_limit_rad_s": 22.52,
       "usd_limit_deg_s": 1290.3009033203125,
-      "target_peak_rad_s": 4.2285346984786365,
-      "target_peak_source_s": 284.20833333342466,
-      "target_limit_ratio": 0.18776797062516148,
-      "actual_fd_peak_rad_s": 4.00915145874388,
-      "actual_fd_peak_source_s": 284.2000000000644,
-      "actual_fd_limit_ratio": 0.1780262637097638,
+      "target_peak_rad_s": 6.341342926013856,
+      "target_peak_source_s": 281.89583333342284,
+      "target_limit_ratio": 0.28158716367734704,
+      "actual_fd_peak_rad_s": 6.0016822814859525,
+      "actual_fd_peak_source_s": 281.8750000000625,
+      "actual_fd_limit_ratio": 0.26650454180665867,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -260,9 +260,9 @@
       "target_peak_rad_s": 7.794136226173672,
       "target_peak_source_s": 229.47916666671446,
       "target_limit_ratio": 0.43787282169515007,
-      "actual_fd_peak_rad_s": 8.48970204590593,
+      "actual_fd_peak_rad_s": 8.489716351020675,
       "actual_fd_peak_source_s": 229.47500000002083,
-      "actual_fd_limit_ratio": 0.4769495531407825,
+      "actual_fd_limit_ratio": 0.47695035679891434,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -270,12 +270,12 @@
       "group": "tron2_arm",
       "model_limit_rad_s": 17.8,
       "usd_limit_deg_s": 1019.86474609375,
-      "target_peak_rad_s": 7.108441829683013,
-      "target_peak_source_s": 81.85416666666363,
-      "target_limit_ratio": 0.3993506645889333,
-      "actual_fd_peak_rad_s": 7.116369009020371,
-      "actual_fd_peak_source_s": 81.84999999999728,
-      "actual_fd_limit_ratio": 0.39979601174271745,
+      "target_peak_rad_s": 7.552642464638185,
+      "target_peak_source_s": 28.937499999999957,
+      "target_limit_ratio": 0.42430575644034746,
+      "actual_fd_peak_rad_s": 7.489952445030638,
+      "actual_fd_peak_source_s": 28.92500000000028,
+      "actual_fd_limit_ratio": 0.4207838452264403,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -283,12 +283,12 @@
       "group": "tron2_arm",
       "model_limit_rad_s": 17.8,
       "usd_limit_deg_s": 1019.86474609375,
-      "target_peak_rad_s": 3.943486690522137,
-      "target_peak_source_s": 88.39583333332993,
-      "target_limit_ratio": 0.22154419609674925,
-      "actual_fd_peak_rad_s": 3.740835785867059,
-      "actual_fd_peak_source_s": 88.39999999999691,
-      "actual_fd_limit_ratio": 0.21015931381275613,
+      "target_peak_rad_s": 4.18066263198805,
+      "target_peak_source_s": 50.95833333333204,
+      "target_limit_ratio": 0.2348686871903399,
+      "actual_fd_peak_rad_s": 4.091885089873338,
+      "actual_fd_peak_source_s": 50.97499999999903,
+      "actual_fd_limit_ratio": 0.2298811848243448,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -299,9 +299,9 @@
       "target_peak_rad_s": 7.146636562539957e-07,
       "target_peak_source_s": 48.97916666666549,
       "target_limit_ratio": 4.014964360977504e-08,
-      "actual_fd_peak_rad_s": 4.71304701932401e-07,
+      "actual_fd_peak_rad_s": 4.5538399717786044e-07,
       "actual_fd_peak_source_s": 59.749999999998536,
-      "actual_fd_limit_ratio": 2.6477792243393313e-08,
+      "actual_fd_limit_ratio": 2.5583370627969687e-08,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -312,9 +312,9 @@
       "target_peak_rad_s": 0.0002678018063307418,
       "target_peak_source_s": 48.97916666666549,
       "target_limit_ratio": 1.5045045299479875e-05,
-      "actual_fd_peak_rad_s": 0.00019147060811526152,
+      "actual_fd_peak_rad_s": 0.000185603275895182,
       "actual_fd_peak_source_s": 59.749999999998536,
-      "actual_fd_limit_ratio": 1.0756775736812445e-05,
+      "actual_fd_limit_ratio": 1.042715033119e-05,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -325,9 +325,9 @@
       "target_peak_rad_s": 0.6559867858874786,
       "target_peak_source_s": 236.93750000005372,
       "target_limit_ratio": 0.07639301105013144,
-      "actual_fd_peak_rad_s": 0.2406120300289686,
+      "actual_fd_peak_rad_s": 0.24046897888150787,
       "actual_fd_peak_source_s": 211.67500000000666,
-      "actual_fd_limit_ratio": 0.028020499595780672,
+      "actual_fd_limit_ratio": 0.028003840559160113,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -338,9 +338,9 @@
       "target_peak_rad_s": 2.9618732929216267,
       "target_peak_source_s": 236.91666666672037,
       "target_limit_ratio": 0.2668354317947412,
-      "actual_fd_peak_rad_s": 1.32619857787905,
+      "actual_fd_peak_rad_s": 1.3262772560101534,
       "actual_fd_peak_source_s": 198.67499999999632,
-      "actual_fd_limit_ratio": 0.11947734935847297,
+      "actual_fd_limit_ratio": 0.1194844374783922,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -351,9 +351,9 @@
       "target_peak_rad_s": 8.627872467025322,
       "target_peak_source_s": 236.93750000005372,
       "target_limit_ratio": 0.6709076568448928,
-      "actual_fd_peak_rad_s": 7.7211856842023465,
+      "actual_fd_peak_rad_s": 7.72234439849678,
       "actual_fd_peak_source_s": 236.92500000002676,
-      "actual_fd_limit_ratio": 0.6004032413843193,
+      "actual_fd_limit_ratio": 0.6004933435845086,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -364,9 +364,9 @@
       "target_peak_rad_s": 10.602252960185792,
       "target_peak_source_s": 182.60416666667714,
       "target_limit_ratio": 0.7853520711248735,
-      "actual_fd_peak_rad_s": 12.440686225888285,
+      "actual_fd_peak_rad_s": 12.440071105954203,
       "actual_fd_peak_source_s": 114.59999999999542,
-      "actual_fd_limit_ratio": 0.9215323130287619,
+      "actual_fd_limit_ratio": 0.9214867485892002,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -377,9 +377,9 @@
       "target_peak_rad_s": 8.202178001411268,
       "target_peak_source_s": 264.2916666667422,
       "target_limit_ratio": 0.9998997929307897,
-      "actual_fd_peak_rad_s": 7.60732412337219,
+      "actual_fd_peak_rad_s": 7.6073884963885465,
       "actual_fd_peak_source_s": 264.30000000004856,
-      "actual_fd_limit_ratio": 0.9273831675450678,
+      "actual_fd_limit_ratio": 0.9273910150418807,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -390,9 +390,9 @@
       "target_peak_rad_s": 2.907209873198141,
       "target_peak_source_s": 234.31250000005164,
       "target_limit_ratio": 0.3584722408382418,
-      "actual_fd_peak_rad_s": 4.538125097745426,
-      "actual_fd_peak_source_s": 284.3000000000645,
-      "actual_fd_limit_ratio": 0.5595715286985729,
+      "actual_fd_peak_rad_s": 5.1050685346056905,
+      "actual_fd_peak_source_s": 281.8750000000625,
+      "actual_fd_limit_ratio": 0.6294782410117992,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -403,9 +403,9 @@
       "target_peak_rad_s": 12.858741760248058,
       "target_peak_source_s": 196.58333333335494,
       "target_limit_ratio": 0.9999021586507044,
-      "actual_fd_peak_rad_s": 12.448210716244729,
-      "actual_fd_peak_source_s": 251.12500000003806,
-      "actual_fd_limit_ratio": 0.9679790603611764,
+      "actual_fd_peak_rad_s": 12.462172508236913,
+      "actual_fd_peak_source_s": 50.92499999999903,
+      "actual_fd_limit_ratio": 0.9690647362548144,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -416,9 +416,9 @@
       "target_peak_rad_s": 13.498643875115931,
       "target_peak_source_s": 164.1249999999958,
       "target_limit_ratio": 0.9998995463048838,
-      "actual_fd_peak_rad_s": 12.79834270477004,
+      "actual_fd_peak_rad_s": 12.798285484311055,
       "actual_fd_peak_source_s": 164.1249999999926,
-      "actual_fd_limit_ratio": 0.9480253855385214,
+      "actual_fd_limit_ratio": 0.948021146986004,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -429,9 +429,9 @@
       "target_peak_rad_s": 8.202186584480115,
       "target_peak_source_s": 139.958333333327,
       "target_limit_ratio": 0.9999008392636981,
-      "actual_fd_peak_rad_s": 7.888813018797035,
+      "actual_fd_peak_rad_s": 7.888641357420082,
       "actual_fd_peak_source_s": 165.14999999999256,
-      "actual_fd_limit_ratio": 0.9616985272213867,
+      "actual_fd_limit_ratio": 0.9616776005632186,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -442,9 +442,9 @@
       "target_peak_rad_s": 2.5353548526752387,
       "target_peak_source_s": 226.31250000004528,
       "target_limit_ratio": 0.31262082030520827,
-      "actual_fd_peak_rad_s": 4.075146317476435,
-      "actual_fd_peak_source_s": 284.3000000000645,
-      "actual_fd_limit_ratio": 0.5024841328577602,
+      "actual_fd_peak_rad_s": 4.850343614810048,
+      "actual_fd_peak_source_s": 281.8750000000625,
+      "actual_fd_limit_ratio": 0.5980694962774412,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -455,9 +455,9 @@
       "target_peak_rad_s": 12.85874176025683,
       "target_peak_source_s": 49.47916666666546,
       "target_limit_ratio": 0.9999021586513865,
-      "actual_fd_peak_rad_s": 12.501597404491351,
+      "actual_fd_peak_rad_s": 12.501568794261859,
       "actual_fd_peak_source_s": 268.0000000000515,
-      "actual_fd_limit_ratio": 0.9721304358080367,
+      "actual_fd_limit_ratio": 0.972128211062353,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -468,9 +468,9 @@
       "target_peak_rad_s": 13.498661041260533,
       "target_peak_source_s": 16.062500000000274,
       "target_limit_ratio": 0.9999008178711506,
-      "actual_fd_peak_rad_s": 12.987399101258063,
-      "actual_fd_peak_source_s": 16.250000000000178,
-      "actual_fd_limit_ratio": 0.9620295630561528,
+      "actual_fd_peak_rad_s": 12.958917617796745,
+      "actual_fd_peak_source_s": 16.225000000000176,
+      "actual_fd_limit_ratio": 0.9599198235404997,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -481,9 +481,9 @@
       "target_peak_rad_s": 7.552551269532968,
       "target_peak_source_s": 105.68749999999561,
       "target_limit_ratio": 0.920705994091548,
-      "actual_fd_peak_rad_s": 6.839590072630282,
+      "actual_fd_peak_rad_s": 6.839461326597567,
       "actual_fd_peak_source_s": 105.69999999999592,
-      "actual_fd_limit_ratio": 0.8337913047214778,
+      "actual_fd_limit_ratio": 0.8337756097278517,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -494,9 +494,9 @@
       "target_peak_rad_s": 2.168746232985464,
       "target_peak_source_s": 173.91666666667024,
       "target_limit_ratio": 0.26741630493039015,
-      "actual_fd_peak_rad_s": 3.8614654540962943,
-      "actual_fd_peak_source_s": 284.3000000000645,
-      "actual_fd_limit_ratio": 0.4761363075334519,
+      "actual_fd_peak_rad_s": 4.818543791764361,
+      "actual_fd_peak_source_s": 281.8750000000625,
+      "actual_fd_limit_ratio": 0.5941484330165674,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -507,9 +507,9 @@
       "target_peak_rad_s": 12.858741760254636,
       "target_peak_source_s": 17.500000000000345,
       "target_limit_ratio": 0.9999021586512159,
-      "actual_fd_peak_rad_s": 12.590289115888584,
-      "actual_fd_peak_source_s": 194.8749999999933,
-      "actual_fd_limit_ratio": 0.9790271474252399,
+      "actual_fd_peak_rad_s": 12.587814331051826,
+      "actual_fd_peak_source_s": 177.87499999999181,
+      "actual_fd_limit_ratio": 0.9788347069247143,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -520,9 +520,9 @@
       "target_peak_rad_s": 12.6805400848158,
       "target_peak_source_s": 229.60416666671455,
       "target_limit_ratio": 0.9392992655419111,
-      "actual_fd_peak_rad_s": 12.59303569791983,
+      "actual_fd_peak_rad_s": 12.593021392805085,
       "actual_fd_peak_source_s": 230.25000000002143,
-      "actual_fd_limit_ratio": 0.9328174591051727,
+      "actual_fd_limit_ratio": 0.9328163994670433,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -533,9 +533,9 @@
       "target_peak_rad_s": 6.291337966920376,
       "target_peak_source_s": 105.66666666666228,
       "target_limit_ratio": 0.7669557438644857,
-      "actual_fd_peak_rad_s": 5.663752555849099,
+      "actual_fd_peak_rad_s": 5.663666725160622,
       "actual_fd_peak_source_s": 104.97499999999597,
-      "actual_fd_limit_ratio": 0.6904489279347921,
+      "actual_fd_limit_ratio": 0.690438464605708,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -546,9 +546,9 @@
       "target_peak_rad_s": 3.2752690315231687,
       "target_peak_source_s": 172.45833333333576,
       "target_limit_ratio": 0.40385561424453376,
-      "actual_fd_peak_rad_s": 3.3359313011161853,
-      "actual_fd_peak_source_s": 172.39999999999213,
-      "actual_fd_limit_ratio": 0.4113355488429329,
+      "actual_fd_peak_rad_s": 4.511870741838021,
+      "actual_fd_peak_source_s": 281.9750000000626,
+      "actual_fd_limit_ratio": 0.5563342468357609,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -559,9 +559,9 @@
       "target_peak_rad_s": 12.858741760265602,
       "target_peak_source_s": 137.4999999999938,
       "target_limit_ratio": 0.9999021586520687,
-      "actual_fd_peak_rad_s": 12.654587030393502,
+      "actual_fd_peak_rad_s": 12.654583454114816,
       "actual_fd_peak_source_s": 272.02500000005466,
-      "actual_fd_limit_ratio": 0.9840269852561044,
+      "actual_fd_limit_ratio": 0.984026707162894,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -572,9 +572,9 @@
       "target_peak_rad_s": 13.498643875115931,
       "target_peak_source_s": 219.9791666667069,
       "target_limit_ratio": 0.9998995463048838,
-      "actual_fd_peak_rad_s": 12.73445606229952,
+      "actual_fd_peak_rad_s": 12.734470367414266,
       "actual_fd_peak_source_s": 219.97500000001327,
-      "actual_fd_limit_ratio": 0.9432930416518163,
+      "actual_fd_limit_ratio": 0.9432941012899456,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -585,9 +585,9 @@
       "target_peak_rad_s": 4.015365600578633,
       "target_peak_source_s": 249.60416666673046,
       "target_limit_ratio": 0.46760982887837815,
-      "actual_fd_peak_rad_s": 3.859949111937599,
-      "actual_fd_peak_source_s": 249.62500000003686,
-      "actual_fd_limit_ratio": 0.44951078513306153,
+      "actual_fd_peak_rad_s": 4.051494598387751,
+      "actual_fd_peak_source_s": 59.92499999999852,
+      "actual_fd_limit_ratio": 0.4718172351680157,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -598,9 +598,9 @@
       "target_peak_rad_s": 5.540976047513349,
       "target_peak_source_s": 149.41666666665978,
       "target_limit_ratio": 0.49918703130750897,
-      "actual_fd_peak_rad_s": 5.55480480194597,
+      "actual_fd_peak_rad_s": 5.554883480077073,
       "actual_fd_peak_source_s": 149.37499999999346,
-      "actual_fd_limit_ratio": 0.5004328650401775,
+      "actual_fd_limit_ratio": 0.5004399531600967,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -611,9 +611,9 @@
       "target_peak_rad_s": 8.013650894161396,
       "target_peak_source_s": 179.72916666667487,
       "target_limit_ratio": 0.6231454816610728,
-      "actual_fd_peak_rad_s": 7.822709083555351,
+      "actual_fd_peak_rad_s": 7.822716236112724,
       "actual_fd_peak_source_s": 178.94999999999177,
-      "actual_fd_limit_ratio": 0.6082977514428733,
+      "actual_fd_limit_ratio": 0.6082983076292943,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -624,9 +624,9 @@
       "target_peak_rad_s": 7.376948118206484,
       "target_peak_source_s": 154.37499999999284,
       "target_limit_ratio": 0.5464406013486285,
-      "actual_fd_peak_rad_s": 6.441508233545746,
+      "actual_fd_peak_rad_s": 6.4413034915909435,
       "actual_fd_peak_source_s": 154.42499999999316,
-      "actual_fd_limit_ratio": 0.4771487580404256,
+      "actual_fd_limit_ratio": 0.4771335919696995,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -637,9 +637,9 @@
       "target_peak_rad_s": 8.202186584480115,
       "target_peak_source_s": 154.22916666665952,
       "target_limit_ratio": 0.9999008392636981,
-      "actual_fd_peak_rad_s": 7.918317317969848,
+      "actual_fd_peak_rad_s": 7.918303012855102,
       "actual_fd_peak_source_s": 264.40000000004864,
-      "actual_fd_limit_ratio": 0.9652952965951296,
+      "actual_fd_limit_ratio": 0.9652935527069489,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -650,9 +650,9 @@
       "target_peak_rad_s": 7.093669295298071,
       "target_peak_source_s": 189.50000000001597,
       "target_limit_ratio": 0.8746817873363836,
-      "actual_fd_peak_rad_s": 6.961004734037725,
+      "actual_fd_peak_rad_s": 6.961011886595098,
       "actual_fd_peak_source_s": 189.49999999999116,
-      "actual_fd_limit_ratio": 0.8583236416815937,
+      "actual_fd_limit_ratio": 0.8583245236245497,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -663,9 +663,9 @@
       "target_peak_rad_s": 12.858741760248058,
       "target_peak_source_s": 201.6875000000257,
       "target_limit_ratio": 0.9999021586507044,
-      "actual_fd_peak_rad_s": 12.608184814435923,
+      "actual_fd_peak_rad_s": 12.608256340009653,
       "actual_fd_peak_source_s": 249.75000000003695,
-      "actual_fd_limit_ratio": 0.9804187258503828,
+      "actual_fd_limit_ratio": 0.980424287714592,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -676,9 +676,9 @@
       "target_peak_rad_s": 13.498649239515547,
       "target_peak_source_s": 236.93750000005372,
       "target_limit_ratio": 0.9998999436678183,
-      "actual_fd_peak_rad_s": 12.804047763344716,
+      "actual_fd_peak_rad_s": 12.792045772072745,
       "actual_fd_peak_source_s": 194.42499999999293,
-      "actual_fd_limit_ratio": 0.948447982469979,
+      "actual_fd_limit_ratio": 0.9475589460794626,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -702,9 +702,9 @@
       "target_peak_rad_s": 5.410483360288067,
       "target_peak_source_s": 179.81250000000827,
       "target_limit_ratio": 0.6671372824029677,
-      "actual_fd_peak_rad_s": 5.308804437516913,
+      "actual_fd_peak_rad_s": 5.308818407355532,
       "actual_fd_peak_source_s": 179.7999999999917,
-      "actual_fd_limit_ratio": 0.6545998073387069,
+      "actual_fd_limit_ratio": 0.6546015298835428,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -728,9 +728,9 @@
       "target_peak_rad_s": 13.498661041262835,
       "target_peak_source_s": 39.166666666666046,
       "target_limit_ratio": 0.9999008178713211,
-      "actual_fd_peak_rad_s": 13.244361877440276,
-      "actual_fd_peak_source_s": 16.10000000000017,
-      "actual_fd_limit_ratio": 0.9810638427733538,
+      "actual_fd_peak_rad_s": 13.22706699371413,
+      "actual_fd_peak_source_s": 16.250000000000178,
+      "actual_fd_limit_ratio": 0.9797827402751208,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -754,9 +754,9 @@
       "target_peak_rad_s": 3.278487682336566,
       "target_peak_source_s": 256.56250000006935,
       "target_limit_ratio": 0.4042524885741759,
-      "actual_fd_peak_rad_s": 4.302134513849111,
-      "actual_fd_peak_source_s": 284.22500000006437,
-      "actual_fd_limit_ratio": 0.5304728130516784,
+      "actual_fd_peak_rad_s": 5.289738178245957,
+      "actual_fd_peak_source_s": 281.8750000000625,
+      "actual_fd_limit_ratio": 0.6522488505851982,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -767,9 +767,9 @@
       "target_peak_rad_s": 12.858741760248058,
       "target_peak_source_s": 201.70833333335904,
       "target_limit_ratio": 0.9999021586507044,
-      "actual_fd_peak_rad_s": 12.525014877316488,
+      "actual_fd_peak_rad_s": 12.525000572201742,
       "actual_fd_peak_source_s": 199.4249999999969,
-      "actual_fd_limit_ratio": 0.9739513901490271,
+      "actual_fd_limit_ratio": 0.9739502777761853,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -780,9 +780,9 @@
       "target_peak_rad_s": 9.239647865278604,
       "target_peak_source_s": 199.33333333335713,
       "target_limit_ratio": 0.6844183603910077,
-      "actual_fd_peak_rad_s": 9.208116531359508,
+      "actual_fd_peak_rad_s": 9.208102226244762,
       "actual_fd_peak_source_s": 199.34999999999684,
-      "actual_fd_limit_ratio": 0.6820827060266302,
+      "actual_fd_limit_ratio": 0.6820816463885009,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -793,9 +793,9 @@
       "target_peak_rad_s": 5.293779373166538,
       "target_peak_source_s": 166.20833333333078,
       "target_limit_ratio": 0.645346747917413,
-      "actual_fd_peak_rad_s": 4.7186279296810625,
+      "actual_fd_peak_rad_s": 4.718642234795809,
       "actual_fd_peak_source_s": 249.37500000003666,
-      "actual_fd_limit_ratio": 0.5752319797246206,
+      "actual_fd_limit_ratio": 0.5752337236128012,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -806,9 +806,9 @@
       "target_peak_rad_s": 2.8468663394438196,
       "target_peak_source_s": 201.45833333335884,
       "target_limit_ratio": 0.35103160782291243,
-      "actual_fd_peak_rad_s": 2.880451083179359,
-      "actual_fd_peak_source_s": 201.47499999999854,
-      "actual_fd_limit_ratio": 0.3551727599481331,
+      "actual_fd_peak_rad_s": 4.8200368881159825,
+      "actual_fd_peak_source_s": 281.8750000000625,
+      "actual_fd_limit_ratio": 0.5943325386086292,
       "actual_fd_time_over_limit_s": 0.0
     },
     {
@@ -832,9 +832,9 @@
       "target_peak_rad_s": 10.940563201906784,
       "target_peak_source_s": 125.10416666666117,
       "target_limit_ratio": 0.8104120890301322,
-      "actual_fd_peak_rad_s": 10.647969245908223,
+      "actual_fd_peak_rad_s": 10.647940635678731,
       "actual_fd_peak_source_s": 242.6250000000313,
-      "actual_fd_limit_ratio": 0.7887384626598684,
+      "actual_fd_limit_ratio": 0.7887363433836098,
       "actual_fd_time_over_limit_s": 0.0
     }
   ]

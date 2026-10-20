@@ -1,6 +1,6 @@
 {
   "label": "checked",
-  "input_sha256": "99aaf8bbcd84f6f60d54532c2caa859a24d50c7ea1c4bcb57b88e354bc903acd",
+  "input_sha256": "1a06fa1bede52e7f2f40d38942893ce1c10506300ec08ba96341cc4a6c965c20",
   "q_dataset": "q_actual",
   "samples": 23181,
   "midpoints": true,
@@ -14,6 +14,6 @@
   "families": {},
   "intersection_pairs_sorted": [],
   "pairs_sorted": [],
-  "elapsed_s": 44.544638143037446,
+  "elapsed_s": 44.84360871696845,
   "checked_samples_sha256": "a16ef60e8b577d7879b691c4d117d10cb9765f4348d423a0e154109f97024713"
 }

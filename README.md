@@ -1,84 +1,73 @@
-# TRON2 + Wuji：保留 5x 动作的 6x 轨迹
+# TRON2 + Wuji：手指不变、双臂加快的 6x 轨迹
 
-本分支的默认轨迹已替换为保留原 5x 动作的参考版，约 **48.29 秒**。双臂、头部和首尾姿态不变，仅在测得的手部超速/碰撞窗口小幅修正。English: [README.en.md](README.en.md).
+本分支在旧版 6x 基础上，仅调整双臂节奏：**手指目标不变，22 个开合段加快并短暂停顿，总时长仍为 48.29 秒**。English: [README.en.md](README.en.md).
 
 ## 目录
 
-- [安装和更新](#安装和更新)
-- [在 Isaac 中运行](#在-isaac-中运行)
-- [结果和文件](#结果和文件)
-- [使用限制](#使用限制)
+- [新版改了什么](#新版改了什么)
+- [下载和运行](#下载和运行)
+- [文件和视频](#文件和视频)
+- [验证与限制](#验证与限制)
 
-## 安装和更新
+## 新版改了什么
 
-需要 Git、已登录的 GitHub CLI、Python 3.12；显示/物理执行还需要 Isaac Sim 5.1 及兼容 GPU。首次使用：
+| 项目 | 新版行为 |
+| --- | --- |
+| 手指 40 轴 | 与旧版 6x 逐点一致，目标速度、幅度和时间均不变 |
+| 双臂 14 轴 | 沿原姿态路径，22 个较明显开合段局部加快；其余区间保留原节奏 |
+| 加快和停顿 | 路径推进局部最高 1.5 倍；运动期间平均 1.103 倍；接近开合终点时停顿，累计 0.781 秒 |
+| 时间与头部 | 48.291667 秒、13,909 姿态、288 Hz；头部和首尾姿态不变 |
+| 碰撞回退 | 约 35.1 秒处的一段保持原节奏，避免提前动作造成双手相交 |
+
+这里的“手指不变”指目标关节轨迹。物理跟踪时，双臂和接触仍可能影响实际手指运动。来源为旧分支 `replay-6x-collision-smooth` 的 `2d0d503`；原分支和 `main` 保留。
+
+## 下载和运行
+
+需要 Git、GitHub CLI（`gh`）、Python 3.12；显示和物理执行另需 Isaac Sim 5.1 与兼容 GPU。
 
 ```bash
-git clone --branch replay-6x-collision-smooth https://github.com/zengxiong111/tron2-wuji-bag-replay.git
+git clone --branch codex/replay-6x-arm-fast-hand-fixed https://github.com/zengxiong111/tron2-wuji-bag-replay.git
 cd tron2-wuji-bag-replay
 python3 scripts/download_assets.py
 python3 scripts/verify_bundle.py
 ```
 
-已有本分支克隆，在仓库根目录执行：
+预期输出 `Verified 89 runtime files`。模型固定使用 `v1.1.0`，轨迹与视频来自预发布 `6x-arm-fast-hand-fixed-20261020`。切换自旧版且已下载资源时，执行 `python3 scripts/download_assets.py --upgrade`，仅替换哈希匹配的受管文件；自行修改的文件不会被覆盖。
 
-```bash
-git pull --ff-only
-python3 scripts/download_assets.py --upgrade
-python3 scripts/verify_bundle.py
-```
-
-下载器会替换哈希匹配的旧参考文件并移除旧受管轨迹，拒绝覆盖自行修改的输入。模型仍使用固定的 `v1.1.0` 资产；新轨迹来自 `6x-preserve5x-20261015` 预发布。校验应输出 `Verified 87 runtime files`。
-
-## 在 Isaac 中运行
-
-在仓库根目录执行，将 `/path/to/isaac/python.sh` 换成你的 Isaac Python 入口。
-
-1. **查看保留动作的参考路径**（默认）：
+在仓库根目录运行，将 `/path/to/isaac/python.sh` 替换为 Isaac 的 Python 入口。第一行显示目标动作，第二行重新执行物理跟踪：
 
 ```bash
 python3 scripts/replay.py --isaac-python /path/to/isaac/python.sh
-```
-
-直接设置参考姿态，不重新执行物理。文件时间已是 6x 执行秒，按 1x 文件时间显示。
-
-2. **重新执行物理跟踪**：
-
-```bash
 python3 scripts/replay.py --isaac-python /path/to/isaac/python.sh --physics
 ```
 
-使用 240 Hz、6x 动作速度、密集线性目标、98% 模型速度上限及局部接触裕量。新的实际运动会有跟踪偏差，需重新检查。两个入口均支持 `--headless`、`--max-seconds 1`、`--out`；输出写入仓库旁的新目录。物理入口的 `--wall-speed` 只调整等待/渲染节奏。
+目标文件已使用 6x 执行秒，显示按 1x 文件时间播放；物理入口使用 240 Hz、6x 源时间推进、线性目标和 98% 模型速度上限。两个入口支持 `--headless`、`--max-seconds 1` 和 `--out`；输出目录必须在仓库外。物理参数 `--wall-speed` 只调整等待和渲染节奏。
 
-## 结果和文件
+## 文件和视频
 
-以下小幅偏差指标属于**参考路径**：
+| 路径 | 用途 |
+| --- | --- |
+| `trajectories/trajectory_6x.npz` | 默认目标：`time` 执行秒、`source_time` 源秒、`q` 弧度、`joint_names` 轴名 |
+| `trajectories/repaired_source.npz` | 同一目标的源时间版本，供物理入口使用 |
+| `trajectories/physical_tracking_6x.npz` | 本次已验证物理运行的实际状态与目标 |
+| `media/new_6x_full.mp4` | 新版完整目标动作视频，48.3 秒 |
+| `media/old_vs_new_6x.mp4` | 完整同步对比视频，左旧右新，48.3 秒 |
+| `evidence/reference/` | 臂部时间映射、手指一致性、时间质量和验收结果 |
+| `evidence/reference_collision/`、`evidence/physics_collision/` | 目标及物理实际状态的离散网格检查 |
+| `configs/lineage.json`、`release_manifest.json` | 来源、当前文件哈希和下载配置 |
+
+视频为 Isaac 目标轨迹可视化，使用相同视角和帧时间；250 帧变化姿态重新渲染，1,199 帧完全相同姿态复用旧画面。它们不是实际物理运行录像。30 fps 共 1,449 帧，完整覆盖动作时间轴至帧取整精度。[发布页](https://github.com/zengxiong111/tron2-wuji-bag-replay/releases/tag/6x-arm-fast-hand-fixed-20261020)提供轨迹和视频压缩包。
+
+## 验证与限制
 
 | 检查 | 结果 |
 | --- | --- |
-| 参考时长 / 采样 |48.291667秒；56轴、13,909姿态、288 Hz |
-| 原样保留的关节采样值 |98.41%；双臂、头部、首尾姿态及修复窗口外全部不变 |
-| 最大 / RMS 关节修正 |3.80° /0.0775° |
-| 指尖平均 / 最大偏差 |0.019 /4.24 mm |
-| 参考 / 物理实际离散网格 |均零相交；只排除结构性相邻/同刚体对 |
-| 最终 PhysX 接触报告 |零负接触间距对 |
-| 模型速度 |参考与物理实际采样速度均通过 |
+| 目标 / 实际网格 | 27,817 / 23,181 个原采样及中点姿态；每姿态 2,717 对，均零相交 |
+| PhysX | 完整运行 48.295833 秒；零负间距对，最小报告间距 +0.05417 mm |
+| 模型速度 | 目标与实际采样速度均通过；手指目标峰值接近模型上限（99.9903%） |
+| 物理跟踪误差 | 全机器人 RMS 0.025509 rad，最大 0.597680 rad（34.24°） |
+| 实际高频 RMS（6 Hz 以上） | 相对旧版 6x：臂部 +24.0%，手指 +1.5%；不代表抖动进一步减少 |
 
-修复窗口分散在全段，约 50.90% 的帧至少有一个手指值被微调；98.41% 指的是“关节×采样点”，并非整帧比例。没有全段平滑或移动手腕分离双手。
+安装几何不变：物理 `base_Link` 世界 Z=0，桌面 Z=−0.45 m，高度差固定 **0.45 m**。仍有最大约 0.001473° 的微小位置越限；身体映射仍为 `candidate_unconfirmed`。离散碰撞、模型速度和物理采样结果不证明连续 CCD、真机电机能力或真机可执行性。检查命令和准备要求见 [DEPLOYMENT.md](DEPLOYMENT.md)。
 
-| 文件 | 用途 |
-| --- | --- |
-| `trajectories/trajectory_6x.npz` | 默认保真参考：`time`为执行秒，`source_time`为源秒，`q`为弧度，`joint_names`为轴序 |
-| `trajectories/repaired_source.npz` | 同一目标的源时间版本，用于物理执行 |
-| `trajectories/physical_tracking_6x.npz` | 已验证物理运行的实际状态与目标，单独保存 |
-| `configs/`、`release_manifest.json` | 时序、模型/输入哈希、来源和下载配置 |
-| `evidence/reference/`、`evidence/collision/`、`evidence/physics/` | 修改范围、保真度、碰撞及物理结果 |
-| [DEPLOYMENT.md](DEPLOYMENT.md) | 离线检查和真机准备 |
-
-## 使用限制
-
-- **物理实际运动仍有偏差**：相对 5x，指尖平均/P95/最大偏差约 7.94/18.37/72.74 mm，最大关节偏差约 28.10°。小幅参考修正不代表物理实际同样保真，详见[对比结果](evidence/reference/fidelity_temporal.json)。
-- 保留了原 5x 的微小位置越限，最大约 0.001635°。线性插值尚未约束真机加速度/jerk；离散碰撞不证明连续 CCD 或真机安全。
-- 物理基座 `base_Link` 世界 Z=0、桌面 Z=−0.45 m，高度差固定 **0.45 m**。身体映射仍为 `candidate_unconfirmed`；设备身份、SDK映射、电流/力矩/温度限制待确认。
-- 新参考 SHA-256：`841c29aefb3a3bfb2813bd59698ffe60ecdf20b712205227cb5ba05f77890253`。修改掩码见 `evidence/reference/local_masks.npz`；来源见[lineage](configs/lineage.json)。新运行不自动继承原报告验收。
-- 上游模型及许可见 `licenses/` 和 `configs/origin.json`；模型许可不自动覆盖用户轨迹或连接件。
+当前目标 SHA-256：`5467cff16fcf08f2aba6fada0bce74d914ba8bc69e141a99e3c08531915db2e2`。新运行须重新验证。上游模型许可证见 `licenses/`。

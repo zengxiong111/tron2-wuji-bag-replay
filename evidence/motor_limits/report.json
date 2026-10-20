@@ -1,5 +1,5 @@
 {
-  "trajectory_sha256": "841c29aefb3a3bfb2813bd59698ffe60ecdf20b712205227cb5ba05f77890253",
+  "trajectory_sha256": "5467cff16fcf08f2aba6fada0bce74d914ba8bc69e141a99e3c08531915db2e2",
   "urdf_sha256": "684a9f18203bb2c8792cb701fd59bfe5e0b0c77ddc816367794e1b4ad4d960fb",
   "producer_sha256": "2a52fbd9432030e0a54e63b89a61a2445fc25040584898c605f2acd2f5c637de",
   "interpolation": "piecewise linear in execution seconds",
@@ -65,22 +65,5 @@
   "hardware_motor_limits_verified": false,
   "hardware_execution_authorized": false,
   "physical_base_to_table_m": 0.45,
-  "boundary": "Model-only position and interval-slope velocity checks; not device ratings, current/torque/thermal verification or new physics execution",
-  "collision": {
-    "assembly_policy_sha256": null,
-    "raw_structural_only": true,
-    "policy_boundary": "Structural-only triangle mesh audit",
-    "passed": true,
-    "strict_intersections": true,
-    "samples_with_mesh_intersection": 0,
-    "mesh_intersection_events": 0,
-    "threshold_mm": 0.1,
-    "maximum_depth_mm": 0.0,
-    "families": {},
-    "input_sha256": "6fcddae26b90f92a4678fdaee3b315198a28a2bd1f9515ccafb9b924b9d5d14c"
-  },
-  "collision_samples": 39401,
-  "sampled_sha256": "6fcddae26b90f92a4678fdaee3b315198a28a2bd1f9515ccafb9b924b9d5d14c",
-  "collision_sample_definition": "All native knots, all interval midpoints, and 240 Hz execution grid including endpoints",
-  "collision_boundary": "Strict discrete triangle intersections with structural exclusions only; no Wuji assembly exemptions; not continuous CCD or exact solid clearance"
+  "boundary": "Model-only position and interval-slope velocity checks; not device ratings, current/torque/thermal verification or new physics execution"
 }
