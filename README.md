@@ -23,7 +23,7 @@
 
 ## 下载和运行
 
-需要 Git、GitHub CLI（`gh`）、Python 3.12；显示和物理执行另需 Isaac Sim 5.1 与兼容 GPU。
+需要 Git、已登录的 GitHub CLI（`gh`）、Python 3.12；显示和物理执行另需 Isaac Sim 5.1 与兼容 GPU。
 
 ```bash
 git clone --branch codex/replay-6x-arm-fast-hand-fixed https://github.com/zengxiong111/tron2-wuji-bag-replay.git

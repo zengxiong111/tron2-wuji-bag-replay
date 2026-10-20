@@ -23,7 +23,7 @@ This branch changes only arm timing relative to the previous 6x: **finger target
 
 ## Download and run
 
-Requires Git, GitHub CLI (`gh`) and Python 3.12; display and physics additionally require Isaac Sim 5.1 and a compatible GPU.
+Requires Git, authenticated GitHub CLI (`gh`) and Python 3.12; display and physics additionally require Isaac Sim 5.1 and a compatible GPU.
 
 ```bash
 git clone --branch codex/replay-6x-arm-fast-hand-fixed https://github.com/zengxiong111/tron2-wuji-bag-replay.git
