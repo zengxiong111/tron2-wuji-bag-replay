@@ -1,0 +1,485 @@
+{
+  "accepted": true,
+  "gates": {
+    "nominal_full_c2_audit_supplied": true,
+    "nominal_c2_reference_binding": true,
+    "nominal_c2_urdf_binding": true,
+    "nominal_c2_full_coverage": true,
+    "nominal_c2_all_pairs": true,
+    "nominal_c2_zero_collision": true,
+    "complete_source_interval": true,
+    "overall_5x": true,
+    "shared_clock_5x": true,
+    "physics_completed": true,
+    "all_physics_steps_recorded": true,
+    "audit_bound_to_actual": true,
+    "audit_urdf_binding": true,
+    "physics_bound_to_actual": true,
+    "physics_bound_to_reference": true,
+    "physics_bound_to_raw_feedback": true,
+    "physics_bound_to_usd": true,
+    "runtime_actuator_force_caps_unchanged": true,
+    "runtime_joint_velocity_caps_not_raised": true,
+    "runtime_self_collision_enabled": true,
+    "runtime_collision_shapes_retained": true,
+    "runtime_producer_frozen": true,
+    "physx_contacts_bound_to_trace": true,
+    "no_physx_penetration_beyond_10um": true,
+    "audit_all_pair_population": true,
+    "audit_dense_actual_coverage": true,
+    "no_actual_mesh_collision": true,
+    "no_actual_mesh_penetration": true,
+    "physical_base_table_gap": true,
+    "actual_gap_max": true,
+    "actual_gap_rms": true,
+    "measured_physx_gap_max": true,
+    "measured_physx_gap_rms": true,
+    "measured_gap_target_matches_raw_fk": true,
+    "actual_position_limits": true,
+    "actual_native_speed": true,
+    "actual_fd_speed": true,
+    "thumb_target_range": true,
+    "thumb_actual_range": true,
+    "no_other_thumb_target_axis_nearly_locked": true,
+    "no_other_thumb_actual_axis_nearly_locked": true,
+    "thumb_target_waveform": true,
+    "thumb_actual_waveform": true,
+    "thumb_distal_target_motion": true,
+    "thumb_distal_actual_motion": true,
+    "no_active_target_hand_axis_nearly_locked": true,
+    "no_active_actual_hand_axis_nearly_locked": true,
+    "actual_high_frequency_reduced": true,
+    "official_audit_whitelist": true,
+    "official_runtime_whitelist": true,
+    "official_runtime_pairs_read_back": true,
+    "official_audit_additional_pair_count": true
+  },
+  "metrics": {
+    "q_target": {
+      "gap_vs_raw_c2_max_mm": 0.01649097497580243,
+      "gap_vs_raw_c2_rms_mm": 0.00136502433362019,
+      "thumb_axes": {
+        "l_thumb_cmc_flex": {
+          "range_fraction": 0.9999996027473015,
+          "correlation": 0.9966697407189883
+        },
+        "l_thumb_cmc_abd": {
+          "range_fraction": 0.9978179957278462,
+          "correlation": 0.9999115577870668
+        },
+        "l_thumb_mcp": {
+          "range_fraction": 0.9732773114732877,
+          "correlation": 0.9732358579607068
+        },
+        "l_thumb_ip": {
+          "range_fraction": 0.8785413078786558,
+          "correlation": 0.9787401818990833
+        }
+      },
+      "hand_axis_motion": {
+        "l_thumb_cmc_flex": {
+          "raw_range_rad": 0.7043354486341966,
+          "range_fraction": 0.9999996027473015
+        },
+        "l_thumb_cmc_abd": {
+          "raw_range_rad": 0.5909592877885892,
+          "range_fraction": 0.9978179957278462
+        },
+        "l_thumb_mcp": {
+          "raw_range_rad": 1.2935603860461427,
+          "range_fraction": 0.9732773114732877
+        },
+        "l_thumb_ip": {
+          "raw_range_rad": 0.9667533339218207,
+          "range_fraction": 0.8785413078786558
+        },
+        "l_index_finger_mcp_flex": {
+          "raw_range_rad": 1.0597845996158737,
+          "range_fraction": 0.9394124712894134
+        },
+        "l_index_finger_mcp_abd": {
+          "raw_range_rad": 0.5329677166353035,
+          "range_fraction": 1.1566951580520854
+        },
+        "l_index_finger_pip": {
+          "raw_range_rad": 1.6748719557994798,
+          "range_fraction": 1.0038296864333727
+        },
+        "l_index_finger_dip": {
+          "raw_range_rad": 1.567172230310601,
+          "range_fraction": 0.8937642102653469
+        },
+        "l_middle_finger_mcp_flex": {
+          "raw_range_rad": 1.3866378267090802,
+          "range_fraction": 0.8839718649707179
+        },
+        "l_middle_finger_mcp_abd": {
+          "raw_range_rad": 0.4134521509414065,
+          "range_fraction": 1.0007706705800457
+        },
+        "l_middle_finger_pip": {
+          "raw_range_rad": 1.6280799365027732,
+          "range_fraction": 0.9972464677397919
+        },
+        "l_middle_finger_dip": {
+          "raw_range_rad": 1.5908600766657004,
+          "range_fraction": 1.0009791523490696
+        },
+        "l_ring_finger_mcp_flex": {
+          "raw_range_rad": 0.9546427281571286,
+          "range_fraction": 0.9690771720541553
+        },
+        "l_ring_finger_mcp_abd": {
+          "raw_range_rad": 0.41309349323431643,
+          "range_fraction": 1.046418241824848
+        },
+        "l_ring_finger_pip": {
+          "raw_range_rad": 1.7302094196266584,
+          "range_fraction": 0.9742939987927051
+        },
+        "l_ring_finger_dip": {
+          "raw_range_rad": 1.3617324062634437,
+          "range_fraction": 0.9946744662170726
+        },
+        "l_pinky_mcp_flex": {
+          "raw_range_rad": 0.7333326473332462,
+          "range_fraction": 1.14539095969837
+        },
+        "l_pinky_mcp_abd": {
+          "raw_range_rad": 0.42588693249878024,
+          "range_fraction": 1.2819662374256897
+        },
+        "l_pinky_pip": {
+          "raw_range_rad": 1.6794802470358814,
+          "range_fraction": 1.146883901583118
+        },
+        "l_pinky_dip": {
+          "raw_range_rad": 1.5878520388347914,
+          "range_fraction": 0.9837914133009023
+        },
+        "r_thumb_cmc_flex": {
+          "raw_range_rad": 0.8241775819154251,
+          "range_fraction": 0.9696835679898177
+        },
+        "r_thumb_cmc_abd": {
+          "raw_range_rad": 0.7096810479527351,
+          "range_fraction": 0.9995911653101975
+        },
+        "r_thumb_mcp": {
+          "raw_range_rad": 1.2248113374318041,
+          "range_fraction": 0.9906022201632925
+        },
+        "r_thumb_ip": {
+          "raw_range_rad": 0.8389036864731592,
+          "range_fraction": 1.0010307610726452
+        },
+        "r_index_finger_mcp_flex": {
+          "raw_range_rad": 1.110343617606318,
+          "range_fraction": 0.9975593326545661
+        },
+        "r_index_finger_mcp_abd": {
+          "raw_range_rad": 0.5544431746126637,
+          "range_fraction": 0.9960604437707775
+        },
+        "r_index_finger_pip": {
+          "raw_range_rad": 1.5496006657659163,
+          "range_fraction": 0.9999831843518245
+        },
+        "r_index_finger_dip": {
+          "raw_range_rad": 1.3225498676060232,
+          "range_fraction": 0.9533641135963186
+        },
+        "r_middle_finger_mcp_flex": {
+          "raw_range_rad": 1.1503087936322955,
+          "range_fraction": 0.9278755001733189
+        },
+        "r_middle_finger_mcp_abd": {
+          "raw_range_rad": 0.5443122787622545,
+          "range_fraction": 0.9641963918656239
+        },
+        "r_middle_finger_pip": {
+          "raw_range_rad": 1.4947242293247551,
+          "range_fraction": 1.0000388369455495
+        },
+        "r_middle_finger_dip": {
+          "raw_range_rad": 1.580199563633326,
+          "range_fraction": 0.994039713897446
+        },
+        "r_ring_finger_mcp_flex": {
+          "raw_range_rad": 0.9197837079796255,
+          "range_fraction": 1.003655796455963
+        },
+        "r_ring_finger_mcp_abd": {
+          "raw_range_rad": 0.42509075289701975,
+          "range_fraction": 1.066634707267139
+        },
+        "r_ring_finger_pip": {
+          "raw_range_rad": 1.337981119135326,
+          "range_fraction": 1.0014908079038065
+        },
+        "r_ring_finger_dip": {
+          "raw_range_rad": 1.135206958184077,
+          "range_fraction": 0.9999786995024209
+        },
+        "r_pinky_mcp_flex": {
+          "raw_range_rad": 0.605637421217663,
+          "range_fraction": 0.9968717712821805
+        },
+        "r_pinky_mcp_abd": {
+          "raw_range_rad": 0.36310467867829554,
+          "range_fraction": 0.9996467379668517
+        },
+        "r_pinky_pip": {
+          "raw_range_rad": 1.549979993311638,
+          "range_fraction": 0.9984522936301617
+        },
+        "r_pinky_dip": {
+          "raw_range_rad": 1.5248990004018053,
+          "range_fraction": 0.999429703708792
+        }
+      },
+      "thumb_tip_wrist_relative_error_rms_mm": 1.4997147348206195,
+      "thumb_tip_wrist_relative_error_max_mm": 11.702189017185084,
+      "thumb_flex_range_fraction": 0.9999996027473015,
+      "thumb_flex_correlation": 0.9966697407189883,
+      "thumb_flex_rms_error_deg": 0.6278099536987407,
+      "qpos_fd_speed_ratio_max": 0.9463594515111985,
+      "position_limit_excess_rad": 0.0,
+      "hand_high_frequency_ratio_vs_raw_c2": {
+        "15": 0.4607635132797962,
+        "30": 0.38278926702023736
+      }
+    },
+    "q_actual": {
+      "gap_vs_raw_c2_max_mm": 1.8913257329619682,
+      "gap_vs_raw_c2_rms_mm": 0.9271977329752099,
+      "thumb_axes": {
+        "l_thumb_cmc_flex": {
+          "range_fraction": 0.9939473435212796,
+          "correlation": 0.9965206878764966
+        },
+        "l_thumb_cmc_abd": {
+          "range_fraction": 0.9840816400304109,
+          "correlation": 0.9988705488406093
+        },
+        "l_thumb_mcp": {
+          "range_fraction": 0.9769088513301012,
+          "correlation": 0.9723325720272475
+        },
+        "l_thumb_ip": {
+          "range_fraction": 0.8865745554300786,
+          "correlation": 0.9778065422744371
+        }
+      },
+      "hand_axis_motion": {
+        "l_thumb_cmc_flex": {
+          "raw_range_rad": 0.7043354486341966,
+          "range_fraction": 0.9939473435212796
+        },
+        "l_thumb_cmc_abd": {
+          "raw_range_rad": 0.5909592877885892,
+          "range_fraction": 0.9840816400304109
+        },
+        "l_thumb_mcp": {
+          "raw_range_rad": 1.2935603860461427,
+          "range_fraction": 0.9769088513301012
+        },
+        "l_thumb_ip": {
+          "raw_range_rad": 0.9667533339218207,
+          "range_fraction": 0.8865745554300786
+        },
+        "l_index_finger_mcp_flex": {
+          "raw_range_rad": 1.0597845996158737,
+          "range_fraction": 0.9223151575185775
+        },
+        "l_index_finger_mcp_abd": {
+          "raw_range_rad": 0.5329677166353035,
+          "range_fraction": 1.1477239623941242
+        },
+        "l_index_finger_pip": {
+          "raw_range_rad": 1.6748719557994798,
+          "range_fraction": 1.0181499182402765
+        },
+        "l_index_finger_dip": {
+          "raw_range_rad": 1.567172230310601,
+          "range_fraction": 0.910016537403131
+        },
+        "l_middle_finger_mcp_flex": {
+          "raw_range_rad": 1.3866378267090802,
+          "range_fraction": 0.8781971912572105
+        },
+        "l_middle_finger_mcp_abd": {
+          "raw_range_rad": 0.4134521509414065,
+          "range_fraction": 1.0029753271450397
+        },
+        "l_middle_finger_pip": {
+          "raw_range_rad": 1.6280799365027732,
+          "range_fraction": 1.0245293604510308
+        },
+        "l_middle_finger_dip": {
+          "raw_range_rad": 1.5908600766657004,
+          "range_fraction": 1.0260974875147333
+        },
+        "l_ring_finger_mcp_flex": {
+          "raw_range_rad": 0.9546427281571286,
+          "range_fraction": 0.9701188895527224
+        },
+        "l_ring_finger_mcp_abd": {
+          "raw_range_rad": 0.41309349323431643,
+          "range_fraction": 1.0470068679738793
+        },
+        "l_ring_finger_pip": {
+          "raw_range_rad": 1.7302094196266584,
+          "range_fraction": 0.9986690512953577
+        },
+        "l_ring_finger_dip": {
+          "raw_range_rad": 1.3617324062634437,
+          "range_fraction": 0.9866350120970279
+        },
+        "l_pinky_mcp_flex": {
+          "raw_range_rad": 0.7333326473332462,
+          "range_fraction": 1.1629214517850164
+        },
+        "l_pinky_mcp_abd": {
+          "raw_range_rad": 0.42588693249878024,
+          "range_fraction": 1.2645129555587957
+        },
+        "l_pinky_pip": {
+          "raw_range_rad": 1.6794802470358814,
+          "range_fraction": 1.1815247580068986
+        },
+        "l_pinky_dip": {
+          "raw_range_rad": 1.5878520388347914,
+          "range_fraction": 0.9870796284364813
+        },
+        "r_thumb_cmc_flex": {
+          "raw_range_rad": 0.8241775819154251,
+          "range_fraction": 0.9753418803885209
+        },
+        "r_thumb_cmc_abd": {
+          "raw_range_rad": 0.7096810479527351,
+          "range_fraction": 0.9871251499088408
+        },
+        "r_thumb_mcp": {
+          "raw_range_rad": 1.2248113374318041,
+          "range_fraction": 0.9777539515368129
+        },
+        "r_thumb_ip": {
+          "raw_range_rad": 0.8389036864731592,
+          "range_fraction": 1.0084472568254248
+        },
+        "r_index_finger_mcp_flex": {
+          "raw_range_rad": 1.110343617606318,
+          "range_fraction": 0.9973334595244956
+        },
+        "r_index_finger_mcp_abd": {
+          "raw_range_rad": 0.5544431746126637,
+          "range_fraction": 0.9970063844781629
+        },
+        "r_index_finger_pip": {
+          "raw_range_rad": 1.5496006657659163,
+          "range_fraction": 1.0414636427879913
+        },
+        "r_index_finger_dip": {
+          "raw_range_rad": 1.3225498676060232,
+          "range_fraction": 0.9649775051488474
+        },
+        "r_middle_finger_mcp_flex": {
+          "raw_range_rad": 1.1503087936322955,
+          "range_fraction": 0.9081566652558863
+        },
+        "r_middle_finger_mcp_abd": {
+          "raw_range_rad": 0.5443122787622545,
+          "range_fraction": 0.9574902241305993
+        },
+        "r_middle_finger_pip": {
+          "raw_range_rad": 1.4947242293247551,
+          "range_fraction": 1.0386314240112329
+        },
+        "r_middle_finger_dip": {
+          "raw_range_rad": 1.580199563633326,
+          "range_fraction": 1.016572193899032
+        },
+        "r_ring_finger_mcp_flex": {
+          "raw_range_rad": 0.9197837079796255,
+          "range_fraction": 1.0091527966968188
+        },
+        "r_ring_finger_mcp_abd": {
+          "raw_range_rad": 0.42509075289701975,
+          "range_fraction": 1.0719409946912326
+        },
+        "r_ring_finger_pip": {
+          "raw_range_rad": 1.337981119135326,
+          "range_fraction": 1.0524567427113305
+        },
+        "r_ring_finger_dip": {
+          "raw_range_rad": 1.135206958184077,
+          "range_fraction": 1.0244386817016382
+        },
+        "r_pinky_mcp_flex": {
+          "raw_range_rad": 0.605637421217663,
+          "range_fraction": 1.0294561261200181
+        },
+        "r_pinky_mcp_abd": {
+          "raw_range_rad": 0.36310467867829554,
+          "range_fraction": 0.994067292621311
+        },
+        "r_pinky_pip": {
+          "raw_range_rad": 1.549979993311638,
+          "range_fraction": 1.0514899824696604
+        },
+        "r_pinky_dip": {
+          "raw_range_rad": 1.5248990004018053,
+          "range_fraction": 1.034071703477232
+        }
+      },
+      "thumb_tip_wrist_relative_error_rms_mm": 1.5688366233637072,
+      "thumb_tip_wrist_relative_error_max_mm": 11.957668150086775,
+      "thumb_flex_range_fraction": 0.9939473435212796,
+      "thumb_flex_correlation": 0.9965206878764966,
+      "thumb_flex_rms_error_deg": 0.6443215825283203,
+      "qpos_fd_speed_ratio_max": 0.9925769610122683,
+      "position_limit_excess_rad": 0.0,
+      "hand_high_frequency_ratio_vs_raw_c2": {
+        "15": 0.48870474706678946,
+        "30": 0.41119657397056886
+      },
+      "measured_physx_gap_vs_raw_c2_max_mm": 1.891212702001932,
+      "measured_physx_gap_vs_raw_c2_rms_mm": 0.9271941773375306,
+      "measured_desired_gap_vs_raw_fk_max_mm": 1.1102230246251565e-13
+    }
+  },
+  "native_speed_ratio_max": 0.9400066509197998,
+  "physx_contact_metrics": {
+    "callback_rows": 30997,
+    "steps": 33094,
+    "minimum_separation_m": 4.5621709432452917e-07,
+    "rows_below_minus_10um": 0,
+    "max_reported_impulse_norm": 0.018310039082431815
+  },
+  "working_thresholds": {
+    "gap_max_mm": 2.0,
+    "gap_rms_mm": 1.0,
+    "thumb_range_fraction": 0.8,
+    "thumb_correlation": 0.9,
+    "physx_negative_separation_tolerance_m": 1e-05,
+    "active_hand_axis_raw_range_rad": 0.05,
+    "actual_speed_denominator": "original URDF limits, regardless of conservative internal controller hand caps",
+    "allowed_internal_hand_velocity_scale_interval": [
+      0.9,
+      1.0
+    ]
+  },
+  "binding": {
+    "/home/sustech/\u6587\u6863/ChatGPT_artifacts/tron2_wuji_20261027_6x/source/feedback_30hz.npz": "e3add39de3eb21ab6f8880f9788be0e2486e7833655a8c33cfda6971b00daa23",
+    "/home/sustech/\u6587\u6863/ChatGPT_artifacts/tron2_wuji_20261028_5x_restore/toppra_actual_contact_margin_167_v9_v97/reference.npz": "2061bd3639f0c632f8344caf8ac57964f7c21892d326449e8a479bd12a97146a",
+    "/home/sustech/\u6587\u6863/ChatGPT_artifacts/tron2_wuji_20261028_5x_restore/NEW/runtime/actual_contact_margin_167_v9_arm20k_480hz_handvel094/tracking_actual.npz": "26d5bfec6669c33ec123c172134f7c53de2fa42c131f0429cf6182ea4909b805",
+    "/home/sustech/\u6587\u6863/ChatGPT_artifacts/tron2_wuji_20261028_5x_restore/NEW/runtime/actual_contact_margin_167_v9_arm20k_480hz_handvel094/actual_allpairs_133_dense2/report.json": "30563611e34c431569b79804d042bdcb3a3bf41f6e70c8e347c5520a6e32d424",
+    "/home/sustech/\u6587\u6863/ChatGPT_artifacts/tron2_wuji_20261028_5x_restore/NEW/runtime/actual_contact_margin_167_v9_arm20k_480hz_handvel094/report.json": "bd7e2c7070daa9aa44b56e92a4646af1947385187f6482d8411ee9cfa988ec21",
+    "/home/sustech/\u6587\u6863/ChatGPT/tron2_wuji/outputs/robot/tron2_wuji_hand2.urdf": "c7864b55f60bac854586c8e7bab730fff027455511a4ef6ccbfec97d85f0407d",
+    "/home/sustech/\u6587\u6863/ChatGPT/tron2_wuji/outputs/bag_feedback_20261008_adapter/physics_motion5x_collision_fixed/robot_collision_fixed.usd": "0526b9a8f358a0ae2b9e55ead21467282c619973fa6b36bc2b33175b7eefed84",
+    "/home/sustech/\u6587\u6863/ChatGPT_artifacts/tron2_wuji_20261028_5x_restore/NEW/runtime/actual_contact_margin_167_v9_arm20k_480hz_handvel094/contacts_per_physics_step.json": "fbf1a6dd75f6faedb2ccd970510e8ca5bb5420298f97509d5363b0a1854596c5",
+    "/home/sustech/\u6587\u6863/ChatGPT_artifacts/tron2_wuji_20261028_5x_restore/fullmesh_c2_v9_v97_export_fresh/report.json": "3af8fa0dfacff2b678c8f743daba4fe2e0de01c5350493cf51935ad131f0f913"
+  },
+  "boundary": "Simulation discrete geometry under the explicitly selected contact policy and tracking acceptance only; excluded official internal assembly overlaps are not zero all-mesh penetration. Not CCD, hardware or contact-force safety. Thresholds are explicit working tolerances, not user-supplied specifications."
+}

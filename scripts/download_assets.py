@@ -14,6 +14,16 @@ parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--upgrade', action='store_true', help='Replace only hash-matched managed files from the previous release')
 args = parser.parse_args()
 
+def local_target(relative):
+    relative_path = Path(relative)
+    if relative_path.is_absolute() or '..' in relative_path.parts or not relative_path.parts:
+        raise ValueError('Release manifest contains an unsafe path: '+relative)
+    target = root/relative_path
+    resolved = target.resolve(strict=False)
+    if root.resolve() not in resolved.parents:
+        raise ValueError('Release path escapes repository: '+relative)
+    return target
+
 def digest(path):
     value = hashlib.sha256()
     with path.open('rb') as stream:
@@ -26,7 +36,7 @@ with tempfile.TemporaryDirectory(prefix='tron2-download-') as temporary:
     for asset in manifest['assets']:
         installed = True
         for relative, expected in asset['files'].items():
-            target = root/relative
+            target = local_target(relative)
             parent = target.parent
             unsafe = target.is_symlink()
             while parent != root:
@@ -64,7 +74,7 @@ with tempfile.TemporaryDirectory(prefix='tron2-download-') as temporary:
             file = staged/relative
             if not file.is_file() or digest(file) != expected:
                 raise RuntimeError('Installed file checksum mismatch: '+relative)
-            target = root/relative
+            target = local_target(relative)
             previous = manifest.get('previous_files', {}).get(relative)
             replaceable = args.upgrade and target.is_file() and not target.is_symlink() and previous == digest(target)
             if target.is_symlink() or (target.exists() and (not target.is_file() or digest(target) != expected) and not replaceable):
@@ -75,7 +85,7 @@ with tempfile.TemporaryDirectory(prefix='tron2-download-') as temporary:
                     raise ValueError('Symlink in destination path: '+str(parent))
                 parent = parent.parent
         for relative in asset['files']:
-            target = root/relative
+            target = local_target(relative)
             target.parent.mkdir(parents=True, exist_ok=True)
             if target.exists() and digest(target) != asset['files'][relative]:
                 # Stage beside the destination, then atomically replace an unchanged managed input.
@@ -101,7 +111,7 @@ with tempfile.TemporaryDirectory(prefix='tron2-download-') as temporary:
         print('Installed and verified:',asset['name'])
 if args.upgrade:
     for relative, expected in manifest.get('retired_files', {}).items():
-        target = root/relative
+        target = local_target(relative)
         if target.is_file() and not target.is_symlink() and digest(target) == expected:
             parent = target.parent
             while parent != root:

@@ -1,0 +1,279 @@
+{
+  "status": "TOPPRA_solution_audited_on_dense_output",
+  "accepted": false,
+  "input": "/home/sustech/\u6587\u6863/ChatGPT_artifacts/tron2_wuji_20261028_5x_restore/NEW/fingers/actual_contact_margin_167_v8_event_raw6568_v2/v9_actual_local/reference.npz",
+  "input_sha256": "eed682c1669b24ddb5972a4bf4a6d9af1254778ee1bb3acecc6bd69576faa4e6",
+  "urdf": "/home/sustech/\u6587\u6863/ChatGPT/tron2_wuji/outputs/robot/tron2_wuji_hand2.urdf",
+  "urdf_sha256": "c7864b55f60bac854586c8e7bab730fff027455511a4ef6ccbfec97d85f0407d",
+  "path_rate_hz": 1920.0,
+  "path_grid_count": 132373,
+  "discretization": "interpolation",
+  "parametrizer": "ParametrizeSpline",
+  "audit_rate_hz": 480.0,
+  "audit_sample_count": 33094,
+  "source_path_clock_interval_s": [
+    0.0,
+    68.94353873520001
+  ],
+  "normalized_path_interval": [
+    0.0,
+    1.0
+  ],
+  "rest_to_rest_toppra_minimum_duration_estimate_s": 65.52523528552788,
+  "time_stretch_factor": 1.0521677401809664,
+  "candidate_duration_s": 68.9435387352,
+  "goal_duration_s": 68.9435387352,
+  "goal_duration_met": true,
+  "target_duration_feasible_from_discretized_solution": true,
+  "dense_rnea_max_effort_ratio": 1.1868305618024175,
+  "dense_velocity_max_ratio": 0.9495189633677149,
+  "hand_acceleration_limit_rad_s2": null,
+  "hand_acceleration_joint_count": 0,
+  "dense_hand_acceleration_max_abs_rad_s2": null,
+  "dense_hand_acceleration_max_ratio": null,
+  "dense_hand_acceleration_worst_joint": null,
+  "dense_hand_acceleration_constraint_respected": null,
+  "dense_position_limit_excess_rad": 0.0,
+  "effort_constraint_scale": 1.0,
+  "velocity_constraint_scale": 0.97,
+  "torque_constraint_enabled": true,
+  "arm_effort_constraint_scale": null,
+  "model_limit_source": "URDF effortLimit and velocityLimit for every mapped joint; arm effort values are N m; physical Wuji torque conversion is not established",
+  "worst_joints": [
+    {
+      "joint": "proximal_roll_R_Joint",
+      "effort_limit_urdf_units": 150.0,
+      "peak_abs_rnea_effort_urdf_units": 178.02458427036262,
+      "peak_effort_ratio": 1.1868305618024175,
+      "time_s": 19.354166666666668,
+      "peak_speed_rad_s": 12.074574232688548,
+      "velocity_limit_rad_s": 18.3,
+      "position_min_rad": -0.9904851155158982,
+      "position_max_rad": -0.3677706301970515,
+      "position_limits_rad": [
+        -3.193952531149623,
+        0.2617993877991494
+      ]
+    },
+    {
+      "joint": "proximal_roll_L_Joint",
+      "effort_limit_urdf_units": 150.0,
+      "peak_abs_rnea_effort_urdf_units": 155.66253909754417,
+      "peak_effort_ratio": 1.0377502606502944,
+      "time_s": 64.26666666666667,
+      "peak_speed_rad_s": 10.999719051359849,
+      "velocity_limit_rad_s": 18.3,
+      "position_min_rad": 0.5500071578593965,
+      "position_max_rad": 1.2042392305531042,
+      "position_limits_rad": [
+        -0.2617993877991494,
+        3.193952531149623
+      ]
+    },
+    {
+      "joint": "r_pinky_mcp_abd",
+      "effort_limit_urdf_units": 0.2,
+      "peak_abs_rnea_effort_urdf_units": 0.20575872472944512,
+      "peak_effort_ratio": 1.0287936236472255,
+      "time_s": 4.702083333333333,
+      "peak_speed_rad_s": 7.489009289071054,
+      "velocity_limit_rad_s": 8.11,
+      "position_min_rad": -0.2675128176818122,
+      "position_max_rad": 0.09546358989945425,
+      "position_limits_rad": [
+        -0.698,
+        0.698
+      ]
+    },
+    {
+      "joint": "r_ring_finger_mcp_abd",
+      "effort_limit_urdf_units": 0.2,
+      "peak_abs_rnea_effort_urdf_units": 0.20414726506887548,
+      "peak_effort_ratio": 1.0207363253443773,
+      "time_s": 64.35625,
+      "peak_speed_rad_s": 7.50876546445714,
+      "velocity_limit_rad_s": 8.11,
+      "position_min_rad": -0.1058245324028807,
+      "position_max_rad": 0.34759201837559367,
+      "position_limits_rad": [
+        -0.698,
+        0.698
+      ]
+    },
+    {
+      "joint": "wrist_roll_R_Joint",
+      "effort_limit_urdf_units": 20.0,
+      "peak_abs_rnea_effort_urdf_units": 20.277048807519144,
+      "peak_effort_ratio": 1.0138524403759572,
+      "time_s": 68.03125,
+      "peak_speed_rad_s": 5.023443941779709,
+      "velocity_limit_rad_s": 17.8,
+      "position_min_rad": -1.4758373605743527,
+      "position_max_rad": -1.004006008335723,
+      "position_limits_rad": [
+        -1.5707963267948966,
+        1.5707963267948966
+      ]
+    },
+    {
+      "joint": "r_index_finger_mcp_abd",
+      "effort_limit_urdf_units": 0.2,
+      "peak_abs_rnea_effort_urdf_units": 0.1986186607255468,
+      "peak_effort_ratio": 0.993093303627734,
+      "time_s": 22.12916666666667,
+      "peak_speed_rad_s": 7.492398998230877,
+      "velocity_limit_rad_s": 8.11,
+      "position_min_rad": -0.3241693675207459,
+      "position_max_rad": 0.22808954702824918,
+      "position_limits_rad": [
+        -0.698,
+        0.698
+      ]
+    },
+    {
+      "joint": "l_middle_finger_mcp_abd",
+      "effort_limit_urdf_units": 0.2,
+      "peak_abs_rnea_effort_urdf_units": 0.1983154296343574,
+      "peak_effort_ratio": 0.9915771481717869,
+      "time_s": 4.720833333333333,
+      "peak_speed_rad_s": 7.493316205084971,
+      "velocity_limit_rad_s": 8.11,
+      "position_min_rad": -0.10355344681865528,
+      "position_max_rad": 0.3102173395318143,
+      "position_limits_rad": [
+        -0.698,
+        0.698
+      ]
+    },
+    {
+      "joint": "r_middle_finger_mcp_abd",
+      "effort_limit_urdf_units": 0.2,
+      "peak_abs_rnea_effort_urdf_units": 0.19753775371626414,
+      "peak_effort_ratio": 0.9876887685813207,
+      "time_s": 35.40208333333333,
+      "peak_speed_rad_s": 7.491332997842753,
+      "velocity_limit_rad_s": 8.11,
+      "position_min_rad": -0.23763706499323015,
+      "position_max_rad": 0.28718687024818534,
+      "position_limits_rad": [
+        -0.698,
+        0.698
+      ]
+    },
+    {
+      "joint": "proximal_pitch_R_Joint",
+      "effort_limit_urdf_units": 150.0,
+      "peak_abs_rnea_effort_urdf_units": 147.18776029118519,
+      "peak_effort_ratio": 0.9812517352745679,
+      "time_s": 57.116666666666674,
+      "peak_speed_rad_s": 14.068260797774396,
+      "velocity_limit_rad_s": 18.3,
+      "position_min_rad": -1.555455093051034,
+      "position_max_rad": -0.8719735618208397,
+      "position_limits_rad": [
+        -3.141592653589793,
+        2.600540585471551
+      ]
+    },
+    {
+      "joint": "wrist_roll_L_Joint",
+      "effort_limit_urdf_units": 20.0,
+      "peak_abs_rnea_effort_urdf_units": 19.53976796516988,
+      "peak_effort_ratio": 0.9769883982584939,
+      "time_s": 64.24791666666667,
+      "peak_speed_rad_s": 11.781168321832508,
+      "velocity_limit_rad_s": 17.8,
+      "position_min_rad": 0.21949410679129033,
+      "position_max_rad": 1.3919943906047532,
+      "position_limits_rad": [
+        -1.5707963267948966,
+        1.5707963267948966
+      ]
+    },
+    {
+      "joint": "l_pinky_mcp_abd",
+      "effort_limit_urdf_units": 0.2,
+      "peak_abs_rnea_effort_urdf_units": 0.19279044927088826,
+      "peak_effort_ratio": 0.9639522463544412,
+      "time_s": 34.62083333333334,
+      "peak_speed_rad_s": 7.486967600583307,
+      "velocity_limit_rad_s": 8.11,
+      "position_min_rad": -0.18765991691683107,
+      "position_max_rad": 0.3583127515028835,
+      "position_limits_rad": [
+        -0.698,
+        0.698
+      ]
+    },
+    {
+      "joint": "proximal_yaw_L_Joint",
+      "effort_limit_urdf_units": 60.0,
+      "peak_abs_rnea_effort_urdf_units": 56.24915377166134,
+      "peak_effort_ratio": 0.9374858961943556,
+      "time_s": 68.80000000000001,
+      "peak_speed_rad_s": 14.762278177901955,
+      "velocity_limit_rad_s": 22.52,
+      "position_min_rad": -1.9391579967082906,
+      "position_max_rad": -1.0970107475920958,
+      "position_limits_rad": [
+        -3.6651914291880923,
+        1.4835298641951802
+      ]
+    }
+  ],
+  "toppra_return_code": "<ParameterizationReturnCode.Ok: 'Ok: Successful parametrization'>",
+  "boundary": "TOPPRA retimes the sampled cubic joint path under discretized URDF velocity constraints, with URDF torque constraints enabled unless explicitly disabled, and optional symmetric acceleration bounds on the 40 hand joints only. The audit always reports Pinocchio RNEA effort; when torque constraints are disabled that effort result is diagnostic only. Coarse path grids can underresolve extrema, so compare grid densities. It does not include contact, collision/table clearance, controller tracking, thermal limits, or hardware admission.",
+  "source_phase_preserved": true,
+  "trajectory_path": "/home/sustech/\u6587\u6863/ChatGPT_artifacts/tron2_wuji_20261028_5x_restore/toppra_actual_contact_margin_167_v9_v97/trajectory.npz",
+  "trajectory_sha256": "6d595b46d977fe1ca5f42a7a53552fb0c09d5e2e42ce1e0aee4f867d645bb5b0",
+  "runtime_export": {
+    "reference_path": "/home/sustech/\u6587\u6863/ChatGPT_artifacts/tron2_wuji_20261028_5x_restore/toppra_actual_contact_margin_167_v9_v97/reference.npz",
+    "reference_sha256": "2061bd3639f0c632f8344caf8ac57964f7c21892d326449e8a479bd12a97146a",
+    "execution_path": "/home/sustech/\u6587\u6863/ChatGPT_artifacts/tron2_wuji_20261028_5x_restore/toppra_actual_contact_margin_167_v9_v97/execution.npz",
+    "execution_sha256": "a2c1cfbebbff9bf39cb149469fd3b45fdc637fc5f55980587f0e6f4be634d1d7",
+    "torque_path": "/home/sustech/\u6587\u6863/ChatGPT_artifacts/tron2_wuji_20261028_5x_restore/toppra_actual_contact_margin_167_v9_v97/rnea_torque_240hz.npz",
+    "torque_sha256": "a38a3c3cabe139e691222248bb741339d22e81b69fd4f38f61d33418ae2d9183",
+    "reference_knot_count": 297824,
+    "original_input_geometry_knots": 165457,
+    "switchpoint_count": 132373,
+    "native_command_count": 16548,
+    "switch_guard_seconds_each_side": 0.0,
+    "switch_guard_knot_count": 0,
+    "audit_sample_count": 415848,
+    "audit_grid_hz": 1920.0,
+    "same_grid_analytic_vs_exported_c2_max_abs": {
+      "max_abs_q_rad": 3.1207325612570003e-10,
+      "max_abs_qdot_rad_s": 6.921007612348262e-06,
+      "max_abs_qddot_rad_s2": 0.5320761173645003
+    },
+    "audit_effort_ratio_max": 1.2511416684407786,
+    "audit_velocity_ratio_max": 0.9593116604261747,
+    "hand_acceleration_limit_rad_s2": null,
+    "hand_acceleration_joint_count": 0,
+    "audit_hand_acceleration_max_abs_rad_s2": null,
+    "audit_hand_acceleration_max_ratio": null,
+    "audit_hand_acceleration_worst_joint": null,
+    "audit_hand_acceleration_constraint_respected": null,
+    "audit_position_excess_rad": 0.0,
+    "audit_duration_s": 68.9435387352,
+    "accepted_under_urdf_effort_velocity_position": false,
+    "torque_metadata": {
+      "reference_sha256": "2061bd3639f0c632f8344caf8ac57964f7c21892d326449e8a479bd12a97146a",
+      "execution_sha256": "a2c1cfbebbff9bf39cb149469fd3b45fdc637fc5f55980587f0e6f4be634d1d7",
+      "raw_source_sha256": "e3add39de3eb21ab6f8880f9788be0e2486e7833655a8c33cfda6971b00daa23",
+      "restored_reference_sha256": "271d65a9c7838b84206d2897c96238b7e546522e51e33be122972ec0d7a96105",
+      "prepared_input_sha256": "eed682c1669b24ddb5972a4bf4a6d9af1254778ee1bb3acecc6bd69576faa4e6",
+      "urdf_sha256": "c7864b55f60bac854586c8e7bab730fff027455511a4ef6ccbfec97d85f0407d",
+      "derivative_provenance": "Exact exported reference CubicSpline, clamped zero endpoint derivatives; evaluated at reference_clock, qdot multiplied by 5 and qdd by 25 to execution-time derivatives; Pinocchio RNEA on the bound fixed-base URDF.",
+      "motion_speed": 5.0,
+      "qdot_execution_scale": 5.0,
+      "qdd_execution_scale": 25.0,
+      "derivative_source": "exact clamped C2 cubic from reference knots at reference_clock",
+      "dynamics_method": "Pinocchio RNEA",
+      "clock_semantics": "time is execution seconds; reference_clock=5*time; source_time in execution NPZ is original bag phase.",
+      "torque_units": "URDF effortLimit units (arm joints N m); physical hand torque conversion/hardware calibration unverified.",
+      "sample_rate_hz": 240.0
+    },
+    "boundary": "This audits the exact exported runtime C2 interpolation and RNEA derivatives. It remains model-only evidence; collision/contact, tracking, real actuator torque mapping, and hardware safety are not established."
+  }
+}

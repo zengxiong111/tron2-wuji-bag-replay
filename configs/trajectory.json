@@ -1,15 +1,72 @@
 {
-  "trajectory": "trajectories/retimed_actual_4x.npz",
-  "trajectory_sha256": "23b555d6a4bf6df33fa4da4e5905a10f9fe375f6447784edd44079e412bdfcd1",
-  "usd": "outputs/robot/robot_collision_fixed.usd",
-  "usd_sha256": "0526b9a8f358a0ae2b9e55ead21467282c619973fa6b36bc2b33175b7eefed84",
-  "interpolation": "piecewise linear in execution seconds",
+  "schema_version": 2,
+  "mode": "recorded_actual_state_playback",
+  "artifact_id": "20261027-bag-5x-restored-thumb-v9",
+  "motion_speed": 5,
   "file_time_multiplier": 1,
-  "effective_bag_speed": 4,
-  "duration_s": 72.43750000002395,
-  "native_samples": 13909,
-  "native_hz": 192,
-  "mode": "recorded-path kinematic playback",
-  "physics_reexecuted": false,
-  "hardware_execution_authorized": false
+  "execution_time_is_final": true,
+  "timing_profile": "overall5/shared_nonuniform_time_map",
+  "clock_semantics": "reference_clock = 5 * execution time; original_source_time is the original bag phase; one shared nonuniform map is used across all axes",
+  "duration_s": 68.94353873517838,
+  "physics_hz": 480,
+  "physics_steps": 33093,
+  "saved_actual_states_including_initial_and_final": 33094,
+  "actual_dense_collision_samples": 66187,
+  "actual_dense_collision_retained_pairs": 2707,
+  "actual_mesh_collision_events": 0,
+  "actual_mesh_max_penetration_mm": 0.0,
+  "reference": {
+    "path": "trajectories/reference_5x.npz",
+    "sha256": "2061bd3639f0c632f8344caf8ac57964f7c21892d326449e8a479bd12a97146a"
+  },
+  "execution": {
+    "path": "trajectories/execution_5x.npz",
+    "sha256": "a2c1cfbebbff9bf39cb149469fd3b45fdc637fc5f55980587f0e6f4be634d1d7"
+  },
+  "actual": {
+    "path": "trajectories/actual_5x.npz",
+    "sha256": "26d5bfec6669c33ec123c172134f7c53de2fa42c131f0429cf6182ea4909b805"
+  },
+  "raw_feedback": {
+    "path": "trajectories/raw_feedback.npz",
+    "sha256": "e3add39de3eb21ab6f8880f9788be0e2486e7833655a8c33cfda6971b00daa23"
+  },
+  "urdf": {
+    "path": "outputs/robot/tron2_wuji_hand2.urdf",
+    "sha256": "684a9f18203bb2c8792cb701fd59bfe5e0b0c77ddc816367794e1b4ad4d960fb"
+  },
+  "usd": {
+    "path": "outputs/robot/robot_collision_fixed.usd",
+    "sha256": "0526b9a8f358a0ae2b9e55ead21467282c619973fa6b36bc2b33175b7eefed84"
+  },
+  "provenance": {
+    "path": "metadata/runtime_provenance.json",
+    "sha256": "0c3c093631af50e379fd1f1692b4780839c16542be65530852681fd43f237d4c"
+  },
+  "retiming_manifest": {
+    "path": "metadata/runtime_retiming_manifest.json",
+    "sha256": "598d6bb7fd7aaf7c3f814c8c396b4f820b6666defd905eaa3bc21f4e98f31892"
+  },
+  "simulation_profile": {
+    "solver_position_iterations": 32,
+    "solver_velocity_iterations": 16,
+    "global_drive_gain_scale": 4,
+    "arm_drive_gain_scale": 8,
+    "hand_drive_gain_scale": 1,
+    "hand_velocity_limit_scale": 0.94,
+    "arm_force_drive": false,
+    "rnea_feedforward": false,
+    "left_thumb_flex_gain_scale": 4,
+    "target_interpolation": "clamped C2 cubic",
+    "contact_offset_m": 0.001,
+    "rest_offset_m": 0.0,
+    "official_wuji_assembly_policy_pair_count": 20
+  },
+  "evidence_boundaries": {
+    "body_mapping": "candidate_unconfirmed",
+    "continuous_collision_detection_certified": false,
+    "hardware_safety_or_admission_certified": false,
+    "rnea_effort_ratio_max": 1.2511416684407786,
+    "rnea_effort_boundary": "model-only diagnostic proxy; exceeds the URDF effort limit and is not hardware torque evidence"
+  }
 }

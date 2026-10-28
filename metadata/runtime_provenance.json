@@ -1,0 +1,185 @@
+{
+  "candidate": "actual_contact_margin_167_signed_v9_full_diagnostic_handvel094",
+  "reference": "trajectories/reference_5x.npz",
+  "reference_sha256": "2061bd3639f0c632f8344caf8ac57964f7c21892d326449e8a479bd12a97146a",
+  "execution": "trajectories/execution_5x.npz",
+  "execution_sha256": "a2c1cfbebbff9bf39cb149469fd3b45fdc637fc5f55980587f0e6f4be634d1d7",
+  "raw_source": "trajectories/raw_feedback.npz",
+  "raw_source_sha256": "e3add39de3eb21ab6f8880f9788be0e2486e7833655a8c33cfda6971b00daa23",
+  "retiming_manifest": "metadata/runtime_retiming_manifest.json",
+  "retiming_manifest_sha256": "598d6bb7fd7aaf7c3f814c8c396b4f820b6666defd905eaa3bc21f4e98f31892",
+  "retiming_input_sha256": "eed682c1669b24ddb5972a4bf4a6d9af1254778ee1bb3acecc6bd69576faa4e6",
+  "retiming_producer_sha256": null,
+  "usd": "outputs/robot/robot_collision_fixed.usd",
+  "usd_sha256": "0526b9a8f358a0ae2b9e55ead21467282c619973fa6b36bc2b33175b7eefed84",
+  "bag": null,
+  "bag_sha256": "b480b5fc0a2ca90d302f644ee56e1a301da724a8a734fde5d3aea8603fd2d672",
+  "joint_names": [
+    "proximal_pitch_L_Joint",
+    "proximal_roll_L_Joint",
+    "proximal_yaw_L_Joint",
+    "elbow_L_Joint",
+    "wrist_yaw_L_Joint",
+    "wrist_pitch_L_Joint",
+    "wrist_roll_L_Joint",
+    "proximal_pitch_R_Joint",
+    "proximal_roll_R_Joint",
+    "proximal_yaw_R_Joint",
+    "elbow_R_Joint",
+    "wrist_yaw_R_Joint",
+    "wrist_pitch_R_Joint",
+    "wrist_roll_R_Joint",
+    "head_yaw_Joint",
+    "head_pitch_Joint",
+    "l_thumb_cmc_flex",
+    "l_thumb_cmc_abd",
+    "l_thumb_mcp",
+    "l_thumb_ip",
+    "l_index_finger_mcp_flex",
+    "l_index_finger_mcp_abd",
+    "l_index_finger_pip",
+    "l_index_finger_dip",
+    "l_middle_finger_mcp_flex",
+    "l_middle_finger_mcp_abd",
+    "l_middle_finger_pip",
+    "l_middle_finger_dip",
+    "l_ring_finger_mcp_flex",
+    "l_ring_finger_mcp_abd",
+    "l_ring_finger_pip",
+    "l_ring_finger_dip",
+    "l_pinky_mcp_flex",
+    "l_pinky_mcp_abd",
+    "l_pinky_pip",
+    "l_pinky_dip",
+    "r_thumb_cmc_flex",
+    "r_thumb_cmc_abd",
+    "r_thumb_mcp",
+    "r_thumb_ip",
+    "r_index_finger_mcp_flex",
+    "r_index_finger_mcp_abd",
+    "r_index_finger_pip",
+    "r_index_finger_dip",
+    "r_middle_finger_mcp_flex",
+    "r_middle_finger_mcp_abd",
+    "r_middle_finger_pip",
+    "r_middle_finger_dip",
+    "r_ring_finger_mcp_flex",
+    "r_ring_finger_mcp_abd",
+    "r_ring_finger_pip",
+    "r_ring_finger_dip",
+    "r_pinky_mcp_flex",
+    "r_pinky_mcp_abd",
+    "r_pinky_pip",
+    "r_pinky_dip"
+  ],
+  "overall_motion_speed": 5.0,
+  "source_interval_s": [
+    0.0,
+    344.717693676
+  ],
+  "execution_duration_s": 68.9435387352,
+  "clock_semantics": "reference clock = 5*execution; original_source_time is original bag phase; one shared clock for all axes",
+  "official_policy_body_pairs": [
+    [
+      "l_index_finger_proximal",
+      "l_wrist"
+    ],
+    [
+      "l_index_finger_proximal_abd",
+      "l_wrist"
+    ],
+    [
+      "l_middle_finger_proximal",
+      "l_wrist"
+    ],
+    [
+      "l_middle_finger_proximal_abd",
+      "l_wrist"
+    ],
+    [
+      "l_pinky_proximal",
+      "l_wrist"
+    ],
+    [
+      "l_pinky_proximal_abd",
+      "l_wrist"
+    ],
+    [
+      "l_ring_finger_proximal",
+      "l_wrist"
+    ],
+    [
+      "l_ring_finger_proximal_abd",
+      "l_wrist"
+    ],
+    [
+      "l_thumb_proximal",
+      "l_wrist"
+    ],
+    [
+      "l_thumb_proximal_abd",
+      "l_wrist"
+    ],
+    [
+      "r_index_finger_proximal",
+      "r_wrist"
+    ],
+    [
+      "r_index_finger_proximal_abd",
+      "r_wrist"
+    ],
+    [
+      "r_middle_finger_proximal",
+      "r_wrist"
+    ],
+    [
+      "r_middle_finger_proximal_abd",
+      "r_wrist"
+    ],
+    [
+      "r_pinky_proximal",
+      "r_wrist"
+    ],
+    [
+      "r_pinky_proximal_abd",
+      "r_wrist"
+    ],
+    [
+      "r_ring_finger_proximal",
+      "r_wrist"
+    ],
+    [
+      "r_ring_finger_proximal_abd",
+      "r_wrist"
+    ],
+    [
+      "r_thumb_proximal",
+      "r_wrist"
+    ],
+    [
+      "r_thumb_proximal_abd",
+      "r_wrist"
+    ]
+  ],
+  "official_policy_source_sha256": {
+    "assets/wuji-description/hand2/hand2_beta2/body/mjcf/left_with_mount.xml": "903d80d3fa00ff78efa7f7684cedb768b0a1b960db9f68fdb1d28c03eee3ba22",
+    "assets/wuji-description/hand2/hand2_beta2/body/mjcf/right_with_mount.xml": "9bce131e7cf7147b2fdf822cf762ac6ed7a313c449e65c7ff0db3120a617254a"
+  },
+  "official_policy_expected_source_commit": "c2cd7f8d1ef8b6dc8cb907c17daa5a88b4442d95",
+  "table_top_z_m": -0.45,
+  "physical_base_prim": "base_Link",
+  "producer_script": "scripts/portable_physx_replay.py",
+  "producer_script_sha256": "b3878acc9ae03cd06dc2aca1650e8d9558fffe35382f047ad915219aea1d53f2",
+  "claim_boundary": "Full 5x acceleration-drive simulation replay; conservative hand internal velocity cap 0.94; arm force mode and RNEA feedforward disabled. Imported canonical evidence preserves original labels; runtime drive readbacks are authoritative.",
+  "urdf": "outputs/robot/tron2_wuji_hand2.urdf",
+  "urdf_sha256": "684a9f18203bb2c8792cb701fd59bfe5e0b0c77ddc816367794e1b4ad4d960fb",
+  "dynamics_report": "evidence/imported/retiming_report.json",
+  "dynamics_report_sha256": "59af8ed5362b851d3f25b51403ec57f067fb10e90f89b19936aa001fa2e2f45e",
+  "retiming_input": null,
+  "publication_normalization": {
+    "canonical_source": "evidence/imported/provenance.json",
+    "canonical_source_sha256": "d74843adc867f2b17798706502fb1d4b1897f7f3140189bdcd5ca3567929fa74",
+    "changes": "Clone-relative paths, installed URI-normalized URDF hash, runtime producer identity, and corrected drive-mode description; numerical trajectory and accepted evidence unchanged."
+  },
+  "bag_name": "2026-10-27-19-04-00.bag"
+}

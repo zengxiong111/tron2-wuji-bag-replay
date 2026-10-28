@@ -1,0 +1,180 @@
+{
+  "candidate": "actual_contact_margin_167_signed_v9_full_diagnostic_handvel094",
+  "reference": "/home/sustech/\u6587\u6863/ChatGPT_artifacts/tron2_wuji_20261028_5x_restore/toppra_actual_contact_margin_167_v9_v97/reference.npz",
+  "reference_sha256": "2061bd3639f0c632f8344caf8ac57964f7c21892d326449e8a479bd12a97146a",
+  "execution": "/home/sustech/\u6587\u6863/ChatGPT_artifacts/tron2_wuji_20261028_5x_restore/toppra_actual_contact_margin_167_v9_v97/execution.npz",
+  "execution_sha256": "a2c1cfbebbff9bf39cb149469fd3b45fdc637fc5f55980587f0e6f4be634d1d7",
+  "raw_source": "/home/sustech/\u6587\u6863/ChatGPT_artifacts/tron2_wuji_20261027_6x/source/feedback_30hz.npz",
+  "raw_source_sha256": "e3add39de3eb21ab6f8880f9788be0e2486e7833655a8c33cfda6971b00daa23",
+  "retiming_manifest": "/home/sustech/\u6587\u6863/ChatGPT_artifacts/tron2_wuji_20261028_5x_restore/toppra_actual_contact_margin_167_v9_v97/retiming_manifest.json",
+  "retiming_manifest_sha256": "58c08b5c3382abc093343bb6e73877a2febd6eec105eeafbc39dfe599809529b",
+  "retiming_input_sha256": "eed682c1669b24ddb5972a4bf4a6d9af1254778ee1bb3acecc6bd69576faa4e6",
+  "retiming_producer_sha256": null,
+  "usd": "/home/sustech/\u6587\u6863/ChatGPT/tron2_wuji/outputs/bag_feedback_20261008_adapter/physics_motion5x_collision_fixed/robot_collision_fixed.usd",
+  "usd_sha256": "0526b9a8f358a0ae2b9e55ead21467282c619973fa6b36bc2b33175b7eefed84",
+  "bag": "/home/sustech/\u6587\u6863/ChatGPT/tron2_wuji/2026-10-27-19-04-00.bag",
+  "bag_sha256": "b480b5fc0a2ca90d302f644ee56e1a301da724a8a734fde5d3aea8603fd2d672",
+  "joint_names": [
+    "proximal_pitch_L_Joint",
+    "proximal_roll_L_Joint",
+    "proximal_yaw_L_Joint",
+    "elbow_L_Joint",
+    "wrist_yaw_L_Joint",
+    "wrist_pitch_L_Joint",
+    "wrist_roll_L_Joint",
+    "proximal_pitch_R_Joint",
+    "proximal_roll_R_Joint",
+    "proximal_yaw_R_Joint",
+    "elbow_R_Joint",
+    "wrist_yaw_R_Joint",
+    "wrist_pitch_R_Joint",
+    "wrist_roll_R_Joint",
+    "head_yaw_Joint",
+    "head_pitch_Joint",
+    "l_thumb_cmc_flex",
+    "l_thumb_cmc_abd",
+    "l_thumb_mcp",
+    "l_thumb_ip",
+    "l_index_finger_mcp_flex",
+    "l_index_finger_mcp_abd",
+    "l_index_finger_pip",
+    "l_index_finger_dip",
+    "l_middle_finger_mcp_flex",
+    "l_middle_finger_mcp_abd",
+    "l_middle_finger_pip",
+    "l_middle_finger_dip",
+    "l_ring_finger_mcp_flex",
+    "l_ring_finger_mcp_abd",
+    "l_ring_finger_pip",
+    "l_ring_finger_dip",
+    "l_pinky_mcp_flex",
+    "l_pinky_mcp_abd",
+    "l_pinky_pip",
+    "l_pinky_dip",
+    "r_thumb_cmc_flex",
+    "r_thumb_cmc_abd",
+    "r_thumb_mcp",
+    "r_thumb_ip",
+    "r_index_finger_mcp_flex",
+    "r_index_finger_mcp_abd",
+    "r_index_finger_pip",
+    "r_index_finger_dip",
+    "r_middle_finger_mcp_flex",
+    "r_middle_finger_mcp_abd",
+    "r_middle_finger_pip",
+    "r_middle_finger_dip",
+    "r_ring_finger_mcp_flex",
+    "r_ring_finger_mcp_abd",
+    "r_ring_finger_pip",
+    "r_ring_finger_dip",
+    "r_pinky_mcp_flex",
+    "r_pinky_mcp_abd",
+    "r_pinky_pip",
+    "r_pinky_dip"
+  ],
+  "overall_motion_speed": 5.0,
+  "source_interval_s": [
+    0.0,
+    344.717693676
+  ],
+  "execution_duration_s": 68.9435387352,
+  "clock_semantics": "reference clock = 5*execution; original_source_time is original bag phase; one shared clock for all axes",
+  "official_policy_body_pairs": [
+    [
+      "l_index_finger_proximal",
+      "l_wrist"
+    ],
+    [
+      "l_index_finger_proximal_abd",
+      "l_wrist"
+    ],
+    [
+      "l_middle_finger_proximal",
+      "l_wrist"
+    ],
+    [
+      "l_middle_finger_proximal_abd",
+      "l_wrist"
+    ],
+    [
+      "l_pinky_proximal",
+      "l_wrist"
+    ],
+    [
+      "l_pinky_proximal_abd",
+      "l_wrist"
+    ],
+    [
+      "l_ring_finger_proximal",
+      "l_wrist"
+    ],
+    [
+      "l_ring_finger_proximal_abd",
+      "l_wrist"
+    ],
+    [
+      "l_thumb_proximal",
+      "l_wrist"
+    ],
+    [
+      "l_thumb_proximal_abd",
+      "l_wrist"
+    ],
+    [
+      "r_index_finger_proximal",
+      "r_wrist"
+    ],
+    [
+      "r_index_finger_proximal_abd",
+      "r_wrist"
+    ],
+    [
+      "r_middle_finger_proximal",
+      "r_wrist"
+    ],
+    [
+      "r_middle_finger_proximal_abd",
+      "r_wrist"
+    ],
+    [
+      "r_pinky_proximal",
+      "r_wrist"
+    ],
+    [
+      "r_pinky_proximal_abd",
+      "r_wrist"
+    ],
+    [
+      "r_ring_finger_proximal",
+      "r_wrist"
+    ],
+    [
+      "r_ring_finger_proximal_abd",
+      "r_wrist"
+    ],
+    [
+      "r_thumb_proximal",
+      "r_wrist"
+    ],
+    [
+      "r_thumb_proximal_abd",
+      "r_wrist"
+    ]
+  ],
+  "official_policy_source_sha256": {
+    "/home/sustech/\u6587\u6863/ChatGPT/tron2_wuji/assets/wuji-description/hand2/hand2_beta2/body/mjcf/left_with_mount.xml": "903d80d3fa00ff78efa7f7684cedb768b0a1b960db9f68fdb1d28c03eee3ba22",
+    "/home/sustech/\u6587\u6863/ChatGPT/tron2_wuji/assets/wuji-description/hand2/hand2_beta2/body/mjcf/right_with_mount.xml": "9bce131e7cf7147b2fdf822cf762ac6ed7a313c449e65c7ff0db3120a617254a",
+    "/home/sustech/\u6587\u6863/ChatGPT/tron2_wuji/assets/wuji-description/README.md": "63d4ec18255205c73cca9def466abfb4cc3291a0f05cfaf6cd3f5ec34e43de53"
+  },
+  "official_policy_expected_source_commit": "c2cd7f8d1ef8b6dc8cb907c17daa5a88b4442d95",
+  "table_top_z_m": -0.45,
+  "physical_base_prim": "base_Link",
+  "producer_script": "scripts/134_replay_new_bag_6x.py",
+  "producer_script_sha256": "053c7ea222f10138f4b4a156b995e19e200ce113417e0b57fe9ae328111560c5",
+  "claim_boundary": "Full 5x force-PD physical diagnostic; conservative hand internal velocity cap 0.94; no RNEA feedforward or wrist feedback.",
+  "urdf": "/home/sustech/\u6587\u6863/ChatGPT/tron2_wuji/outputs/robot/tron2_wuji_hand2.urdf",
+  "urdf_sha256": "c7864b55f60bac854586c8e7bab730fff027455511a4ef6ccbfec97d85f0407d",
+  "dynamics_report": "/home/sustech/\u6587\u6863/ChatGPT_artifacts/tron2_wuji_20261028_5x_restore/toppra_actual_contact_margin_167_v9_v97/report.json",
+  "dynamics_report_sha256": "59af8ed5362b851d3f25b51403ec57f067fb10e90f89b19936aa001fa2e2f45e",
+  "retiming_input": "/home/sustech/\u6587\u6863/ChatGPT_artifacts/tron2_wuji_20261028_5x_restore/NEW/fingers/actual_contact_margin_167_v8_event_raw6568_v2/v9_actual_local/reference.npz"
+}

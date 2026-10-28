@@ -15,11 +15,11 @@ parser.add_argument('--out', type=Path)
 parser.add_argument('--max-seconds', type=float)
 args = parser.parse_args()
 binding = json.loads((ROOT/'configs/trajectory.json').read_text())
-reference, usd = [ROOT/binding[key] for key in ('trajectory', 'usd')]
+actual, usd = [ROOT/binding[key]['path'] for key in ('actual', 'usd')]
 sha = lambda path: hashlib.sha256(path.read_bytes()).hexdigest()
-if sha(reference) != binding['trajectory_sha256'] or sha(usd) != binding['usd_sha256']:
+if sha(actual) != binding['actual']['sha256'] or sha(usd) != binding['usd']['sha256']:
     raise ValueError('Published trajectory/model binding changed')
-data = np.load(reference, allow_pickle=False)
+data = np.load(actual, allow_pickle=False)
 axis, q, names = data['time'], data['q'], data['joint_names'].tolist()
 if q.shape != (len(axis), 56) or not np.isfinite(q).all() or not np.all(np.diff(axis) > 0):
     raise ValueError('Invalid trajectory')
@@ -33,10 +33,12 @@ output.mkdir(parents=True, exist_ok=False)
 
 from isaacsim import SimulationApp
 app = SimulationApp({'headless': args.headless, 'width': 1280, 'height': 800, 'multi_gpu': False})
-report = {'trajectory_sha256': sha(reference), 'usd_sha256': sha(usd),
+report = {'trajectory_sha256': sha(actual), 'trajectory_kind': 'actual_5x',
+          'reference_sha256': binding['reference']['sha256'], 'usd_sha256': sha(usd),
           'producer_sha256': sha(Path(__file__)), 'mode': 'recorded-path kinematic playback',
           'interpolation': 'piecewise linear in execution seconds', 'file_time_multiplier': 1,
-          'effective_bag_speed': 4, 'physics_stepped': False, 'physical_base_to_table_m': .45,
+          'effective_bag_speed': 5, 'trajectory_motion_speed': 5,
+          'file_time_multiplier': 1, 'physics_stepped': False, 'physical_base_to_table_m': .45,
           'hardware_execution_authorized': False, 'status': 'starting'}
 try:
     from isaacsim.core.api import World
@@ -56,6 +58,15 @@ try:
     table.CreateDisplayColorAttr([Gf.Vec3f(.15, .19, .23)])
     UsdLux.DomeLight.Define(world.stage, '/World/Light').CreateIntensityAttr(650)
     world.reset()
+    base_prim = world.stage.GetPrimAtPath('/World/Robot/base_Link')
+    if not base_prim.IsValid():
+        raise ValueError('Physical base frame base_Link is missing from the bundled USD')
+    from pxr import UsdGeom
+    base_z = float(UsdGeom.XformCache().GetLocalToWorldTransform(base_prim).ExtractTranslation()[2])
+    table_top_z = -.45
+    if abs(base_z - table_top_z - .45) > 1e-6:
+        raise ValueError(f'Physical base/table gap is {base_z-table_top_z:.9f} m, expected exactly 0.45 m')
+    report['physical_base_to_table_m'] = base_z - table_top_z
     SimulationManager.enable_fabric(False)
     world.set_simulation_dt(physics_dt=0, rendering_dt=1/30)
     indices = np.array([robot.get_dof_index(n) for n in names])

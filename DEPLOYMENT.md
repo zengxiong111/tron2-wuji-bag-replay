@@ -1,54 +1,30 @@
-# 真机部署准备
+# 物理复播说明
 
-当前仓库用于 Isaac Sim 回放，**没有真机控制程序，也未通过真机准入**。以下步骤用于交接后继续准备。英文：[DEPLOYMENT.en.md](DEPLOYMENT.en.md)。
+本页说明如何从轨迹参考重新运行 Isaac Sim / PhysX，以及如何理解新运行结果。普通播放会读取已验收的实际状态轨迹；只有显式启用物理模式才会开始新的仿真。英文版：[DEPLOYMENT.en.md](DEPLOYMENT.en.md)。
 
-## 目录
+## 前置条件
 
-- [离线检查](#离线检查)
-- [设备资料](#设备资料)
-- [部署顺序](#部署顺序)
+- 已按 [README.md](README.md) 下载并通过 `python3 scripts/verify_bundle.py` 校验运行资产。
+- 已安装 Isaac Sim 5.1，并能在当前主机启动其 Python 解释器；需使用兼容 GPU。
+- 输出目录由回放工具在仓库外新建。保留输出和日志以便检查，不要把新运行结果覆盖成已验收结果。
 
-## 离线检查
+## 运行新的 PhysX 回放
 
-先按 [README.md](README.md) 下载资产。在仓库根目录执行：
-
-```bash
-python3 scripts/verify_bundle.py
-python3.12 -m venv ../tron2-analysis-env
-../tron2-analysis-env/bin/pip install -r requirements-analysis.txt
-../tron2-analysis-env/bin/python scripts/audit_retimed_trajectory.py --limits-only --out ../tron2-limits-check
-python3 scripts/check_hardware_admission.py
-../tron2-analysis-env/bin/python -m unittest discover -s tests -v
-```
-
-`../tron2-limits-check` 必须是仓库外的新目录。当前角度检查预期退出码为 `2`（3 轴轻微越界）；硬件检查也预期为 `2`（资料不完整）。完整性校验与单元测试应通过。硬件检查只核对离线资料，不连接设备。
-
-如需重新计算完整离散碰撞检查，使用同一环境执行以下命令；计算耗时较长，结果写入新的外部目录：
+在仓库根目录执行，将路径替换为本机 Isaac Sim Python 解释器：
 
 ```bash
-../tron2-analysis-env/bin/python scripts/audit_retimed_trajectory.py --out ../tron2-full-check
+python3 scripts/replay.py --isaac-python /path/to/isaac/python --physics
 ```
 
-## 设备资料
+`--physics` 会从参考轨迹产生新的 PhysX 运行与实际状态记录，使用 480 Hz 和发布配置中的求解器、驱动器及官方装配碰撞规则。它需要较多计算资源，耗时取决于设备。查看新生成报告、轨迹和日志；命令完成或视频看起来正常，都不表示新结果已验收。
 
-由设备负责人补齐以下文件。未知项保持空白，不要用模型值冒充实机参数。
+默认模式不推进物理，只回放绑定到已验收实际状态的记录路径。新物理模式与默认模式输出到仓库外的运行目录，不修改发布资产，也不应再对轨迹施加额外 5× 时间缩放。
 
-| 文件 | 需要确认 |
-| --- | --- |
-| `configs/hardware_inventory.json` | TRON2、左手、右手的型号、硬件版本、固件、编号及证据 |
-| `configs/joint_mapping.csv` | 56 轴的 SDK 名称/编号、方向、零偏和单位 |
-| `configs/hardware_limits.csv` | 逐轴位置、速度、加速度、电流、力矩、温度和持续负载限制，以及来源版本 |
+## 结果解释
 
-源 bag 的机身状态有 16 个无名称通道，顺序仍待确认，头部 yaw/pitch 顺序存在冲突：候选顺序为 yaw、pitch，手册编号为 14=pitch、15=yaw。手部有 40 个命名位置通道，但名称匹配不能证明当前实物的 SDK 映射正确。`bag_hand_index` / `bag_pos_index` 是嵌套手序号 / 位置序号；`bag_raw_index` 是展开后的 40 维序号。
+- 本次已验收轨迹覆盖源 bag 中有 body feedback 的 344.718 s，对应 68.944 s 的 5× 执行时间；原 bag 开头约 2.494 s 不在覆盖范围内。
+- 已有综合验收针对指定 USD、Isaac / PhysX 参数、模型和几何对口径。新运行必须重新检查输入绑定、实际状态、速度、腕间距、拇指运动、接触与几何结果，不能继承旧验收结论。
+- dense mesh 检查是采样证据，不是连续碰撞检测（CCD）证明。桌面到物理基座原点固定为 0.45 m。
+- 离线 RNEA 力矩代理比值为 1.251，超过 URDF effort 限值。当前资料也没有确认真实 body-to-actuator mapping。因此，这些工具和结果不提供真机控制、硬件准入或扭矩通过结论。
 
-## 部署顺序
-
-1. **确认设备和映射。** 核实上表资料，解决机身通道顺序和手部执行器对应关系。
-2. **准备可执行轨迹。** 修复角度越界，加入平滑起停和加速度/jerk 限制，再按真实控制周期重采样。文件的 192 Hz 采样率不代表硬件控制频率。重新检查限制、碰撞及物理跟踪，并更新轨迹和报告哈希。
-3. **检查现场和初始姿态。** 桌面到物理基座原点固定为 0.45 m，不能移动安装高度来消除碰撞。检查转接件、线缆、负载、障碍，以及首帧过渡和制动空间。
-4. **实现真机控制程序。** 使用确认的 SDK，加入逐轴限幅、反馈超时、跟踪误差监测、故障停机与急停。先验证只读反馈和故障处理；参数及增益必须依据真实设备确认。
-5. **逐级试运行。** 设备负责人批准后，依次检查单轴、单手、单臂、低速分段及完整轨迹，最后才验证目标动作速度。记录实际状态、电流/力矩、温度、故障码和时间戳，保存到仓库外。
-
-映射错误、反馈丢失、越限、异常温升或意外接触时，按厂家流程停机；解决原因后再继续。参数、负载、装配、控制器或轨迹变化后重新验证受影响项。
-
-真机验收需要设备负责人确认资料、映射、限制、起停、制动和完整运行结果。Isaac 视频和离线表格不能代替实机验收；当前分段线性路径的加速度/jerk 尚未受限，减速本身不能解决这些问题。
+若需逐项审阅当前已验收运行，查看 `validation/acceptance_155.json`、`validation/actual_mesh_133.json`、`validation/physics_report.json` 与 `metadata/` 中的绑定记录。

@@ -1,0 +1,676 @@
+{
+  "preview_only": false,
+  "reference_only": false,
+  "state_source": "actual",
+  "candidate_label": "Validated discrete replay | official Wuji policy",
+  "accepted": null,
+  "fps": 60,
+  "frames_rendered": 4137,
+  "total_full_video_frames": 4137,
+  "frame_size_px": [
+    1600,
+    450
+  ],
+  "requested_source_duration_s": 68.94353873517838,
+  "encoded_duration_s": 68.95,
+  "video_duration_error_s": 0.006461264821624013,
+  "motion_speed": 5.0,
+  "motion_speed_semantics": "overall speed with shared local retiming map",
+  "time_mapping_mode": "shared_nonuniform_time_map",
+  "virtual_source_interval_s": [
+    0.0,
+    344.7176936758919
+  ],
+  "original_source_interval_s": [
+    0.0,
+    344.7176936758638
+  ],
+  "source_interval_s": [
+    0.0,
+    344.7176936758919
+  ],
+  "simulation_time_interval_s": [
+    0.0,
+    68.94353873517838
+  ],
+  "last_frame_elapsed_s": 68.94353873517838,
+  "last_frame_source_time_s": 344.7176936758919,
+  "last_frame_original_source_time_s": 344.7176936758638,
+  "last_frame_source_time_forced_to_exact_endpoint": true,
+  "endpoint_timestamp_rounding_s": 0.006461264821624013,
+  "video": "/home/sustech/\u6587\u6863/ChatGPT_artifacts/tron2_wuji_20261028_5x_restore/NEW/delivery_v9/video/actual_replay.mp4",
+  "codec": "H264 yuv420p faststart",
+  "composition": "wide robot view plus a separately rendered 1600x900 moving Isaac close camera centered on both wrists and ten fingertips",
+  "reference_sha256": "2061bd3639f0c632f8344caf8ac57964f7c21892d326449e8a479bd12a97146a",
+  "usd_sha256": "0526b9a8f358a0ae2b9e55ead21467282c619973fa6b36bc2b33175b7eefed84",
+  "tracking_actual_sha256": "26d5bfec6669c33ec123c172134f7c53de2fa42c131f0429cf6182ea4909b805",
+  "physics_report_sha256": "bd7e2c7070daa9aa44b56e92a4646af1947385187f6482d8411ee9cfa988ec21",
+  "raw_source_sha256": "e3add39de3eb21ab6f8880f9788be0e2486e7833655a8c33cfda6971b00daa23",
+  "provenance_sha256": "d74843adc867f2b17798706502fb1d4b1897f7f3140189bdcd5ca3567929fa74",
+  "bag_sha256": "b480b5fc0a2ca90d302f644ee56e1a301da724a8a734fde5d3aea8603fd2d672",
+  "producer_sha256": "3dbba22ca817664e4ccfa39fdb32b4afc63d37b641ac8ce1d340d401b2753d1f",
+  "actual_vs_same_clock_c2_target_peak_error_rad_per_joint": {
+    "proximal_pitch_L_Joint": 0.007174008256724207,
+    "proximal_roll_L_Joint": 0.004054418061888443,
+    "proximal_yaw_L_Joint": 0.00914150742653641,
+    "elbow_L_Joint": 0.0029403212072667273,
+    "wrist_yaw_L_Joint": 0.0050198853784813036,
+    "wrist_pitch_L_Joint": 0.007532961397212684,
+    "wrist_roll_L_Joint": 0.006293021474538363,
+    "proximal_pitch_R_Joint": 0.005545467570161389,
+    "proximal_roll_R_Joint": 0.00420439816600382,
+    "proximal_yaw_R_Joint": 0.006633390668387751,
+    "elbow_R_Joint": 0.002382400430108955,
+    "wrist_yaw_R_Joint": 0.0057029047618644135,
+    "wrist_pitch_R_Joint": 0.005547619340136534,
+    "wrist_roll_R_Joint": 0.004062740439989998,
+    "head_yaw_Joint": 0.0,
+    "head_pitch_Joint": 0.00017799758293993292,
+    "l_thumb_cmc_flex": 0.01010828945454778,
+    "l_thumb_cmc_abd": 0.015222544903312818,
+    "l_thumb_mcp": 0.03480274643214945,
+    "l_thumb_ip": 0.02956353084330504,
+    "l_index_finger_mcp_flex": 0.035089171955699994,
+    "l_index_finger_mcp_abd": 0.007926643042539552,
+    "l_index_finger_pip": 0.07805277889629933,
+    "l_index_finger_dip": 0.04576699588774667,
+    "l_middle_finger_mcp_flex": 0.032724649108732684,
+    "l_middle_finger_mcp_abd": 0.009132003121691254,
+    "l_middle_finger_pip": 0.0740716964506263,
+    "l_middle_finger_dip": 0.04402204757509844,
+    "l_ring_finger_mcp_flex": 0.031212905535933283,
+    "l_ring_finger_mcp_abd": 0.008817930226606492,
+    "l_ring_finger_pip": 0.0669888024658801,
+    "l_ring_finger_dip": 0.03996279263246505,
+    "l_pinky_mcp_flex": 0.03683183184751934,
+    "l_pinky_mcp_abd": 0.010156317977826013,
+    "l_pinky_pip": 0.08384139359172216,
+    "l_pinky_dip": 0.05088059584487192,
+    "r_thumb_cmc_flex": 0.026700689122418075,
+    "r_thumb_cmc_abd": 0.02075942859487223,
+    "r_thumb_mcp": 0.04398960878058422,
+    "r_thumb_ip": 0.038251315771298464,
+    "r_index_finger_mcp_flex": 0.036584700215571475,
+    "r_index_finger_mcp_abd": 0.008916756699686945,
+    "r_index_finger_pip": 0.09237265446996837,
+    "r_index_finger_dip": 0.05872275432380929,
+    "r_middle_finger_mcp_flex": 0.03209130378731839,
+    "r_middle_finger_mcp_abd": 0.01164931180686933,
+    "r_middle_finger_pip": 0.09171158871341757,
+    "r_middle_finger_dip": 0.06462331866693555,
+    "r_ring_finger_mcp_flex": 0.036300284898793556,
+    "r_ring_finger_mcp_abd": 0.010207421140500574,
+    "r_ring_finger_pip": 0.08406342950694404,
+    "r_ring_finger_dip": 0.05455618837927295,
+    "r_pinky_mcp_flex": 0.04147718772980019,
+    "r_pinky_mcp_abd": 0.013423229718488416,
+    "r_pinky_pip": 0.09900736806381172,
+    "r_pinky_dip": 0.05797773061173231
+  },
+  "actual_vs_same_clock_c2_target_rms_error_rad_per_joint": {
+    "proximal_pitch_L_Joint": 0.0013197863331241995,
+    "proximal_roll_L_Joint": 0.0018340133916469436,
+    "proximal_yaw_L_Joint": 0.0015835635636148356,
+    "elbow_L_Joint": 0.0007919609715944871,
+    "wrist_yaw_L_Joint": 0.0008220405991135244,
+    "wrist_pitch_L_Joint": 0.0015424852324438557,
+    "wrist_roll_L_Joint": 0.0012581960844341255,
+    "proximal_pitch_R_Joint": 0.001187624075209226,
+    "proximal_roll_R_Joint": 0.0023584038008875306,
+    "proximal_yaw_R_Joint": 0.0012995246068600763,
+    "elbow_R_Joint": 0.0006725532985631405,
+    "wrist_yaw_R_Joint": 0.0008759010694262237,
+    "wrist_pitch_R_Joint": 0.001945668960806357,
+    "wrist_roll_R_Joint": 0.0011616304553474016,
+    "head_yaw_Joint": 0.0,
+    "head_pitch_Joint": 0.00012372200214256083,
+    "l_thumb_cmc_flex": 0.0015883715958720634,
+    "l_thumb_cmc_abd": 0.003708735410505036,
+    "l_thumb_mcp": 0.008629199031672728,
+    "l_thumb_ip": 0.007616807476004633,
+    "l_index_finger_mcp_flex": 0.010681101709774607,
+    "l_index_finger_mcp_abd": 0.001256733897982302,
+    "l_index_finger_pip": 0.028189628915468383,
+    "l_index_finger_dip": 0.016716462422869546,
+    "l_middle_finger_mcp_flex": 0.008322932984056628,
+    "l_middle_finger_mcp_abd": 0.001416113503767561,
+    "l_middle_finger_pip": 0.019344728573457138,
+    "l_middle_finger_dip": 0.012910108436467482,
+    "l_ring_finger_mcp_flex": 0.007347200818925093,
+    "l_ring_finger_mcp_abd": 0.0018862029611948674,
+    "l_ring_finger_pip": 0.015469375505134617,
+    "l_ring_finger_dip": 0.01160269592840798,
+    "l_pinky_mcp_flex": 0.012597070183000419,
+    "l_pinky_mcp_abd": 0.0024234220944109094,
+    "l_pinky_pip": 0.028342101710817663,
+    "l_pinky_dip": 0.017610785973367855,
+    "r_thumb_cmc_flex": 0.005688854687637605,
+    "r_thumb_cmc_abd": 0.005987439551747842,
+    "r_thumb_mcp": 0.011829589316726053,
+    "r_thumb_ip": 0.00826547390114686,
+    "r_index_finger_mcp_flex": 0.01571584936003202,
+    "r_index_finger_mcp_abd": 0.002105806895644684,
+    "r_index_finger_pip": 0.04158266413171164,
+    "r_index_finger_dip": 0.024385293724843844,
+    "r_middle_finger_mcp_flex": 0.01252022956059422,
+    "r_middle_finger_mcp_abd": 0.002845933760354706,
+    "r_middle_finger_pip": 0.03074967481393664,
+    "r_middle_finger_dip": 0.018739764388844057,
+    "r_ring_finger_mcp_flex": 0.011625026588387091,
+    "r_ring_finger_mcp_abd": 0.003137362921206902,
+    "r_ring_finger_pip": 0.02395920462619032,
+    "r_ring_finger_dip": 0.01461326877565503,
+    "r_pinky_mcp_flex": 0.01770427577098065,
+    "r_pinky_mcp_abd": 0.003943139663443427,
+    "r_pinky_pip": 0.03837690370229106,
+    "r_pinky_dip": 0.022988059557226305
+  },
+  "same_clock_target_semantics": "q_target is the provenance-bound reference C2 spline evaluated at the trace virtual source clock; reference original_source_time maps it to raw bag phase",
+  "max_isaac_joint_readback_error_rad": 2.6816510123595094e-10,
+  "preview_frame_transform_diagnostics": [
+    {
+      "frame_index": 0,
+      "virtual_source_time_s": 0.0,
+      "simulation_time_s": 0.0,
+      "joint_readback_error_rad": 0.0,
+      "frames": {
+        "/World/Robot/l_wrist": {
+          "pinocchio_world_position_m": [
+            0.32107294436772466,
+            0.13001927130602464,
+            0.01882021000050159
+          ],
+          "usd_world_position_m": [
+            0.3210729956626892,
+            0.13001908361911774,
+            0.018820054829120636
+          ],
+          "usd_vs_pinocchio_error_m": 2.488688527697873e-07
+        },
+        "/World/Robot/r_wrist": {
+          "pinocchio_world_position_m": [
+            0.2877720066575498,
+            -0.10138691875932708,
+            -0.03081295000402684
+          ],
+          "usd_world_position_m": [
+            0.28777197003364563,
+            -0.10138683766126633,
+            -0.030813079327344894
+          ],
+          "usd_vs_pinocchio_error_m": 1.5698001913744225e-07
+        },
+        "/World/Robot/l_thumb_tip_sensor_frame": {
+          "pinocchio_world_position_m": [
+            0.30354332281738144,
+            0.05151988291723532,
+            0.05988200446138068
+          ],
+          "usd_world_position_m": [
+            0.3035433888435364,
+            0.051519691944122314,
+            0.059881869703531265
+          ],
+          "usd_vs_pinocchio_error_m": 2.4287828434068103e-07
+        },
+        "/World/Robot/l_index_finger_tip_sensor_frame": {
+          "pinocchio_world_position_m": [
+            0.31442595028872333,
+            0.036468445973226765,
+            0.133449909626319
+          ],
+          "usd_world_position_m": [
+            0.31442609429359436,
+            0.03646823763847351,
+            0.13344977796077728
+          ],
+          "usd_vs_pinocchio_error_m": 2.8544103974299136e-07
+        },
+        "/World/Robot/l_middle_finger_tip_sensor_frame": {
+          "pinocchio_world_position_m": [
+            0.33698891678548354,
+            0.031140876829248758,
+            0.12825459502561423
+          ],
+          "usd_world_position_m": [
+            0.33698901534080505,
+            0.031140660867094994,
+            0.12825444340705872
+          ],
+          "usd_vs_pinocchio_error_m": 2.8167532663370326e-07
+        },
+        "/World/Robot/l_ring_finger_tip_sensor_frame": {
+          "pinocchio_world_position_m": [
+            0.3378050762264963,
+            0.025837966823943764,
+            0.06817901430112003
+          ],
+          "usd_world_position_m": [
+            0.3378050923347473,
+            0.02583775296807289,
+            0.06817884743213654
+          ],
+          "usd_vs_pinocchio_error_m": 2.717334482709478e-07
+        },
+        "/World/Robot/l_pinky_tip_sensor_frame": {
+          "pinocchio_world_position_m": [
+            0.3585969228105503,
+            0.03509625072226731,
+            0.06868415842830762
+          ],
+          "usd_world_position_m": [
+            0.3585970103740692,
+            0.035096026957035065,
+            0.06868397444486618
+          ],
+          "usd_vs_pinocchio_error_m": 3.026353510989513e-07
+        },
+        "/World/Robot/r_thumb_tip_sensor_frame": {
+          "pinocchio_world_position_m": [
+            0.30007941199714916,
+            -0.030903571814720796,
+            0.028066454652752468
+          ],
+          "usd_world_position_m": [
+            0.3000793159008026,
+            -0.03090345859527588,
+            0.028066325932741165
+          ],
+          "usd_vs_pinocchio_error_m": 1.96524786825005e-07
+        },
+        "/World/Robot/r_index_finger_tip_sensor_frame": {
+          "pinocchio_world_position_m": [
+            0.3105939601323686,
+            -0.019969653474367195,
+            0.09009323610125775
+          ],
+          "usd_world_position_m": [
+            0.310593843460083,
+            -0.01996951550245285,
+            0.09009314328432083
+          ],
+          "usd_vs_pinocchio_error_m": 2.0313457400376833e-07
+        },
+        "/World/Robot/r_middle_finger_tip_sensor_frame": {
+          "pinocchio_world_position_m": [
+            0.33350498857783584,
+            -0.02010121395020573,
+            0.08187616038859835
+          ],
+          "usd_world_position_m": [
+            0.33350494503974915,
+            -0.020101066678762436,
+            0.08187604695558548
+          ],
+          "usd_vs_pinocchio_error_m": 1.9092273675950564e-07
+        },
+        "/World/Robot/r_ring_finger_tip_sensor_frame": {
+          "pinocchio_world_position_m": [
+            0.3345265102467872,
+            -0.010857584134872523,
+            0.02825373530565571
+          ],
+          "usd_world_position_m": [
+            0.3345264196395874,
+            -0.01085744984447956,
+            0.02825361303985119
+          ],
+          "usd_vs_pinocchio_error_m": 2.0295935862323524e-07
+        },
+        "/World/Robot/r_pinky_tip_sensor_frame": {
+          "pinocchio_world_position_m": [
+            0.3477368511589056,
+            -0.02219780587210174,
+            0.01382795000406003
+          ],
+          "usd_world_position_m": [
+            0.34773680567741394,
+            -0.022197701036930084,
+            0.013827833347022533
+          ],
+          "usd_vs_pinocchio_error_m": 1.6330292005737395e-07
+        }
+      }
+    },
+    {
+      "frame_index": 2068,
+      "virtual_source_time_s": 172.33333333333334,
+      "simulation_time_s": 34.46666666666667,
+      "joint_readback_error_rad": 7.275585689470176e-11,
+      "frames": {
+        "/World/Robot/l_wrist": {
+          "pinocchio_world_position_m": [
+            0.28044703409474836,
+            0.1855222696421035,
+            0.07021831031761275
+          ],
+          "usd_world_position_m": [
+            0.2804471552371979,
+            0.18552210927009583,
+            0.07021816819906235
+          ],
+          "usd_vs_pinocchio_error_m": 2.461551467833984e-07
+        },
+        "/World/Robot/r_wrist": {
+          "pinocchio_world_position_m": [
+            0.2948768283941524,
+            -0.17153497978316004,
+            0.04722156167930398
+          ],
+          "usd_world_position_m": [
+            0.2948768138885498,
+            -0.17153498530387878,
+            0.047221578657627106
+          ],
+          "usd_vs_pinocchio_error_m": 2.3003354070909417e-08
+        },
+        "/World/Robot/l_thumb_tip_sensor_frame": {
+          "pinocchio_world_position_m": [
+            0.2817443155604521,
+            0.09848775662431859,
+            0.10936392631780562
+          ],
+          "usd_world_position_m": [
+            0.28174442052841187,
+            0.09848761558532715,
+            0.10936382412910461
+          ],
+          "usd_vs_pinocchio_error_m": 2.0335387947581588e-07
+        },
+        "/World/Robot/l_index_finger_tip_sensor_frame": {
+          "pinocchio_world_position_m": [
+            0.290919633656415,
+            0.07833196150894886,
+            0.16982188019637123
+          ],
+          "usd_world_position_m": [
+            0.29091981053352356,
+            0.07833179831504822,
+            0.16982179880142212
+          ],
+          "usd_vs_pinocchio_error_m": 2.5405294425521686e-07
+        },
+        "/World/Robot/l_middle_finger_tip_sensor_frame": {
+          "pinocchio_world_position_m": [
+            0.3128382657130284,
+            0.07799596348703305,
+            0.13488617025177765
+          ],
+          "usd_world_position_m": [
+            0.3128384053707123,
+            0.07799579948186874,
+            0.13488604128360748
+          ],
+          "usd_vs_pinocchio_error_m": 2.5106722506017606e-07
+        },
+        "/World/Robot/l_ring_finger_tip_sensor_frame": {
+          "pinocchio_world_position_m": [
+            0.3342632056913094,
+            0.08628843769513725,
+            0.13426241287579993
+          ],
+          "usd_world_position_m": [
+            0.3342633843421936,
+            0.08628825843334198,
+            0.13426227867603302
+          ],
+          "usd_vs_pinocchio_error_m": 2.864620517734363e-07
+        },
+        "/World/Robot/l_pinky_tip_sensor_frame": {
+          "pinocchio_world_position_m": [
+            0.36342948596404157,
+            0.11425414339160413,
+            0.154698634802872
+          ],
+          "usd_world_position_m": [
+            0.3634296953678131,
+            0.11425397545099258,
+            0.1546984612941742
+          ],
+          "usd_vs_pinocchio_error_m": 3.1962361732849154e-07
+        },
+        "/World/Robot/r_thumb_tip_sensor_frame": {
+          "pinocchio_world_position_m": [
+            0.31552833150159776,
+            -0.10020137407750995,
+            0.10584306028284454
+          ],
+          "usd_world_position_m": [
+            0.3155282735824585,
+            -0.10020138323307037,
+            0.10584311187267303
+          ],
+          "usd_vs_pinocchio_error_m": 7.810224954130012e-08
+        },
+        "/World/Robot/r_index_finger_tip_sensor_frame": {
+          "pinocchio_world_position_m": [
+            0.3320437371537736,
+            -0.10626752107686815,
+            0.17265929817168718
+          ],
+          "usd_world_position_m": [
+            0.33204370737075806,
+            -0.106267549097538,
+            0.17265938222408295
+          ],
+          "usd_vs_pinocchio_error_m": 9.347187377875691e-08
+        },
+        "/World/Robot/r_middle_finger_tip_sensor_frame": {
+          "pinocchio_world_position_m": [
+            0.3469008589604923,
+            -0.0899070393954333,
+            0.13235972413830552
+          ],
+          "usd_world_position_m": [
+            0.3469008207321167,
+            -0.08990702033042908,
+            0.13235978782176971
+          ],
+          "usd_vs_pinocchio_error_m": 7.668420109435647e-08
+        },
+        "/World/Robot/r_ring_finger_tip_sensor_frame": {
+          "pinocchio_world_position_m": [
+            0.3588863606036402,
+            -0.08936798083850322,
+            0.11630106050960531
+          ],
+          "usd_world_position_m": [
+            0.35888633131980896,
+            -0.08936795592308044,
+            0.11630112677812576
+          ],
+          "usd_vs_pinocchio_error_m": 7.661486714354041e-08
+        },
+        "/World/Robot/r_pinky_tip_sensor_frame": {
+          "pinocchio_world_position_m": [
+            0.38637416689253007,
+            -0.11267226098441986,
+            0.12215138734418846
+          ],
+          "usd_world_position_m": [
+            0.38637417554855347,
+            -0.11267226934432983,
+            0.1221514567732811
+          ],
+          "usd_vs_pinocchio_error_m": 7.046427279744546e-08
+        }
+      }
+    },
+    {
+      "frame_index": 4136,
+      "virtual_source_time_s": 344.7176936758919,
+      "simulation_time_s": 68.94353873517838,
+      "joint_readback_error_rad": 0.0,
+      "frames": {
+        "/World/Robot/l_wrist": {
+          "pinocchio_world_position_m": [
+            0.2917070375073707,
+            0.17778997518733627,
+            0.0014405669316667757
+          ],
+          "usd_world_position_m": [
+            0.2917071282863617,
+            0.17778989672660828,
+            0.0014405660331249237
+          ],
+          "usd_vs_pinocchio_error_m": 1.199904930432997e-07
+        },
+        "/World/Robot/r_wrist": {
+          "pinocchio_world_position_m": [
+            0.2962047430869614,
+            -0.09904874967118495,
+            -0.008927428709234547
+          ],
+          "usd_world_position_m": [
+            0.29620474576950073,
+            -0.09904880076646805,
+            -0.008927473798394203
+          ],
+          "usd_vs_pinocchio_error_m": 6.81979199912513e-08
+        },
+        "/World/Robot/l_thumb_tip_sensor_frame": {
+          "pinocchio_world_position_m": [
+            0.270837989859764,
+            0.11154425323717021,
+            0.07379340638785879
+          ],
+          "usd_world_position_m": [
+            0.27083808183670044,
+            0.11154422163963318,
+            0.0737934559583664
+          ],
+          "usd_vs_pinocchio_error_m": 1.0915766766537834e-07
+        },
+        "/World/Robot/l_index_finger_tip_sensor_frame": {
+          "pinocchio_world_position_m": [
+            0.30543648166231485,
+            0.10307975016835115,
+            0.052322785982374484
+          ],
+          "usd_world_position_m": [
+            0.30543655157089233,
+            0.10307967662811279,
+            0.05232281982898712
+          ],
+          "usd_vs_pinocchio_error_m": 1.0696246561436489e-07
+        },
+        "/World/Robot/l_middle_finger_tip_sensor_frame": {
+          "pinocchio_world_position_m": [
+            0.3228796596019055,
+            0.10742910370092927,
+            0.04959172557148217
+          ],
+          "usd_world_position_m": [
+            0.32287973165512085,
+            0.10742903500795364,
+            0.049591753631830215
+          ],
+          "usd_vs_pinocchio_error_m": 1.0343004337990006e-07
+        },
+        "/World/Robot/l_ring_finger_tip_sensor_frame": {
+          "pinocchio_world_position_m": [
+            0.34417500983366395,
+            0.10255981745531254,
+            0.04673319072243671
+          ],
+          "usd_world_position_m": [
+            0.3441751301288605,
+            0.10255974531173706,
+            0.046733222901821136
+          ],
+          "usd_vs_pinocchio_error_m": 1.4391366360328537e-07
+        },
+        "/World/Robot/l_pinky_tip_sensor_frame": {
+          "pinocchio_world_position_m": [
+            0.38168505575064715,
+            0.11436763817981871,
+            0.08221061318894585
+          ],
+          "usd_world_position_m": [
+            0.38168516755104065,
+            0.11436755955219269,
+            0.08221061527729034
+          ],
+          "usd_vs_pinocchio_error_m": 1.366967181131244e-07
+        },
+        "/World/Robot/r_thumb_tip_sensor_frame": {
+          "pinocchio_world_position_m": [
+            0.28423146472546906,
+            -0.04403757982570271,
+            0.07510812029844186
+          ],
+          "usd_world_position_m": [
+            0.28423139452934265,
+            -0.04403764382004738,
+            0.07510807365179062
+          ],
+          "usd_vs_pinocchio_error_m": 1.0582382711164898e-07
+        },
+        "/World/Robot/r_index_finger_tip_sensor_frame": {
+          "pinocchio_world_position_m": [
+            0.3102672496708385,
+            -0.031364257782562265,
+            0.054715821449489915
+          ],
+          "usd_world_position_m": [
+            0.31026726961135864,
+            -0.031364332884550095,
+            0.054715801030397415
+          ],
+          "usd_vs_pinocchio_error_m": 8.03422196442981e-08
+        },
+        "/World/Robot/r_middle_finger_tip_sensor_frame": {
+          "pinocchio_world_position_m": [
+            0.3262667217200307,
+            -0.03311930343598973,
+            0.0433586287071103
+          ],
+          "usd_world_position_m": [
+            0.32626670598983765,
+            -0.03311936557292938,
+            0.04335860535502434
+          ],
+          "usd_vs_pinocchio_error_m": 6.82184590899157e-08
+        },
+        "/World/Robot/r_ring_finger_tip_sensor_frame": {
+          "pinocchio_world_position_m": [
+            0.3427823942808258,
+            -0.024080377048883054,
+            0.03495536356965662
+          ],
+          "usd_world_position_m": [
+            0.3427824378013611,
+            -0.024080447852611542,
+            0.03495535999536514
+          ],
+          "usd_vs_pinocchio_error_m": 8.318642027976276e-08
+        },
+        "/World/Robot/r_pinky_tip_sensor_frame": {
+          "pinocchio_world_position_m": [
+            0.3835237964233579,
+            -0.035555362435756716,
+            0.06846860576186792
+          ],
+          "usd_world_position_m": [
+            0.3835238218307495,
+            -0.03555544838309288,
+            0.06846863031387329
+          ],
+          "usd_vs_pinocchio_error_m": 9.292621326276442e-08
+        }
+      }
+    }
+  ],
+  "physics_stepped_during_capture": false,
+  "capture_source": "saved q_actual from 480 Hz Isaac PhysX replay; states rendered at fixed FPS",
+  "boundary": "Reference-only captures contain no physics trace and are kinematic target visualization. Actual-state captures use saved PhysX q_actual; neither render independently certifies collision acceptance.",
+  "replay_timing_profile": "overall5/shared_nonuniform_time_map",
+  "capture_source_generated_by_script": "saved q_actual from 240 Hz Isaac PhysX replay; states rendered at fixed FPS",
+  "capture_physics_hz": 480,
+  "capture_source_metadata_correction": {
+    "reason": "The frozen renderer had a legacy 240 Hz literal in its capture_source description; the bound physics report confirms this v9 trace was generated at 480 Hz.",
+    "authority_report": "/home/sustech/\u6587\u6863/ChatGPT_artifacts/tron2_wuji_20261028_5x_restore/NEW/runtime/actual_contact_margin_167_v9_arm20k_480hz_handvel094/report.json",
+    "authority_report_sha256": "bd7e2c7070daa9aa44b56e92a4646af1947385187f6482d8411ee9cfa988ec21",
+    "producer_sha256_unchanged": "3dbba22ca817664e4ccfa39fdb32b4afc63d37b641ac8ce1d340d401b2753d1f"
+  }
+}

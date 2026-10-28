@@ -1,14 +1,13 @@
 {
   "repository": "zengxiong111/tron2-wuji-bag-replay",
-  "tag": "v1.2.0",
+  "tag": "bag-20261027-5x-validated-20261028",
+  "artifact_id": "20261027-bag-5x-restored-thumb-v9",
   "assets": [
     {
-      "name": "robot-assets.tar.gz",
-      "sha256": "390d7760609d0afb7841c8d8d64b41c4a172b68f617c10a4f17ea60adcade9e4",
-      "size_bytes": 68635683,
+      "name": "robot-assets-20261027-5x.tar.gz",
+      "size_bytes": 44261499,
+      "sha256": "0ffb2090f12ed4054c207bde089af516dbf976e8b6909b7d94231f61002223e0",
       "files": {
-        "assets/adapter/tron2-12070101-\u821e\u808c\u624b\u8f6c\u63a5\u4ef6.stp": "89c44ac876415470e10b0176e6e195412fbd98d8ba185331b6d9929e4b98999c",
-        "assets/adapter/tron2_wuji_adapter.stl": "c3501998c28cd36ab0c66fe3f1ed65c96c342d7c3049817f6f4498b7a7df66b6",
         "assets/tron2-robot-description/tron2a/DACH_TRON2A/meshes/base_2_Link.STL": "0949b4cc8fe9908e42cadbd700b20248b813e216e37c36b4c5ed3c05f2132659",
         "assets/tron2-robot-description/tron2a/DACH_TRON2A/meshes/base_3_Link.STL": "e97bbbb149445b4ce2a7df2589b53ac03045c0386e64590eb2efc5d3524c2fce",
         "assets/tron2-robot-description/tron2a/DACH_TRON2A/meshes/base_Link.STL": "25b6fc44a8455e116c24ca636628f648426c26ad9b2903d10719ca387f999abc",
@@ -87,38 +86,34 @@
         "assets/wuji-description/hand2/hand2_beta2/body/meshes/right/r_thumb_proximal_abd.STL": "d9e28b15b054ede554f23524c32f430fefa3622eb9fa10016c39fec10a2638e8",
         "assets/wuji-description/hand2/hand2_beta2/body/meshes/right/r_thumb_tip_sensor_frame.STL": "7a94ebdd1c50ec5b62e73abd51848fe15589d9eb07e2fa3b1eab6567e5f08c12",
         "assets/wuji-description/hand2/hand2_beta2/body/meshes/right/r_wrist.STL": "748cf6a16bc5bfedf9c7e2ee489459f726740680db1449221133be570f9ee505",
+        "assets/adapter/tron2_wuji_adapter.stl": "c3501998c28cd36ab0c66fe3f1ed65c96c342d7c3049817f6f4498b7a7df66b6",
         "outputs/robot/robot_collision_fixed.usd": "0526b9a8f358a0ae2b9e55ead21467282c619973fa6b36bc2b33175b7eefed84",
         "outputs/robot/tron2_wuji_hand2.urdf": "684a9f18203bb2c8792cb701fd59bfe5e0b0c77ddc816367794e1b4ad4d960fb",
-        "outputs/robot/tron2_wuji_hand2.usd": "33747dc8b5bcf796ea104fc1cc9522298e60f260c92c6ed6cf51d859fa66c486"
-      },
-      "tag": "v1.1.0"
+        "licenses/tron2-robot-description.LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "licenses/tron2-robot-description.NOTICE": "fa088ffa82ada2b29f93aadbc79c92f2097af5f0c3bff19e99ea87619d7dda60",
+        "licenses/wuji-description.LICENSE": "38b27e3155e0c1c8d6f3e909e7a00359a302085dfd9ae963b52a91cbbe25afa3",
+        "outputs/robot/model_changes.json": "e468832a881da42e0329cc3e1379fc91b6f43bf6e8c869d74ff9b83368e61eda",
+        "outputs/robot/asset_binding.json": "ff51a0b401feadf9b0562636cda63460c213b2e2880e511fc8600ca7987fbff8",
+        "assets/wuji-description/hand2/hand2_beta2/body/mjcf/left_with_mount.xml": "903d80d3fa00ff78efa7f7684cedb768b0a1b960db9f68fdb1d28c03eee3ba22",
+        "assets/wuji-description/hand2/hand2_beta2/body/mjcf/right_with_mount.xml": "9bce131e7cf7147b2fdf822cf762ac6ed7a313c449e65c7ff0db3120a617254a"
+      }
     },
     {
-      "name": "trajectory-data.tar.gz",
-      "sha256": "f37258a2b73dadaf48492b6fe0c96fccfca2a80d6d04ef0cce1a1a60ef0da92f",
-      "size_bytes": 7035426,
+      "name": "trajectory-data-20261027-5x.tar.gz",
+      "size_bytes": 197993276,
+      "sha256": "a00ba6bacb1e7307723c6a7301356b98389f1950bfb4ad5d29b2849910beacd5",
       "files": {
-        "trajectories/retimed_actual_4x.npz": "23b555d6a4bf6df33fa4da4e5905a10f9fe375f6447784edd44079e412bdfcd1"
+        "trajectories/actual_5x.npz": "26d5bfec6669c33ec123c172134f7c53de2fa42c131f0429cf6182ea4909b805",
+        "trajectories/execution_5x.npz": "a2c1cfbebbff9bf39cb149469fd3b45fdc637fc5f55980587f0e6f4be634d1d7",
+        "trajectories/raw_feedback.npz": "e3add39de3eb21ab6f8880f9788be0e2486e7833655a8c33cfda6971b00daa23",
+        "trajectories/reference_5x.npz": "2061bd3639f0c632f8344caf8ac57964f7c21892d326449e8a479bd12a97146a"
       }
     }
   ],
-  "previous_files": {},
-  "retired_files": {
-    "evidence/collision_repaired/validation/tracking.npz": "f4389730da594a20130bc2921f122380b51c4e89d27ece5ceb9307f40f18c94b",
-    "evidence/smooth/validation/tracking.npz": "b30ed7d95aee31c953ea399e547ca260e6cc6c00acd43cc46436824b77330666",
-    "trajectories/accelerated_5x.npz": "16ed96bc4e742acdf21155e12b9d7ef4c86e6256913eedd5067ee4516661d72d",
-    "trajectories/head_forward_5x.npz": "40572370bb6506b28c4db6b0856ad849d2d6f91bf3b92ada0e1c3ce64c33c5c2",
-    "trajectories/repaired_5x.npz": "81fe1d098124f50334f4f555cb06355cce131f532948e01ced2deb870b1aa8dc",
-    "trajectories/repaired_source.npz": "f0300020e4dc23165578a84c70998911ac32c4f805b7c08a2181c2965db67fb2",
-    "media/head_forward_full_5x.mp4": "92d45ad013eb127b5fcbb05a5516f5c09877ede0ab0f74001f15daecffaa7685",
-    "data/2026-10-08-17-54-13.bag": "2af6c090b36e26231aff0b2b102768c7224044cd260b8bc07486aa4167fe55bd",
-    "evidence/comparison/reference.npz": "2bc1c11bfdce4a6cd333a903f2c27ff838a19d036624e91b4703a53abb282d44",
-    "evidence/comparison/tracking.npz": "c32d5797d02dae340d94275bac06ccb6bb5e00029c9d52d9299ce19fc864210d",
-    "evidence/final/audit/checked_samples.npz": "62fd09ca42ef198c774d9c61ded2fe2474ef28e97771e39d3c72477faa84c41a",
-    "evidence/final/target_audit/checked_samples.npz": "8af44d8b459d3b0151bab4a2dcc6d3670adcf046fc284bf24e48f37fd8ca1ed9",
-    "evidence/final/validation/tracking.npz": "d7a1af76a43508be2810868adb6a45cbc3cbf7e57d5e69ea687d0940805a8d03",
-    "trajectories/head_forward_4x.npz": "84eaf146901e0583a6cf9b1e4f2afdf65b2ac53a431bae800cf883009ee854b2",
-    "trajectories/head_forward_source.npz": "f070b4dcfa886e9b584ade88953b4ecfe74df2b353a30150d8e5cba1d58a883c",
-    "trajectories/original.npz": "0527c09a35d1cea23a20c6a0497154365a8c869aa5095076f4efd45b06b065b1"
+  "video": {
+    "name": "actual_replay_5x.mp4",
+    "size_bytes": 26149744,
+    "sha256": "921cabaced6849dab2a52a22d967a1604bc1e86dcb9bc6e7f23f6f03c96c64c6",
+    "url": "https://github.com/zengxiong111/tron2-wuji-bag-replay/releases/download/bag-20261027-5x-validated-20261028/actual_replay_5x.mp4"
   }
 }

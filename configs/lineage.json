@@ -1,0 +1,106 @@
+{
+  "artifact_id": "20261027-bag-5x-restored-thumb-v9",
+  "acceptance": {
+    "artifact_id": "20261027-bag-5x-restored-thumb-v9",
+    "canonical_source_sha256": "2b3f670ebc45de276d1c5729028bbf8f6d4d58119ae68d1a826a0039f160ac8d",
+    "source": {
+      "path": "evidence/imported/acceptance_155.json",
+      "sha256": "2b3f670ebc45de276d1c5729028bbf8f6d4d58119ae68d1a826a0039f160ac8d"
+    },
+    "installed": {
+      "path": "evidence/imported/acceptance_155.json",
+      "sha256": "2b3f670ebc45de276d1c5729028bbf8f6d4d58119ae68d1a826a0039f160ac8d"
+    },
+    "report": {
+      "path": "evidence/imported/acceptance_155.json",
+      "sha256": "2b3f670ebc45de276d1c5729028bbf8f6d4d58119ae68d1a826a0039f160ac8d"
+    },
+    "binding_sources": {
+      "reference": "/home/sustech/文档/ChatGPT_artifacts/tron2_wuji_20261028_5x_restore/toppra_actual_contact_margin_167_v9_v97/reference.npz",
+      "actual": "/home/sustech/文档/ChatGPT_artifacts/tron2_wuji_20261028_5x_restore/NEW/runtime/actual_contact_margin_167_v9_arm20k_480hz_handvel094/tracking_actual.npz",
+      "raw_feedback": "/home/sustech/文档/ChatGPT_artifacts/tron2_wuji_20261027_6x/source/feedback_30hz.npz",
+      "urdf": "/home/sustech/文档/ChatGPT/tron2_wuji/outputs/robot/tron2_wuji_hand2.urdf",
+      "usd": "/home/sustech/文档/ChatGPT/tron2_wuji/outputs/bag_feedback_20261008_adapter/physics_motion5x_collision_fixed/robot_collision_fixed.usd"
+    }
+  },
+  "source_to_installed_binding": {
+    "reference": {
+      "source_sha256": "2061bd3639f0c632f8344caf8ac57964f7c21892d326449e8a479bd12a97146a",
+      "installed_sha256": "2061bd3639f0c632f8344caf8ac57964f7c21892d326449e8a479bd12a97146a",
+      "transformation": "byte_preserved"
+    },
+    "execution": {
+      "source_sha256": "a2c1cfbebbff9bf39cb149469fd3b45fdc637fc5f55980587f0e6f4be634d1d7",
+      "installed_sha256": "a2c1cfbebbff9bf39cb149469fd3b45fdc637fc5f55980587f0e6f4be634d1d7",
+      "transformation": "byte_preserved"
+    },
+    "actual": {
+      "source_sha256": "26d5bfec6669c33ec123c172134f7c53de2fa42c131f0429cf6182ea4909b805",
+      "installed_sha256": "26d5bfec6669c33ec123c172134f7c53de2fa42c131f0429cf6182ea4909b805",
+      "transformation": "byte_preserved"
+    },
+    "raw_feedback": {
+      "source_sha256": "e3add39de3eb21ab6f8880f9788be0e2486e7833655a8c33cfda6971b00daa23",
+      "installed_sha256": "e3add39de3eb21ab6f8880f9788be0e2486e7833655a8c33cfda6971b00daa23",
+      "transformation": "byte_preserved"
+    },
+    "urdf": {
+      "source_sha256": "c7864b55f60bac854586c8e7bab730fff027455511a4ef6ccbfec97d85f0407d",
+      "installed_sha256": "684a9f18203bb2c8792cb701fd59bfe5e0b0c77ddc816367794e1b4ad4d960fb",
+      "transformation": "mesh_uri_normalization_only"
+    },
+    "usd": {
+      "source_sha256": "0526b9a8f358a0ae2b9e55ead21467282c619973fa6b36bc2b33175b7eefed84",
+      "installed_sha256": "0526b9a8f358a0ae2b9e55ead21467282c619973fa6b36bc2b33175b7eefed84",
+      "transformation": "byte_preserved"
+    }
+  },
+  "model_identity": {
+    "urdf_path_only_conversion": true,
+    "source_sha256": "c7864b55f60bac854586c8e7bab730fff027455511a4ef6ccbfec97d85f0407d",
+    "installed_sha256": "684a9f18203bb2c8792cb701fd59bfe5e0b0c77ddc816367794e1b4ad4d960fb",
+    "semantic_sha256": "b2a051abb39f8591a501a38ddce017a534d0e468119c75fbd94f23ba263e3ef8",
+    "upstream_commits": {
+      "tron2-robot-description": "f547f5bc949f2a4c98e076e61cf6d3ca73d179a0",
+      "wuji-description": "c2cd7f8d1ef8b6dc8cb907c17daa5a88b4442d95"
+    }
+  },
+  "runtime_bindings": {
+    "reference": "2061bd3639f0c632f8344caf8ac57964f7c21892d326449e8a479bd12a97146a",
+    "execution": "a2c1cfbebbff9bf39cb149469fd3b45fdc637fc5f55980587f0e6f4be634d1d7",
+    "actual": "26d5bfec6669c33ec123c172134f7c53de2fa42c131f0429cf6182ea4909b805",
+    "raw_feedback": "e3add39de3eb21ab6f8880f9788be0e2486e7833655a8c33cfda6971b00daa23",
+    "urdf": "684a9f18203bb2c8792cb701fd59bfe5e0b0c77ddc816367794e1b4ad4d960fb",
+    "usd": "0526b9a8f358a0ae2b9e55ead21467282c619973fa6b36bc2b33175b7eefed84",
+    "provenance": "0c3c093631af50e379fd1f1692b4780839c16542be65530852681fd43f237d4c",
+    "retiming_manifest": "598d6bb7fd7aaf7c3f814c8c396b4f820b6666defd905eaa3bc21f4e98f31892"
+  },
+  "physics_report": {
+    "path": "evidence/imported/physics_report.json",
+    "sha256": "bd7e2c7070daa9aa44b56e92a4646af1947385187f6482d8411ee9cfa988ec21"
+  },
+  "runtime_files": {
+    "scripts/download_assets.py": "416a37f176067c5704b2cf33a27cb5b9fa54b65c1297fd77416233b30854e067",
+    "scripts/portable_fresh_physics.py": "06896fb4d2c4c6b77b7a39e570535e908208cfba32a185b8107f47daa377f1bf",
+    "scripts/portable_physx_replay.py": "b3878acc9ae03cd06dc2aca1650e8d9558fffe35382f047ad915219aea1d53f2",
+    "scripts/replay.py": "7fd00a796957717709134ad09502fb36e0c5c229f60fbb1c1c782c92e69ad3d2",
+    "scripts/replay_recorded_path.py": "0906b7f7ce219c1f2747568ef5296063313e356d9b129750d1f627dd73b6f85d",
+    "scripts/verify_bundle.py": "a62b4896304e320163b7ebad1d02c551c869c0c247b927e121bf39e8bf6d8f4e",
+    "scripts/wuji_collision_policy.py": "8eaae36c2d788308ac97af934576c35833a81ac0931eb24e558b6a3930a23790",
+    "metadata/runtime_provenance.json": "0c3c093631af50e379fd1f1692b4780839c16542be65530852681fd43f237d4c",
+    "metadata/runtime_retiming_manifest.json": "598d6bb7fd7aaf7c3f814c8c396b4f820b6666defd905eaa3bc21f4e98f31892",
+    "configs/trajectory.json": "f9458079bfa5d02445c6776d9067d29cfbcd334a7354bc58c74a72ba9d65a222"
+  },
+  "imported_evidence": {
+    "evidence/imported/acceptance_155.json": "2b3f670ebc45de276d1c5729028bbf8f6d4d58119ae68d1a826a0039f160ac8d",
+    "evidence/imported/actual_mesh_133.json": "30563611e34c431569b79804d042bdcb3a3bf41f6e70c8e347c5520a6e32d424",
+    "evidence/imported/contacts_per_physics_step.json": "fbf1a6dd75f6faedb2ccd970510e8ca5bb5420298f97509d5363b0a1854596c5",
+    "evidence/imported/physics_report.json": "bd7e2c7070daa9aa44b56e92a4646af1947385187f6482d8411ee9cfa988ec21",
+    "evidence/imported/provenance.json": "d74843adc867f2b17798706502fb1d4b1897f7f3140189bdcd5ca3567929fa74",
+    "evidence/imported/recording.json": "bb9d416d0f8c0ce6efbe13cde2589187f85aeb2904eb586630335a9e3bd94f94",
+    "evidence/imported/retiming_manifest.json": "58c08b5c3382abc093343bb6e73877a2febd6eec105eeafbc39dfe599809529b",
+    "evidence/imported/retiming_report.json": "59af8ed5362b851d3f25b51403ec57f067fb10e90f89b19936aa001fa2e2f45e",
+    "evidence/imported/source_c2_162.json": "799d0966daeaf75c447ceeb27c0b33a7e03489dd8b00622f20aea27e6e4c0e6f",
+    "evidence/imported/target_c2_162.json": "3af8fa0dfacff2b678c8f743daba4fe2e0de01c5350493cf51935ad131f0f913"
+  }
+}

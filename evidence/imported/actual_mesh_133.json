@@ -1,71 +1,205 @@
 {
-  "assembly_policy": null,
-  "assembly_policy_sha256": null,
-  "usd_sha256": "33747dc8b5bcf796ea104fc1cc9522298e60f260c92c6ed6cf51d859fa66c486",
-  "urdf_sha256": "684a9f18203bb2c8792cb701fd59bfe5e0b0c77ddc816367794e1b4ad4d960fb",
-  "robot_collision_geometry_count": 75,
-  "coverage": {
-    "urdf_link_count": 89,
-    "urdf_links_without_collision": [
-      "base_imu",
-      "d435_Link",
-      "d435_optical_frame",
-      "head_base_Link",
-      "l_index_finger_tip",
-      "l_middle_finger_tip",
-      "l_pinky_tip",
-      "l_ring_finger_tip",
-      "l_thumb_tip",
-      "r_index_finger_tip",
-      "r_middle_finger_tip",
-      "r_pinky_tip",
-      "r_ring_finger_tip",
-      "r_thumb_tip"
+  "official_wuji_assembly_policy": {
+    "enabled": true,
+    "model": "Wuji hand2_beta2 with_mount",
+    "body_pairs": [
+      [
+        "l_index_finger_proximal",
+        "l_wrist"
+      ],
+      [
+        "l_index_finger_proximal_abd",
+        "l_wrist"
+      ],
+      [
+        "l_middle_finger_proximal",
+        "l_wrist"
+      ],
+      [
+        "l_middle_finger_proximal_abd",
+        "l_wrist"
+      ],
+      [
+        "l_pinky_proximal",
+        "l_wrist"
+      ],
+      [
+        "l_pinky_proximal_abd",
+        "l_wrist"
+      ],
+      [
+        "l_ring_finger_proximal",
+        "l_wrist"
+      ],
+      [
+        "l_ring_finger_proximal_abd",
+        "l_wrist"
+      ],
+      [
+        "l_thumb_proximal",
+        "l_wrist"
+      ],
+      [
+        "l_thumb_proximal_abd",
+        "l_wrist"
+      ],
+      [
+        "r_index_finger_proximal",
+        "r_wrist"
+      ],
+      [
+        "r_index_finger_proximal_abd",
+        "r_wrist"
+      ],
+      [
+        "r_middle_finger_proximal",
+        "r_wrist"
+      ],
+      [
+        "r_middle_finger_proximal_abd",
+        "r_wrist"
+      ],
+      [
+        "r_pinky_proximal",
+        "r_wrist"
+      ],
+      [
+        "r_pinky_proximal_abd",
+        "r_wrist"
+      ],
+      [
+        "r_ring_finger_proximal",
+        "r_wrist"
+      ],
+      [
+        "r_ring_finger_proximal_abd",
+        "r_wrist"
+      ],
+      [
+        "r_thumb_proximal",
+        "r_wrist"
+      ],
+      [
+        "r_thumb_proximal_abd",
+        "r_wrist"
+      ]
     ],
-    "urdf_links_without_collision_count": 14,
-    "pinocchio_collision_geometry_count": 75
-  },
-  "pairs": {
-    "robot": {
-      "included_pairs": 2642,
-      "excluded_pairs": 133
+    "official_pair_count": 20,
+    "source_sha256": {
+      "/home/sustech/\u6587\u6863/ChatGPT/tron2_wuji/assets/wuji-description/hand2/hand2_beta2/body/mjcf/left_with_mount.xml": "903d80d3fa00ff78efa7f7684cedb768b0a1b960db9f68fdb1d28c03eee3ba22",
+      "/home/sustech/\u6587\u6863/ChatGPT/tron2_wuji/assets/wuji-description/hand2/hand2_beta2/body/mjcf/right_with_mount.xml": "9bce131e7cf7147b2fdf822cf762ac6ed7a313c449e65c7ff0db3120a617254a",
+      "/home/sustech/\u6587\u6863/ChatGPT/tron2_wuji/assets/wuji-description/README.md": "63d4ec18255205c73cca9def466abfb4cc3291a0f05cfaf6cd3f5ec34e43de53"
     },
-    "table": 75,
-    "total": 2717
+    "expected_source_commit": "c2cd7f8d1ef8b6dc8cb907c17daa5a88b4442d95",
+    "semantics": "Official model-specific internal assembly-overlap exclusions; no cross-digit, distal/palm, cross-hand, arm or table pair is removed.",
+    "boundary": "Excluded assembly mesh intersections remain geometric overlaps and must not be described as zero all-mesh penetration.",
+    "additional_removed_pairs": [
+      {
+        "first": "l_wrist_0",
+        "second": "l_index_finger_proximal_abd_0",
+        "body_pair": [
+          "l_index_finger_proximal_abd",
+          "l_wrist"
+        ],
+        "reason": "official_wuji_beta2_assembly_overlap"
+      },
+      {
+        "first": "l_wrist_0",
+        "second": "l_middle_finger_proximal_abd_0",
+        "body_pair": [
+          "l_middle_finger_proximal_abd",
+          "l_wrist"
+        ],
+        "reason": "official_wuji_beta2_assembly_overlap"
+      },
+      {
+        "first": "l_wrist_0",
+        "second": "l_pinky_proximal_abd_0",
+        "body_pair": [
+          "l_pinky_proximal_abd",
+          "l_wrist"
+        ],
+        "reason": "official_wuji_beta2_assembly_overlap"
+      },
+      {
+        "first": "l_wrist_0",
+        "second": "l_ring_finger_proximal_abd_0",
+        "body_pair": [
+          "l_ring_finger_proximal_abd",
+          "l_wrist"
+        ],
+        "reason": "official_wuji_beta2_assembly_overlap"
+      },
+      {
+        "first": "l_wrist_0",
+        "second": "l_thumb_proximal_abd_0",
+        "body_pair": [
+          "l_thumb_proximal_abd",
+          "l_wrist"
+        ],
+        "reason": "official_wuji_beta2_assembly_overlap"
+      },
+      {
+        "first": "r_wrist_0",
+        "second": "r_index_finger_proximal_abd_0",
+        "body_pair": [
+          "r_index_finger_proximal_abd",
+          "r_wrist"
+        ],
+        "reason": "official_wuji_beta2_assembly_overlap"
+      },
+      {
+        "first": "r_wrist_0",
+        "second": "r_middle_finger_proximal_abd_0",
+        "body_pair": [
+          "r_middle_finger_proximal_abd",
+          "r_wrist"
+        ],
+        "reason": "official_wuji_beta2_assembly_overlap"
+      },
+      {
+        "first": "r_wrist_0",
+        "second": "r_pinky_proximal_abd_0",
+        "body_pair": [
+          "r_pinky_proximal_abd",
+          "r_wrist"
+        ],
+        "reason": "official_wuji_beta2_assembly_overlap"
+      },
+      {
+        "first": "r_wrist_0",
+        "second": "r_ring_finger_proximal_abd_0",
+        "body_pair": [
+          "r_ring_finger_proximal_abd",
+          "r_wrist"
+        ],
+        "reason": "official_wuji_beta2_assembly_overlap"
+      },
+      {
+        "first": "r_wrist_0",
+        "second": "r_thumb_proximal_abd_0",
+        "body_pair": [
+          "r_thumb_proximal_abd",
+          "r_wrist"
+        ],
+        "reason": "official_wuji_beta2_assembly_overlap"
+      }
+    ],
+    "additional_removed_pair_count": 10
   },
-  "table_center_m": [
-    0.8,
-    0,
-    -0.475
-  ],
-  "table_size_m": [
-    1.2,
-    1.6,
-    0.05
-  ],
-  "physical_base_above_table_m": 0.45,
-  "contact_samples_per_pair": 16,
-  "raw_depth_sign_test": {
-    "overlap_m": 0.5,
-    "raw_penetration_depth_m": -0.5,
-    "positive_depth_formula": "max(0, -raw_penetration_depth_m)"
+  "status": "no_collision_detected",
+  "input": "/home/sustech/\u6587\u6863/ChatGPT_artifacts/tron2_wuji_20261028_5x_restore/NEW/runtime/actual_contact_margin_167_v9_arm20k_480hz_handvel094/tracking_actual.npz",
+  "input_sha256": "26d5bfec6669c33ec123c172134f7c53de2fa42c131f0429cf6182ea4909b805",
+  "urdf": "/home/sustech/\u6587\u6863/ChatGPT/tron2_wuji/outputs/robot/tron2_wuji_hand2.urdf",
+  "urdf_sha256": "c7864b55f60bac854586c8e7bab730fff027455511a4ef6ccbfec97d85f0407d",
+  "geometry_count": 75,
+  "pair_summary": {
+    "included_pairs": 2632,
+    "excluded_pairs": 143,
+    "table_pairs": 75,
+    "total_pairs": 2707
   },
-  "usd_self_collision_enabled": [
-    false
-  ],
-  "usd_collider_meshes": [
-    {
-      "path": "/tron2_dach_wuji_hand2_beta2/l_adapter/adapter_geometry",
-      "enabled": true,
-      "approximation": "convexDecomposition"
-    },
-    {
-      "path": "/tron2_dach_wuji_hand2_beta2/r_adapter/adapter_geometry",
-      "enabled": true,
-      "approximation": "convexDecomposition"
-    }
-  ],
-  "exclusions": [
+  "excluded_pairs": [
     {
       "first": "base_Link_0",
       "second": "base_2_Link_0",
@@ -838,91 +972,152 @@
       "first": "r_thumb_distal_0",
       "second": "r_thumb_tip_sensor_frame_0",
       "reason": "same_rigid_joint"
+    },
+    {
+      "first": "l_wrist_0",
+      "second": "l_index_finger_proximal_abd_0",
+      "body_pair": [
+        "l_index_finger_proximal_abd",
+        "l_wrist"
+      ],
+      "reason": "official_wuji_beta2_assembly_overlap"
+    },
+    {
+      "first": "l_wrist_0",
+      "second": "l_middle_finger_proximal_abd_0",
+      "body_pair": [
+        "l_middle_finger_proximal_abd",
+        "l_wrist"
+      ],
+      "reason": "official_wuji_beta2_assembly_overlap"
+    },
+    {
+      "first": "l_wrist_0",
+      "second": "l_pinky_proximal_abd_0",
+      "body_pair": [
+        "l_pinky_proximal_abd",
+        "l_wrist"
+      ],
+      "reason": "official_wuji_beta2_assembly_overlap"
+    },
+    {
+      "first": "l_wrist_0",
+      "second": "l_ring_finger_proximal_abd_0",
+      "body_pair": [
+        "l_ring_finger_proximal_abd",
+        "l_wrist"
+      ],
+      "reason": "official_wuji_beta2_assembly_overlap"
+    },
+    {
+      "first": "l_wrist_0",
+      "second": "l_thumb_proximal_abd_0",
+      "body_pair": [
+        "l_thumb_proximal_abd",
+        "l_wrist"
+      ],
+      "reason": "official_wuji_beta2_assembly_overlap"
+    },
+    {
+      "first": "r_wrist_0",
+      "second": "r_index_finger_proximal_abd_0",
+      "body_pair": [
+        "r_index_finger_proximal_abd",
+        "r_wrist"
+      ],
+      "reason": "official_wuji_beta2_assembly_overlap"
+    },
+    {
+      "first": "r_wrist_0",
+      "second": "r_middle_finger_proximal_abd_0",
+      "body_pair": [
+        "r_middle_finger_proximal_abd",
+        "r_wrist"
+      ],
+      "reason": "official_wuji_beta2_assembly_overlap"
+    },
+    {
+      "first": "r_wrist_0",
+      "second": "r_pinky_proximal_abd_0",
+      "body_pair": [
+        "r_pinky_proximal_abd",
+        "r_wrist"
+      ],
+      "reason": "official_wuji_beta2_assembly_overlap"
+    },
+    {
+      "first": "r_wrist_0",
+      "second": "r_ring_finger_proximal_abd_0",
+      "body_pair": [
+        "r_ring_finger_proximal_abd",
+        "r_wrist"
+      ],
+      "reason": "official_wuji_beta2_assembly_overlap"
+    },
+    {
+      "first": "r_wrist_0",
+      "second": "r_thumb_proximal_abd_0",
+      "body_pair": [
+        "r_thumb_proximal_abd",
+        "r_wrist"
+      ],
+      "reason": "official_wuji_beta2_assembly_overlap"
     }
   ],
-  "boundary": "Discrete triangle-mesh intersection/contact-feature depth. Not exact solid clearance, PhysX convex collider equivalence, CCD or collision response. Adjacent joints and same-rigid meshes excluded; adapter seating assessed separately.",
-  "usd_parser_shapes": {
-    "CubeShape": [
-      "/tron2_dach_wuji_hand2_beta2/base_2_Link/collisions/mesh_0/box"
+  "table": {
+    "center_m": [
+      0.8,
+      0.0,
+      -0.475
     ],
-    "MeshShape": [
-      "/tron2_dach_wuji_hand2_beta2/l_adapter/adapter_geometry",
-      "/tron2_dach_wuji_hand2_beta2/r_adapter/adapter_geometry"
-    ]
+    "size_m": [
+      1.2,
+      1.6,
+      0.05
+    ],
+    "top_z_m": -0.45
   },
-  "usd_collision_api_non_gprim": [
-    "/tron2_dach_wuji_hand2_beta2/base_Link/collisions/base_Link/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/base_3_Link/collisions/base_3_Link/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/head_yaw_Link/collisions/head_yaw_Link/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/head_pitch_Link/collisions/head_pitch_Link/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/proximal_pitch_L_Link/collisions/proximal_pitch_L_Link/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/proximal_roll_L_Link/collisions/proximal_roll_L_Link/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/proximal_yaw_L_Link/collisions/proximal_yaw_L_Link_collision/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/elbow_L_Link/collisions/elbow_L_Link/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/wrist_yaw_L_Link/collisions/wrist_yaw_L_Link/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/wrist_pitch_L_Link/collisions/wrist_pitch_L_Link/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/wrist_roll_L_Link/collisions/wrist_roll_L_Link_collision/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/l_mount/collisions/l_mount/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/l_wrist/collisions/l_wrist/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/l_index_finger_proximal/collisions/l_index_finger_proximal/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/l_index_finger_proximal_abd/collisions/l_index_finger_proximal_abd/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/l_index_finger_middle/collisions/l_index_finger_middle/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/l_index_finger_distal/collisions/l_index_finger_distal/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/l_index_finger_tip_sensor_frame/collisions/l_index_finger_tip_sensor_frame/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/l_middle_finger_proximal/collisions/l_middle_finger_proximal/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/l_middle_finger_proximal_abd/collisions/l_middle_finger_proximal_abd/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/l_middle_finger_middle/collisions/l_middle_finger_middle/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/l_middle_finger_distal/collisions/l_middle_finger_distal/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/l_middle_finger_tip_sensor_frame/collisions/l_middle_finger_tip_sensor_frame/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/l_pinky_proximal/collisions/l_pinky_proximal/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/l_pinky_proximal_abd/collisions/l_pinky_proximal_abd/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/l_pinky_middle/collisions/l_pinky_middle/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/l_pinky_distal/collisions/l_pinky_distal/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/l_pinky_tip_sensor_frame/collisions/l_pinky_tip_sensor_frame/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/l_ring_finger_proximal/collisions/l_ring_finger_proximal/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/l_ring_finger_proximal_abd/collisions/l_ring_finger_proximal_abd/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/l_ring_finger_middle/collisions/l_ring_finger_middle/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/l_ring_finger_distal/collisions/l_ring_finger_distal/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/l_ring_finger_tip_sensor_frame/collisions/l_ring_finger_tip_sensor_frame/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/l_thumb_proximal/collisions/l_thumb_proximal/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/l_thumb_proximal_abd/collisions/l_thumb_proximal_abd/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/l_thumb_middle/collisions/l_thumb_middle/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/l_thumb_distal/collisions/l_thumb_distal/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/l_thumb_tip_sensor_frame/collisions/l_thumb_tip_sensor_frame/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/proximal_pitch_R_Link/collisions/proximal_pitch_R_Link/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/proximal_roll_R_Link/collisions/proximal_roll_R_Link/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/proximal_yaw_R_Link/collisions/proximal_yaw_R_Link_collision/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/elbow_R_Link/collisions/elbow_R_Link/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/wrist_yaw_R_Link/collisions/wrist_yaw_R_Link/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/wrist_pitch_R_Link/collisions/wrist_pitch_R_Link/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/wrist_roll_R_Link/collisions/wrist_roll_R_Link_collision/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/r_mount/collisions/r_mount/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/r_wrist/collisions/r_wrist/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/r_index_finger_proximal/collisions/r_index_finger_proximal/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/r_index_finger_proximal_abd/collisions/r_index_finger_proximal_abd/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/r_index_finger_middle/collisions/r_index_finger_middle/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/r_index_finger_distal/collisions/r_index_finger_distal/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/r_index_finger_tip_sensor_frame/collisions/r_index_finger_tip_sensor_frame/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/r_middle_finger_proximal/collisions/r_middle_finger_proximal/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/r_middle_finger_proximal_abd/collisions/r_middle_finger_proximal_abd/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/r_middle_finger_middle/collisions/r_middle_finger_middle/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/r_middle_finger_distal/collisions/r_middle_finger_distal/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/r_middle_finger_tip_sensor_frame/collisions/r_middle_finger_tip_sensor_frame/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/r_pinky_proximal/collisions/r_pinky_proximal/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/r_pinky_proximal_abd/collisions/r_pinky_proximal_abd/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/r_pinky_middle/collisions/r_pinky_middle/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/r_pinky_distal/collisions/r_pinky_distal/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/r_pinky_tip_sensor_frame/collisions/r_pinky_tip_sensor_frame/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/r_ring_finger_proximal/collisions/r_ring_finger_proximal/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/r_ring_finger_proximal_abd/collisions/r_ring_finger_proximal_abd/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/r_ring_finger_middle/collisions/r_ring_finger_middle/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/r_ring_finger_distal/collisions/r_ring_finger_distal/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/r_ring_finger_tip_sensor_frame/collisions/r_ring_finger_tip_sensor_frame/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/r_thumb_proximal/collisions/r_thumb_proximal/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/r_thumb_proximal_abd/collisions/r_thumb_proximal_abd/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/r_thumb_middle/collisions/r_thumb_middle/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/r_thumb_distal/collisions/r_thumb_distal/node_STL_BINARY_",
-    "/tron2_dach_wuji_hand2_beta2/r_thumb_tip_sensor_frame/collisions/r_thumb_tip_sensor_frame/node_STL_BINARY_"
+  "coal_depth_sign_test": {
+    "overlap_m": 0.5,
+    "raw_penetration_depth_m": -0.5,
+    "positive_depth_formula": "max(0, -raw_penetration_depth_m)"
+  },
+  "collision_policy": "Same rigid/direct-parent structural exclusions plus exactly the official Wuji beta2 assembly-overlap pairs; all other geometry pairs retained.",
+  "source_samples": 33094,
+  "dense_samples": 66187,
+  "dense_factor": 2,
+  "requested_grid_step_s": 0.004166666666666667,
+  "time_domain": "execution",
+  "source_grid_step_max_s": 0.020833333333333332,
+  "requested_motion_speed": 5.0,
+  "physical_base_to_table_m": 0.45,
+  "source_time_span_s": [
+    0.0,
+    68.94353873517838
   ],
-  "usd_parser_boundary": "OpenUSD core physics parser; separate from a PhysX runtime contact test. The original Xform CollisionAPI declarations are unrecognized shape types."
+  "dense_max_interval_s": 0.001041666666669272,
+  "all_collision_events": 0,
+  "samples_with_any_collision": 0,
+  "collision_events_path": "/home/sustech/\u6587\u6863/ChatGPT_artifacts/tron2_wuji_20261028_5x_restore/NEW/runtime/actual_contact_margin_167_v9_arm20k_480hz_handvel094/actual_allpairs_133_dense2/collision_events.jsonl",
+  "collision_events_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "samples_over_depth_tolerance": 0,
+  "depth_tolerance_mm": 0.1,
+  "maximum_reported_penetration_depth_mm": 0.0,
+  "collision_pairs_sorted": [],
+  "wrist_distance_m": {
+    "min": 0.2462645755243005,
+    "max": 0.5224391187055687,
+    "mean": 0.3744174418024069
+  },
+  "cross_hand_tip_min_distance_m": {
+    "min": 0.031498070304637166,
+    "max": 0.2594281574186076
+  },
+  "fixed_mounting_contract_m": 0.45,
+  "mounting_note": "Collision model coordinates are URDF-root relative. The task mounting contract fixes physical base 0.45 m above table; this audit does not infer a table placement from q.",
+  "elapsed_s": 102.96804642677307,
+  "limits": [
+    "URDF/Coal mesh contacts are discrete geometric evidence, not PhysX collider parity, CCD, contact force, or hardware safety.",
+    "A zero penetration depth with a collision event remains counted as a collision."
+  ]
 }
