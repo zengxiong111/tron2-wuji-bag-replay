@@ -5,7 +5,25 @@ from pathlib import Path
 import subprocess
 import sys
 
+import numpy as np
+
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def load_actual_trajectory(path):
+    """Load the accepted actual-state NPZ on simulation time, without retiming it."""
+    with np.load(path, allow_pickle=False) as data:
+        required = {'simulation_time', 'q_actual', 'joint_names'}
+        if not required.issubset(data.files):
+            raise ValueError(f'Actual-state trajectory is missing keys: {sorted(required - set(data.files))}')
+        axis = np.asarray(data['simulation_time'], dtype=np.float64)
+        q = np.asarray(data['q_actual'], dtype=np.float64)
+        names = data['joint_names'].astype(str).tolist()
+    if (axis.ndim != 1 or q.shape != (len(axis), 56) or len(names) != 56
+            or not np.isfinite(axis).all() or not np.isfinite(q).all()
+            or not np.all(np.diff(axis) > 0)):
+        raise ValueError('Invalid actual-state trajectory: expected finite increasing simulation_time and 56-DOF q_actual')
+    return axis, q, names
 
 
 def build_command(args):

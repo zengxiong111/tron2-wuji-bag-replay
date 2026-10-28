@@ -123,6 +123,15 @@ class RuntimeBundleTests(unittest.TestCase):
         self.assertEqual(command[option+1], '/opt/isaac/python.sh')
         self.assertIn('--max-source-seconds', command)
 
+    def test_published_actual_npz_loads_actual_states_on_simulation_clock(self):
+        binding = json.loads((ROOT/'configs/trajectory.json').read_text())
+        actual = ROOT/binding['actual']['path']
+        axis, q, names = REPLAY.load_actual_trajectory(actual)
+        self.assertEqual(q.shape, (33094, 56))
+        self.assertEqual(len(names), 56)
+        self.assertAlmostEqual(axis[1] - axis[0], 1/480, places=12)
+        self.assertAlmostEqual(axis[-1], binding['duration_s'], places=8)
+
     def test_valid_bundle_passes_and_reports_file_count(self):
         self.assertEqual(MODULE.verify(self.root), 1)
 

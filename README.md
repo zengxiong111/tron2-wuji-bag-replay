@@ -10,18 +10,25 @@
 
 ## 安装与下载
 
-需要有权访问私有 GitHub 仓库，并安装 Git、GitHub CLI 和 Python 3。播放还需要 Isaac Sim 5.1 与兼容的 GPU。以下命令在终端执行：
+需要有权访问 GitHub 仓库，并安装 Git、GitHub CLI 和 Python 3。播放还需要 Isaac Sim 5.1 与兼容的 GPU。以下命令在终端执行：
 
 ```bash
 gh auth login
 gh auth setup-git
-git clone https://github.com/zengxiong111/tron2-wuji-bag-replay.git
+git clone --branch codex/bag-20261027-5x-validated https://github.com/zengxiong111/tron2-wuji-bag-replay.git
 cd tron2-wuji-bag-replay
 python3 scripts/download_assets.py
 python3 scripts/verify_bundle.py
 ```
 
-轨迹与模型从 GitHub Release 下载；仅克隆源码不足以回放。当前发布标签为 `bag-20261027-5x-validated-20261028`。下载器会校验归档和文件哈希，并拒绝覆盖本地修改过的文件。已有副本先执行 `git pull --ff-only`，再按需要运行 `python3 scripts/download_assets.py --upgrade` 和完整性校验。
+轨迹与模型从 GitHub Release 下载；仅克隆源码不足以回放。当前发布标签为 `bag-20261027-5x-validated-20261028`。下载器会校验归档和文件哈希，并拒绝覆盖本地修改过的文件。已有副本在仓库根目录执行：
+
+```bash
+git switch codex/bag-20261027-5x-validated
+git pull --ff-only
+python3 scripts/download_assets.py
+python3 scripts/verify_bundle.py
+```
 
 ## 播放轨迹
 
@@ -45,8 +52,8 @@ python3 scripts/replay.py --isaac-python /path/to/isaac/python
 | 稠密几何检查 | 源轨迹 186,407 点、执行导出 325,400 点、PhysX 实际状态 66,187 点；各自对 2,707 个保留几何对检查，未发现碰撞事件。 |
 | 实际跟踪与运动 | 实际腕间距相对原始 C2 最大 / RMS 为 1.891 / 0.927 mm；最大位置差分速度为原始 URDF 限值的 0.993；左拇指 CMC flex 行程比例 / 相关系数为 99.4% / 0.9965。 |
 | 高频波动 | 手部 30 Hz 以上 RMS 为同相位原始 C2 基准的 0.411 倍。 |
-| 综合验收 | 验收文件中的 52 项工作门限均通过，详见 `validation/acceptance_155.json`。 |
+| 综合验收 | 验收文件中的 52 项工作门限均通过，详见 `evidence/imported/acceptance_155.json`。 |
 
-几何口径保留了 2,632 个机器人几何对和 75 个桌面几何对。官方 Wuji Beta2 装配规则中的 20 个内部 body pair 按来源规则排除，其中 10 个已属于 133 个结构排除；最终唯一排除数为 143。桌面到物理基座原点固定为 **0.45 m**。
+几何口径保留了 2,632 个机器人几何对和 75 个桌面几何对。官方 Wuji Beta2 装配规则中的 20 个内部 body pair 按来源规则排除，其中 10 个已属于 133 个结构排除；最终唯一排除数为 143。桌面到物理基座原点固定为 **0.45 m**。56 个轴均使用 acceleration drive；实际 PhysX 验收运行未启用手臂 force drive 或 RNEA 前馈。
 
-这些结果代表指定模型和 Isaac / PhysX 离散采样检查，不构成连续碰撞检测（CCD）认证或真实硬件安全证明。离线 Pinocchio RNEA 力矩代理最大比值为 1.251，未通过 URDF effort 限值；不得据此声称力矩验收通过。原始 body mapping 仍未确认，硬件准入和 Sim2Real 均未验证。完整证据及逐项口径见 `validation/`、`metadata/` 和[物理复播说明](DEPLOYMENT.md)。
+这些结果代表指定模型和 Isaac / PhysX 离散采样检查，不构成连续碰撞检测（CCD）认证或真实硬件安全证明。离线 Pinocchio RNEA 力矩代理最大比值为 1.251，未通过 URDF effort 限值；不得据此声称力矩验收通过。原始 body mapping 仍未确认，硬件准入和 Sim2Real 均未验证。完整证据及逐项口径见 `evidence/imported/`、`metadata/` 和[物理复播说明](DEPLOYMENT.md)。

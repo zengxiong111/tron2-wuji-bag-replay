@@ -1,5 +1,6 @@
 """Run a provenance-bound 5x or 6x ROS bag reference through Isaac PhysX."""
 import argparse
+import datetime
 import hashlib
 import json
 import time
@@ -68,7 +69,7 @@ parser.add_argument('--rnea-feedforward-max-correction', type=float, default=.02
 parser.add_argument('--headless', action='store_true')
 args = parser.parse_args()
 if args.out is None:
-    args.out = DEFAULT_OUT / f'physics_{args.motion_speed:g}x'
+    args.out = DEFAULT_OUT / f'physics_{args.motion_speed:g}x_{datetime.datetime.now().strftime("%Y%m%d_%H%M%S_%f")}'
 if min(args.wall_speed, args.motion_speed, args.contact_offset) <= 0 or not 0 <= args.rest_offset < args.contact_offset:
     raise ValueError('Invalid speed or contact offsets')
 if args.solver_position_iterations < 1 or args.solver_velocity_iterations < 1:

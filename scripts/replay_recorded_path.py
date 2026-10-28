@@ -7,6 +7,7 @@ from pathlib import Path
 import time
 
 import numpy as np
+from replay import load_actual_trajectory
 
 ROOT = Path(__file__).resolve().parents[1]
 parser = argparse.ArgumentParser(description=__doc__)
@@ -19,10 +20,7 @@ actual, usd = [ROOT/binding[key]['path'] for key in ('actual', 'usd')]
 sha = lambda path: hashlib.sha256(path.read_bytes()).hexdigest()
 if sha(actual) != binding['actual']['sha256'] or sha(usd) != binding['usd']['sha256']:
     raise ValueError('Published trajectory/model binding changed')
-data = np.load(actual, allow_pickle=False)
-axis, q, names = data['time'], data['q'], data['joint_names'].tolist()
-if q.shape != (len(axis), 56) or not np.isfinite(q).all() or not np.all(np.diff(axis) > 0):
-    raise ValueError('Invalid trajectory')
+axis, q, names = load_actual_trajectory(actual)
 if args.max_seconds is not None and (not np.isfinite(args.max_seconds) or args.max_seconds <= 0):
     raise ValueError('Positive finite --max-seconds required')
 end = min(float(axis[-1]), args.max_seconds) if args.max_seconds else float(axis[-1])
@@ -38,7 +36,7 @@ report = {'trajectory_sha256': sha(actual), 'trajectory_kind': 'actual_5x',
           'producer_sha256': sha(Path(__file__)), 'mode': 'recorded-path kinematic playback',
           'interpolation': 'piecewise linear in execution seconds', 'file_time_multiplier': 1,
           'effective_bag_speed': 5, 'trajectory_motion_speed': 5,
-          'file_time_multiplier': 1, 'physics_stepped': False, 'physical_base_to_table_m': .45,
+          'physics_stepped': False, 'physical_base_to_table_m': .45,
           'hardware_execution_authorized': False, 'status': 'starting'}
 try:
     from isaacsim.core.api import World

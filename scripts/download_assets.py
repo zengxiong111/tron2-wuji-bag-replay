@@ -1,4 +1,4 @@
-"""Download private GitHub Release assets, verify hashes, and install without overwriting."""
+"""Download GitHub Release assets, verify hashes, and install without overwriting."""
 import argparse
 import hashlib
 import json
